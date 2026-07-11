@@ -96,9 +96,55 @@ ufw enable
 
 ## 5. Custom Domain + SSL (lultrills.com)
 
-1. Point DNS A record of `lultrills.com` (and www) to your Droplet IP
-2. Once DNS propagates, add reverse proxy (Nginx/Caddy) with Let's Encrypt
-3. Update `next.config.mjs` if needed for trusted proxies
+**Important:** If the browser shows Hostinger / Zyrosite headers (`server: hcdn`, `x-powered-by: HostingerWebsiteBuilder`), DNS is still on Hostinger — not the DigitalOcean Next.js app.
+
+### Live DigitalOcean setup (Trillsverse droplet)
+
+- Droplet IP: `138.197.145.142` (SSH host: `trillsverse-droplet`)
+- App path: `/root/lultrills.com`
+- Container: port **3000**
+- Caddy reverse proxy already includes:
+
+```
+lultrills.com, www.lultrills.com {
+  encode gzip
+  reverse_proxy 127.0.0.1:3000
+}
+```
+
+### Point Namecheap DNS at the droplet
+
+1. Log into Namecheap → Domain List → **lultrills.com** → Manage → **Advanced DNS**
+2. Remove / disable Hostinger / parking / URL redirect records for `@` and `www` if present
+3. Set:
+
+| Type | Host | Value | TTL |
+|------|------|-------|-----|
+| A | `@` | `138.197.145.142` | Automatic or 5 min |
+| A | `www` | `138.197.145.142` | Automatic or 5 min |
+
+4. Wait 5–60 minutes. Test:
+
+```bash
+dig +short lultrills.com
+# should print: 138.197.145.142
+
+curl -sI https://www.lultrills.com | head -5
+# should NOT say HostingerWebsiteBuilder
+# should show Next.js / Caddy path
+
+curl -sI https://www.lultrills.com/essays/why-everything-is-one
+# HTTP 200
+```
+
+5. Until DNS flips, the new site is already up at:
+
+```
+http://138.197.145.142:3000
+http://138.197.145.142:3000/essays/why-everything-is-one
+```
+
+Caddy will auto-issue HTTPS for lultrills.com once public DNS points at the droplet.
 
 ---
 

@@ -1,44 +1,33 @@
 import type { Metadata } from "next";
-import { Orbitron, Rajdhani, JetBrains_Mono } from "next/font/google";
+import { Bebas_Neue, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const display = Orbitron({
+const display = Bebas_Neue({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "700", "800", "900"],
+  weight: "400",
   display: "swap",
 });
 
-const body = Rajdhani({
+const body = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Lultrills | Multi-Genre Rap Artist | Trillsverse",
+  title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills — Bay Area multi-genre rap/hip-hop artist. NDE survivor. AuDHD sovereign creator of Trillsverse. Gold grills frequency. A Place You Were Never Meant To Enter. Public artist portal + signal node.",
+    "Lultrills — Bay Area multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "Lultrills | SYSTEM BREACH · Trillsverse",
     description:
-      "He died, then came back and reconstructed reality. Album + Gate. Enter the Trillsverse.",
-    images: [
-      {
-        url: "https://trillsverse.com/opengraph.jpg",
-      },
-    ],
+      "He died, then came back and reconstructed reality. Album + Gate.",
+    images: [{ url: "https://trillsverse.com/opengraph.jpg" }],
   },
 };
 
@@ -48,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body className="bg-[var(--void)] text-[var(--ink)] antialiased">{children}</body>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

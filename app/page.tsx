@@ -66,10 +66,10 @@ export default function LultrillsHome() {
               </a>
             </div>
           </div>
-          <div aria-hidden className="hero-side">
+          <div className="hero-side">
             <p className="hero-sub" style={{ marginBottom: 0, maxWidth: "20rem" }}>
-              Bay Area. Gold grills. NDE. AuDHD. The Gate is open — the album is
-              the record of what broke and what got rebuilt.
+              The Gate is open. The album is the record of what broke and what
+              got rebuilt.
             </p>
           </div>
         </section>

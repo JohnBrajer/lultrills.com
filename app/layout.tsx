@@ -19,7 +19,7 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills — Bay Area multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate.",
+    "Lultrills — multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate.",
   icons: {
     icon: "/favicon.ico",
   },

@@ -22,6 +22,9 @@ export default function LultrillsHome() {
             <Link href="/really-that-magazine" className="hover:text-[#C5A26F] transition-colors">
               Magazine
             </Link>
+            <Link href="/essays/why-everything-is-one" className="hover:text-[#C5A26F] transition-colors">
+              Essay
+            </Link>
             <a href={GATE} className="hover:text-[#C5A26F] transition-colors">
               Gate
             </a>
@@ -141,7 +144,7 @@ export default function LultrillsHome() {
           Public nodes
         </p>
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10">Where to go</h2>
-        <div className="grid sm:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <a
             href={GATE}
             className="block p-6 border border-white/10 hover:border-red-500/40 bg-black/40 transition-colors"
@@ -152,6 +155,18 @@ export default function LultrillsHome() {
               Interactive universe. Initiation, throne, Trillaxy, Firstborns.
             </p>
           </a>
+          <Link
+            href="/essays/why-everything-is-one"
+            className="block p-6 border border-white/10 hover:border-emerald-500/40 bg-black/40 transition-colors"
+          >
+            <div className="text-emerald-400/90 text-[10px] tracking-[0.25em] uppercase mb-3">
+              John B
+            </div>
+            <div className="text-xl font-semibold mb-2">One System</div>
+            <p className="text-sm text-zinc-500 leading-relaxed">
+              Why separation is a lie — Roman concrete, fields, antifragility.
+            </p>
+          </Link>
           <Link
             href="/really-that-magazine"
             className="block p-6 border border-white/10 hover:border-[#C5A26F]/40 bg-black/40 transition-colors"

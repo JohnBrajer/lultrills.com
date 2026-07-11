@@ -75,6 +75,25 @@ export default function ReallyThatMagazinePage() {
             </p>
           </div>
 
+          <div className="border border-white/10 bg-white/[0.02] p-6">
+            <p className="text-[10px] font-mono tracking-[0.3em] text-red-400/90 uppercase mb-3">
+              Feature essay · John B
+            </p>
+            <h2 className="text-xl font-semibold text-white mb-3 tracking-tight">
+              Why Everything You Think Is Separate Is Actually One Thing
+            </h2>
+            <p className="text-zinc-400 mb-5">
+              Ocean, beach, air. Roman concrete. Quantum fields. Antifragility. The philosophical
+              spine of the Trillsverse — full longform.
+            </p>
+            <Link
+              href="/essays/why-everything-is-one"
+              className="inline-flex text-[11px] font-mono tracking-[0.2em] uppercase text-[#C5A26F] hover:text-white transition-colors"
+            >
+              Read the essay →
+            </Link>
+          </div>
+
           <div>
             <h2 className="text-xl font-semibold text-white mb-3 tracking-tight">
               What is operational in the runtime
@@ -97,7 +116,13 @@ export default function ReallyThatMagazinePage() {
           </div>
         </section>
 
-        <div className="mt-16 flex flex-col sm:flex-row gap-3">
+        <div className="mt-16 flex flex-col sm:flex-row gap-3 flex-wrap">
+          <Link
+            href="/essays/why-everything-is-one"
+            className="inline-flex justify-center px-6 py-3 border border-red-900/40 hover:border-red-500/50 text-[11px] font-mono tracking-[0.2em] uppercase transition-colors"
+          >
+            John B · One System
+          </Link>
           <a
             href="https://trillsverse.com/api/doctrine/sovereignty"
             className="px-6 py-3 border border-[#C5A26F]/50 text-[#C5A26F] text-[11px] font-mono tracking-[0.2em] uppercase hover:bg-[#C5A26F] hover:text-black transition-colors text-center"

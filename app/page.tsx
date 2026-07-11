@@ -1,189 +1,182 @@
-import React from 'react';
+import Link from "next/link";
+
+const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
+const GATE = "https://trillsverse.com";
+const BREACH = "https://trillsverse.com/system-breach";
 
 export default function LultrillsHome() {
   return (
-    <main className="min-h-screen bg-black text-off-white">
-      {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="font-mono text-xl tracking-[4px] gold">LULTRILLS</div>
-          <div className="flex gap-8 text-sm uppercase tracking-widest">
-            <a href="#music" className="hover:gold transition-colors">MUSIC</a>
-            <a href="#bio" className="hover:gold transition-colors">BIO</a>
-            <a href="#connect" className="hover:gold transition-colors">CONNECT</a>
-            <a href="#trillsverse" className="hover:gold transition-colors">TRILLSVERSE</a>
+    <main className="min-h-screen bg-[#050505] text-zinc-100">
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(197,162,111,0.18),transparent_55%),radial-gradient(ellipse_60%_40%_at_90%_80%,rgba(220,38,38,0.12),transparent_50%)]" />
+
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+        <div className="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
+          <div className="font-mono text-sm tracking-[0.35em] text-[#C5A26F]">LULTRILLS</div>
+          <div className="hidden sm:flex gap-6 text-[10px] uppercase tracking-[0.25em] text-zinc-400">
+            <a href="#breach" className="hover:text-[#C5A26F] transition-colors">
+              Breach
+            </a>
+            <a href="#music" className="hover:text-[#C5A26F] transition-colors">
+              Music
+            </a>
+            <Link href="/really-that-magazine" className="hover:text-[#C5A26F] transition-colors">
+              Magazine
+            </Link>
+            <a href={GATE} className="hover:text-[#C5A26F] transition-colors">
+              Gate
+            </a>
           </div>
-          <a 
-            href="https://github.com/JohnBrajer/lultrills.com" 
-            target="_blank"
-            className="text-xs px-4 py-1.5 border border-white/30 hover:border-gold transition-colors"
+          <a
+            href={BREACH}
+            className="text-[10px] tracking-[0.2em] uppercase px-3 py-2 border border-[#C5A26F]/50 text-[#C5A26F] hover:bg-[#C5A26F] hover:text-black transition-colors"
           >
-            CODE
+            Enter
           </a>
         </div>
       </nav>
 
-      {/* HERO */}
-      <section className="pt-24 pb-20 px-6 max-w-4xl mx-auto text-center border-b border-white/10">
-        <div className="inline-block px-4 py-1 mb-6 text-xs tracking-[3px] border border-gold/40 text-gold">BAY AREA • MULTI-GENRE RAP • TRILLSVERSE INITIATION PHASE I</div>
-        
-        <h1 className="text-[92px] md:text-[120px] leading-[0.9] font-bold tracking-[-6.5px] mb-6">
+      <section className="relative pt-28 pb-20 px-5 max-w-4xl mx-auto text-center">
+        <p className="inline-block px-3 py-1 mb-6 text-[10px] tracking-[0.35em] border border-red-500/40 text-red-400 uppercase">
+          July 11 · Birthday · SYSTEM BREACH
+        </p>
+        <h1 className="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-6">
           LULTRILLS
         </h1>
-        
-        <p className="text-2xl md:text-3xl text-white/70 max-w-3xl mx-auto mb-4">
-          A contradiction stitched into sound.<br />
-          A memory that refuses to stay still.<br />
-          A voice born from the fracture between emotion and identity.
+        <p className="text-lg sm:text-2xl text-zinc-400 max-w-2xl mx-auto mb-3 leading-snug">
+          A contradiction stitched into sound.
+          <br />
+          Architect of the Trillsverse.
         </p>
-
-        <p className="text-xl text-white/60 max-w-2xl mx-auto mb-10">
-          This isn’t a brand. This is a psychological territory. A Place You Were Never Meant To Enter.
+        <p className="text-sm sm:text-base text-zinc-500 max-w-xl mx-auto mb-10">
+          Not a brand. A psychological territory. Music as documentation. Runtime as architecture.
         </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#music" className="btn-gold px-10 py-4 text-sm uppercase tracking-[2px] font-medium inline-block">
-            LISTEN NOW
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href={SPOTIFY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold"
+          >
+            Stream
           </a>
-          <a href="#trillsverse" className="px-10 py-4 text-sm uppercase tracking-[2px] font-medium border border-white/40 hover:border-gold transition-colors inline-block">
-            ENTER TRILLSVERSE
+          <a
+            href={BREACH}
+            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-red-500/60 hover:text-red-300 transition-colors"
+          >
+            SYSTEM BREACH
+          </a>
+          <a
+            href={GATE}
+            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-[#C5A26F]/60 hover:text-[#C5A26F] transition-colors"
+          >
+            Enter Gate
           </a>
         </div>
       </section>
 
-      {/* BIO */}
-      <section id="bio" className="section max-w-3xl mx-auto px-6 py-20 border-b border-white/10">
-        <div className="uppercase text-xs tracking-[3px] mb-4 text-gold">CHAPTER I — ORIGIN</div>
-        <h2 className="text-5xl tracking-[-1.5px] mb-8">The Artist</h2>
-        
-        <div className="prose prose-invert max-w-none text-lg text-white/80 space-y-6">
-          <p>
-            Lultrills is the multi-genre rap and hip-hop artist, CEO + Founder of Trillsverse LLC, 
-            Independent Recording Artist, Creative Director, Brand Developer, Audio Engineer, 
-            Record Producer, Journalist, Editor in Chief, Web Developer + AI Integration Specialist, 
-            Life Coach, Influencer, and Trillonian from the San Francisco Bay Area.
+      <section id="breach" className="relative border-y border-white/10 bg-red-950/10">
+        <div className="max-w-4xl mx-auto px-5 py-16 sm:py-20">
+          <p className="text-[10px] font-mono tracking-[0.35em] text-red-400 uppercase mb-4">
+            Transmission · Drop window
           </p>
-          <p>
-            Gold grills. Cinematic worlds. Sovereign signal. After a near-death experience and navigating AuDHD, 
-            he built Trillsverse — a living transmedia universe designed as a permanent reality shift. 
-            This is not performance. This is architecture.
+          <h2 className="text-4xl sm:text-6xl font-black tracking-tight mb-6">SYSTEM BREACH</h2>
+          <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
+            He died, then came back and reconstructed reality. The album is the documentation.
+            The Trillsverse is the system. The Gate is open.
           </p>
-          <p>
-            Every track, every gate, every protocol serves one purpose: 
-            making the frequency undeniable so the Trillionaires can find their way home.
-          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={BREACH}
+              className="px-6 py-3 bg-red-600 hover:bg-red-500 text-white text-[11px] font-mono tracking-[0.2em] uppercase transition-colors"
+            >
+              Open breach page
+            </a>
+            <a
+              href={SPOTIFY}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-zinc-700 hover:border-zinc-500 text-[11px] font-mono tracking-[0.2em] uppercase transition-colors"
+            >
+              Spotify · Lultrills
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* MUSIC / DISCOGRAPHY */}
-      <section id="music" className="section max-w-4xl mx-auto px-6 py-20 border-b border-white/10">
-        <div className="uppercase text-xs tracking-[3px] mb-4 text-gold">CHAPTER II — FREQUENCY</div>
-        <h2 className="text-5xl tracking-[-1.5px] mb-10">Discography</h2>
-
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 text-lg">
+      <section id="music" className="relative max-w-4xl mx-auto px-5 py-16 sm:py-20">
+        <p className="text-[10px] font-mono tracking-[0.35em] text-[#C5A26F] uppercase mb-4">
+          Frequency catalog
+        </p>
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10">Music</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
           {[
-            { title: "Up", status: "Single • Redefines Hip Hop" },
-            { title: "Oh Okay", status: "Single • Fearless first impression" },
+            { title: "SYSTEM BREACH", status: "Album · July 11, 2026" },
+            { title: "G O A T", status: "Single" },
+            { title: "Oh Okay", status: "Single · Honk Magazine" },
             { title: "2REAL", status: "Single" },
             { title: "Villain", status: "Single" },
+            { title: "Up", status: "Single" },
             { title: "Really That", status: "Single" },
             { title: "AMIWRONG?", status: "Single" },
-            { title: "Kasano", status: "Single" },
-            { title: "G O A T", status: "Single" },
-          ].map((track, i) => (
-            <div key={i} className="flex justify-between border-b border-white/10 pb-4 group">
+          ].map((t) => (
+            <a
+              key={t.title}
+              href={SPOTIFY}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex justify-between items-center border border-white/10 hover:border-[#C5A26F]/40 bg-white/[0.02] px-4 py-4 transition-colors"
+            >
               <div>
-                <div className="font-medium group-hover:text-gold transition-colors">{track.title}</div>
-                <div className="text-sm text-white/50">{track.status}</div>
+                <div className="font-medium group-hover:text-[#C5A26F] transition-colors">{t.title}</div>
+                <div className="text-xs text-zinc-500 mt-1">{t.status}</div>
               </div>
-              <div className="text-gold text-sm self-center opacity-70 group-hover:opacity-100 transition-all">LISTEN →</div>
-            </div>
+              <span className="text-[10px] tracking-widest text-[#C5A26F]/70">LISTEN</span>
+            </a>
           ))}
         </div>
+      </section>
 
-        <div className="mt-10 text-sm text-white/60 max-w-md">
-          Full album in progress. More frequencies loading. Press features on Honk Magazine and beyond.
-        </div>
-
-        <div className="mt-6">
-          <a 
-            href="https://music.apple.com/us/artist/lultrills/1811909376" 
-            target="_blank"
-            className="inline-block text-sm border border-white/30 px-6 py-2 hover:border-gold hover:text-gold transition-colors"
+      <section className="relative border-t border-white/10 max-w-4xl mx-auto px-5 py-16 sm:py-20">
+        <p className="text-[10px] font-mono tracking-[0.35em] text-[#C5A26F] uppercase mb-4">
+          Public nodes
+        </p>
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10">Where to go</h2>
+        <div className="grid sm:grid-cols-3 gap-4">
+          <a
+            href={GATE}
+            className="block p-6 border border-white/10 hover:border-red-500/40 bg-black/40 transition-colors"
           >
-            LISTEN ON APPLE MUSIC →
+            <div className="text-red-400 text-[10px] tracking-[0.25em] uppercase mb-3">Runtime</div>
+            <div className="text-xl font-semibold mb-2">Trillsverse Gate</div>
+            <p className="text-sm text-zinc-500 leading-relaxed">
+              Interactive universe. Initiation, throne, Trillaxy, Firstborns.
+            </p>
+          </a>
+          <Link
+            href="/really-that-magazine"
+            className="block p-6 border border-white/10 hover:border-[#C5A26F]/40 bg-black/40 transition-colors"
+          >
+            <div className="text-[#C5A26F] text-[10px] tracking-[0.25em] uppercase mb-3">Doctrine</div>
+            <div className="text-xl font-semibold mb-2">Really That Magazine</div>
+            <p className="text-sm text-zinc-500 leading-relaxed">
+              Longform. Sovereignty as operating constraint. Academic signal.
+            </p>
+          </Link>
+          <a
+            href="https://www.instagram.com/lultrillzkapalot/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-6 border border-white/10 hover:border-white/30 bg-black/40 transition-colors"
+          >
+            <div className="text-zinc-400 text-[10px] tracking-[0.25em] uppercase mb-3">Social</div>
+            <div className="text-xl font-semibold mb-2">Instagram</div>
+            <p className="text-sm text-zinc-500 leading-relaxed">@lultrillzkapalot · #TrillionairesOnly</p>
           </a>
         </div>
       </section>
 
-      {/* CONNECT */}
-      <section id="connect" className="section max-w-3xl mx-auto px-6 py-20 border-b border-white/10">
-        <div className="uppercase text-xs tracking-[3px] mb-4 text-gold">CHAPTER — TRANSMISSION</div>
-        <h2 className="text-5xl tracking-[-1.5px] mb-10">Connect</h2>
-
-        <div className="grid md:grid-cols-2 gap-8 text-lg">
-          <a 
-            href="https://www.instagram.com/lultrillzkapalot/" 
-            target="_blank"
-            className="block p-6 border border-white/10 hover:border-gold transition-colors group"
-          >
-            <div className="text-gold mb-2">INSTAGRAM</div>
-            <div className="text-white/70 group-hover:text-white transition-colors">@lultrillzkapalot</div>
-          </a>
-
-          <a 
-            href="https://music.apple.com/us/artist/lultrills/1811909376" 
-            target="_blank"
-            className="block p-6 border border-white/10 hover:border-gold transition-colors group"
-          >
-            <div className="text-gold mb-2">APPLE MUSIC</div>
-            <div className="text-white/70 group-hover:text-white transition-colors">Full catalog + artist page</div>
-          </a>
-
-          <a 
-            href="https://honkmagazine.com/lultrills-makes-a-fearless-first-impression-with-latest-single-oh-okay/" 
-            target="_blank"
-            className="block p-6 border border-white/10 hover:border-gold transition-colors group"
-          >
-            <div className="text-gold mb-2">PRESS — “OH OKAY”</div>
-            <div className="text-white/70 group-hover:text-white transition-colors">Honk Magazine feature</div>
-          </a>
-
-          <a 
-            href="https://github.com/JohnBrajer/Trillsverse-Gate-FINAL" 
-            target="_blank"
-            className="block p-6 border border-white/10 hover:border-gold transition-colors group"
-          >
-            <div className="text-gold mb-2">TRILLSVERSE</div>
-            <div className="text-white/70 group-hover:text-white transition-colors">Deeper gates & mapping</div>
-          </a>
-        </div>
-      </section>
-
-      {/* TRILLSVERSE TEASER */}
-      <section id="trillsverse" className="section max-w-3xl mx-auto px-6 py-20">
-        <div className="uppercase text-xs tracking-[3px] mb-4 text-gold">CHAPTER III — WAKING</div>
-        <h2 className="text-5xl tracking-[-1.5px] mb-8">Trillsverse</h2>
-        
-        <div className="text-xl text-white/80 max-w-2xl">
-          The deeper architecture. Interactive gates. 3D Trillaxy Maps. Bloodline resonance. Echo lattice. Arena protocols.
-          <br /><br />
-          This public node is the entry point. The full universe — the next shift — lives beyond.
-        </div>
-
-        <div className="mt-10">
-          <a 
-            href="https://github.com/JohnBrajer/Trillsverse-Gate-FINAL" 
-            target="_blank"
-            className="inline-block px-8 py-3 border border-gold text-gold hover:bg-gold hover:text-black transition-colors text-sm tracking-widest"
-          >
-            ENTER THE DEEPER GATES →
-          </a>
-        </div>
-      </section>
-
-      <footer className="border-t border-white/10 py-10 text-center text-xs text-white/50">
-        LULTRILLS © {new Date().getFullYear()} — SOVEREIGN • TRILLSVERSE LLC • TRILLONIAN
+      <footer className="relative border-t border-white/10 py-10 text-center text-[10px] tracking-[0.2em] uppercase text-zinc-600">
+        Lultrills · Trillsverse LLC · {new Date().getFullYear()} · Sovereign
       </footer>
     </main>
   );

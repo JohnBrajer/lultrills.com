@@ -52,24 +52,24 @@ export default function LultrillsHome() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href={SPOTIFY}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold"
-          >
-            Stream
-          </a>
-          <a
             href={BREACH}
-            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-red-500/60 hover:text-red-300 transition-colors"
+            className="btn-gold px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold"
           >
             SYSTEM BREACH
           </a>
           <a
             href={GATE}
-            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-[#C5A26F]/60 hover:text-[#C5A26F] transition-colors"
+            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-red-500/60 hover:text-red-300 transition-colors"
           >
             Enter Gate
+          </a>
+          <a
+            href={SPOTIFY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-[#C5A26F]/60 hover:text-[#C5A26F] transition-colors"
+          >
+            Stream
           </a>
         </div>
       </section>

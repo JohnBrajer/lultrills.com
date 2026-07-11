@@ -38,34 +38,36 @@ function renderBody(body: string) {
 
 export function CanonArticle({ page }: { page: CanonPage }) {
   return (
-    <main className="min-h-screen bg-[#070708] text-zinc-100">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_70%_40%_at_20%_0%,rgba(197,162,111,0.1),transparent_50%)]" />
-
-      <header className="relative border-b border-white/10">
+    <main className="relative min-h-screen">
+      <div className="tv-atmosphere" aria-hidden />
+      <header className="relative z-10 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div className="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between gap-3">
-          <Link href="/" className="font-mono text-[10px] tracking-[0.3em] text-zinc-500 hover:text-[#C5A26F]">
+          <Link
+            href="/"
+            className="font-mono-sys text-[10px] tracking-[0.3em] text-[var(--ink-dim)] hover:text-[var(--gold)] transition-colors duration-200"
+          >
             ← LULTRILLS
           </Link>
-          <div className="font-mono text-[9px] tracking-[0.25em] text-zinc-600 uppercase">
-            Canon · {page.words}w · Injection surface
+          <div className="font-mono-sys tabular text-[9px] tracking-[0.25em] text-[var(--ink-dim)] uppercase">
+            Canon · {page.words}w
           </div>
           <a
             href="https://trillsverse.com/system-breach"
-            className="font-mono text-[10px] tracking-[0.2em] text-zinc-500 hover:text-red-400"
+            className="font-mono-sys text-[10px] tracking-[0.2em] text-[var(--ink-dim)] hover:text-red-400 transition-colors duration-200"
           >
             GATE
           </a>
         </div>
       </header>
 
-      <article className="relative max-w-3xl mx-auto px-5 py-14 sm:py-20">
-        <p className="text-[10px] font-mono tracking-[0.35em] text-[#C5A26F] uppercase mb-5">
-          Sovereign HTML · Ported from Hostinger for model + human ingestion
+      <article className="relative z-10 max-w-3xl mx-auto px-5 py-14 sm:py-20">
+        <p className="font-mono-sys text-[10px] tracking-[0.32em] text-[var(--gold)] uppercase mb-5">
+          Sovereign HTML · injection surface
         </p>
-        <h1 className="text-3xl sm:text-4xl font-black tracking-tight leading-[1.1] mb-8">
+        <h1 className="text-3xl sm:text-4xl font-black tracking-[-0.03em] leading-[1.1] mb-8 text-wrap">
           {page.title.split("|")[0].trim()}
         </h1>
-        <div className="border-t border-white/10 pt-8">{renderBody(page.body)}</div>
+        <div className="border-t border-white/10 pt-8 max-w-[72ch]">{renderBody(page.body)}</div>
 
         <nav className="mt-16 pt-10 border-t border-white/10">
           <p className="font-mono text-[10px] tracking-[0.3em] text-zinc-600 uppercase mb-4">

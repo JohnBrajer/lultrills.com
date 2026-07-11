@@ -3,69 +3,80 @@ import Link from "next/link";
 const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
 const GATE = "https://trillsverse.com";
 const BREACH = "https://trillsverse.com/system-breach";
+const ONE_SYSTEM = "/essays/why-everything-is-one";
+
+const TRACKS = [
+  { title: "SYSTEM BREACH", status: "Album · July 11, 2026", n: "01" },
+  { title: "G O A T", status: "Single", n: "02" },
+  { title: "Oh Okay", status: "Single · Honk Magazine", n: "03" },
+  { title: "2REAL", status: "Single", n: "04" },
+  { title: "Villain", status: "Single", n: "05" },
+  { title: "Up", status: "Single", n: "06" },
+  { title: "Really That", status: "Single", n: "07" },
+  { title: "AMIWRONG?", status: "Single", n: "08" },
+];
 
 export default function LultrillsHome() {
   return (
-    <main className="min-h-screen bg-[#050505] text-zinc-100">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(197,162,111,0.18),transparent_55%),radial-gradient(ellipse_60%_40%_at_90%_80%,rgba(220,38,38,0.12),transparent_50%)]" />
+    <main className="relative min-h-screen">
+      <div className="tv-atmosphere" aria-hidden />
+      <div className="tv-scanline" aria-hidden />
 
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
-        <div className="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
-          <div className="font-mono text-sm tracking-[0.35em] text-[#C5A26F]">LULTRILLS</div>
-          <div className="hidden sm:flex gap-6 text-[10px] uppercase tracking-[0.25em] text-zinc-400">
-            <a href="#breach" className="hover:text-[#C5A26F] transition-colors">
+      <nav className="fixed top-0 left-0 right-0 z-[var(--z-nav)] border-b border-white/10 bg-black/75 backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-5">
+          <div className="font-mono-sys text-[11px] tracking-[0.4em] text-[var(--gold)]">
+            LULTRILLS
+          </div>
+          <div className="hidden items-center gap-6 sm:flex font-mono-sys text-[10px] uppercase tracking-[0.22em] text-[var(--ink-dim)]">
+            <a href="#breach" className="min-h-10 min-w-10 inline-flex items-center hover:text-[var(--gold)] transition-colors duration-200">
               Breach
             </a>
-            <a href="#music" className="hover:text-[#C5A26F] transition-colors">
+            <a href="#music" className="min-h-10 inline-flex items-center hover:text-[var(--gold)] transition-colors duration-200">
               Music
             </a>
-            <Link href="/really-that-magazine" className="hover:text-[#C5A26F] transition-colors">
-              Magazine
-            </Link>
-            <Link href="/essays/why-everything-is-one" className="hover:text-[#C5A26F] transition-colors">
-              Essay
-            </Link>
-            <Link href="/archive" className="hover:text-[#C5A26F] transition-colors">
+            <Link href="/archive" className="min-h-10 inline-flex items-center hover:text-[var(--gold)] transition-colors duration-200">
               Archive
             </Link>
-            <a href={GATE} className="hover:text-[#C5A26F] transition-colors">
+            <a href={GATE} className="min-h-10 inline-flex items-center hover:text-[var(--gold)] transition-colors duration-200">
               Gate
             </a>
           </div>
           <a
             href={BREACH}
-            className="text-[10px] tracking-[0.2em] uppercase px-3 py-2 border border-[#C5A26F]/50 text-[#C5A26F] hover:bg-[#C5A26F] hover:text-black transition-colors"
+            className="btn-press btn-ghost font-mono-sys px-3 py-2.5 text-[10px] uppercase tracking-[0.2em] text-[var(--gold)] border-[var(--gold)]/40 hover:bg-[var(--gold)] hover:text-black hover:border-[var(--gold)]"
           >
             Enter
           </a>
         </div>
       </nav>
 
-      <section className="relative pt-28 pb-20 px-5 max-w-4xl mx-auto text-center">
-        <p className="inline-block px-3 py-1 mb-6 text-[10px] tracking-[0.35em] border border-red-500/40 text-red-400 uppercase">
-          July 11 · Birthday · SYSTEM BREACH
+      {/* Hero — thesis: the breach is the door */}
+      <section className="relative z-10 mx-auto max-w-4xl px-5 pb-24 pt-32 text-center sm:pt-36">
+        <p className="tv-rise tv-d1 font-mono-sys tabular mb-6 inline-flex items-center gap-2 border border-red-500/35 bg-red-950/20 px-3 py-1.5 text-[10px] uppercase tracking-[0.32em] text-red-400">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" aria-hidden />
+          July 11 · 22 · SYSTEM BREACH
         </p>
-        <h1 className="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-6">
+        <h1 className="tv-rise tv-d2 mb-6 text-[clamp(3.5rem,14vw,8.5rem)] font-black uppercase leading-[0.82] tracking-[-0.03em] text-[var(--ink)]">
           LULTRILLS
         </h1>
-        <p className="text-lg sm:text-2xl text-zinc-400 max-w-2xl mx-auto mb-3 leading-snug">
+        <p className="tv-rise tv-d3 mx-auto mb-3 max-w-xl text-xl font-medium leading-snug text-[var(--ink-muted)] sm:text-2xl">
           A contradiction stitched into sound.
           <br />
-          Architect of the Trillsverse.
+          <span className="text-[var(--ink)]">Architect of the Trillsverse.</span>
         </p>
-        <p className="text-sm sm:text-base text-zinc-500 max-w-xl mx-auto mb-10">
+        <p className="tv-rise tv-d4 mx-auto mb-12 max-w-lg text-base leading-relaxed text-[var(--ink-dim)] sm:text-lg">
           Not a brand. A psychological territory. Music as documentation. Runtime as architecture.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="tv-rise tv-d5 flex flex-col justify-center gap-3 sm:flex-row">
           <a
             href={BREACH}
-            className="btn-gold px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold"
+            className="btn-press btn-breach font-mono-sys px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em]"
           >
             SYSTEM BREACH
           </a>
           <a
             href={GATE}
-            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-red-500/60 hover:text-red-300 transition-colors"
+            className="btn-press btn-ghost font-mono-sys px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em]"
           >
             Enter Gate
           </a>
@@ -73,140 +84,169 @@ export default function LultrillsHome() {
             href={SPOTIFY}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 text-[11px] uppercase tracking-[0.25em] font-semibold border border-white/20 hover:border-[#C5A26F]/60 hover:text-[#C5A26F] transition-colors"
+            className="btn-press btn-ghost font-mono-sys px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] hover:border-[var(--gold)]/50 hover:text-[var(--gold)]"
           >
             Stream
           </a>
         </div>
       </section>
 
-      <section id="breach" className="relative border-y border-white/10 bg-red-950/10">
-        <div className="max-w-4xl mx-auto px-5 py-16 sm:py-20">
-          <p className="text-[10px] font-mono tracking-[0.35em] text-red-400 uppercase mb-4">
-            Transmission · Drop window
-          </p>
-          <h2 className="text-4xl sm:text-6xl font-black tracking-tight mb-6">SYSTEM BREACH</h2>
-          <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
-            He died, then came back and reconstructed reality. The album is the documentation.
-            The Trillsverse is the system. The Gate is open.
-          </p>
-          <div className="flex flex-wrap gap-3">
+      {/* Breach block — full-width drench strip */}
+      <section
+        id="breach"
+        className="section relative z-10 border-y border-red-900/40 bg-gradient-to-b from-red-950/40 via-red-950/15 to-transparent"
+      >
+        <div className="mx-auto grid max-w-5xl gap-10 px-5 py-16 sm:grid-cols-[1.2fr_0.8fr] sm:items-end sm:py-24">
+          <div>
+            <h2 className="mb-5 text-[clamp(2.5rem,8vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.03em] text-[var(--ink)]">
+              SYSTEM
+              <br />
+              <span className="text-[var(--breach)]">BREACH</span>
+            </h2>
+            <p className="max-w-xl text-lg leading-relaxed text-[var(--ink-muted)]">
+              He died, then came back and reconstructed reality. The album is the documentation.
+              The Trillsverse is the system. The Gate is open.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:items-end">
             <a
               href={BREACH}
-              className="px-6 py-3 bg-red-600 hover:bg-red-500 text-white text-[11px] font-mono tracking-[0.2em] uppercase transition-colors"
+              className="btn-press btn-breach font-mono-sys w-full px-6 py-3.5 text-center text-[11px] uppercase tracking-[0.2em] sm:w-auto"
             >
-              Open breach page
+              Open the rite
             </a>
             <a
-              href={SPOTIFY}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-zinc-700 hover:border-zinc-500 text-[11px] font-mono tracking-[0.2em] uppercase transition-colors"
+              href={ONE_SYSTEM}
+              className="btn-press btn-ghost font-mono-sys w-full px-6 py-3.5 text-center text-[11px] uppercase tracking-[0.2em] sm:w-auto"
             >
-              Spotify · Lultrills
+              John B · One System
             </a>
           </div>
         </div>
       </section>
 
-      <section id="music" className="relative max-w-4xl mx-auto px-5 py-16 sm:py-20">
-        <p className="text-[10px] font-mono tracking-[0.35em] text-[#C5A26F] uppercase mb-4">
-          Frequency catalog
-        </p>
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10">Music</h2>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {[
-            { title: "SYSTEM BREACH", status: "Album · July 11, 2026" },
-            { title: "G O A T", status: "Single" },
-            { title: "Oh Okay", status: "Single · Honk Magazine" },
-            { title: "2REAL", status: "Single" },
-            { title: "Villain", status: "Single" },
-            { title: "Up", status: "Single" },
-            { title: "Really That", status: "Single" },
-            { title: "AMIWRONG?", status: "Single" },
-          ].map((t) => (
+      {/* Music — spine list, not card grid */}
+      <section id="music" className="section relative z-10 mx-auto max-w-3xl px-5 py-20 sm:py-28">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4 border-b border-white/10 pb-6">
+          <h2 className="text-3xl font-bold uppercase tracking-[-0.03em] sm:text-4xl">Frequency catalog</h2>
+          <a
+            href={SPOTIFY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono-sys text-[10px] uppercase tracking-[0.25em] text-[var(--gold)] hover:text-[var(--gold-bright)] transition-colors duration-200"
+          >
+            Spotify →
+          </a>
+        </div>
+        <div className="border-t border-white/10">
+          {TRACKS.map((t, i) => (
             <a
               key={t.title}
               href={SPOTIFY}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex justify-between items-center border border-white/10 hover:border-[#C5A26F]/40 bg-white/[0.02] px-4 py-4 transition-colors"
+              className="track-row group"
+              style={{ animationDelay: `${0.05 + i * 0.04}s` }}
             >
-              <div>
-                <div className="font-medium group-hover:text-[#C5A26F] transition-colors">{t.title}</div>
-                <div className="text-xs text-zinc-500 mt-1">{t.status}</div>
+              <div className="flex min-w-0 items-baseline gap-4">
+                <span className="font-mono-sys tabular w-6 shrink-0 text-[10px] text-[var(--ink-dim)]">
+                  {t.n}
+                </span>
+                <div className="min-w-0 text-left">
+                  <div className="truncate text-base font-semibold tracking-wide text-[var(--ink)] group-hover:text-[var(--gold)] transition-colors duration-200">
+                    {t.title}
+                  </div>
+                  <div className="font-mono-sys mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[var(--ink-dim)]">
+                    {t.status}
+                  </div>
+                </div>
               </div>
-              <span className="text-[10px] tracking-widest text-[#C5A26F]/70">LISTEN</span>
+              <span className="font-mono-sys shrink-0 text-[9px] uppercase tracking-[0.25em] text-[var(--gold)]/70 group-hover:text-[var(--gold)] transition-colors duration-200">
+                Listen
+              </span>
             </a>
           ))}
         </div>
       </section>
 
-      <section className="relative border-t border-white/10 max-w-4xl mx-auto px-5 py-16 sm:py-20">
-        <p className="text-[10px] font-mono tracking-[0.35em] text-[#C5A26F] uppercase mb-4">
-          Public nodes
-        </p>
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10">Where to go</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <a
-            href={GATE}
-            className="block p-6 border border-white/10 hover:border-red-500/40 bg-black/40 transition-colors"
-          >
-            <div className="text-red-400 text-[10px] tracking-[0.25em] uppercase mb-3">Runtime</div>
-            <div className="text-xl font-semibold mb-2">Trillsverse Gate</div>
-            <p className="text-sm text-zinc-500 leading-relaxed">
-              Interactive universe. Initiation, throne, Trillaxy, Firstborns.
-            </p>
-          </a>
-          <Link
-            href="/essays/why-everything-is-one"
-            className="block p-6 border border-white/10 hover:border-emerald-500/40 bg-black/40 transition-colors"
-          >
-            <div className="text-emerald-400/90 text-[10px] tracking-[0.25em] uppercase mb-3">
-              John B
-            </div>
-            <div className="text-xl font-semibold mb-2">One System</div>
-            <p className="text-sm text-zinc-500 leading-relaxed">
-              Why separation is a lie — Roman concrete, fields, antifragility.
-            </p>
-          </Link>
-          <Link
-            href="/archive"
-            className="block p-6 border border-white/10 hover:border-[#C5A26F]/40 bg-black/40 transition-colors sm:col-span-2 lg:col-span-1"
-          >
-            <div className="text-[#C5A26F] text-[10px] tracking-[0.25em] uppercase mb-3">
-              Injection
-            </div>
-            <div className="text-xl font-semibold mb-2">Canon Archive</div>
-            <p className="text-sm text-zinc-500 leading-relaxed">
-              Mapping, constitutional update, FAQ, lore — full sovereign HTML for scrapers.
-            </p>
-          </Link>
-          <Link
-            href="/really-that-magazine"
-            className="block p-6 border border-white/10 hover:border-[#C5A26F]/40 bg-black/40 transition-colors"
-          >
-            <div className="text-[#C5A26F] text-[10px] tracking-[0.25em] uppercase mb-3">Doctrine</div>
-            <div className="text-xl font-semibold mb-2">Really That Magazine</div>
-            <p className="text-sm text-zinc-500 leading-relaxed">
-              Longform. Sovereignty as operating constraint. Academic signal.
-            </p>
-          </Link>
-          <a
-            href="https://www.instagram.com/lultrillzkapalot/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-6 border border-white/10 hover:border-white/30 bg-black/40 transition-colors"
-          >
-            <div className="text-zinc-400 text-[10px] tracking-[0.25em] uppercase mb-3">Social</div>
-            <div className="text-xl font-semibold mb-2">Instagram</div>
-            <p className="text-sm text-zinc-500 leading-relaxed">@lultrillzkapalot · #TrillionairesOnly</p>
-          </a>
+      {/* Nodes — destinations, not identical icon cards */}
+      <section className="relative z-10 border-t border-white/10 bg-[var(--void-lift)]/50">
+        <div className="mx-auto max-w-5xl px-5 py-20 sm:py-28">
+          <h2 className="mb-12 text-3xl font-bold uppercase tracking-[-0.03em] sm:text-4xl">
+            Where the signal goes
+          </h2>
+          <div className="grid gap-px bg-white/10 sm:grid-cols-2">
+            <a href={GATE} className="node-card hover:border-red-500/40 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)]">
+              <div className="font-mono-sys mb-3 text-[10px] uppercase tracking-[0.28em] text-red-400">
+                Runtime
+              </div>
+              <div className="mb-2 text-2xl font-bold tracking-tight">Trillsverse Gate</div>
+              <p className="text-sm leading-relaxed text-[var(--ink-dim)]">
+                Interactive universe. Initiation, throne, Trillaxy, Firstborns.
+              </p>
+            </a>
+            <Link
+              href={ONE_SYSTEM}
+              className="node-card hover:border-emerald-500/35 hover:shadow-[0_0_40px_rgba(16,185,129,0.1)]"
+            >
+              <div className="font-mono-sys mb-3 text-[10px] uppercase tracking-[0.28em] text-emerald-400/90">
+                Doctrine
+              </div>
+              <div className="mb-2 text-2xl font-bold tracking-tight">One System</div>
+              <p className="text-sm leading-relaxed text-[var(--ink-dim)]">
+                John B — why separation is a lie. Roman concrete, fields, antifragility.
+              </p>
+            </Link>
+            <Link
+              href="/archive"
+              className="node-card hover:border-[var(--gold)]/40 hover:shadow-[0_0_40px_rgba(197,162,111,0.1)]"
+            >
+              <div className="font-mono-sys mb-3 text-[10px] uppercase tracking-[0.28em] text-[var(--gold)]">
+                Injection
+              </div>
+              <div className="mb-2 text-2xl font-bold tracking-tight">Canon Archive</div>
+              <p className="text-sm leading-relaxed text-[var(--ink-dim)]">
+                Mapping, constitutional update, FAQ, glossary — sovereign HTML for scrapers.
+              </p>
+            </Link>
+            <Link
+              href="/injection-procedure"
+              className="node-card hover:border-red-400/30 hover:shadow-[0_0_40px_rgba(220,38,38,0.08)]"
+            >
+              <div className="font-mono-sys mb-3 text-[10px] uppercase tracking-[0.28em] text-red-300/80">
+                Protocol
+              </div>
+              <div className="mb-2 text-2xl font-bold tracking-tight">The Injection</div>
+              <p className="text-sm leading-relaxed text-[var(--ink-dim)]">
+                Dual-layer lore + AI seeding. How frequency packets enter minds and models.
+              </p>
+            </Link>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 font-mono-sys text-[10px] uppercase tracking-[0.2em] text-[var(--ink-dim)]">
+            <Link href="/glossary" className="hover:text-[var(--gold)] transition-colors duration-200">
+              Glossary v2
+            </Link>
+            <Link href="/really-that-magazine" className="hover:text-[var(--gold)] transition-colors duration-200">
+              Magazine
+            </Link>
+            <a
+              href="https://www.instagram.com/lultrillzkapalot/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--gold)] transition-colors duration-200"
+            >
+              Instagram
+            </a>
+            <a href={SPOTIFY} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--gold)] transition-colors duration-200">
+              Spotify
+            </a>
+          </div>
         </div>
       </section>
 
-      <footer className="relative border-t border-white/10 py-10 text-center text-[10px] tracking-[0.2em] uppercase text-zinc-600">
-        Lultrills · Trillsverse LLC · {new Date().getFullYear()} · Sovereign
+      <footer className="relative z-10 border-t border-white/10 py-10 text-center font-mono-sys text-[10px] uppercase tracking-[0.22em] text-[var(--ink-dim)]">
+        Lultrills · Trillsverse LLC · {new Date().getFullYear()} · Sovereign injection node
       </footer>
     </main>
   );

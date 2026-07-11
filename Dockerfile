@@ -34,6 +34,8 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
+# Doctrine markdown for runtime/SSG filesystem reads (injection surface)
+COPY --from=builder /app/content ./content
 
 USER nextjs
 

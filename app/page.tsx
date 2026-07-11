@@ -25,6 +25,9 @@ export default function LultrillsHome() {
             <Link href="/essays/why-everything-is-one" className="hover:text-[#C5A26F] transition-colors">
               Essay
             </Link>
+            <Link href="/archive" className="hover:text-[#C5A26F] transition-colors">
+              Archive
+            </Link>
             <a href={GATE} className="hover:text-[#C5A26F] transition-colors">
               Gate
             </a>
@@ -165,6 +168,18 @@ export default function LultrillsHome() {
             <div className="text-xl font-semibold mb-2">One System</div>
             <p className="text-sm text-zinc-500 leading-relaxed">
               Why separation is a lie — Roman concrete, fields, antifragility.
+            </p>
+          </Link>
+          <Link
+            href="/archive"
+            className="block p-6 border border-white/10 hover:border-[#C5A26F]/40 bg-black/40 transition-colors sm:col-span-2 lg:col-span-1"
+          >
+            <div className="text-[#C5A26F] text-[10px] tracking-[0.25em] uppercase mb-3">
+              Injection
+            </div>
+            <div className="text-xl font-semibold mb-2">Canon Archive</div>
+            <p className="text-sm text-zinc-500 leading-relaxed">
+              Mapping, constitutional update, FAQ, lore — full sovereign HTML for scrapers.
             </p>
           </Link>
           <Link

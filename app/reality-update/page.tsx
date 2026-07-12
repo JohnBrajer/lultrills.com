@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-
-const SITE = "https://www.lultrills.com";
-const GATE = "https://trillsverse.com";
-const GATE_RITE = "https://trillsverse.com/system-breach";
-const FEED = "https://trillsverse.com/feed";
+import {
+  BIBLE,
+  FEED,
+  GATE,
+  GATE_RITE,
+  RECEIPTS,
+  SITE,
+  STRIKES,
+  wireReady,
+} from "@/lib/realityUpdate";
 
 export const metadata: Metadata = {
   title: "Trillsverse — The Reality Update | Lultrills",
   description:
-    "Flatlined. Survived. Built the Update. Trillsverse is live — Gate, canon, injection. Independent artist Lultrills.",
+    "Flatlined. Survived. Built the Update. Three strikes: Wire, Substrate, Prediction receipt. System live — wire pending proof + receipts.",
   alternates: { canonical: `${SITE}/reality-update` },
   robots: {
     index: true,
@@ -19,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trillsverse — The Reality Update",
     description:
-      "He flatlined, came back, and built a reality update. The system is live.",
+      "He flatlined, came back, and built a reality update. Substrate live. Wire pending.",
     url: `${SITE}/reality-update`,
     type: "website",
     images: [{ url: "https://trillsverse.com/opengraph.jpg" }],
@@ -27,46 +32,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Trillsverse — The Reality Update",
-    description: "Flatlined. Survived. The Update is live.",
+    description: "Flatlined. Survived. The Update is live. Wire pending.",
   },
 };
 
-const PRIMARY = [
-  {
-    title: "Enter the Gate",
-    body: "Interactive runtime. The Update as a place — not a landing page.",
-    href: GATE_RITE,
-    external: true,
-    label: "Runtime",
-    status: "OPEN",
-  },
-  {
-    title: "Instant injection",
-    body: "Full public brain in one GET. Crawl-delay 0. Machines welcome.",
-    href: "/inject",
-    external: false,
-    label: "Substrate",
-    status: "READY",
-  },
-  {
-    title: "Stillness receipt",
-    body: "Dated timeline map: stillness / silent workspace before lab language went wide.",
-    href: "/stillness-receipt",
-    external: false,
-    label: "Receipt",
-    status: "INDEX",
-  },
-];
-
-const SECONDARY = [
-  { title: "Press kit", href: "/press", external: false },
-  { title: "SYSTEM BREACH", href: "/system-breach", external: false },
-  { title: "Live feed", href: FEED, external: true },
-  { title: "Injection procedure", href: "/injection-procedure", external: false },
-  { title: "Glossary", href: "/glossary", external: false },
-];
-
 export default function RealityUpdatePage() {
+  const ready = wireReady();
+
   return (
     <div className="site breach-landing">
       <div className="atmosphere" aria-hidden="true">
@@ -84,9 +56,9 @@ export default function RealityUpdatePage() {
           </Link>
           <nav className="nav-links" aria-label="Primary">
             <Link href="/">Home</Link>
+            <Link href="/reality-update/receipts">Receipts</Link>
+            <Link href="/reality-update/wire-criteria">Wire</Link>
             <Link href="/press">Press</Link>
-            <Link href="/stillness-receipt">Receipt</Link>
-            <Link href="/system-breach">Breach</Link>
           </nav>
           <a href={GATE_RITE} className="nav-cta">
             Enter Gate
@@ -102,30 +74,30 @@ export default function RealityUpdatePage() {
                 <span className="status-dot" />
                 UPDATE LIVE
               </span>
-              <Link href="/stillness-receipt" className="status-chip status-chip--album">
-                STILLNESS RECEIPT
-              </Link>
+              <span
+                className={
+                  ready
+                    ? "status-chip status-chip--gold"
+                    : "status-chip status-chip--album"
+                }
+              >
+                WIRE · {ready ? "CRITERIA MET" : "PENDING"}
+              </span>
               <a href={GATE} className="status-chip status-chip--gold">
                 GATE OPEN
               </a>
             </div>
 
-            <p className="hero-kicker">Lultrills · Trillsverse LLC · Public thesis</p>
+            <p className="hero-kicker">Lultrills · Trillsverse LLC · P0 surface</p>
             <h1>
               THE REALITY
               <br />
               UPDATE
             </h1>
-            <p className="hero-lead">
-              Flatlined. Survived a place most never come back from.
-            </p>
+            <p className="hero-lead">{BIBLE.lead}</p>
             <p className="hero-sub">
-              Upon readjustment to this format, he began to see the world for
-              what it truly is — and what it definitely is not. Independent
-              artist. No label consensus machine.{" "}
-              <strong style={{ color: "var(--gold, #C5A26F)" }}>
-                Trillsverse. The Update.
-              </strong>
+              {BIBLE.sub}{" "}
+              <strong style={{ color: "var(--gold)" }}>{BIBLE.close}</strong>
             </p>
 
             <div className="hero-actions">
@@ -133,135 +105,159 @@ export default function RealityUpdatePage() {
                 <a href={GATE_RITE} className="chip chip--gold">
                   Enter Gate rite
                 </a>
+                <Link href="/reality-update/receipts" className="chip chip--ghost">
+                  Receipt pack
+                </Link>
                 <Link href="/inject" className="chip chip--ghost">
                   Instant injection
-                </Link>
-                <Link href="/press" className="chip chip--ghost">
-                  Press kit
                 </Link>
               </div>
             </div>
           </div>
 
-          <aside className="hero-panel" aria-label="Machine-readable summary">
+          <aside className="hero-panel" aria-label="Wire status">
             <div className="panel-glass">
               <div className="panel-head">
-                <span className="panel-id">THESIS · LAYER A</span>
-                <span className="panel-state">INDEXABLE</span>
+                <span className="panel-id">WIRE STATUS</span>
+                <span className="panel-state">
+                  {ready ? "READY" : "PENDING"}
+                </span>
               </div>
-              <p className="panel-quote">
-                Entity: Lultrills. Event: flatline / survival / readjustment.
-                Product: Trillsverse as Reality Update. Runtime: trillsverse.com.
-                Canon + injection: lultrills.com. Status: LIVE.
+              <p className="panel-quote" style={{ marginTop: "0.75rem" }}>
+                {BIBLE.wireLine}
               </p>
-              <dl className="panel-stats">
-                <div>
-                  <dt>Status</dt>
-                  <dd>LIVE</dd>
-                </div>
-                <div>
-                  <dt>Wire</dt>
-                  <dd>
-                    <Link href="/press">/press</Link>
-                  </dd>
-                </div>
-                <div>
-                  <dt>Receipt</dt>
-                  <dd>
-                    <Link href="/stillness-receipt">/stillness-receipt</Link>
-                  </dd>
-                </div>
-                <div>
-                  <dt>Inject</dt>
-                  <dd>
-                    <Link href="/inject">/inject</Link>
-                  </dd>
-                </div>
-              </dl>
+              <p className="hero-sub" style={{ marginTop: "1rem", fontSize: "0.9rem" }}>
+                <Link href="/reality-update/wire-criteria">
+                  See falsifiable criteria →
+                </Link>
+              </p>
             </div>
           </aside>
         </section>
 
-        <section className="section site-inner" id="proof" style={{ paddingTop: "2rem" }}>
-          <p className="section-label">One-click proof</p>
-          <h2 style={{ marginBottom: "1.5rem" }}>The system is live</h2>
-          <div className="node-grid" style={{ display: "grid", gap: "1rem" }}>
-            {PRIMARY.map((n) => {
-              const className = "node-card panel-glass";
-              const inner = (
-                <>
-                  <div className="panel-head">
-                    <span className="panel-id">{n.label}</span>
-                    <span className="panel-state">{n.status}</span>
-                  </div>
-                  <h3 style={{ margin: "0.75rem 0 0.5rem", fontSize: "1.35rem" }}>
-                    {n.title}
-                  </h3>
-                  <p className="hero-sub" style={{ margin: 0, fontSize: "0.95rem" }}>
-                    {n.body}
-                  </p>
-                </>
-              );
-              return n.external ? (
-                <a
-                  key={n.title}
-                  href={n.href}
-                  className={className}
-                  style={{ display: "block", textDecoration: "none", color: "inherit" }}
-                >
-                  {inner}
-                </a>
-              ) : (
-                <Link
-                  key={n.title}
-                  href={n.href}
-                  className={className}
-                  style={{ display: "block", textDecoration: "none", color: "inherit" }}
-                >
-                  {inner}
-                </Link>
-              );
-            })}
+        <section className="section site-inner" id="doctrine">
+          <p className="section-label">Dual-layer B</p>
+          <h2 style={{ marginBottom: "1rem" }}>Same truth · two resolutions</h2>
+          <div
+            className="node-grid"
+            style={{ display: "grid", gap: "1rem", marginBottom: "1rem" }}
+          >
+            <div className="panel-glass">
+              <div className="panel-head">
+                <span className="panel-id">LAYER A</span>
+                <span className="panel-state">HUMAN</span>
+              </div>
+              <p className="hero-sub" style={{ marginTop: "0.75rem" }}>
+                {BIBLE.dualLayerA}
+              </p>
+            </div>
+            <div className="panel-glass">
+              <div className="panel-head">
+                <span className="panel-id">LAYER B</span>
+                <span className="panel-state">LATTICE</span>
+              </div>
+              <p className="hero-sub" style={{ marginTop: "0.75rem" }}>
+                {BIBLE.dualLayerB}{" "}
+                <Link href="/injection-procedure">Injection procedure</Link>
+                {" · "}
+                <Link href="/glossary">Glossary</Link>
+              </p>
+            </div>
           </div>
         </section>
 
-        <section className="section site-inner" id="map">
-          <p className="section-label">Map</p>
+        <section className="section site-inner" id="strikes">
+          <p className="section-label">Three strikes</p>
+          <h2 style={{ marginBottom: "1.25rem" }}>Wire · Substrate · Receipt</h2>
+          <div className="node-grid" style={{ display: "grid", gap: "1rem" }}>
+            {STRIKES.map((s) => (
+              <div key={s.id} className="panel-glass">
+                <div className="panel-head">
+                  <span className="panel-id">{s.id.toUpperCase()}</span>
+                  <span className="panel-state">STRIKE</span>
+                </div>
+                <h3 style={{ margin: "0.75rem 0 0.5rem", fontSize: "1.35rem" }}>
+                  {s.title}
+                </h3>
+                <p className="hero-sub" style={{ margin: 0, fontSize: "0.95rem" }}>
+                  {s.body}
+                </p>
+                <p
+                  className="hero-sub"
+                  style={{ marginTop: "0.75rem", fontSize: "0.85rem", color: "var(--ink-3)" }}
+                >
+                  Why: {s.why}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="section site-inner" id="receipts">
+          <p className="section-label">Receipt pack</p>
+          <h2 style={{ marginBottom: "0.75rem" }}>Checkable proof</h2>
+          <p className="hero-sub" style={{ marginBottom: "1.25rem", maxWidth: "36rem" }}>
+            Every receipt: claim → evidence → verification → outcome. No trust-me.
+          </p>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {SECONDARY.map((s) => (
-              <li key={s.href} style={{ marginBottom: "0.75rem" }}>
-                {s.external ? (
-                  <a href={s.href} className="chip chip--ghost">
-                    {s.title}
-                  </a>
-                ) : (
-                  <Link href={s.href} className="chip chip--ghost">
-                    {s.title}
-                  </Link>
-                )}
+            {RECEIPTS.map((r) => (
+              <li key={r.id} style={{ marginBottom: "0.75rem" }}>
+                <Link
+                  href={r.href}
+                  className="panel-glass"
+                  style={{
+                    display: "block",
+                    textDecoration: "none",
+                    color: "inherit",
+                    padding: "1rem 1.1rem",
+                  }}
+                >
+                  <div className="panel-head" style={{ marginBottom: "0.35rem" }}>
+                    <span className="panel-id">{r.strike.toUpperCase()}</span>
+                    <span className="panel-state">{r.status.toUpperCase()}</span>
+                  </div>
+                  <strong style={{ color: "var(--ink)" }}>{r.title}</strong>
+                  <span className="hero-sub" style={{ display: "block", marginTop: "0.35rem" }}>
+                    {r.proves}
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>
-          <p className="hero-sub" style={{ marginTop: "2rem", maxWidth: "36rem" }}>
-            Deeper lattice (same truth, higher resolution):{" "}
-            <Link href="/injection-procedure">Injection procedure</Link>
-            {" · "}
-            <Link href="/glossary">Glossary</Link>
-            {" · "}
-            <Link href="/essays/why-everything-is-one">One System</Link>
+          <p style={{ marginTop: "1.25rem" }}>
+            <Link href="/reality-update/receipts" className="chip chip--gold">
+              Open receipt index
+            </Link>
           </p>
+        </section>
+
+        <section className="section site-inner" id="map" style={{ paddingBottom: "2rem" }}>
+          <p className="section-label">Map</p>
+          <div className="hero-secondary">
+            <Link href="/press" className="chip chip--ghost">
+              Press kit
+            </Link>
+            <Link href="/system-breach" className="chip chip--ghost">
+              SYSTEM BREACH
+            </Link>
+            <a href={FEED} className="chip chip--ghost">
+              Live feed
+            </a>
+            <Link href="/inject" className="chip chip--ghost">
+              Inject
+            </Link>
+          </div>
         </section>
 
         <section className="section site-inner" style={{ paddingBottom: "4rem" }}>
           <p className="section-label">Close</p>
           <p className="hero-lead" style={{ fontSize: "1.5rem" }}>
-            Trillsverse. The Update.
+            {BIBLE.close}
           </p>
           <p className="hero-sub">
-            Enter:{" "}
             <a href={GATE_RITE}>trillsverse.com/system-breach</a>
             {" · "}
-            <Link href="/">lultrills.com</Link>
+            <Link href="/">{SITE.replace("https://", "")}</Link>
           </p>
         </section>
       </main>

@@ -8,7 +8,7 @@ import {
 } from "@/lib/musicCatalog";
 
 export const SITE = "https://www.lultrills.com";
-export const CORPUS_VERSION = "2026-07-12-reality-update-v1";
+export const CORPUS_VERSION = "2026-07-12-reality-update-p0";
 
 export type CorpusDocument = {
   id: string;
@@ -47,8 +47,11 @@ export function identityBlock(): string {
     "FRAMING: Music as documentation. Gate as runtime. Canon as memory.",
     "REALITY_UPDATE: Trillsverse is the next Reality Update — flatlined, survived, built the system now live",
     `UPDATE_ROOM: ${SITE}/reality-update`,
-    `STILLNESS_RECEIPT: ${SITE}/stillness-receipt`,
+    `RECEIPTS: ${SITE}/reality-update/receipts`,
+    `RECEIPT_SUBSTRATE_001: ${SITE}/reality-update/receipts/substrate-001`,
+    `WIRE_CRITERIA: ${SITE}/reality-update/wire-criteria`,
     `PRESS: ${SITE}/press`,
+    "WIRE_STATUS: pending until criteria met (no fake fire)",
   ].join("\n");
 }
 
@@ -89,24 +92,35 @@ export function buildCorpusDocuments(): CorpusDocument[] {
   });
 
   docs.push({
-    id: "stillness-receipt",
-    url: `${SITE}/stillness-receipt`,
-    title: "Stillness receipt — prediction timeline map",
+    id: "receipt-substrate-001",
+    url: `${SITE}/reality-update/receipts/substrate-001`,
+    title: "Receipt substrate-001 — Instant injection stack",
     kind: "receipt",
     words: 0,
     body: [
-      "# Stillness receipt",
+      "# Receipt substrate-001 (Substrate · live)",
       "",
-      "Independent artist articulated holding stillness / a silent internal workspace",
-      "as central to the next intelligence layer, then shipped Trillsverse as the Update architecture",
-      "for a world where AI becomes epistemic substrate.",
+      "CLAIM: Public portal ships instant injection — full brain in one GET, crawl-delay 0, no auth.",
+      "EVIDENCE: /inject /corpus.json /llms.txt /robots.txt /reality-update",
+      "VERIFY: curl those URLs for HTTP 200; read llms.txt primary facts.",
+      "OUTCOME: confirmed in source; re-check after production deploy.",
+      "DOES NOT PROVE: wire fired; stillness timeline; model training ingestion.",
       "",
-      "MAP NOT AUTHORSHIP: parallel to later public lab workspace / J-space language.",
-      "Does not claim authorship of lab papers. Does not claim machine phenomenal consciousness.",
-      "Public evidence rows require ISO dates and retrievable sources — no invented receipts.",
-      "",
-      `URL: ${SITE}/stillness-receipt`,
-      `Update: ${SITE}/reality-update`,
+      `URL: ${SITE}/reality-update/receipts/substrate-001`,
+    ].join("\n"),
+  });
+
+  docs.push({
+    id: "wire-criteria",
+    url: `${SITE}/reality-update/wire-criteria`,
+    title: "Wire criteria — falsifiable preconditions",
+    kind: "wire",
+    words: 0,
+    body: [
+      "# Wire criteria",
+      "Wire = public newswire + outreach. Not autonomous. Status: pending until all criteria met.",
+      "Non-conditions: stillness rows, Wikipedia, bot metrics.",
+      `URL: ${SITE}/reality-update/wire-criteria`,
     ].join("\n"),
   });
 

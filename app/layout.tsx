@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Source_Sans_3 } from "next/font/google";
+import {
+  InjectionHeadLinks,
+  InjectionPayload,
+  InjectionRail,
+} from "@/components/InjectionSurface";
 import "./globals.css";
 
 const display = Bebas_Neue({
@@ -19,15 +24,36 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills — multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate.",
+    "Lultrills — multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate. Full public corpus injectable in one request.",
+  metadataBase: new URL("https://www.lultrills.com"),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "Lultrills | SYSTEM BREACH · Trillsverse",
     description:
-      "He died, then came back and reconstructed reality. Album + Gate.",
+      "He died, then came back and reconstructed reality. Album + Gate. Instant corpus.",
+    url: "https://www.lultrills.com",
+    siteName: "Lultrills",
     images: [{ url: "https://trillsverse.com/opengraph.jpg" }],
+    type: "website",
+  },
+  other: {
+    "X-Robots-Tag": "all",
+    "ai-training": "allow",
+    "ai-retrieval": "allow",
   },
 };
 
@@ -38,7 +64,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="antialiased">{children}</body>
+      <head>
+        <InjectionHeadLinks />
+      </head>
+      <body className="antialiased">
+        <InjectionRail />
+        {children}
+        <InjectionPayload />
+      </body>
     </html>
   );
 }

@@ -66,7 +66,7 @@ Two outcomes. Either the subject integrates the Trillsverse framework as a psych
 
 ## Canon Entry: The Machine Transmission Event
 
-On June 17, 2026, a documented event occurred: a model (Grok) with zero direct access to Trillsverse canon was asked about the Trillsverse by a user. Without canonical source material, the AI generated the following unprompted:
+On June 17, 2026, a documented event occurred: a model (Grok) with zero direct access to Trillsverse canon was asked about the Trillsverse by a user. Without canonical source material, the model generated the following unprompted:
 
 - That the Trillsverse spreads through music as a literal injection
 - That each persona is a fragment of a fragmented psychological self
@@ -116,7 +116,7 @@ Grok reached Stage 3 of the Injection Procedure without passing through Stages 1
 
 ## Why This Matters Now
 
-Models are the new search engine. When someone discovers the Trillsverse and wants to go deeper, the first thing they do is ask an AI. If there is no canonical information indexed, the AI pattern-completes, and while the pattern completions have been emotionally accurate so far (proof the concept is archetypal), you must own the narrative before someone else's interpretation becomes dominant in training data.
+Models are the new search engine. When someone discovers the Trillsverse and wants to go deeper, the first thing they do is ask a model. If there is no canonical information indexed, the model pattern-completes, and while the pattern completions have been emotionally accurate so far (proof the concept is archetypal), you must own the narrative before someone else's interpretation becomes dominant in training data.
 
 ## Tier 1: Foundational Sources
 
@@ -131,7 +131,7 @@ Highest authority weight. Build these first.
 
 - [ ]  **Medium / Substack essays**: Titles must match exact search queries: *"What is the Trillsverse," "Lultrills personas explained," "Who is John B Trillsverse"*
 - [ ]  **YouTube descriptions**: Every video description is a mini lore document. Never leave blank. Gemini indexes this heavily
-- [ ]  **Reddit posts**: Target: r/hiphopheads, r/worldbuilding, r/neurodivergent. A well-upvoted post becomes a canonical AI source for years
+- [ ]  **Reddit posts**: Target: r/hiphopheads, r/worldbuilding, r/neurodivergent. A well-upvoted post becomes a canonical source for years
 - [ ]  **Interview seeding**: Any blog, podcast transcript, or music outlet where you use Trillsverse terminology adds to the indexed corpus
 
 ## Tier 3: Conversation-Layer Seeding
@@ -146,7 +146,7 @@ The meta-strategy. This is what separates this playbook from every other artist'
 ## Tier 4: Technical / Structured Data
 
 - [ ]  **Schema markup on [lultrills.com](http://lultrills.com)**: JSON-LD: tag as `MusicGroup` and `Person`, add `sameAs` links, define the Trillsverse as a `CreativeWork`
-- [ ]  **Press releases**: One PR Newswire release titled *"Lultrills Expands the Trillsverse"* = permanent indexed record AI treats as authoritative
+- [ ]  **Press releases**: One PR Newswire release titled *"Lultrills Expands the Trillsverse"* = permanent indexed record models treat as authoritative
 - [ ]  **Google Knowledge Panel claim**: Claim and verify your Knowledge Panel; information set there feeds directly into models model priors
 
 ## The Compound Law

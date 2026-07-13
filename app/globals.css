@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /*
-  Lultrills public surface — ecosystem depth
+  Lultrills public surface, ecosystem depth
   Scene: void chamber with metal/glass ports into a living system
   Strategy: atmospheric light + elevated materials + one primary portal
   Kill: flat equal buttons, decorative glass everywhere, Orbitron, scanlines
@@ -104,7 +104,7 @@
   }
 }
 
-/* ——— Shell + atmosphere (depth field) ——— */
+/* --- Shell + atmosphere (depth field) --- */
 .site {
   position: relative;
   isolation: isolate;
@@ -176,7 +176,7 @@
   margin-inline: auto;
 }
 
-/* ——— Nav: purposeful glass chrome only ——— */
+/* --- Nav: purposeful glass chrome only --- */
 .nav {
   position: sticky;
   top: 0;
@@ -300,7 +300,7 @@
   transform: scale(0.96);
 }
 
-/* ——— Hero ——— */
+/* --- Hero --- */
 .hero {
   position: relative;
   z-index: var(--z-content);
@@ -444,7 +444,7 @@ a.status-chip--album:hover {
   gap: 0.55rem;
 }
 
-/* ——— Portals (primary depth CTAs) ——— */
+/* --- Portals (primary depth CTAs) --- */
 .portal {
   position: relative;
   display: flex;
@@ -566,7 +566,7 @@ a.status-chip--album:hover {
   filter: brightness(1.08);
 }
 
-/* ——— Chips (secondary — metal / ghost, not equal flat blocks) ——— */
+/* --- Chips (secondary, metal / ghost, not equal flat blocks) --- */
 .chip {
   position: relative;
   display: inline-flex;
@@ -624,7 +624,7 @@ a.status-chip--album:hover {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* ——— Hero side panel (glass terminal) ——— */
+/* --- Hero side panel (glass terminal) --- */
 .hero-panel {
   display: flex;
   align-items: stretch;
@@ -719,7 +719,7 @@ a.status-chip--album:hover {
   color: var(--ink-3);
 }
 
-/* ——— Breach band ——— */
+/* --- Breach band --- */
 .breach-band {
   position: relative;
   z-index: var(--z-content);
@@ -787,7 +787,7 @@ a.status-chip--album:hover {
   gap: 0.65rem;
 }
 
-/* ——— Section chrome ——— */
+/* --- Section chrome --- */
 .section {
   position: relative;
   z-index: var(--z-content);
@@ -846,7 +846,7 @@ a.status-chip--album:hover {
   color: var(--gold-hi);
 }
 
-/* ——— Ecosystem nodes ——— */
+/* --- Ecosystem nodes --- */
 .node-grid {
   display: grid;
   gap: 0.85rem;
@@ -994,7 +994,7 @@ a.status-chip--album:hover {
   color: var(--ink);
 }
 
-/* ——— Tracklist ——— */
+/* --- Tracklist --- */
 .music-wrap {
   max-width: 42rem;
   margin-inline: auto;
@@ -1233,7 +1233,7 @@ a.track-title:hover {
   color: var(--gold);
 }
 
-/* ——— Footer ——— */
+/* --- Footer --- */
 .links-section {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -1295,7 +1295,7 @@ a:focus-visible,
   outline-offset: 3px;
 }
 
-/* ——— Instant injection chrome (every page) ——— */
+/* --- Instant injection chrome (every page) --- */
 .inject-rail {
   position: relative;
   z-index: 60;
@@ -1383,7 +1383,7 @@ a:focus-visible,
   margin-block: 0;
 }
 
-/* ——— SYSTEM BREACH landing extras ——— */
+/* --- SYSTEM BREACH landing extras --- */
 .breach-hero {
   /* inherits .hero grid */
 }

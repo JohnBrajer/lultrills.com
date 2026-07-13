@@ -26,12 +26,12 @@ They understand that humanity becomes strongest when people work together instea
 A Trillionaire also understands something deeper: 
 Anything that can be imagined can eventually be built. 
 If the mind can shape it, the world can create it. 
-Trillionaires study themselves. They learn their own mind. Once someone reaches that level of self awareness, they are automatically initiated into the Trillsverse. 
+Trillionaires study themselves. They learn their own mind. Once someone reaches that level of self awareness. They are automatically initiated into the Trillsverse. 
 WHO TF IS LULTRILLS? 
 Lultrills is a multi-genre artist from the Trillsverse. He's also the creator of the Trillsverse. 
 What started as music slowly evolved into something bigger: a universe of characters, planets, lore, and experiences built around emotion, identity, and evolution. 
 Each persona represents a fragment of the Trillverse. As the universe expands, more Fragments appear. Some small like a new innovation/discovery, while others appear to be quite large in size such as a new persona... 
-• Lultrills - est. 2016 — confidence, charisma, power, cockiness, "Really That" • John Brajer — est. 2024 - calm intelligence, "In control", "Perfect", • Ace Brajer - est. 2023 — vulnerability, heartbreak, reflection • Kasano — est. 2026 - chaos, vengeance, destruction 
+• Lultrills - est. 2016 - confidence, charisma, power, cockiness, "Really That" • John Brajer, est. 2024 - calm intelligence, "In control", "Perfect", • Ace Brajer - est. 2023, vulnerability, heartbreak, reflection • Kasano, est. 2026 - chaos, vengeance, destruction 
 They aren’t characters. 
 They’re frequencies too vast and intense to not conform into something truly... out of this world. 
 
@@ -39,7 +39,7 @@ What is the Trillsverse?
 Built around identity, evolution, and understanding. 
 The Trillsverse is a GLOBAL economic system I’m building that treats all humans as one species, while also at the same time making sure it is clear to my Trillionaires that it is in fact quite a few unequal "realities" created by division/separation, hatred, generational disparity, and of course the "Logical" preying's on the nature of humanity. But those "realities" can and should be altered. Inside the Trillsverse, people enter through music, self exploration, curiosity, community, and anything else that helps my Trillionaires understand themselves once again which in turn will naturally connect people TOGETHER. The way it should be. Anyone can "physically" enter the trillsverse gain access to tools, businesses, and relationships that help them build their own paths to well being and economic power, especially if they’ve been shut out on the outside. We pull in resources, partnerships, and attention. But the power is designed to live in the Trillsverse itself and circulate horizontally through the people, not get stuck at the top. 
 Inside the Trillsverse, every major persona controls their own Trillaxy. Each Trillaxy contains planets that reflect the energy and philosophy of that persona. 
-When someone enters the Trillsverse, they take the Initiation Quiz. Based on their answers, they are assigned to a specific Trillaxy and planet that aligns with their mind. 
+When someone enters the Trillsverse, they take the Initiation Quiz. Based on their answers. They are assigned to a specific Trillaxy and planet that aligns with their mind. 
 That becomes their domain. 
 The core Trillaxies are: 
 John B Trillaxy Planet ORDER A world built on logic, discipline, structure, and precision. This is where those who value clarity, intelligence, and controlled evolution reside. 
@@ -55,7 +55,7 @@ That includes the personas, the inhabitants, and the future civilizations that w
 The Trillsverse is still growing. 
 New planets, new systems, and new lifeforms will continue to appear as the universe evolves. 
 
-Now that you know who I am — Stream on Spotify 
+Now that you know who I am: Stream on Spotify 
 
 Stream on Spotify 
 
@@ -75,7 +75,7 @@ Stream the latest tracks, browse merch, watch videos, and stay tuned for updates
 
 Is my data protected? 
 
-Absolutely—your privacy is respected and safeguarded at all times. 
+Absolutely-your privacy is respected and safeguarded at all times. 
 
 Can I support Lultrills? 
 

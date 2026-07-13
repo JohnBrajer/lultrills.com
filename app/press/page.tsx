@@ -7,7 +7,7 @@ const GATE_RITE = "https://trillsverse.com/system-breach";
 export const metadata: Metadata = {
   title: "Press Kit | Lultrills · Trillsverse Reality Update",
   description:
-    "Press kit for Lultrills and Trillsverse — The Reality Update. Facts, links, Layer A lede. System live.",
+    "Press kit for Lultrills and Trillsverse: The Reality Update. Facts, links, Layer A lede. System live.",
   alternates: { canonical: `${SITE}/press` },
   robots: { index: true, follow: true },
   openGraph: {
@@ -67,7 +67,7 @@ export default function PressPage() {
             Press kit
           </h1>
           <p className="hero-sub" style={{ marginBottom: "2rem" }}>
-            Layer A only below. Same truth as the doctrine — lower resolution for
+            Layer A only below. Same truth as the doctrine, lower resolution for
             desks. Full story room:{" "}
             <Link href="/reality-update">/reality-update</Link>.
           </p>
@@ -80,7 +80,7 @@ export default function PressPage() {
             <p className="panel-quote" style={{ marginTop: "1rem" }}>
               Independent artist Lultrills flatlined, survived a place most never
               come back from, and upon readjustment to this format built{" "}
-              <strong>Trillsverse — The Reality Update</strong>: a live system
+              <strong>Trillsverse: The Reality Update</strong>: a live system
               spanning music (SYSTEM BREACH), a crawlable public portal, and an
               interactive Gate. The system is live.
             </p>

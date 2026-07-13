@@ -50,7 +50,7 @@ const NODES = [
     id: "doctrine",
     layer: "Doctrine",
     title: "One System",
-    body: "John B — separation is a perceptual artifact. Roman concrete. Antifragile minds.",
+    body: "John B, separation is a perceptual artifact. Roman concrete. Antifragile minds.",
     href: ONE_SYSTEM,
     external: false,
     status: "CANON",
@@ -61,7 +61,7 @@ const NODES = [
     id: "archive",
     layer: "Library",
     title: "Canon archive",
-    body: "Mapping, constitutional update, FAQ, glossary — full HTML for humans and scrapers.",
+    body: "Mapping, constitutional update, FAQ, glossary, full HTML for humans and machines.",
     href: "/archive",
     external: false,
     status: "INDEX",
@@ -129,7 +129,7 @@ export default function LultrillsHome() {
             </p>
             <p className="hero-sub">
               Music as documentation. Gate as runtime. Canon as memory. Pick a
-              node — everything else is the map.
+              node, everything else is the map.
             </p>
 
             <div className="hero-actions">

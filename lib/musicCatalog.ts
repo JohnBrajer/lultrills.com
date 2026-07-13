@@ -1,5 +1,5 @@
 /**
- * Lultrills released catalog — platform deep links for public surface.
+ * Lultrills released catalog, platform deep links for public surface.
  * Spotify + Apple Music IDs verified 2026-07-11. YouTube uses search deep-links
  * when a stable official video ID is not published.
  */
@@ -34,7 +34,7 @@ const SP_ALBUM = (id: string) => `https://open.spotify.com/album/${id}`;
 const SP_SEARCH = (q: string) =>
   `https://open.spotify.com/search/${encodeURIComponent(`Lultrills ${q}`)}`;
 
-/** SYSTEM BREACH — full album, track order from Spotify / Apple Music */
+/** SYSTEM BREACH, full album, track order from Spotify / Apple Music */
 export const SYSTEM_BREACH_ALBUM = {
   title: "SYSTEM BREACH",
   meta: "Album · July 11, 2026 · 12 tracks",

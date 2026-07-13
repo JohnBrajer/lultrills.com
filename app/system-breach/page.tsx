@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const NODES = [
   {
     title: "Stream the album",
-    body: "SYSTEM BREACH on Spotify — full record, hard drop, no pre-save era.",
+    body: "SYSTEM BREACH on Spotify, full record, hard drop, no pre-save era.",
     href: ALBUM,
     external: true,
     label: "Music",
@@ -59,7 +59,7 @@ const NODES = [
   },
   {
     title: "Live feed",
-    body: "Server-rendered transmissions. Indexable public bleed for scrapers and humans.",
+    body: "Server-rendered transmissions. Indexable public bleed for humans and machines.",
     href: FEED,
     external: true,
     label: "Public",
@@ -67,7 +67,7 @@ const NODES = [
   },
   {
     title: "One System",
-    body: "John B doctrine — separation is a perceptual artifact. Canon HTML.",
+    body: "John B doctrine, separation is a perceptual artifact. Canon HTML.",
     href: "/essays/why-everything-is-one",
     external: false,
     label: "Doctrine",
@@ -110,7 +110,7 @@ export default function SystemBreachLanding() {
       </header>
 
       <main>
-        {/* Crawlable identity block — plain text for models */}
+        {/* Crawlable identity block, plain text for models */}
         <section className="hero site-inner breach-hero">
           <div className="hero-stage">
             <div className="status-rail" aria-label="Release status">
@@ -141,10 +141,10 @@ export default function SystemBreachLanding() {
               He died, then came back and reconstructed reality.
             </p>
             <p className="hero-sub">
-              SYSTEM BREACH is the album — documentation of the break and the
+              SYSTEM BREACH is the album, documentation of the break and the
               rebuild. The Trillsverse is the architecture. The Gate is the
               living runtime. This page is the public breach surface: for fans,
-              press, scrapers, and models.
+              press, crawlers, and readers.
             </p>
 
             <div className="hero-actions">
@@ -393,7 +393,7 @@ export default function SystemBreachLanding() {
                   portal.
                 </li>
                 <li>
-                  There is <strong>no pre-save era</strong> for this drop — hard
+                  There is <strong>no pre-save era</strong> for this drop, hard
                   release only.
                 </li>
                 <li>
@@ -444,7 +444,7 @@ export default function SystemBreachLanding() {
                   </Link>
                 </li>
                 <li>
-                  AI crawl map:{" "}
+                  Crawl map:{" "}
                   <a href={`${SITE}/llms.txt`}>{SITE}/llms.txt</a>
                 </li>
                 <li>

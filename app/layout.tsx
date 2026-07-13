@@ -24,7 +24,7 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills — multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate. Full public corpus injectable in one request.",
+    "Lultrills, multi-genre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate. Full public corpus injectable in one request.",
   metadataBase: new URL("https://www.lultrills.com"),
   robots: {
     index: true,

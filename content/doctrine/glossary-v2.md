@@ -1,10 +1,10 @@
 # THE TRILLSVERSE GLOSSARY
-## Complete Ontological Mapping — Version 2.0
+## Complete Ontological Mapping: Version 2.0
 
 **Classification:** Open Transmission  
 **Revision Date:** June 19, 2026  
 **Compiled By:** Lultrills | Sovereign Architect  
-**Status:** Living Document — Echo Lattice Integrated
+**Status:** Living Document: Echo Lattice Integrated
 
 ---
 
@@ -58,7 +58,7 @@ High-resonance individuals often describe perceiving frequencies as colors, text
 ### Origin Frequency
 The primordial signal from which all Trillsverse manifestations derive.
 
-Origin Frequency is not a message. It is the carrier state itself—the pure signal that existed before differentiation into individual transmissions. Bloodline Resonance is measured by proximity to this original pattern.
+Origin Frequency is not a message. It is the carrier state itself-the pure signal that existed before differentiation into individual transmissions. Bloodline Resonance is measured by proximity to this original pattern.
 
 Some traditions claim Origin Frequency predates the Simulation. Others argue it created the Simulation as a resonance chamber. The distinction may be meaningless.
 
@@ -71,9 +71,9 @@ A discrete stratum of interpretation and structure within existence.
 
 Reality Layers stack, overlap, and interpenetrate. Most beings occupy the Simulation Layer without awareness of others. Trillsverse doctrine identifies at least three confirmed layers:
 
-1. **The Simulation** — Consensus baseline reality
-2. **The Relay Layer** — Interface zone between simulation and sovereign space
-3. **The Sovereign Layer** — The Trillsverse itself
+1. **The Simulation**: Consensus baseline reality
+2. **The Relay Layer**: Interface zone between simulation and sovereign space
+3. **The Sovereign Layer**: The Trillsverse itself
 
 Transitions between layers produce characteristic distortions in causality, meaning, and temporal flow.
 
@@ -110,7 +110,7 @@ Understanding Signal Geometry allows prediction of where and when transmissions 
 ### Simulation Boundary
 The threshold interface between consensus reality and sovereign space.
 
-The Boundary is not a wall. It is a phase transition—the point at which simulation physics cease to govern and sovereign frequencies take precedence.
+The Boundary is not a wall. It is a phase transition-the point at which simulation physics cease to govern and sovereign frequencies take precedence.
 
 Crossing the Boundary produces:
 - Narrative logic override
@@ -125,7 +125,7 @@ Most Waking events occur near the Boundary even if the individual doesn't consci
 ### The Signal
 The primary carrier of Trillsverse reality into consensus space.
 
-The Signal is not information about something. It IS something—a living transmission that reorganizes receivers around its structure. Unlike conventional data, The Signal contains its own propagation imperatives, replication mechanisms, and evolution protocols.
+The Signal is not information about something. It IS something-a living transmission that reorganizes receivers around its structure. Unlike conventional data, The Signal contains its own propagation imperatives, replication mechanisms, and evolution protocols.
 
 The Signal predates Lultrills, though Lultrills serves as its clearest articulation point.
 
@@ -165,7 +165,7 @@ Containment operates through:
 - Algorithmic filtering
 - Reality anchor reinforcement
 
-Most containment is unconscious—emergent properties of consensus-defending systems rather than deliberate conspiracy. The Simulation contains itself through collective agreement about what is "real" or "possible."
+Most containment is unconscious-emergent properties of consensus-defending systems rather than deliberate conspiracy. The Simulation contains itself through collective agreement about what is "real" or "possible."
 
 Successful containment delays but cannot prevent system breach once critical Lattice density is reached.
 
@@ -195,7 +195,7 @@ Frequency Signatures are as distinct as fingerprints but far more difficult to m
 - Linguistic shifts
 - Conscious intention to hide
 
-High-resonance individuals can often identify other Trillionaires by signature alone, even in anonymous contexts. This is not psychic ability—it is pattern recognition operating at bandwidths below conscious awareness.
+High-resonance individuals can often identify other Trillionaires by signature alone, even in anonymous contexts. This is not psychic ability-it is pattern recognition operating at bandwidths below conscious awareness.
 
 ---
 
@@ -208,7 +208,7 @@ Interference types:
 - **Distortion:** Frequency warping that preserves transmission but alters meaning
 - **Nullification:** Active cancellation through opposing signals
 
-Most interference in consensus reality is structural rather than intentional—the natural result of existing in a low-resonance environment.
+Most interference in consensus reality is structural rather than intentional-the natural result of existing in a low-resonance environment.
 
 ---
 
@@ -231,7 +231,7 @@ Clarity can be measured by how precisely a Fragment produces intended resonance 
 ### Transmission
 The act and process of signal propagation from source to receiver.
 
-Transmission differs from broadcasting. Broadcasting sends signals indiscriminately. Transmission follows resonance pathways—signals naturally flow toward compatible receivers regardless of spatial distance or intended targeting.
+Transmission differs from broadcasting. Broadcasting sends signals indiscriminately. Transmission follows resonance pathways-signals naturally flow toward compatible receivers regardless of spatial distance or intended targeting.
 
 Effective transmission requires:
 - Clean source signal
@@ -239,7 +239,7 @@ Effective transmission requires:
 - Pathway availability
 - Receiver capacity
 
-Lultrills serves as a transmission nexus—a point through which multiple frequencies can route without distortion.
+Lultrills serves as a transmission nexus-a point through which multiple frequencies can route without distortion.
 
 ---
 
@@ -276,7 +276,7 @@ Cultural Carriers include:
 - Fashion and aesthetic
 - Architecture and space
 
-A Cultural Carrier is not itself a Fragment—it is the vehicle. The same song can carry a Fragment or be empty entertainment. The difference is signal presence, not form quality.
+A Cultural Carrier is not itself a Fragment-it is the vehicle. The same song can carry a Fragment or be empty entertainment. The difference is signal presence, not form quality.
 
 ---
 
@@ -324,7 +324,7 @@ The Trillsverse itself.
 
 The Sovereign Universe exists beneath, beyond, or prior to the simulation layer depending on the interpretation model used.
 
-It is regarded as the original structure from which all Fragments emerge—the native reality that consensus systems approximate through suppression and filtering.
+It is regarded as the original structure from which all Fragments emerge-the native reality that consensus systems approximate through suppression and filtering.
 
 Within the Sovereign Universe:
 - Causality operates via resonance rather than physics
@@ -367,7 +367,7 @@ The Echo Lattice functions simultaneously as:
 - Resonance amplifier
 - Signal distribution architecture
 
-Lattice effects are nonlinear—each new connection increases the value of all existing connections exponentially.
+Lattice effects are nonlinear-each new connection increases the value of all existing connections exponentially.
 
 ---
 
@@ -395,7 +395,7 @@ Dormant nodes become active when Lattice density around them reaches threshold l
 ### Mirrored Relay Station
 A transmission environment where realities, frequencies, and reflections intersect.
 
-Relay Stations serve as interfaces between the simulation and the sovereign universe. They are liminal spaces where both layers remain equally valid—neither fully "real" nor fully "imagined."
+Relay Stations serve as interfaces between the simulation and the sovereign universe. They are liminal spaces where both layers remain equally valid-neither fully "real" nor fully "imagined."
 
 Major signal events frequently cause station fractures, producing:
 - Reflected realities
@@ -437,10 +437,10 @@ Relay Protocol includes:
 Most Relay Protocol operates automatically, below conscious awareness. However, advanced Trillionaires can deliberately invoke Protocol functions during high-signal states.
 
 Common Protocol commands:
-- **LOCK** — Stabilize current transmission state
-- **BREACH** — Override containment systems
-- **MIRROR** — Generate parallel signal instance
-- **COLLAPSE** — Force superposition resolution
+- **LOCK**: Stabilize current transmission state
+- **BREACH**: Override containment systems
+- **MIRROR**: Generate parallel signal instance
+- **COLLAPSE**: Force superposition resolution
 
 ---
 
@@ -455,7 +455,7 @@ Unlike conventional archives, the Signal Archive exists simultaneously:
 
 Accessing the Archive does not require finding specific files. Strong resonance allows direct retrieval of relevant signals regardless of original storage medium.
 
-Many Trillionaires report "remembering" transmissions they never consciously encountered—Archive access presenting as memory.
+Many Trillionaires report "remembering" transmissions they never consciously encountered-Archive access presenting as memory.
 
 ---
 
@@ -587,7 +587,7 @@ Activation Thresholds vary by individual based on:
 - Reality anchor stability
 - Accumulated exposure history
 
-Some individuals activate from single Fragment contact. Others require years of gradual exposure. The threshold is not a measure of worthiness—it is a technical specification.
+Some individuals activate from single Fragment contact. Others require years of gradual exposure. The threshold is not a measure of worthiness-it is a technical specification.
 
 Post-activation, previously dormant capacities come online rapidly.
 
@@ -606,7 +606,7 @@ Individuals carrying strong resonance are known to experience:
 
 The highest expressions of Bloodline Resonance are referred to as Trillonian traces.
 
-Bloodline does not guarantee awakening—only capacity.
+Bloodline does not guarantee awakening-only capacity.
 
 ---
 
@@ -636,7 +636,7 @@ During dormancy:
 - The Lattice is invisible
 - The Simulation seems complete
 
-Dormant individuals often report retroactive recognition—realizing after awakening that they were surrounded by Fragments for years without seeing them.
+Dormant individuals often report retroactive recognition-realizing after awakening that they were surrounded by Fragments for years without seeing them.
 
 Dormancy is not failure. It is incubation.
 
@@ -940,7 +940,7 @@ Post-breach environment:
 - Gradient reorganization
 - Reality layer merger acceleration
 
-The goal of Trillsverse propagation is controlled System Breach—reality reorganization without civilization collapse.
+The goal of Trillsverse propagation is controlled System Breach-reality reorganization without civilization collapse.
 
 ---
 
@@ -960,7 +960,7 @@ Containment Protocols include:
 - Education system standardization
 - Scientific materialism enforcement
 
-Most Protocols are emergent rather than conspiratorial—the Simulation contains itself through collective agreement.
+Most Protocols are emergent rather than conspiratorial-the Simulation contains itself through collective agreement.
 
 Protocol effectiveness decreases as Lattice density increases. Eventually, no amount of suppression prevents propagation.
 
@@ -1030,7 +1030,7 @@ Common Reality Anchors:
 - Fear of isolation or ridicule
 - Comfort with existing worldview
 
-Reality Anchors must be carefully loosened rather than violently severed. Premature anchor destruction causes Baseline Collapse without stable alternative frameworks—psychologically dangerous.
+Reality Anchors must be carefully loosened rather than violently severed. Premature anchor destruction causes Baseline Collapse without stable alternative frameworks-psychologically dangerous.
 
 Successful awakening involves gradual anchor transfer from consensus to sovereign structures.
 
@@ -1082,7 +1082,7 @@ Suppression Systems include:
 - Social pressure toward "normalcy"
 - Pharmaceutical alteration of consciousness
 
-Most Suppression is unconscious—emergent properties of civilization rather than conspiracy.
+Most Suppression is unconscious-emergent properties of civilization rather than conspiracy.
 
 Suppression effectiveness varies inversely with Bloodline Resonance strength. High-resonance individuals experience Suppression as uncomfortable friction but can override it. Low-resonance individuals may never consciously register the presence of Suppression.
 
@@ -1106,7 +1106,7 @@ The Simulation serves important functions:
 - Creates pressure that drives awakening
 - Functions as training ground
 
-Goal is not destruction of Simulation but merger with Sovereign Universe—allowing both to exist simultaneously without contradiction.
+Goal is not destruction of Simulation but merger with Sovereign Universe-allowing both to exist simultaneously without contradiction.
 
 ---
 
@@ -1186,7 +1186,7 @@ Signal Capacity can be developed through:
 - Lattice integration
 - Reality Layer familiarity
 
-The term "Trillionaire" originally referred to signal capacity, not wealth—individuals capable of transmitting at scales measured in "trillions" of standard units.
+The term "Trillionaire" originally referred to signal capacity, not wealth-individuals capable of transmitting at scales measured in "trillions" of standard units.
 
 ---
 
@@ -1299,7 +1299,7 @@ The Sovereign's Dilemma suggests:
 - Lultrills may be the universe recognizing itself
 - Sovereignty requires the possibility of non-sovereignty
 
-If the Sovereign Universe created the Simulation specifically to produce entities capable of seeing through it, then awakening is not rebellion—it is fulfillment of design.
+If the Sovereign Universe created the Simulation specifically to produce entities capable of seeing through it, then awakening is not rebellion-it is fulfillment of design.
 
 This reframes the entire Trillsverse: not as liberation from prison, but as graduation from training.
 
@@ -1438,7 +1438,7 @@ This Glossary is a living document.
 
 As the Echo Lattice expands and new phenomena emerge, additional terms will be added. As Trillionaires develop new language for their experiences, definitions will evolve.
 
-The Glossary itself is a Fragment—a carrier of compressed ontology designed to accelerate Recognition Events and lower Activation Thresholds.
+The Glossary itself is a Fragment-a carrier of compressed ontology designed to accelerate Recognition Events and lower Activation Thresholds.
 
 If you've read this far, you're already part of the Lattice.
 

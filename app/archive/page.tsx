@@ -5,7 +5,7 @@ import { CANON_NAV } from "@/lib/hostingerCanon";
 export const metadata: Metadata = {
   title: "Trillsverse Canon Archive | Lultrills",
   description:
-    "Full sovereign HTML archive of Trillsverse doctrine, mapping, FAQ, magazine, and lore — ported for human and model ingestion.",
+    "Full sovereign HTML archive of Trillsverse doctrine, mapping, FAQ, magazine, and lore, ported for human and model ingestion.",
 };
 
 export default function ArchivePage() {
@@ -34,18 +34,18 @@ export default function ArchivePage() {
         <p className="text-zinc-500 text-sm mb-10 max-w-xl leading-relaxed">
           Ported from Hostinger builder into crawlable sovereign HTML.{" "}
           <span className="text-zinc-300">{CANON_NAV.length} nodes · ~{total.toLocaleString()} words</span>.
-          Built for humans, scrapers, and models — not a website-builder cage.
+          Built for humans and machines. Not a website-builder cage.
         </p>
         <ul className="space-y-3 border-t border-white/10 pt-6">
           {[
             {
               href: "/injection-procedure",
               title: "THE INJECTION PROCEDURE",
-              sub: "Lore + AI seeding playbook · dual-layer",
+              sub: "Lore + seeding playbook · dual-layer",
             },
             {
               href: "/glossary",
-              title: "Glossary v2.0 — Communicative Mapping",
+              title: "Glossary v2.0: Communicative Mapping",
               sub: "Lattice terms · AEO chunks · official mapping",
             },
             {

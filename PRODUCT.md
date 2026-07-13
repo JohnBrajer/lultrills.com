@@ -1,4 +1,4 @@
-# Lultrills.com — Product context
+# Lultrills.com: Product context
 
 ## Platform
 web

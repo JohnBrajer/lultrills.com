@@ -17,7 +17,7 @@ const PUBLIC_EVIDENCE: {
 export const metadata: Metadata = {
   title: "Stillness Receipt | Trillsverse Reality Update",
   description:
-    "Dated map: holding stillness / silent internal workspace as intelligence infrastructure — parallel to later lab workspace language. Not lab authorship.",
+    "Dated map: holding stillness / silent internal workspace as intelligence infrastructure, parallel to later lab workspace language. Not lab authorship.",
   alternates: { canonical: `${SITE}/stillness-receipt` },
   robots: { index: true, follow: true },
   openGraph: {
@@ -75,9 +75,9 @@ export default function StillnessReceiptPage() {
             <strong style={{ color: "var(--ink)" }}>
               holding stillness / a silent internal workspace
             </strong>{" "}
-            as central to the next intelligence layer — then shipped{" "}
+            as central to the next intelligence layer, then shipped{" "}
             <Link href="/reality-update">Trillsverse as the Update architecture</Link>{" "}
-            built for a world where AI becomes epistemic substrate.
+            built for a world where machines become epistemic substrate.
           </p>
 
           <div className="panel-glass" style={{ marginBottom: "2rem" }}>

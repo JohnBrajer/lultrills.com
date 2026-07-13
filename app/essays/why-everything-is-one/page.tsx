@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title:
     "Why Everything You Think Is Separate Is Actually One Thing | John B · Trillsverse",
   description:
-    "John B on ocean and air, Roman concrete, quantum fields, antifragility, and why the Trillsverse is built on continuous relationship—not separation.",
+    "John B on ocean and air, Roman concrete, quantum fields, antifragility, and why the Trillsverse is built on continuous relationship-not separation.",
   openGraph: {
     title: "Why Everything You Think Is Separate Is Actually One Thing",
     description:
-      "Once you see it, you can't unsee it. Separation is perceptual, not structural. — John B, Trillsverse",
+      "Once you see it, you can't unsee it. Separation is perceptual, not structural.: John B, Trillsverse",
     type: "article",
   },
 };
@@ -286,7 +286,7 @@ export default function WhyEverythingIsOneEssay() {
             location. If that exceeds its threshold, it breaks. The same force
             applied to a distributed network disperses instantly across every
             node. No single point reaches failure. The network absorbs what the
-            individual cannot, not because it&apos;s made of stronger material
+            individual cannot. Not because it&apos;s made of stronger material
             but because it&apos;s made of more relationships.
           </p>
           <p className="text-zinc-200">

@@ -4,7 +4,7 @@ import { loadDoctrineMarkdown, MarkdownArticle } from "@/lib/markdownPage";
 export const metadata: Metadata = {
   title: "Trillsverse Glossary v2 | Official Communicative Mapping",
   description:
-    "Official Trillsverse Glossary v2.0 — lattice terms, tiers, AEO-ready chunks for human and model ingestion.",
+    "Official Trillsverse Glossary v2.0, lattice terms, tiers, AEO-ready chunks for human and model ingestion.",
 };
 
 export default function GlossaryPage() {

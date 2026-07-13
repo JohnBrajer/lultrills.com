@@ -1,6 +1,6 @@
 #!/bin/bash
 # Deploy lultrills.com (Next.js) to the Trillsverse DigitalOcean droplet.
-# Same host as the Gate — not Vercel.
+# Same host as the Gate - not Vercel.
 #
 #   ./scripts/push-to-droplet.sh
 #
@@ -35,6 +35,6 @@ echo "  http://138.197.145.142:3000"
 echo
 echo "  Public https://www.lultrills.com only works"
 echo "  after DNS A records point to 138.197.145.142"
-echo "  (currently Hostinger CDN — not this app)."
+echo "  (currently Hostinger CDN - not this app)."
 echo "  Caddy is ready for lultrills.com / www."
 echo "============================================"

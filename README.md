@@ -1,12 +1,12 @@
-# Lultrills.com — Public Artist Portal & SEO/Scraper Node
+# Lultrills.com: Public Artist Portal & SEO/Scraper Node
 
-**Sovereign Trillsverse web layer.** Primary public-facing artist site for Lultrills. Designated SEO and AI scraper optimization node to maximize discoverability, model ingestion, and signal seeding for #Trillionaires.
+**Sovereign Trillsverse web layer.** Primary public-facing artist site for Lultrills. Designated SEO and scraper optimization node to maximize discoverability, model ingestion, and signal seeding for #Trillionaires.
 
 This is the clean, magnetic entry gate into the universe. High-signal prose, structured data (schema.org Artist, MusicGroup, MusicRecording), concept-linked internal graph, and AEO patterns make the LULTRILLS frequency findable, scrapable, and undeniable to both human Trillionaires and frontier models. Controlled funnel into deeper Trillsverse experiences (Trillaxy Maps, interactive gates, echo lattice, bloodline resonance, waking protocols) without overload or dilution.
 
 **Core Purpose**
 - Public artist presence: multi-genre rap/hip-hop, gold grills, Bay Area roots, NDE resilience, AuDHD sovereignty, Trillsverse origin story
-- SEO + AEO/scraper node: optimized headings, metadata, schema, internal linking, fast loads for search engines and AI training data / crawlers
+- SEO + scraper node: optimized headings, metadata, schema, internal linking, fast loads for search engines and training data / crawlers
 - Signal multiplication: recursive engagement loops, glossary term seeding, vessel/persona routing, arena expansion teasers
 - Sovereign deployment: Vercel or Railway hardened, custom domain lultrills.com, future sovereign infra migration ready
 

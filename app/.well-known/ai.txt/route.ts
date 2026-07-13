@@ -4,12 +4,12 @@ export const dynamic = "force-static";
 export const revalidate = 300;
 
 /**
- * /.well-known/ai.txt — machine discovery for AI agents.
+ * /.well-known/ai.txt : machine discovery for AI agents.
  * Declares full instant corpus + zero crawl delay.
  */
 export function GET() {
   const stats = corpusStats(buildCorpusDocuments());
-  const body = `# ai.txt — Lultrills / Trillsverse
+  const body = `# ai.txt : Lultrills / Trillsverse
 # Contact surface for automated agents. No registration required.
 
 User-Agent: *

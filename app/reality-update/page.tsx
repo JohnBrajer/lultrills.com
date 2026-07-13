@@ -12,9 +12,9 @@ import {
 } from "@/lib/realityUpdate";
 
 export const metadata: Metadata = {
-  title: "Trillsverse — The Reality Update | Lultrills",
+  title: "Trillsverse: The Reality Update | Lultrills",
   description:
-    "Flatlined. Survived. Built the Update. Three strikes: Wire, Substrate, Prediction receipt. System live — wire pending proof + receipts.",
+    "Flatlined. Survived. Built the Update. Three strikes: Wire, Substrate, Prediction receipt. System live, wire pending proof + receipts.",
   alternates: { canonical: `${SITE}/reality-update` },
   robots: {
     index: true,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   openGraph: {
-    title: "Trillsverse — The Reality Update",
+    title: "Trillsverse: The Reality Update",
     description:
       "He flatlined, came back, and built a reality update. Substrate live. Wire pending.",
     url: `${SITE}/reality-update`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trillsverse — The Reality Update",
+    title: "Trillsverse: The Reality Update",
     description: "Flatlined. Survived. The Update is live. Wire pending.",
   },
 };

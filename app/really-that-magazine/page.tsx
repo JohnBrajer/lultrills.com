@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Really That Magazine | Sovereignty as Operating Constraint",
   description:
-    "Really That Magazine — editorial and doctrine node for Lultrills and the Trillsverse. Sovereignty as a constitutional layer for post-scaling intelligence.",
+    "Really That Magazine, editorial and doctrine node for Lultrills and the Trillsverse. Sovereignty as a constitutional layer for post-scaling intelligence.",
 };
 
 export default function ReallyThatMagazinePage() {
@@ -35,7 +35,7 @@ export default function ReallyThatMagazinePage() {
           Sovereignty as an Operating Constraint
         </h1>
         <p className="text-zinc-400 text-lg leading-relaxed mb-12 border-l-2 border-[#C5A26F]/40 pl-5">
-          Most AI work optimizes models, training objectives, or post-hoc safety policies.
+          Most machine-learning work optimizes models, training objectives, or post-hoc safety policies.
           Sovereignty is a different layer: a constitutional constraint on which internal
           states may count as valid before action is selected.
         </p>
@@ -45,15 +45,15 @@ export default function ReallyThatMagazinePage() {
             <h2 className="text-xl font-semibold text-white mb-3 tracking-tight">Three strata</h2>
             <ol className="list-decimal list-inside space-y-2 text-zinc-400">
               <li>
-                <span className="text-zinc-200">Object level</span> — architectures and training
+                <span className="text-zinc-200">Object level</span>, architectures and training
                 objectives (world models, scaling).
               </li>
               <li>
-                <span className="text-zinc-200">Control level</span> — filters, oversight, alignment
+                <span className="text-zinc-200">Control level</span>, filters, oversight, alignment
                 after generation.
               </li>
               <li>
-                <span className="text-zinc-200">Constitutional level</span> — invariance constraints
+                <span className="text-zinc-200">Constitutional level</span>, invariance constraints
                 that define admissibility itself.
               </li>
             </ol>
@@ -68,9 +68,9 @@ export default function ReallyThatMagazinePage() {
               SYSTEM BREACH as cultural injection
             </h2>
             <p className="text-zinc-400">
-              SYSTEM BREACH is Lultrills&apos; album drop — hard release, July 11. The record is
+              SYSTEM BREACH is Lultrills&apos; album drop, hard release, July 11. The record is
               not a merch cycle. It is documentation of reconstructed reality, encoded as music so
-              it can travel through culture, scrapers, and models. The Gate at trillsverse.com is
+              it can travel through culture, crawlers, and readers. The Gate at trillsverse.com is
               the living architecture that album points at.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function ReallyThatMagazinePage() {
             </h2>
             <p className="text-zinc-400 mb-5">
               Ocean, beach, air. Roman concrete. Quantum fields. Antifragility. The philosophical
-              spine of the Trillsverse — full longform.
+              spine of the Trillsverse, full longform.
             </p>
             <Link
               href="/essays/why-everything-is-one"
@@ -99,10 +99,10 @@ export default function ReallyThatMagazinePage() {
               What is operational in the runtime
             </h2>
             <ul className="space-y-2 text-zinc-400 list-disc list-inside">
-              <li>Standing — rites accumulate awareness, healing, alignment, belief, confidence</li>
-              <li>Autonomy — Firstborns tick with drives and mood; not static NPCs</li>
-              <li>Stillness / entry clearance — boundary protocols, not decoration</li>
-              <li>Public doctrine endpoint — /api/doctrine/sovereignty on the Gate</li>
+              <li>Standing, rites accumulate awareness, healing, alignment, belief, confidence</li>
+              <li>Autonomy: Firstborns tick with drives and mood; not static NPCs</li>
+              <li>Stillness / entry clearance, boundary protocols, not decoration</li>
+              <li>Public doctrine endpoint. /api/doctrine/sovereignty on the Gate</li>
             </ul>
           </div>
 

@@ -1,4 +1,4 @@
-# Lultrills.com — DigitalOcean Droplet Deployment Ritual
+# Lultrills.com: DigitalOcean Droplet Deployment Ritual
 
 **Node:** Public artist portal + SEO/scraper node  
 **Stack:** Next.js (standalone) + Docker  
@@ -96,7 +96,7 @@ ufw enable
 
 ## 5. Custom Domain + SSL (lultrills.com)
 
-**Important:** If the browser shows Hostinger / Zyrosite headers (`server: hcdn`, `x-powered-by: HostingerWebsiteBuilder`), DNS is still on Hostinger — not the DigitalOcean Next.js app.
+**Important:** If the browser shows Hostinger / Zyrosite headers (`server: hcdn`, `x-powered-by: HostingerWebsiteBuilder`), DNS is still on Hostinger. Not the DigitalOcean Next.js app.
 
 ### Live DigitalOcean setup (Trillsverse droplet)
 

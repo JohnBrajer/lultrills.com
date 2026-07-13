@@ -6,7 +6,7 @@ Trillsverse Initiation Phase I
 
 Every release. Every era. All in one place. 
 
-Stream The Latest Single From Lultrills — " Kasano " Out Now On All Platforms 
+Stream The Latest Single From Lultrills. " Kasano " Out Now On All Platforms 
 
 Follow Lultrills On Spotify 
 

@@ -1,4 +1,4 @@
-/** Reality Update P0 — shared copy + receipt index (from message bible). */
+/** Reality Update P0, shared copy + receipt index (from message bible). */
 
 export const SITE = "https://www.lultrills.com";
 export const GATE = "https://trillsverse.com";
@@ -8,12 +8,12 @@ export const FEED = "https://trillsverse.com/feed";
 export const BIBLE = {
   headline: "THE REALITY UPDATE",
   lead: "Flatlined. Survived a place most never come back from.",
-  sub: "Upon readjustment to this format, he began to see the world for what it truly is — and what it definitely is not. Independent artist. No label consensus machine.",
+  sub: "Upon readjustment to this format, he began to see the world for what it truly is, and what it definitely is not. Independent artist. No label consensus machine.",
   close: "Trillsverse. The Update.",
   dualLayerA:
-    "Near-death / flatline is on-record. He survived, returned, and built a live system — music as documentation, Gate as runtime, canon as memory.",
+    "Near-death / flatline is on-record. He survived, returned, and built a live system, music as documentation, Gate as runtime, canon as memory.",
   dualLayerB:
-    "Same event at higher resolution: Hardware Breach (Node 04 reboot), reinstall, then Intelligence Injection into the layer becoming how society decides what’s true. Same truth — diggers go deeper.",
+    "Same event at higher resolution: Hardware Breach (Node 04 reboot), reinstall, then Intelligence Injection into the layer becoming how society decides what’s true. Same truth, diggers go deeper.",
   wireStatus: "pending" as const,
   wireLine:
     "Wire pending live proof + validated receipts. No fake progress. No autonomous blast yet.",
@@ -40,7 +40,7 @@ export const STRIKES: {
   {
     id: "wire",
     title: "Wire",
-    body: "Permanent, citable records so humans and machines treat the Update as a real event with URLs — not a rumor.",
+    body: "Permanent, citable records so humans and machines treat the Update as a real event with URLs. Not a rumor.",
     why: "Consensus today is often paid. Wire is the honest public record when criteria are met.",
   },
   {
@@ -52,7 +52,7 @@ export const STRIKES: {
   {
     id: "prediction",
     title: "Prediction receipt",
-    body: "Checkable claims: claim → evidence → verification → outcome. Optional stillness timeline later — not a P0 gate.",
+    body: "Checkable claims: claim → evidence → verification → outcome. Optional stillness timeline later. Not a P0 gate.",
     why: "No trust-me. External observers can re-run the checks.",
   },
 ];
@@ -64,7 +64,7 @@ export const RECEIPTS: Receipt[] = [
     strike: "substrate",
     status: "live",
     proves:
-      "Full public brain in one GET — inject, corpus, llms.txt, crawl-delay 0.",
+      "Full public brain in one GET, inject, corpus, llms.txt, crawl-delay 0.",
     href: "/reality-update/receipts/substrate-001",
   },
   {
@@ -73,7 +73,7 @@ export const RECEIPTS: Receipt[] = [
     strike: "prediction",
     status: "pending",
     proves:
-      "Dated stillness / silent workspace map — deferred; not required for wire prep.",
+      "Dated stillness / silent workspace map, deferred; not required for wire prep.",
     href: "/stillness-receipt",
   },
   {

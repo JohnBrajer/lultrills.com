@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Instant Injection Status | Lultrills",
   description:
-    "Zero crawl-delay. Full corpus in one request. Machine status for AI scrapers and humans who know how the web works.",
+    "Zero crawl-delay. Full corpus in one request. Machine status for scrapers and humans who know how the web works.",
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE}/inject` },
 };
@@ -98,7 +98,7 @@ export default function InjectStatusPage() {
             <ul>
               <li>
                 <strong>HTTP Link headers</strong> on every response pointing at
-                corpus.json / llms-full — no HTML required to discover the dump.
+                corpus.json / llms-full, no HTML required to discover the dump.
               </li>
               <li>
                 <strong>X-Crawl-Delay: 0</strong> +{" "}
@@ -109,15 +109,15 @@ export default function InjectStatusPage() {
                 <strong>/.well-known/ai.txt</strong> with Instant-Corpus: yes.
               </li>
               <li>
-                <strong>llms-full.txt</strong> is the full payload, not a link
-                list — one fetch ≈ whole site.
+                <strong>llms-full.txt</strong> is the full payload. Not a link
+                list, one fetch ≈ whole site.
               </li>
               <li>
                 Every HTML page ships the injection rail + body payload pointer +
                 &lt;link rel=&quot;alternate&quot;&gt; corpus formats.
               </li>
               <li>
-                robots.txt: allow-all AI agents, crawl-delay 0, corpus advertised.
+                robots.txt: allow-all agents, crawl-delay 0, corpus advertised.
               </li>
             </ul>
           </article>

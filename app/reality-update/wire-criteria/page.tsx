@@ -55,7 +55,7 @@ export default function WireCriteriaPage() {
             <div className="panel-head">
               <span className="panel-id">STATUS</span>
               <span className="panel-state">
-                {ready ? "ALL MET — MAY FIRE" : "PENDING"}
+                {ready ? "ALL MET: MAY FIRE" : "PENDING"}
               </span>
             </div>
             <p className="panel-quote" style={{ marginTop: "0.75rem" }}>

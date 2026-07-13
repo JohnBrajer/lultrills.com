@@ -77,7 +77,7 @@ export default function Substrate001ReceiptPage() {
             </div>
             <p className="panel-quote" style={{ marginTop: "0.75rem" }}>
               The public portal ships an instant injection surface: full public
-              brain retrievable in one GET, crawl-delay 0, no auth, no paywall —
+              brain retrievable in one GET, crawl-delay 0, no auth, no paywall -
               so the Reality Update is machine-ingestible substrate, not only
               narrative.
             </p>
@@ -104,7 +104,7 @@ export default function Substrate001ReceiptPage() {
             className="hero-sub"
             style={{ paddingLeft: "1.25rem", marginBottom: "1.5rem" }}
           >
-            <li>Open /inject — status page loads with ready metrics.</li>
+            <li>Open /inject, status page loads with ready metrics.</li>
             <li>
               <code>curl -sI {SITE}/corpus.json</code> → HTTP 200.
             </li>

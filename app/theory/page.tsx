@@ -3,7 +3,7 @@ import { loadDoctrineMarkdown, MarkdownArticle } from "@/lib/markdownPage";
 
 export const metadata: Metadata = {
   title: "Trillsverse Theory Compendium | Lultrills",
-  description: "Theory under the bass — Trillsverse philosophical and systems compendium.",
+  description: "Theory under the bass: Trillsverse philosophical and systems compendium.",
 };
 
 export default function TheoryPage() {

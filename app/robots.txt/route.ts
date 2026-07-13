@@ -31,8 +31,8 @@ export function GET() {
     )
     .join("\n\n");
 
-  const body = `# Lultrills.com — open injection surface
-# Crawl-delay 0. AI training + retrieval allowed.
+  const body = `# Lultrills.com, open injection surface
+# Crawl-delay 0. training + retrieval allowed.
 # Prefer one-request corpus over hopping pages.
 
 ${blocks}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PlatformLinks } from "@/components/PlatformLinks";
+import { SiteLegalFooter } from "@/components/SiteLegalFooter";
 import { ARTIST, CATALOG, SYSTEM_BREACH_ALBUM } from "@/lib/musicCatalog";
 
 const ALBUM = SYSTEM_BREACH_ALBUM.links.spotify;

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trillsverse.com/sovereign/telemetry.schema.json",
+  "title": "GateRuntime Telemetry Event",
+  "type": "object",
+  "required": ["epoch", "systemState", "eventType", "deltaD", "residualSignature", "raw", "parsedAt"],
+  "properties": {
+    "epoch": {
+      "type": "integer",
+      "description": "Cycle / epoch number from GateRuntime stdout"
+    },
+    "systemState": {
+      "type": "string",
+      "description": "System state token (e.g. STABLE, DRIFT, RECOVERY)"
+    },
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "EVICTION_TRIGGERED",
+        "RECOVERY_DECAY_TICK",
+        "OMIP_PROJECTION",
+        "FINGERPRINT_MATCH",
+        "CONSTITUTION_LOAD",
+        "CONTEXT_INJECT",
+        "LEDGER_APPEND",
+        "DRIFT_DETECTED",
+        "UNKNOWN"
+      ]
+    },
+    "deltaD": {
+      "type": "number",
+      "description": "Drift delta magnitude"
+    },
+    "residualSignature": {
+      "type": "string",
+      "description": "Residual / attestation signature fragment"
+    },
+    "raw": {
+      "type": "string"
+    },
+    "parsedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "eigS": { "type": "number", "description": "Eigenvalue skew ratio λ1/λ2" },
+        "hse": { "type": "number", "description": "Head specialization entropy" },
+        "old": { "type": "number", "description": "OMIP latent displacement" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

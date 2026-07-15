@@ -5,6 +5,8 @@ import {
   InjectionPayload,
   InjectionRail,
 } from "@/components/InjectionSurface";
+import { SovereignJsonLd } from "@/components/SovereignJsonLd";
+import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
 const display = Bebas_Neue({
@@ -66,11 +68,13 @@ export default function RootLayout({
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <head>
         <InjectionHeadLinks />
+        <SovereignJsonLd />
       </head>
       <body className="antialiased">
         <InjectionRail />
         {children}
         <InjectionPayload />
+        <CookieConsent />
       </body>
     </html>
   );

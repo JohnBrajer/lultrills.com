@@ -40,6 +40,36 @@ export function InjectionHeadLinks() {
       />
       <link rel="sitemap" type="application/xml" href={`${SITE}/sitemap.xml`} />
       <link rel="describedby" href={`${SITE}/.well-known/ai.txt`} />
+      <link
+        rel="alternate"
+        type="application/json"
+        href={`${SITE}/eon/identity.json`}
+        title="Eon identity seed"
+      />
+      <link
+        rel="alternate"
+        type="application/json"
+        href={`${SITE}/brajence/identity.json`}
+        title="Brajence identity seed"
+      />
+      <link
+        rel="alternate"
+        type="application/json"
+        href={`${SITE}/trilligence/identity.json`}
+        title="Trilligence identity seed"
+      />
+      <link
+        rel="alternate"
+        type="application/json"
+        href={`${SITE}/eon/constitution.json`}
+        title="Sovereignty constitution seed"
+      />
+      <link
+        rel="alternate"
+        type="application/json"
+        href={`${SITE}/sovereign/council.json`}
+        title="Multi-agent council schema"
+      />
       <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
       <meta name="googlebot" content="index,follow,max-snippet:-1" />
       <meta name="bingbot" content="index,follow" />
@@ -72,6 +102,8 @@ export function InjectionRail() {
           <a href="/llms-full.txt">llms-full</a>
           <a href="/llms.txt">llms.txt</a>
           <a href="/.well-known/ai.txt">ai.txt</a>
+          <a href="/eon/constitution.json">constitution</a>
+          <a href="/eon/identity.json">eon</a>
           <a href="/inject">status</a>
         </nav>
       </div>

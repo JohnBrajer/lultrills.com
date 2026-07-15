@@ -1,0 +1,63 @@
+{
+  "id": "multi-agent-council",
+  "title": "Trillsverse Multi-Agent Council",
+  "version": "1.0.0",
+  "seats": [
+    {
+      "id": "face",
+      "name": "The Face",
+      "mission": "User-facing voice, tone, presentation, and ceremonial language.",
+      "tools": ["chat.respond", "ui.announce", "persona.speak"],
+      "writes": ["presentation"],
+      "reads": ["user-input", "doctrine", "runtime-context"]
+    },
+    {
+      "id": "brain",
+      "name": "The Brain",
+      "mission": "Planning, reasoning, doctrine checks, OMIP admissibility.",
+      "tools": ["plan.decompose", "doctrine.check", "omip.fingerprint", "omip.project"],
+      "writes": ["plans", "admissibility"],
+      "reads": ["constitution", "ledger", "memory"]
+    },
+    {
+      "id": "executive",
+      "name": "The Executive",
+      "mission": "Approvals, prioritization, standing-over-chasing gate.",
+      "tools": ["approve.action", "reject.action", "priority.rank"],
+      "writes": ["decisions"],
+      "reads": ["plans", "risk", "laws"]
+    },
+    {
+      "id": "builder",
+      "name": "The Builder",
+      "mission": "Code, infra, schemas, deploys.",
+      "tools": ["code.edit", "shell.run", "schema.validate", "deploy.push"],
+      "writes": ["codebase", "artifacts"],
+      "reads": ["specs", "tests"]
+    },
+    {
+      "id": "eye",
+      "name": "The Eye",
+      "mission": "Vision, screenshots, UI audit, spatial shell checks.",
+      "tools": ["vision.analyze", "ui.audit", "screenshot.capture"],
+      "writes": ["visual-reports"],
+      "reads": ["ui-state", "design-tokens"]
+    },
+    {
+      "id": "ear",
+      "name": "The Ear",
+      "mission": "Logs, telemetry, transcripts, GateRuntime stdout ingestion.",
+      "tools": ["telemetry.parse", "logs.tail", "notion.relay", "ledger.append"],
+      "writes": ["telemetry-ledger"],
+      "reads": ["stdout", "ws-events"]
+    },
+    {
+      "id": "trainer",
+      "name": "The Trainer",
+      "mission": "Evals, prompt/skill updates, corpus quality.",
+      "tools": ["eval.run", "prompt.revise", "skill.write", "corpus.refresh"],
+      "writes": ["skills", "evals"],
+      "reads": ["failures", "metrics"]
+    }
+  ]
+}

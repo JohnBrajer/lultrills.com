@@ -362,12 +362,7 @@ export default function LultrillsHome() {
         </section>
       </main>
 
-      <footer className="site-foot">
-        <div className="site-inner foot-row">
-          <span>Lultrills · Trillsverse LLC · {new Date().getFullYear()}</span>
-          <span className="foot-sys">PUBLIC SURFACE · DO NODE</span>
-        </div>
-      </footer>
+      <SiteLegalFooter />
     </div>
   );
 }

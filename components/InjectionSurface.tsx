@@ -70,6 +70,18 @@ export function InjectionHeadLinks() {
         href={`${SITE}/sovereign/council.json`}
         title="Multi-agent council schema"
       />
+      <link
+        rel="alternate"
+        type="text/markdown"
+        href={`${SITE}/doctrine/sovereignty-as-invariance-constraint.md`}
+        title="Sovereignty working paper (Markdown)"
+      />
+      <link
+        rel="alternate"
+        type="text/html"
+        href={`${SITE}/doctrine/sovereignty-as-invariance-constraint`}
+        title="Sovereignty working paper"
+      />
       <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
       <meta name="googlebot" content="index,follow,max-snippet:-1" />
       <meta name="bingbot" content="index,follow" />

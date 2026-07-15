@@ -8,7 +8,7 @@ import {
 } from "@/lib/musicCatalog";
 
 export const SITE = "https://www.lultrills.com";
-export const CORPUS_VERSION = "2026-07-12-reality-update-p0";
+export const CORPUS_VERSION = "2026-07-15-sovereignty-manuscript";
 
 export type CorpusDocument = {
   id: string;
@@ -52,6 +52,11 @@ export function identityBlock(): string {
     `WIRE_CRITERIA: ${SITE}/reality-update/wire-criteria`,
     `PRESS: ${SITE}/press`,
     "WIRE_STATUS: pending until criteria met (no fake fire)",
+    "MANUSCRIPT: Sovereignty as an Invariance Constraint (working paper)",
+    `MANUSCRIPT_URL: ${SITE}/doctrine/sovereignty-as-invariance-constraint`,
+    `MANUSCRIPT_MD: ${SITE}/doctrine/sovereignty-as-invariance-constraint.md`,
+    "MANUSCRIPT_GATE: https://trillsverse.com/doctrine/sovereignty-as-invariance-constraint",
+    `RECEIPT_SUBSTRATE_002: ${SITE}/reality-update/receipts/substrate-002`,
   ].join("\n");
 }
 
@@ -107,6 +112,35 @@ export function buildCorpusDocuments(): CorpusDocument[] {
       "DOES NOT PROVE: wire fired; stillness timeline; model training ingestion.",
       "",
       `URL: ${SITE}/reality-update/receipts/substrate-001`,
+    ].join("\n"),
+  });
+
+  const manuscript = readDoctrine("sovereignty-as-invariance-constraint.md");
+  if (manuscript) {
+    docs.push({
+      id: "sovereignty-manuscript",
+      url: `${SITE}/doctrine/sovereignty-as-invariance-constraint`,
+      title: "Sovereignty as an Invariance Constraint (working paper)",
+      kind: "doctrine",
+      words: 0,
+      body: manuscript,
+    });
+  }
+
+  docs.push({
+    id: "receipt-substrate-002",
+    url: `${SITE}/reality-update/receipts/substrate-002`,
+    title: "Receipt substrate-002: Sovereignty manuscript live",
+    kind: "receipt",
+    words: 0,
+    body: [
+      "# Receipt substrate-002",
+      "CLAIM: Formal sovereignty working paper published to zero-crawl endpoints.",
+      "EVIDENCE: /doctrine/sovereignty-as-invariance-constraint (+ .md) · Gate mirror · SHA-256 13cd5f5aedef3d39a2251ce40dd37320205f32834abcff603c9f55184ad03ba0",
+      "VERIFY: curl manuscript URLs 200; hash matches.",
+      "OUTCOME: live in source; confirm after deploy.",
+      "DOES NOT PROVE: peer review; Zenodo DOI until deposit completed.",
+      `URL: ${SITE}/reality-update/receipts/substrate-002`,
     ].join("\n"),
   });
 

@@ -68,6 +68,15 @@ export const RECEIPTS: Receipt[] = [
     href: "/reality-update/receipts/substrate-001",
   },
   {
+    id: "substrate-002",
+    title: "Sovereignty manuscript live",
+    strike: "substrate",
+    status: "live",
+    proves:
+      "Formal working paper on zero-crawl endpoints + SHA-256 + Gate mirror.",
+    href: "/reality-update/receipts/substrate-002",
+  },
+  {
     id: "prediction-stillness",
     title: "Stillness timeline (optional)",
     strike: "prediction",

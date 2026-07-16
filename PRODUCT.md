@@ -22,5 +22,7 @@ Terminal + concert poster. Psychological territory, not SaaS. Specific claims on
 
 ## Design system anchors
 - Gold `#C5A26F`, Breach `#DC143C`, Void `#050505`
-- Display: Orbitron · Body: Rajdhani · Mono: JetBrains Mono
+- Display: Orbitron (mark/H1 only) · Body: Rajdhani · Mono: JetBrains Mono
+- Radius: 0 structural · no orbs/glass/pulse chips
 - Motion: ease-out expo, reduced-motion safe, scale 0.96 on press
+- Spec: `docs/superpowers/specs/2026-07-16-lultrills-public-shell-renovation-design.md`

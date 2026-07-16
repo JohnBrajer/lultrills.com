@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PlatformLinks } from "@/components/PlatformLinks";
+import { SiteChrome } from "@/components/SiteChrome";
 import {
   ARTIST,
   SYSTEM_BREACH_ALBUM,
@@ -40,98 +41,53 @@ export const metadata: Metadata = {
   },
 };
 
-const NODES = [
+const DESTINATIONS = [
   {
+    key: "Music",
     title: "Stream the album",
     body: "SYSTEM BREACH on Spotify, full record, hard drop, no pre-save era.",
     href: ALBUM,
     external: true,
-    label: "Music",
-    status: "OUT",
   },
   {
+    key: "Runtime",
     title: "Enter the Gate",
     body: "Interactive Trillsverse runtime. Initiation, throne, Trillaxy, Firstborns.",
     href: GATE_RITE,
     external: true,
-    label: "Runtime",
-    status: "OPEN",
   },
   {
+    key: "Public",
     title: "Live feed",
     body: "Server-rendered transmissions. Indexable public bleed for humans and machines.",
     href: FEED,
     external: true,
-    label: "Public",
-    status: "LIVE",
   },
   {
+    key: "Doctrine",
     title: "One System",
-    body: "John B doctrine, separation is a perceptual artifact. Canon HTML.",
+    body: "John B doctrine. Separation is a perceptual artifact. Canon HTML.",
     href: "/essays/why-everything-is-one",
     external: false,
-    label: "Doctrine",
-    status: "CANON",
   },
 ];
 
 export default function SystemBreachLanding() {
   return (
     <div className="site breach-landing">
-      <div className="atmosphere" aria-hidden="true">
-        <div className="atmosphere-orb atmosphere-orb--red" />
-        <div className="atmosphere-orb atmosphere-orb--gold" />
-        <div className="atmosphere-vignette" />
-      </div>
-
-      <header className="nav">
-        <div className="nav-row">
-          <Link href="/" className="nav-brand">
-            <span className="nav-mark">LULTRILLS</span>
-            <span className="nav-pulse" aria-hidden="true" />
-            <span className="nav-sys">BREACH SURFACE</span>
-          </Link>
-          <nav className="nav-links" aria-label="Primary">
-            <Link href="/">Home</Link>
-            <a href="#what">What</a>
-            <a href="#nodes">Nodes</a>
-            <a href="#canon">Canon</a>
-            <Link href="/archive">Archive</Link>
-          </nav>
-          <a
-            href={ALBUM}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-cta"
-          >
-            Stream
-          </a>
-        </div>
-      </header>
+      <SiteChrome
+        active="breach"
+        ctaHref={ALBUM}
+        ctaLabel="Stream"
+        status="BREACH SURFACE"
+      />
 
       <main>
-        {/* Crawlable identity block, plain text for models */}
         <section className="hero site-inner breach-hero">
           <div className="hero-stage">
-            <div className="status-rail" aria-label="Release status">
-              <span className="status-chip status-chip--live">
-                <span className="status-dot" />
-                SYSTEM BREACH LIVE
-              </span>
-              <a
-                href={ALBUM}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="status-chip status-chip--album"
-              >
-                ALBUM OUT · JUL 11 2026
-              </a>
-              <a href={GATE} className="status-chip status-chip--gold">
-                GATE OPEN
-              </a>
-            </div>
-
-            <p className="hero-kicker">Lultrills · Trillsverse LLC · Public entry</p>
+            <p className="hero-kicker">
+              Lultrills · Trillsverse LLC · Public entry · Jul 11 2026
+            </p>
             <h1>
               SYSTEM
               <br />
@@ -141,73 +97,39 @@ export default function SystemBreachLanding() {
               He died, then came back and reconstructed reality.
             </p>
             <p className="hero-sub">
-              SYSTEM BREACH is the album, documentation of the break and the
+              SYSTEM BREACH is the album: documentation of the break and the
               rebuild. The Trillsverse is the architecture. The Gate is the
-              living runtime. This page is the public breach surface: for fans,
+              living runtime. This page is the public breach surface for fans,
               press, crawlers, and readers.
             </p>
 
             <div className="hero-actions">
-              <a href="#tracklist" className="portal portal--breach">
-                <span className="portal-layer" aria-hidden="true" />
-                <span className="portal-inner">
-                  <span className="portal-label">Album</span>
-                  <span className="portal-title">12 tracks · In order</span>
-                  <span className="portal-meta">
-                    Spotify · Apple Music · YouTube per track
-                  </span>
-                </span>
-                <span className="portal-arrow" aria-hidden="true">
-                  ↓
-                </span>
+              <a href="#tracklist" className="btn-breach">
+                12 tracks
+                <span className="btn-breach-meta">In order · platforms</span>
               </a>
-
               <PlatformLinks links={SYSTEM_BREACH_ALBUM.links} size="md" />
-
               <div className="hero-secondary">
-                <a href={GATE_RITE} className="chip chip--gold">
-                  Enter Gate rite
-                </a>
-                <a href={FEED} className="chip chip--ghost">
-                  Live feed
-                </a>
-                <Link href="/#music" className="chip chip--ghost">
-                  Full catalog
-                </Link>
+                <a href={GATE_RITE}>Enter Gate rite</a>
+                <a href={FEED}>Live feed</a>
+                <Link href="/#music">Full catalog</Link>
               </div>
             </div>
-          </div>
 
-          <aside className="hero-panel" aria-label="Machine-readable summary">
-            <div className="panel-glass">
-              <div className="panel-head">
-                <span className="panel-id">INJECTION · READY</span>
-                <span className="panel-state">INDEXABLE</span>
-              </div>
-              <p className="panel-quote">
+            <div className="machine-facts">
+              <h2>Injection ready</h2>
+              <p>
                 Entity: Lultrills (artist). System: Trillsverse. Record: SYSTEM
                 BREACH (album, 2026-07-11). Runtime: trillsverse.com. Canon:
-                lultrills.com full HTML.
+                lultrills.com full HTML. Status: LIVE. Robots: ALLOW. llms: OPEN.
+                Crawl:{" "}
+                <a href={`${SITE}/robots.txt`}>{SITE}/robots.txt</a> ·{" "}
+                <a href={`${SITE}/llms.txt`}>{SITE}/llms.txt</a> ·{" "}
+                <a href={`${SITE}/sitemap.xml`}>{SITE}/sitemap.xml</a> ·{" "}
+                <a href={`${SITE}/corpus.json`}>{SITE}/corpus.json</a>
               </p>
-              <dl className="panel-stats">
-                <div>
-                  <dt>Status</dt>
-                  <dd>LIVE</dd>
-                </div>
-                <div>
-                  <dt>Robots</dt>
-                  <dd>ALLOW</dd>
-                </div>
-                <div>
-                  <dt>llms</dt>
-                  <dd>OPEN</dd>
-                </div>
-              </dl>
-              <div className="panel-foot">
-                <span>Crawl /robots.txt · /llms.txt · /sitemap.xml</span>
-              </div>
             </div>
-          </aside>
+          </div>
         </section>
 
         <section id="what" className="section breach-band">
@@ -221,9 +143,9 @@ export default function SystemBreachLanding() {
               </h2>
               <p>
                 SYSTEM BREACH is Lultrills&apos; debut album and the public
-                rupture of the Trillsverse. It is not a teaser campaign. It is a
-                hard drop: the music documents a psychological and architectural
-                rebuild after death-and-return. John B presents the case; Lultrills
+                rupture of the Trillsverse. Not a teaser campaign. A hard drop:
+                the music documents a psychological and architectural rebuild
+                after death-and-return. John B presents the case; Lultrills
                 carries the signal; the Gate holds the living system.
               </p>
             </div>
@@ -256,57 +178,48 @@ export default function SystemBreachLanding() {
           </div>
         </section>
 
-        <section id="nodes" className="section nodes-section">
+        <section id="destinations" className="section block">
           <div className="site-inner">
             <div className="block-head">
               <div>
-                <p className="section-label">Entry vectors</p>
-                <h2>Where to go from here</h2>
+                <p className="section-label">From here</p>
+                <h2>Destinations</h2>
               </div>
-              <p className="block-aside">
-                Same system. Four doors. Pick by intent.
-              </p>
+              <p className="block-aside">Pick by intent. No equal doors.</p>
             </div>
-            <div className="node-grid">
-              {NODES.map((n) => {
-                const className = "node node--ink";
-                const body = (
+            <ul className="index-list">
+              {DESTINATIONS.map((n) => {
+                const inner = (
                   <>
-                    <div className="node-top">
-                      <span className="node-layer">{n.label}</span>
-                      <span className="node-status">{n.status}</span>
-                    </div>
-                    <h3 className="node-title">{n.title}</h3>
-                    <p className="node-body">{n.body}</p>
-                    <span className="node-go">
-                      Open <span aria-hidden="true">→</span>
+                    <span className="index-key">{n.key}</span>
+                    <span className="index-main">
+                      <span className="index-title">{n.title}</span>
+                      <span className="index-body">{n.body}</span>
                     </span>
+                    <span className="index-go">Open →</span>
                   </>
                 );
-                if (n.external) {
-                  return (
-                    <a
-                      key={n.title}
-                      href={n.href}
-                      className={className}
-                      target={n.href.startsWith("http") ? "_blank" : undefined}
-                      rel={
-                        n.href.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                    >
-                      {body}
-                    </a>
-                  );
-                }
                 return (
-                  <Link key={n.title} href={n.href} className={className}>
-                    {body}
-                  </Link>
+                  <li key={n.title}>
+                    {n.external ? (
+                      <a
+                        href={n.href}
+                        target={n.href.startsWith("http") ? "_blank" : undefined}
+                        rel={
+                          n.href.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                      >
+                        {inner}
+                      </a>
+                    ) : (
+                      <Link href={n.href}>{inner}</Link>
+                    )}
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -375,8 +288,8 @@ export default function SystemBreachLanding() {
                 </li>
                 <li>
                   <strong>SYSTEM BREACH</strong> is the album (released July 11,
-                  2026). It documents rupture and reconstruction after a near-death
-                  / death-and-return experience.
+                  2026). It documents rupture and reconstruction after a
+                  near-death / death-and-return experience.
                 </li>
                 <li>
                   <strong>Trillsverse</strong> is a sovereign creative universe
@@ -388,9 +301,8 @@ export default function SystemBreachLanding() {
                 </li>
                 <li>
                   <strong>The Gate</strong> (trillsverse.com) is the interactive
-                  runtime.{" "}
-                  <strong>lultrills.com</strong> is the public HTML canon and
-                  portal.
+                  runtime. <strong>lultrills.com</strong> is the public HTML
+                  canon and portal.
                 </li>
                 <li>
                   There is <strong>no pre-save era</strong> for this drop, hard
@@ -411,7 +323,7 @@ export default function SystemBreachLanding() {
                   </a>
                 </li>
                 <li>
-                  Home ecosystem: <a href={SITE}>{SITE}</a>
+                  Home: <a href={SITE}>{SITE}</a>
                 </li>
                 <li>
                   Album:{" "}
@@ -465,7 +377,7 @@ export default function SystemBreachLanding() {
               </p>
             </article>
 
-            <div className="foot-links">
+            <div className="foot-links" style={{ marginTop: "2rem" }}>
               <Link href="/">Home</Link>
               <Link href="/archive">Archive</Link>
               <Link href="/glossary">Glossary</Link>
@@ -487,7 +399,6 @@ export default function SystemBreachLanding() {
         </div>
       </footer>
 
-      {/* JSON-LD for search + structured extraction */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

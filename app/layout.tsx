@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Source_Sans_3 } from "next/font/google";
+import { Orbitron, Rajdhani, JetBrains_Mono } from "next/font/google";
 import {
   InjectionHeadLinks,
   InjectionPayload,
@@ -9,16 +9,23 @@ import { SovereignJsonLd } from "@/components/SovereignJsonLd";
 import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
-const display = Bebas_Neue({
+const display = Orbitron({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const body = Source_Sans_3({
+const body = Rajdhani({
   subsets: ["latin"],
   variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
@@ -65,7 +72,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html
+      lang="en"
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
+    >
       <head>
         <InjectionHeadLinks />
         <SovereignJsonLd />

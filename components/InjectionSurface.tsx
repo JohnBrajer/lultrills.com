@@ -102,8 +102,7 @@ export function InjectionRail() {
   return (
     <div className="inject-rail" data-injection="ready" data-crawl-delay="0">
       <div className="inject-rail-inner">
-        <span className="inject-pulse" aria-hidden="true" />
-        <span className="inject-label">INSTANT INJECTION</span>
+        <span className="inject-label">INJECTION</span>
         <span className="inject-meta">
           crawl-delay 0 · {stats.documentCount} docs · {stats.totalWords.toLocaleString()}{" "}
           words · one request

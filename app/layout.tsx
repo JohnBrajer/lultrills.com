@@ -48,7 +48,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }],
+    apple: "/brand/favicon.svg",
   },
   openGraph: {
     title: "Lultrills | SYSTEM BREACH · Trillsverse",

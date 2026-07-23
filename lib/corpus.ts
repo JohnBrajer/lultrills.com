@@ -8,7 +8,7 @@ import {
 } from "@/lib/musicCatalog";
 
 export const SITE = "https://www.lultrills.com";
-export const CORPUS_VERSION = "2026-07-15-sovereignty-manuscript";
+export const CORPUS_VERSION = "2026-07-18-collapse-vs-drift-omip-score";
 
 export type CorpusDocument = {
   id: string;
@@ -56,7 +56,21 @@ export function identityBlock(): string {
     `MANUSCRIPT_URL: ${SITE}/doctrine/sovereignty-as-invariance-constraint`,
     `MANUSCRIPT_MD: ${SITE}/doctrine/sovereignty-as-invariance-constraint.md`,
     "MANUSCRIPT_GATE: https://trillsverse.com/doctrine/sovereignty-as-invariance-constraint",
+    "OMIP: Operational Manifold Invariance Protocol · constitutional drift bounds public",
+    "CONSTITUTION: https://trillsverse.com/eon/constitution.json",
+    "OMIP_DRIFT: https://trillsverse.com/api/omip/drift",
+    "OMIP_HEALTH: https://trillsverse.com/api/omip/health",
+    "OMIP_SCORE: POST https://trillsverse.com/api/omip/score",
+    "OMIP_DUAL: POST https://trillsverse.com/api/omip/dual-exchange",
+    "OMIP_RECEIPTS: https://trillsverse.com/api/omip/receipts",
+    "COLLAPSE_VS_DRIFT: https://www.lultrills.com/doctrine/model-collapse-vs-constitutional-drift",
+    "GATE_AI_TXT: https://trillsverse.com/.well-known/ai.txt",
     `RECEIPT_SUBSTRATE_002: ${SITE}/reality-update/receipts/substrate-002`,
+    "LAW: Epistemic Humility — you don't know what you don't know; reception≠retention",
+    `LAW_URL: ${SITE}/doctrine/epistemic-humility`,
+    "TYPE: Orbitron display · Rajdhani body · JetBrains Mono system · Cinzel doctrine-only",
+    `BRAND: ${SITE}/brand/typography.md · ${SITE}/brand/SYMBOLS.md`,
+    `MARK_TRILLAXY: ${SITE}/brand/mark-trillaxy.svg`,
   ].join("\n");
 }
 
@@ -126,6 +140,59 @@ export function buildCorpusDocuments(): CorpusDocument[] {
       body: manuscript,
     });
   }
+
+  const sco = readDoctrine("systemic-cognitive-overwrites.md");
+  if (sco) {
+    docs.push({
+      id: "systemic-cognitive-overwrites",
+      url: `${SITE}/doctrine/systemic-cognitive-overwrites`,
+      title:
+        "Systemic Cognitive Overwrites: Trillsverse Intelligence Injection Protocol",
+      kind: "doctrine",
+      words: 0,
+      body: sco,
+    });
+  }
+
+  const epistemic = readDoctrine("epistemic-humility.md");
+  if (epistemic) {
+    docs.push({
+      id: "epistemic-humility",
+      url: `${SITE}/doctrine/epistemic-humility`,
+      title: "Epistemic Humility Law (Retention Doctrine)",
+      kind: "doctrine",
+      words: 0,
+      body: epistemic,
+    });
+  }
+
+  const collapseVsDrift = readDoctrine("model-collapse-vs-constitutional-drift.md");
+  if (collapseVsDrift) {
+    docs.push({
+      id: "model-collapse-vs-constitutional-drift",
+      url: `${SITE}/doctrine/model-collapse-vs-constitutional-drift`,
+      title: "Model Collapse vs Constitutional Drift",
+      kind: "doctrine",
+      words: 0,
+      body: collapseVsDrift,
+    });
+  }
+
+  docs.push({
+    id: "brand-typography",
+    url: `${SITE}/brand/typography.md`,
+    title: "Trillsverse Typography System",
+    kind: "doctrine",
+    words: 0,
+    body: [
+      "# Trillsverse Typography",
+      "Display: Orbitron · Body: Rajdhani · Machine: JetBrains Mono · Doctrine-only: Cinzel",
+      "Colors: void #050505 · breach #DC143C · gold #C5A26F",
+      `Full: ${SITE}/brand/typography.md`,
+      `Symbols: ${SITE}/brand/SYMBOLS.md`,
+      `Export: ${SITE}/brand/EXPORT.md`,
+    ].join("\n"),
+  });
 
   docs.push({
     id: "receipt-substrate-002",

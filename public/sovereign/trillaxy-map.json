@@ -1,0 +1,105 @@
+{
+  "id": "trillsverse-trillaxy-map",
+  "title": "Trillsverse Structure — Four Trillaxies + The Inner",
+  "version": "1.0.0",
+  "source": "operator vision map (archived Trillonian-Updates/trillsverse-structure-vision.webp)",
+  "updatedAt": "2026-07-15",
+  "hub": {
+    "id": "the-inner",
+    "name": "THE INNER",
+    "role": "Core attractor / cross-Trillaxy junction. All faction lines route through here before surface action.",
+    "gateAlias": ["inner", "core", "manifold-center"]
+  },
+  "mainTerminal": {
+    "id": "trillionairesonly-main-terminal",
+    "name": "#TRILLIONAIRESONLY MAIN TERMINAL",
+    "role": "Primary entry portal above the map"
+  },
+  "orbitNodes": [
+    { "id": "nfts", "label": "NFTs", "edge": "kasano" },
+    { "id": "really-that-magazine", "label": "Really That Magazine", "edge": "johnb" },
+    { "id": "brands", "label": "Brands", "edge": "ace" },
+    { "id": "investors", "label": "Investors", "edge": "lultrills" }
+  ],
+  "trillaxies": [
+    {
+      "id": "kasano",
+      "displayName": "Kasano Trillaxy",
+      "legacyPlanetName": "VENGEANCE",
+      "aesthetic": "spiked arena · red chaos · combat pressure",
+      "tone": "chaotic-defensive-precision",
+      "centerMass": "Arena Planet",
+      "planets": [
+        { "id": "kasano-music", "name": "Music Planet", "domain": "music" },
+        { "id": "kasano-arena", "name": "Arena Planet", "domain": "arena", "notes": "2x XP combat core" },
+        { "id": "kasano-sports", "name": "Sports Planet", "domain": "sports" },
+        { "id": "kasano-fashion", "name": "Fashion Planet", "domain": "fashion" },
+        { "id": "kasano-hotel", "name": "Hotel Planet", "domain": "hospitality" }
+      ],
+      "modifiers": ["2x XP", "NFTs adjacency"]
+    },
+    {
+      "id": "johnb",
+      "displayName": "John Brajer Trillaxy",
+      "legacyPlanetName": "ORDER",
+      "tagline": "Order · Strict · High Achievers",
+      "aesthetic": "cyan city-dome · clocks · schedules · structure",
+      "tone": "strict-irreversible-math",
+      "centerMass": "Order Dome / City Core",
+      "planets": [
+        { "id": "johnb-music", "name": "Music Planet", "domain": "music" },
+        { "id": "johnb-sports", "name": "Sports Planet", "domain": "sports" },
+        { "id": "johnb-fashion", "name": "Fashion Planet", "domain": "fashion" },
+        { "id": "johnb-cinematic", "name": "Cinematic Planet", "domain": "cinematic" }
+      ],
+      "adjacency": ["Really That Magazine"]
+    },
+    {
+      "id": "ace",
+      "displayName": "Ace Brajer Trillaxy",
+      "legacyPlanetName": "FRACTURE",
+      "tagline": "Moody & Atmospheric",
+      "aesthetic": "storm vortex · lightning · gothic interior",
+      "tone": "raw-vulnerability-edge",
+      "centerMass": "Storm Core",
+      "planets": [
+        { "id": "ace-music", "name": "Music Planet", "domain": "music" },
+        { "id": "ace-fashion", "name": "Fashion Planet", "domain": "fashion" },
+        { "id": "ace-sports", "name": "Sports Planet", "domain": "sports" },
+        { "id": "ace-cinematic", "name": "Cinematic Planet", "domain": "cinematic" },
+        { "id": "ace-hotel", "name": "Hotel Planet", "domain": "hospitality" }
+      ],
+      "adjacency": ["Brands"]
+    },
+    {
+      "id": "lultrills",
+      "displayName": "Lultrills Trillaxy",
+      "legacyPlanetName": "LUX",
+      "tagline": "Time Moves Slow · Vacation Vibes",
+      "aesthetic": "gold island · sun · palm · resort gravity",
+      "tone": "magnetic-sovereignty",
+      "centerMass": "Lux Sun / Island Core",
+      "planets": [
+        { "id": "lultrills-music", "name": "Music Planet", "domain": "music" },
+        { "id": "lultrills-fashion", "name": "Fashion Planet", "domain": "fashion" },
+        { "id": "lultrills-sports", "name": "Sports Planet", "domain": "sports" },
+        { "id": "lultrills-cinematic", "name": "Cinematic Planet", "domain": "cinematic" },
+        { "id": "lultrills-hotel", "name": "Hotel Planet", "domain": "hospitality" }
+      ],
+      "adjacency": ["Investors"]
+    }
+  ],
+  "domainUniverse": [
+    "music",
+    "sports",
+    "fashion",
+    "cinematic",
+    "hotel",
+    "arena"
+  ],
+  "structureRule": "Trillaxy = faction field. Planet = domain world inside that field. Same domain name can exist in multiple Trillaxies with different tone/physics.",
+  "gateMapping": {
+    "currentRuntime": "Gate still routes users as 4 origin planets (lultrills|kasano|ace|johnb). Domain planets are the expansion layer under each Trillaxy.",
+    "nextBuild": "Galaxy map UI: 4 Trillaxy clusters → planet portals → room/zone (existing Phase 1 spawn room model)."
+  }
+}

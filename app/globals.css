@@ -146,9 +146,16 @@
 
 .nav-brand {
   display: flex;
-  align-items: baseline;
-  gap: 0.65rem;
+  align-items: center;
+  gap: 0.55rem;
   min-width: 0;
+}
+
+.nav-symbol {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
 }
 
 .nav-mark {

@@ -14,36 +14,78 @@ const ONE_SYSTEM = "/essays/why-everything-is-one";
 
 const INDEX = [
   {
+    key: "Hub",
+    title: "Gate hub [live]",
+    body: "Canonical entry. Runtime + album + corpus in one map. No scatter.",
+    href: "/gate",
+    external: false,
+  },
+  {
+    key: "Universe",
+    title: "Trillsverse hub [live]",
+    body: "Official entity page. Four Trillaxies, schema.org, knowledge surface.",
+    href: "/trillsverse",
+    external: false,
+  },
+  {
     key: "Runtime",
-    title: "Trillsverse Gate",
-    body: "Interactive universe. Initiation, throne, Trillaxy, Firstborns.",
+    title: "Trillsverse Gate [live]",
+    body: "Interactive universe. Immersion void, Trillaxy walk, Throne, TRILLAGRAM.",
     href: GATE,
     external: true,
   },
   {
+    key: "Immersion",
+    title: "Trillaxy / walk [live]",
+    body: "Third-person void · 7s align · first-person planet surfaces. Trackpad move.",
+    href: `${GATE}/trillaxy`,
+    external: true,
+  },
+  {
+    key: "Plate",
+    title: "THE INNER + HUD [live]",
+    body: "Diffusion plate + code-layer SpatialShell telemetry. Sector · Lux next.",
+    href: `${GATE}/plate/inner`,
+    external: true,
+  },
+  {
+    key: "Album",
+    title: "SYSTEM BREACH [live]",
+    body: "12 tracks · MusicRecording JSON-LD · Spotify / Apple / YouTube.",
+    href: BREACH,
+    external: false,
+  },
+  {
+    key: "Ingress",
+    title: "Audio ingress sandbox [live]",
+    body: "Legacy metadata → sovereign stem. SCRUB · MAP · SEAL. No reward writes.",
+    href: `${GATE}/api/ingress`,
+    external: true,
+  },
+  {
     key: "Thesis",
-    title: "Reality Update",
+    title: "Reality Update [live]",
     body: "Flatlined. Survived. Built the Update. The system is live.",
     href: "/reality-update",
     external: false,
   },
   {
     key: "Public",
-    title: "Live feed",
+    title: "Live feed [live]",
     body: "Server-rendered transmissions. Indexable. High-authority bleed.",
     href: FEED,
     external: true,
   },
   {
     key: "Doctrine",
-    title: "One System",
+    title: "One System [live]",
     body: "Separation is a perceptual artifact. Roman concrete. Antifragile minds.",
     href: ONE_SYSTEM,
     external: false,
   },
   {
     key: "Library",
-    title: "Canon archive",
+    title: "Canon archive [live]",
     body: "Mapping, constitutional update, FAQ, glossary. Full HTML for humans and machines.",
     href: "/archive",
     external: false,
@@ -77,14 +119,11 @@ export default function LultrillsHome() {
                 <span className="btn-breach-meta">Album · Gate · Jul 11</span>
               </Link>
               <div className="hero-secondary">
-                <a
-                  href={ALBUM}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href="/gate">Gate hub</Link>
+                <a href={ALBUM} target="_blank" rel="noopener noreferrer">
                   Stream album
                 </a>
-                <a href={GATE_RITE}>Gate rite</a>
+                <a href={`${GATE}/trillaxy`}>Immersion</a>
                 <a href={FEED}>Live feed</a>
               </div>
             </div>

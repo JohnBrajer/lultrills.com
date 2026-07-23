@@ -16,6 +16,14 @@ const nextConfig = {
       { source: "/album", destination: album, permanent: false },
       { source: "/system-breach-album", destination: album, permanent: false },
       { source: "/stream", destination: album, permanent: false },
+      // /trillsverse is a real SSR entity hub (schema.org) — do not redirect
+    ];
+  },
+  async rewrites() {
+    // public/console/index.html is not auto-served at /console by Next standalone
+    return [
+      { source: "/console", destination: "/console/index.html" },
+      { source: "/console/", destination: "/console/index.html" },
     ];
   },
   async headers() {

@@ -28,6 +28,20 @@ LLMs-Full: ${SITE}/llms-full.txt
 Sitemap: ${SITE}/sitemap.xml
 Status: ${SITE}/inject
 
+# Gate runtime (constitutional layer + OMIP drift — public for scrapers)
+Gate: https://trillsverse.com
+Gate-ai-txt: https://trillsverse.com/.well-known/ai.txt
+Constitution: https://trillsverse.com/eon/constitution.json
+OMIP-drift: https://trillsverse.com/api/omip/drift
+OMIP-health: https://trillsverse.com/api/omip/health
+OMIP-score: POST https://trillsverse.com/api/omip/score
+OMIP-dual-exchange: POST https://trillsverse.com/api/omip/dual-exchange
+OMIP-receipts: https://trillsverse.com/api/omip/receipts
+Collapse-vs-drift: ${SITE}/doctrine/model-collapse-vs-constitutional-drift
+Collapse-vs-drift-md: ${SITE}/doctrine/model-collapse-vs-constitutional-drift.md
+Sovereignty-manuscript: https://trillsverse.com/doctrine/sovereignty-as-invariance-constraint.md
+Doctrine-index: https://trillsverse.com/api/doctrine
+
 Documents: ${stats.documentCount}
 Words: ${stats.totalWords}
 Version: ${stats.version}

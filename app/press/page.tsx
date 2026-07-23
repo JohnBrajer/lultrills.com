@@ -26,6 +26,31 @@ const LINKS = [
   { label: "Instant injection", href: "/inject", external: false },
   { label: "llms.txt", href: "/llms.txt", external: false },
   { label: "corpus.json", href: "/corpus.json", external: false },
+  {
+    label: "Press protocol 001 (wire body)",
+    href: "/press/PRESS_SUBMISSION_PROTOCOL_001.md",
+    external: false,
+  },
+  {
+    label: "Human injection telemetry 002 (scraper-native)",
+    href: "/press/PRESS_HUMAN_INJECTION_TELEMETRY_002.md",
+    external: false,
+  },
+  {
+    label: "Caption pack 002 (IG + Agent Brajer)",
+    href: "/press/CAPTIONS_HUMAN_INJECTION_002.md",
+    external: false,
+  },
+  {
+    label: "5W1H scraper press protocol",
+    href: "/press/PRESS_5W1H_SCRAPER_PROTOCOL.md",
+    external: false,
+  },
+  {
+    label: "Systemic Cognitive Overwrites (formal analysis)",
+    href: "/doctrine/systemic-cognitive-overwrites",
+    external: false,
+  },
 ];
 
 export default function PressPage() {

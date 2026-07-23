@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PlatformLinks } from "@/components/PlatformLinks";
 import { SiteChrome } from "@/components/SiteChrome";
+import { ARTIST, SYSTEM_BREACH_ALBUM } from "@/lib/musicCatalog";
 import {
-  ARTIST,
-  SYSTEM_BREACH_ALBUM,
-} from "@/lib/musicCatalog";
+  buildSystemBreachMusicGraph,
+  trackPageFragment,
+} from "@/lib/musicRecordingJsonLd";
 
 const ALBUM = SYSTEM_BREACH_ALBUM.links.spotify;
 const SPOTIFY = ARTIST.spotify;
@@ -233,20 +234,33 @@ export default function SystemBreachLanding() {
               <PlatformLinks links={SYSTEM_BREACH_ALBUM.links} size="sm" />
             </div>
             <div className="tracks tracks--catalog">
-              {SYSTEM_BREACH_ALBUM.tracks.map((t) => (
-                <div key={t.n} className="track track--platforms">
+              {SYSTEM_BREACH_ALBUM.tracks.map((t) => {
+                const frag = trackPageFragment(t);
+                return (
+                <div
+                  key={t.n}
+                  id={frag}
+                  className="track track--platforms"
+                  itemScope
+                  itemType="https://schema.org/MusicRecording"
+                >
                   <span className="track-n">
                     {String(t.n).padStart(2, "0")}
                   </span>
                   <div className="track-info">
-                    <span className="track-title">{t.title}</span>
+                    <span className="track-title" itemProp="name">{t.title}</span>
                     <span className="track-meta">
                       Track {t.n} of {SYSTEM_BREACH_ALBUM.tracks.length}
+                      {" · "}
+                      <a href={`#${frag}`} className="track-anchor" style={{ opacity: 0.6 }}>
+                        #{frag}
+                      </a>
                     </span>
                   </div>
                   <PlatformLinks links={t.links} size="sm" />
                 </div>
-              ))}
+                );
+              })}
             </div>
             <p className="breach-note">
               Album Spotify:{" "}
@@ -402,33 +416,7 @@ export default function SystemBreachLanding() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "MusicAlbum",
-                name: "SYSTEM BREACH",
-                byArtist: {
-                  "@type": "MusicGroup",
-                  name: "Lultrills",
-                  url: SITE,
-                  sameAs: [SPOTIFY, GATE],
-                },
-                datePublished: "2026-07-11",
-                url: ALBUM,
-                genre: ["Hip-Hop", "Multi-genre"],
-              },
-              {
-                "@type": "WebPage",
-                name: "SYSTEM BREACH",
-                url: `${SITE}/system-breach`,
-                description:
-                  "Public landing for SYSTEM BREACH album and Trillsverse Gate entry.",
-                isPartOf: { "@type": "WebSite", name: "Lultrills", url: SITE },
-                datePublished: "2026-07-11",
-              },
-            ],
-          }),
+          __html: JSON.stringify(buildSystemBreachMusicGraph()),
         }}
       />
     </div>

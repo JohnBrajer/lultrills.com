@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <!-- Four Trillaxies around THE INNER -->
+  <!-- Center / Inner -->
+  <circle cx="32" cy="32" r="4" fill="#C5A26F"/>
+  <!-- Kasano — top-left red -->
+  <path d="M18 18 L28 28 L18 28 Z" fill="#DC143C"/>
+  <!-- John Brajer — top-right cyan -->
+  <path d="M46 18 L46 28 L36 28 Z" fill="#22D3EE"/>
+  <!-- Ace — bottom-left violet -->
+  <path d="M18 46 L28 46 L28 36 Z" fill="#A78BFA"/>
+  <!-- Lultrills — bottom-right gold -->
+  <path d="M46 46 L36 36 L46 36 Z" fill="#C5A26F"/>
+  <!-- Axis lines -->
+  <line x1="32" y1="12" x2="32" y2="52" stroke="#C5A26F" stroke-width="1" opacity="0.35"/>
+  <line x1="12" y1="32" x2="52" y2="32" stroke="#C5A26F" stroke-width="1" opacity="0.35"/>
+</svg>

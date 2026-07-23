@@ -80,7 +80,13 @@ Status: ${base}/inject
 - [Gate hub](${base}/gate): Canonical entry · runtime + immersion + plates + corpus · vertical status live
 - [SYSTEM BREACH landing](${base}/system-breach): Album page + 12 MusicRecording JSON-LD tracks + platform links
 - [Home / ecosystem](${base}/): Node map + full music catalog with Spotify / Apple / YouTube per release
-- [Immersion void](https://trillsverse.com/trillaxy): Walkable Trillaxy · 7s align · first-person surfaces [live]
+- [Immersion SSR](${base}/immersion): Public semantic shell · keyword doctrine · bridge to WebGL [live]
+- [Portal Lultrills SSR](${base}/portal/lultrills): Lux Trillaxy dossier + live SPA portal [live]
+- [Portal Eon SSR](${base}/portal/eon): Firstborn / constitution geometry [live]
+- [Immersion void runtime](https://trillsverse.com/trillaxy): Walkable Trillaxy · 7s align · first-person surfaces [live]
+- [Immersion SSR (Gate)](https://trillsverse.com/immersion): Same doctrine, server-rendered HTML for bots [live]
+- [Portal Lultrills always-SSR](https://trillsverse.com/seo/portal/lultrills): Bot-safe portal text [live]
+- [Portal Eon (Gate)](https://trillsverse.com/portal/eon): Eon SSR dossier [live]
 - [THE INNER plate](https://trillsverse.com/plate/inner): Visual plate + code HUD [live]
 - [SECTOR LUX plate](https://trillsverse.com/plate/sector-lux): Domain wasteland plate + HUD [live]
 - [Audio ingress](https://trillsverse.com/api/ingress): Legacy metadata → sovereign stem sandbox [live]

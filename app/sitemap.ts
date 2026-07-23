@@ -8,6 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Official entity hub — primary knowledge surface for "Trillsverse"
     { path: "/trillsverse", priority: 1, changeFrequency: "daily" },
     { path: "/gate", priority: 1, changeFrequency: "daily" },
+    { path: "/immersion", priority: 1, changeFrequency: "daily" },
+    { path: "/portal/lultrills", priority: 0.95, changeFrequency: "daily" },
+    { path: "/portal/eon", priority: 0.95, changeFrequency: "daily" },
     { path: "/system-breach", priority: 1, changeFrequency: "daily" },
     // Runtime surfaces live on trillsverse.com; listed in llms.txt for machines.
     { path: "/reality-update", priority: 1, changeFrequency: "daily" },

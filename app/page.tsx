@@ -36,10 +36,24 @@ const INDEX = [
   },
   {
     key: "Immersion",
-    title: "Trillaxy / walk [live]",
-    body: "Third-person void · 7s align · first-person planet surfaces. Trackpad move.",
-    href: `${GATE}/trillaxy`,
-    external: true,
+    title: "Immersion SSR [live]",
+    body: "Semantic shell for crawlers · bridge to WebGL void / Trillaxy walk.",
+    href: "/immersion",
+    external: false,
+  },
+  {
+    key: "Portal",
+    title: "Portal Lultrills [live]",
+    body: "Lux Trillaxy dossier · Throne · TRILLAGRAM · Music · live SPA portal.",
+    href: "/portal/lultrills",
+    external: false,
+  },
+  {
+    key: "Eon",
+    title: "Portal Eon [live]",
+    body: "Firstborn · constitution · OMIP · doctrine geometry.",
+    href: "/portal/eon",
+    external: false,
   },
   {
     key: "Plate",

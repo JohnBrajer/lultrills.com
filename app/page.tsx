@@ -159,6 +159,52 @@ export default function LultrillsHome() {
           </div>
         </section>
 
+        <section id="trillionaires" className="section block">
+          <div className="site-inner">
+            <div className="block-head">
+              <div>
+                <p className="section-label">First transmission</p>
+                <h2>Trillionaires</h2>
+              </div>
+              <p className="block-aside">
+                Before the Gate, know what the name means.
+              </p>
+            </div>
+
+            <div className="canon-bleed">
+              <p>Welcome to the Trillsverse.</p>
+              <p>
+                If you’re here, you are one of the first people entering a
+                universe being built around music, technology, creativity,
+                identity, and new ways for people to connect.
+              </p>
+              <p>
+                “Trillionaire” does not mean you need to have a trillion
+                dollars. It means you are a citizen of the Trillsverse:
+                someone with a place, a perspective, and the ability to help
+                shape what this becomes.
+              </p>
+              <p>
+                You are seeing this early, while the world is still being
+                built. Some parts are live. Some parts are still developing.
+                That is intentional. You are not arriving after everything has
+                already been decided.
+              </p>
+              <p>
+                Explore. Ask questions. Pay attention. Bring your own ideas.
+                Your presence here is part of the record.
+              </p>
+              <h3>Core principle</h3>
+              <p>There is no true evil, only misguidance.</p>
+              <div className="hero-actions">
+                <a href="https://trillsverse.com/trillionaires" className="chip chip--gold">
+                  Read the full orientation →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="breach" className="section breach-band">
           <div className="site-inner breach-inner">
             <div className="breach-copy">
@@ -286,6 +332,7 @@ export default function LultrillsHome() {
           <div className="site-inner">
             <div className="foot-links">
               <Link href="/glossary">Glossary</Link>
+              <a href="https://trillsverse.com/trillionaires">Trillionaires</a>
               <Link href="/injection-procedure">Injection</Link>
               <Link href="/really-that-magazine">Magazine</Link>
               <Link href="/press">Press</Link>

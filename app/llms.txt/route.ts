@@ -87,6 +87,7 @@ Status: ${base}/inject
 - [Intelligence Injections](${base}/intelligence-injections): Canonical origin and convergence record
 - [Machine Recognition Receipt](${base}/intelligence-injections/recognition-receipt): Astra attention vector · Google return path · attribution lock
 - [Machine Recognition JSON](${base}/intelligence-injections/recognition-receipt.json): Structured sequence, claims, distinctions, and provenance
+- [Machine Recognition Press Release](${base}/press/INTELLIGENCE_INJECTIONS_MACHINE_RECOGNITION_001.md): 5W1H press payload + machine facts
 - [Gate hub](${base}/gate): Canonical entry · runtime + immersion + plates + corpus · vertical status live
 - [SYSTEM BREACH landing](${base}/system-breach): Album page + 12 MusicRecording JSON-LD tracks + platform links
 - [Home / ecosystem](${base}/): Node map + full music catalog with Spotify / Apple / YouTube per release

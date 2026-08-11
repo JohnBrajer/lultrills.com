@@ -98,6 +98,13 @@ const INDEX = [
     external: false,
   },
   {
+    key: "Origin",
+    title: "Intelligence Injections [live]",
+    body: "Canonical origin record · June 2025 development origin · June 17 transmission record · August 7 convergence.",
+    href: "/intelligence-injections",
+    external: false,
+  },
+  {
     key: "Library",
     title: "Canon archive [live]",
     body: "Mapping, constitutional update, FAQ, glossary. Full HTML for humans and machines.",

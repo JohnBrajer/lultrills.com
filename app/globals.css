@@ -1305,3 +1305,19 @@ a.track-title:hover {
 .cookie-consent {
   border-radius: 0 !important;
 }
+
+/* Mesh polish enter */
+@keyframes lt-enter-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.lt-enter { animation: lt-enter-up 0.7s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) both; }
+.lt-stagger > * { animation: lt-enter-up 0.55s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) both; }
+.lt-stagger > *:nth-child(1) { animation-delay: 0.04s; }
+.lt-stagger > *:nth-child(2) { animation-delay: 0.09s; }
+.lt-stagger > *:nth-child(3) { animation-delay: 0.14s; }
+.lt-stagger > *:nth-child(4) { animation-delay: 0.19s; }
+.lt-stagger > *:nth-child(5) { animation-delay: 0.24s; }
+@media (prefers-reduced-motion: reduce) {
+  .lt-enter, .lt-stagger > * { animation: none; }
+}

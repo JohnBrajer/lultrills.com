@@ -173,7 +173,7 @@ export default function LultrillsHome() {
           </div>
         </section>
 
-        <section id="trillionaires" className="section block">
+        <section id="trillionaires" className="section block lt-enter">
           <div className="site-inner">
             <div className="block-head">
               <div>

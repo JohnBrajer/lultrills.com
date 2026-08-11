@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Machine Recognition Receipt · Intelligence Injections",
+    description:
+      "Astra amplified the category. Google recognized the source graph. The Trillsverse remains the origin system.",
+  },
 };
 
 const structuredData = {

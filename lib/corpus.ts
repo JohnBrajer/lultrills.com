@@ -292,6 +292,12 @@ export function buildCorpusDocuments(): CorpusDocument[] {
         title: "Injection procedure",
       },
       {
+        id: "intelligence-injections-origin",
+        route: "/intelligence-injections",
+        file: "intelligence-injections-origin.md",
+        title: "Intelligence Injections origin record",
+      },
+      {
         id: "theory",
         route: "/theory",
         file: "theory-compendium.md",
@@ -363,6 +369,8 @@ export function corpusStats(docs: CorpusDocument[]) {
       robots: `${SITE}/robots.txt`,
       sitemap: `${SITE}/sitemap.xml`,
       inject: `${SITE}/inject`,
+      intelligenceInjections: `${SITE}/intelligence-injections`,
+      intelligenceInjectionsJson: `${SITE}/intelligence-injections.json`,
       wellKnownAi: `${SITE}/.well-known/ai.txt`,
     },
   };

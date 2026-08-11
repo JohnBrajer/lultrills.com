@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/intelligence-injections/recognition-receipt", priority: 1, changeFrequency: "daily" },
     { path: "/intelligence-injections/recognition-receipt.json", priority: 0.95, changeFrequency: "daily" },
     { path: "/press/PRESS_HUMAN_INJECTION_TELEMETRY_002.md", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/press/INTELLIGENCE_INJECTIONS_MACHINE_RECOGNITION_001.md", priority: 0.95, changeFrequency: "daily" },
+    { path: "/press/INTELLIGENCE_INJECTIONS_SOCIAL_PACK.md", priority: 0.85, changeFrequency: "daily" },
     { path: "/press/PRESS_SUBMISSION_PROTOCOL_001.md", priority: 0.8, changeFrequency: "weekly" },
     { path: "/doctrine/sovereignty-as-invariance-constraint", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/systemic-cognitive-overwrites", priority: 0.95, changeFrequency: "weekly" },

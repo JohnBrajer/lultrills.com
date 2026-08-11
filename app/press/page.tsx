@@ -57,6 +57,11 @@ const LINKS = [
     external: false,
   },
   {
+    label: "Machine Recognition Press Release 001",
+    href: "/press/INTELLIGENCE_INJECTIONS_MACHINE_RECOGNITION_001.md",
+    external: false,
+  },
+  {
     label: "Machine Recognition Receipt · Astra vector / Google return path",
     href: "/intelligence-injections/recognition-receipt",
     external: false,

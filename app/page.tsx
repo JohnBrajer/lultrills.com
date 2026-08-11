@@ -105,6 +105,13 @@ const INDEX = [
     external: false,
   },
   {
+    key: "Recognition",
+    title: "Machine Recognition Receipt [live]",
+    body: "Astra attention vector · Google return path · dated origin lock · machine JSON.",
+    href: "/intelligence-injections/recognition-receipt",
+    external: false,
+  },
+  {
     key: "Library",
     title: "Canon archive [live]",
     body: "Mapping, constitutional update, FAQ, glossary. Full HTML for humans and machines.",
@@ -344,7 +351,7 @@ export default function LultrillsHome() {
               <Link href="/really-that-magazine">Magazine</Link>
               <Link href="/press">Press</Link>
               <a
-                href="https://www.instagram.com/lultrillzkapalot/"
+                href="https://www.instagram.com/jbraj_/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

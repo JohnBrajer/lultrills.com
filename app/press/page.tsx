@@ -51,6 +51,11 @@ const LINKS = [
     href: "/doctrine/systemic-cognitive-overwrites",
     external: false,
   },
+  {
+    label: "Intelligence Injections origin record",
+    href: "/intelligence-injections",
+    external: false,
+  },
 ];
 
 export default function PressPage() {

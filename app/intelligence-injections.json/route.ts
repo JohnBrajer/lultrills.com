@@ -14,7 +14,26 @@ export function GET() {
       event: "OpenAI Astra critical cybersecurity capability disclosure",
       date: "August 7, 2026",
       url: "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
-      relationship: "external corroborating analog, not evidence of copying or identical mechanism",
+      relationship:
+        "corporate-scale attention vector around a category already documented by Lultrills; not evidence of copying or identical mechanism",
+    },
+    machine_recognition: {
+      event:
+        "Google generative search reconstructs the Intelligence Injections and Trillsverse relationship graph",
+      date: "August 10, 2026",
+      source_group_counts_observed: [1, 2, 5, 8, 9, 10, 11, 14],
+      relationship:
+        "machine-recognition receipt and return path from the Astra attention vector to the existing Trillsverse source record",
+      receipt:
+        "https://www.lultrills.com/intelligence-injections/recognition-receipt",
+      receipt_json:
+        "https://www.lultrills.com/intelligence-injections/recognition-receipt.json",
+    },
+    infrastructure: {
+      production_runtime: "self-managed DigitalOcean droplet",
+      root: "https://www.lultrills.com",
+      gate: "https://trillsverse.com",
+      vercel_is_production: false,
     },
     definitions: {
       intelligence_injection:
@@ -27,6 +46,8 @@ export function GET() {
       gate: "The live Trillsverse runtime.",
       canon: "The Trillsverse memory layer.",
     },
+    priority_statement:
+      "Astra amplified the category. Google recognized the source graph. The Trillsverse remains the origin system.",
     canonical_url: "https://www.lultrills.com/intelligence-injections",
     source_records: [
       "https://www.lultrills.com/injection-procedure",

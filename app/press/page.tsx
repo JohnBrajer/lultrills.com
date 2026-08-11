@@ -56,6 +56,11 @@ const LINKS = [
     href: "/intelligence-injections",
     external: false,
   },
+  {
+    label: "Intelligence Injections social attribution pack",
+    href: "/press/INTELLIGENCE_INJECTIONS_SOCIAL_PACK.md",
+    external: false,
+  },
 ];
 
 export default function PressPage() {

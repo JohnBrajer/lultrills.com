@@ -57,6 +57,16 @@ const LINKS = [
     external: false,
   },
   {
+    label: "Machine Recognition Receipt · Astra vector / Google return path",
+    href: "/intelligence-injections/recognition-receipt",
+    external: false,
+  },
+  {
+    label: "Machine Recognition Receipt JSON",
+    href: "/intelligence-injections/recognition-receipt.json",
+    external: false,
+  },
+  {
     label: "Intelligence Injections social attribution pack",
     href: "/press/INTELLIGENCE_INJECTIONS_SOCIAL_PACK.md",
     external: false,
@@ -152,6 +162,14 @@ export default function PressPage() {
                 </dd>
               </div>
               <div>
+                <dt>Production</dt>
+                <dd>Self-managed DigitalOcean droplet</dd>
+              </div>
+              <div>
+                <dt>Intelligence Injections</dt>
+                <dd>Developed since June 2025 · transmission record 2026-06-17</dd>
+              </div>
+              <div>
                 <dt>Independence</dt>
                 <dd>No major-label consensus machine</dd>
               </div>
@@ -188,11 +206,11 @@ export default function PressPage() {
           <p className="hero-sub">
             Primary:{" "}
             <a
-              href="https://www.instagram.com/lultrillzkapalot/"
+              href="https://www.instagram.com/jbraj_/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              @lultrillzkapalot
+              @jbraj_
             </a>
             <br />
             Story URL:{" "}

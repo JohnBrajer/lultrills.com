@@ -105,7 +105,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
       {
         heading: "Creative content and interactive experiences",
         body: [
-          "The Services include music, lore, fiction, interactive characters, games, and world-building experiences. All of that is entertainment and creative expression. Interactive characters and story systems are fictional. They are not real people, licensed professionals, or substitutes for human judgment.",
+          "The Services include music, doctrine, interactive system surfaces (Fragments), games, and immersion experiences that transmit the Trillsverse. The Trillsverse itself is an operational creative and systems framework — not a fictional franchise. Interactive system surfaces and chat experiences are creative expressions and runtime interfaces; they are not real people, licensed professionals, or substitutes for human judgment.",
           "You agree not to treat any output from the Services as medical, mental health, legal, financial, or other professional advice.",
         ],
       },
@@ -118,7 +118,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
       {
         heading: "Intellectual property",
         body: [
-          `Music, names, characters, lore, trademarks, code, design, and other materials in the Services are owned by ${LEGAL.entity} or our licensors. You get a limited, revocable, non-exclusive license to use the Services for personal, non-commercial enjoyment unless we say otherwise in writing.`,
+          `Music, names, marks, doctrine, trademarks, code, design, and other materials in the Services are owned by ${LEGAL.entity} or our licensors. You get a limited, revocable, non-exclusive license to use the Services for personal, non-commercial enjoyment unless we say otherwise in writing.`,
           "You may not copy, redistribute, or commercially exploit our content without permission, except for fair use or other rights the law already gives you.",
         ],
       },
@@ -319,7 +319,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
       {
         heading: "Entertainment only",
         body: [
-          `Content on Services operated by ${LEGAL.entity} is for entertainment, art, music, and creative world-building. Lore, characters, interactive systems, and story experiences are fictional or artistic. They are not statements of scientific, medical, or professional fact unless we explicitly say so in a non-fiction context (for example a press fact sheet).`,
+          `Content on Services operated by ${LEGAL.entity} includes entertainment, art, music, doctrine, and interactive systems that present the Trillsverse. The Trillsverse is not marketed as a fictional franchise; it is the operator's live creative and systems architecture. Interactive Fragment and chat surfaces are artistic and system interfaces — not licensed professional services. Nothing on the Services is medical, legal, financial, or other professional advice unless we explicitly state otherwise in a dedicated non-entertainment context (for example a press fact sheet).`,
         ],
       },
       {
@@ -364,7 +364,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
       {
         heading: "Ownership",
         body: [
-          `Unless otherwise noted, music, text, graphics, characters, lore, code, and trademarks on the Services are owned by ${LEGAL.entity} or used under license. All rights reserved.`,
+          `Unless otherwise noted, music, text, graphics, marks, doctrine, code, and trademarks on the Services are owned by ${LEGAL.entity} or used under license. All rights reserved.`,
         ],
       },
       {

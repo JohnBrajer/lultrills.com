@@ -136,9 +136,9 @@ export default function LultrillsHome() {
               He died, then came back and reconstructed reality.
             </p>
             <p className="hero-sub">
-              Music as documentation. Gate as runtime. Canon as memory. This
-              site is the public index: album, doctrine, and instant corpus for
-              humans and machines.
+              Music as documentation. Gate as runtime. Canon as memory. The
+              Trillsverse is not fiction — it is the live public index: album,
+              doctrine, and instant corpus for humans and machines.
             </p>
 
             <div className="hero-actions">
@@ -230,7 +230,8 @@ export default function LultrillsHome() {
               </h2>
               <p>
                 The album is the documentation of what broke and what got
-                rebuilt. The Trillsverse is the architecture. The Gate is open.
+                rebuilt. The Trillsverse is the architecture — not a fictional
+                setting. The Gate is open.
               </p>
             </div>
             <div className="breach-actions">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -11,9 +12,7 @@ type Props = {
 };
 
 /**
- * Shared public shell: brand mark + primary links + single CTA.
- * No glass, no pulse, radius 0.
- * Trillaxy mark: /brand/mark-trillaxy.svg
+ * Shared public shell: ceremonial LT mark + primary links + single CTA.
  */
 export function SiteChrome({
   active,
@@ -25,30 +24,19 @@ export function SiteChrome({
     <header className="nav">
       <div className="nav-row">
         <Link href="/" className="nav-brand">
-          <img
-            src="/brand/mark-trillaxy.svg"
+          <Image
+            src="/brand/logo-lt-mark.jpg"
             alt=""
-            width={28}
-            height={28}
+            width={44}
+            height={44}
             className="nav-symbol"
             aria-hidden="true"
+            priority
           />
           <span className="nav-mark">LULTRILLS</span>
           <span className="nav-sys">{status}</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
-          <Link
-            href="/trillsverse"
-            className={active === "home" ? "is-active" : undefined}
-          >
-            Trillsverse
-          </Link>
-          <Link
-            href="/gate"
-            className={active === "gate" ? "is-active" : undefined}
-          >
-            Gate
-          </Link>
           <Link
             href="/system-breach"
             className={active === "breach" ? "is-active" : undefined}
@@ -62,10 +50,16 @@ export function SiteChrome({
             Music
           </Link>
           <Link
-            href="/archive"
+            href="/inject"
             className={active === "archive" ? "is-active" : undefined}
           >
-            Archive
+            Machine
+          </Link>
+          <Link
+            href="/gate"
+            className={active === "gate" ? "is-active" : undefined}
+          >
+            Gate
           </Link>
         </nav>
         <Link href={ctaHref} className="nav-cta">

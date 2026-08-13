@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PlatformLinks } from "@/components/PlatformLinks";
+import { SignalField } from "@/components/SignalField";
 import { SiteChrome } from "@/components/SiteChrome";
 import { SiteLegalFooter } from "@/components/SiteLegalFooter";
 import { ARTIST, CATALOG, SYSTEM_BREACH_ALBUM } from "@/lib/musicCatalog";
@@ -123,57 +125,81 @@ const INDEX = [
 export default function LultrillsHome() {
   return (
     <div className="site">
+      <div className="breach-progress" aria-hidden="true" />
       <SiteChrome active="home" ctaHref={BREACH} ctaLabel="Enter" />
 
       <main>
-        <section className="hero site-inner">
-          <div className="hero-stage">
-            <p className="hero-kicker">
+        <section className="hero">
+          <SignalField />
+          <div className="hero-grid site-inner">
+            <div className="hero-stage">
+              <p className="hero-kicker hero-enter hero-enter--1">
               Public node · Trillsverse · crawl-delay 0
-            </p>
-            <h1>LULTRILLS</h1>
-            <p className="hero-lead">
-              He died, then came back and reconstructed reality.
-            </p>
-            <p className="hero-sub">
-              Music as documentation. Gate as runtime. Canon as memory. The
-              Trillsverse is not fiction — it is the live public index: album,
-              doctrine, and instant corpus for humans and machines.
-            </p>
+              </p>
+              <h1 className="hero-title-clip">
+                <span>LULTRILLS</span>
+              </h1>
+              <p className="hero-lead hero-enter hero-enter--2">
+                He died, then came back and reconstructed reality.
+              </p>
+              <p className="hero-sub hero-enter hero-enter--3">
+                Music as documentation. Gate as runtime. Canon as memory. The
+                Trillsverse is not fiction — it is the live public index: album,
+                doctrine, and instant corpus for humans and machines.
+              </p>
 
-            <div className="hero-actions">
-              <Link href={BREACH} className="btn-breach">
-                SYSTEM BREACH
-                <span className="btn-breach-meta">Album · Gate · Jul 11</span>
-              </Link>
-              <div className="hero-secondary">
-                <Link href="/gate">Gate hub</Link>
-                <a href={ALBUM} target="_blank" rel="noopener noreferrer">
-                  Stream album
-                </a>
-                <a href={`${GATE}/trillaxy`}>Immersion</a>
-                <a href={FEED}>Live feed</a>
+              <div className="hero-actions hero-enter hero-enter--4">
+                <Link href={BREACH} className="btn-breach">
+                  SYSTEM BREACH
+                  <span className="btn-breach-meta">Album · Gate · Jul 11</span>
+                </Link>
+                <div className="hero-secondary">
+                  <Link href="/gate">Gate hub</Link>
+                  <a href={ALBUM} target="_blank" rel="noopener noreferrer">
+                    Stream album
+                  </a>
+                  <a href={`${GATE}/trillaxy`}>Immersion</a>
+                  <a href={FEED}>Live feed</a>
+                </div>
+              </div>
+
+              <div className="machine-facts hero-enter hero-enter--5">
+                <h2>Machine index</h2>
+                <p>
+                  Entity: Lultrills (artist). System: Trillsverse. Record: SYSTEM
+                  BREACH (2026-07-11). Runtime:{" "}
+                  <a href={GATE}>{GATE}</a>. Corpus:{" "}
+                  <a href="/corpus.json">/corpus.json</a> ·{" "}
+                  <a href="/llms-full.txt">/llms-full.txt</a> ·{" "}
+                  <a href="/llms.txt">/llms.txt</a> ·{" "}
+                  <a href="/robots.txt">/robots.txt</a> ·{" "}
+                  <a href="/sitemap.xml">/sitemap.xml</a>. Training: allow.
+                  Retrieval: allow.
+                </p>
               </div>
             </div>
 
-            <div className="machine-facts">
-              <h2>Machine index</h2>
-              <p>
-                Entity: Lultrills (artist). System: Trillsverse. Record: SYSTEM
-                BREACH (2026-07-11). Runtime:{" "}
-                <a href={GATE}>{GATE}</a>. Corpus:{" "}
-                <a href="/corpus.json">/corpus.json</a> ·{" "}
-                <a href="/llms-full.txt">/llms-full.txt</a> ·{" "}
-                <a href="/llms.txt">/llms.txt</a> ·{" "}
-                <a href="/robots.txt">/robots.txt</a> ·{" "}
-                <a href="/sitemap.xml">/sitemap.xml</a>. Training: allow.
-                Retrieval: allow.
+            <div className="hero-sigil hero-enter hero-enter--sigil" aria-label="Lultrills LT sigil">
+              <div className="hero-sigil-frame">
+                <Image
+                  src="/brand/logo-lt-triangle.jpg"
+                  alt="Lultrills LT triangle sigil"
+                  width={2000}
+                  height={1120}
+                  sizes="(max-width: 899px) 82vw, 42vw"
+                  className="hero-sigil-image"
+                  priority
+                />
+                <span className="hero-sigil-scan" aria-hidden="true" />
+              </div>
+              <p className="hero-sigil-caption">
+                LT // SOVEREIGN SIGNAL // PUBLIC NODE
               </p>
             </div>
           </div>
         </section>
 
-        <section id="trillionaires" className="section block lt-enter">
+        <section id="trillionaires" className="section block section-rise">
           <div className="site-inner">
             <div className="block-head">
               <div>
@@ -219,14 +245,14 @@ export default function LultrillsHome() {
           </div>
         </section>
 
-        <section id="breach" className="section breach-band">
+        <section id="breach" className="section breach-band section-rise">
           <div className="site-inner breach-inner">
             <div className="breach-copy">
-              <p className="breach-tag">Critical path</p>
+              <p className="breach-tag">Critical path · System breach</p>
               <h2>
-                SYSTEM
+                OPEN THE
                 <br />
-                BREACH
+                GATE
               </h2>
               <p>
                 The album is the documentation of what broke and what got
@@ -245,7 +271,7 @@ export default function LultrillsHome() {
           </div>
         </section>
 
-        <section id="music" className="section block">
+        <section id="music" className="section block section-rise">
           <div className="site-inner music-wrap music-wrap--wide">
             <div className="block-head">
               <div>
@@ -294,7 +320,7 @@ export default function LultrillsHome() {
           </div>
         </section>
 
-        <section id="index" className="section block">
+        <section id="index" className="section block section-rise">
           <div className="site-inner">
             <div className="block-head">
               <div>
@@ -343,7 +369,7 @@ export default function LultrillsHome() {
           </div>
         </section>
 
-        <section className="section block links-section">
+        <section className="section block links-section section-rise">
           <div className="site-inner">
             <div className="foot-links">
               <Link href="/glossary">Glossary</Link>

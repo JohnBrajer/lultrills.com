@@ -3,7 +3,7 @@ import Link from "next/link";
 
 type Props = {
   /** Active path hint for nav weight */
-  active?: "home" | "breach" | "archive" | "music" | "gate";
+  active?: "home" | "breach" | "music" | "console" | "machine" | "gate";
   /** Nav CTA target */
   ctaHref?: string;
   ctaLabel?: string;
@@ -11,9 +11,7 @@ type Props = {
   status?: string;
 };
 
-/**
- * Shared public shell: ceremonial LT mark + primary links + single CTA.
- */
+/** Shared public shell: ceremonial LT mark + primary links + single CTA. */
 export function SiteChrome({
   active,
   ctaHref = "/system-breach",
@@ -50,13 +48,19 @@ export function SiteChrome({
             Music
           </Link>
           <Link
-            href="/inject"
-            className={active === "archive" ? "is-active" : undefined}
+            href="/console/"
+            className={active === "console" ? "is-active" : undefined}
+          >
+            Console
+          </Link>
+          <Link
+            href="/machine-entry"
+            className={active === "machine" ? "is-active" : undefined}
           >
             Machine
           </Link>
           <Link
-            href="/gate"
+            href="https://trillsverse.com"
             className={active === "gate" ? "is-active" : undefined}
           >
             Gate

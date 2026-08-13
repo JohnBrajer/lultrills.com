@@ -13,7 +13,7 @@
 
 | Surface | Asset |
 |---------|--------|
-| SiteChrome | mark-trillaxy (nav) |
+| SiteChrome | Ceremonial LT entity mark (`logo-lt-mark.jpg`) |
 | /trillsverse hub | mark-trillaxy + mark-inner |
 | Favicon | favicon.svg |
 | Inject / machine | text pointer to /brand/ |

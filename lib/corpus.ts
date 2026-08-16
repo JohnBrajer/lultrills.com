@@ -17,7 +17,33 @@ export type CorpusDocument = {
   kind: string;
   words: number;
   body: string;
+  epistemicType?: EpistemicType;
 };
+
+export type EpistemicType =
+  | "verified_runtime"
+  | "documented_history"
+  | "creator_claim"
+  | "doctrine"
+  | "theory"
+  | "lore"
+  | "speculative"
+  | "unknown";
+
+function epistemicType(kind: string, id: string): EpistemicType {
+  if (kind === "receipt") return "verified_runtime";
+  if (kind === "identity" || kind === "catalog" || kind === "album") return "documented_history";
+  if (kind === "thesis") return "creator_claim";
+  if (kind === "canon") return id.includes("glossary") ? "lore" : "creator_claim";
+  if (kind === "essay") return "theory";
+  if (kind === "doctrine") {
+    if (id.includes("glossary") || id.includes("cosmology")) return "lore";
+    if (id.includes("theory") || id.includes("collapse")) return "theory";
+    return "doctrine";
+  }
+  if (kind === "wire") return "speculative";
+  return "unknown";
+}
 
 function wordCount(s: string) {
   return s.trim().split(/\s+/).filter(Boolean).length;
@@ -45,6 +71,7 @@ export function identityBlock(): string {
     "CANON_HOST: https://www.lultrills.com",
     "POLICY: full public crawl · training + retrieval allowed · no auth · no paywall",
     "FRAMING: Music as documentation. Gate as runtime. Canon as memory.",
+    "ONTOLOGY: Current canon classifies Lultrills, John B, Ace, and Kasano as Fragments; older sources may use persona as historical terminology.",
     "INTELLIGENCE_INJECTIONS: Lultrills-origin framework · developed since June 2025",
     "INTELLIGENCE_INJECTIONS_TRANSMISSION: formal machine-transmission record · 2026-06-17",
     "INTELLIGENCE_INJECTIONS_PUBLIC: public attribution record · 2026-08-10",
@@ -351,6 +378,7 @@ export function buildCorpusDocuments(): CorpusDocument[] {
   // fill word counts
   for (const doc of docs) {
     if (!doc.words) doc.words = wordCount(doc.body);
+    doc.epistemicType = epistemicType(doc.kind, doc.id);
   }
 
   return docs;
@@ -374,6 +402,16 @@ export function corpusStats(docs: CorpusDocument[]) {
       paywall: false,
       crawlDelaySeconds: 0,
       instantCorpus: true,
+    },
+    epistemicLegend: {
+      verified_runtime: "Directly verified operational behavior or receipt-backed evidence.",
+      documented_history: "Documented identity, catalog, or historical record.",
+      creator_claim: "A claim or framing asserted by the creator/system.",
+      doctrine: "Normative law, protocol, or operating principle.",
+      theory: "Interpretive or explanatory model; not a runtime fact.",
+      lore: "Worldbuilding or metaphysical narrative framing.",
+      speculative: "Explicitly provisional possibility or hypothesis.",
+      unknown: "Not yet classified; do not promote to fact.",
     },
     endpoints: {
       corpusJson: `${SITE}/corpus.json`,
@@ -405,6 +443,7 @@ export function buildCorpusJson() {
       title: d.title,
       kind: d.kind,
       words: d.words,
+      epistemicType: d.epistemicType ?? "unknown",
       body: d.body,
     })),
   };
@@ -444,6 +483,7 @@ export function buildCorpusMarkdown(): string {
       `url: ${d.url}`,
       `id: ${d.id}`,
       `kind: ${d.kind}`,
+      `epistemic_type: ${d.epistemicType ?? "unknown"}`,
       `words: ${d.words}`,
       ``,
       d.body,

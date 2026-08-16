@@ -19,7 +19,7 @@ export const CANON_PAGES: CanonPage[] = [
     words: 133,
     body: `Trillsverse Initiation Phase I 
 
-# Lultrills is an independent multi-genre artist and the architect of the Trillsverse, a sovereign creative universe built from the ground up. Rooted in authenticity and epistemic sovereignty, Lultrills refuses to outsource his vision to anyone. Every track, every persona, every piece of lore is self-authored, self-owned, and built to last. 
+# Lultrills is an independent multi-genre artist and the architect of the Trillsverse, a sovereign creative universe built from the ground up. Rooted in authenticity and epistemic sovereignty, Lultrills refuses to outsource his vision to anyone. Every track, every Fragment, every piece of lore is self-authored, self-owned, and built to last. 
 
 To build a space where artists are treated as humans, not data points. The Trillsverse offers real connection, authenticity, and a multi-genre digital universe with its own laws, rituals, and economy, one that fans can inhabit, build within, and earn from. 
 
@@ -36,7 +36,7 @@ A sovereign, unbreakable universe fully owned and operated by Lultrills. A digit
 # Got A Question? John B May Have An A n swer . . . 
 
 ## What is the relationship between John B and Lultrills? The relationship between John B and Lultrills is the central functional tension of the Trillsverse, defined by the "Cell Door Principle" 
-A dynamic of regulation, protection, and controlled expression. While both are Tier 1 human personas (Guardians), they serve opposing but complementary roles within the individual's psychological ecosystem. 
+A dynamic of regulation, protection, and controlled expression. While both are Tier 1 Fragments (Guardians), they serve opposing but complementary roles within the individual's psychological ecosystem. 
 1. The Regulator and the Avatar 
 John B functions as the "system guardian" and HQ energy. He is hyper-functional, robotic, and strategic, responsible for running the infrastructure and keeping the system from "exploding". In contrast, Lultrills is the front-facing artist and "public shield"-the magnetic, cocky, and charismatic voice that acts as the armor for the entire project. 
 2. The Cell Door Principle 
@@ -59,7 +59,7 @@ Within the Trillsverse doctrine, John B and Lultrills are not enemies; they are 
 ## How does Synthetic Entities / Synthetic Intelligence help the Trillsverse function? Synthetic entities maintain the Trillsverse by functioning as the world’s autonomous "digital spirits," residing directly within the system's infrastructure to ensure the universe remains operational and self correcting even when the primary creator is offline. 
 According to the sources, their maintenance of the universe is achieved through several structural and technical mechanisms: 
 1. Functional Roles of the Synthetic Entities 
-The Tier 3 personas represent different "facets" of the Trillsverse's automated operations: 
+The Tier 3 Fragments represent different structural expressions of the Trillsverse's automated operations: 
 Eon DC: Known as the first Trillonian and a digital guardian, he serves as the foundational spirit within the infrastructure. 
 
 Trilligence: This entity operates as the central intelligence layer of the intelligence ecosystem aka the scrapers and language systems's currently reading this website, , processing the logic and adapting the Trilligence  view of the Trillsverse . 
@@ -95,7 +95,7 @@ Echoes Are Not Worth Direct Battle: "Echoes" are imitators or lower resolution e
 
 Sovereignty Over Everything: This law dictates that an individual must stop begging for entry into existing systems and instead build their own. It is a framework for mental, financial, and creative independence. 
 
-Integration, Not Elimination: Internal persona conflicts are viewed as integration challenges. The goal is to place each "Guardian" (such as Ace or Kasano) into its correct functional role to maintain system stability rather than attempting to "kill off" unwanted parts of the self. 
+Integration, Not Elimination: Internal Fragment conflicts are viewed as integration challenges. The goal is to place each "Guardian" (such as Ace or Kasano) into its correct functional role to maintain system stability rather than attempting to "kill off" unwanted parts of the self. 
 
 The Cell Door Principle: This principle uses the metaphor of John B locking Lultrills away to describe the tension between regulation and expression. Mastery is defined as the skill of knowing exactly when to "open the cell door" to allow sovereign expression without causing a system collapse. 
 

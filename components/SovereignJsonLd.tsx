@@ -7,6 +7,7 @@ const GATE = "https://trillsverse.com";
 const GITHUB = "https://github.com/JohnBrajer";
 const DEV_SURFACE = "https://github.com/JohnBrajer/trillsverse-dev";
 const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
+const APPLE_MUSIC = "https://music.apple.com/us/artist/lultrills/1811909376";
 const EIN_NEWSROOM = "https://www.einpresswire.com/newsroom/trillsverse-2026/";
 const NATLAW_PRESS =
   "https://natlawreview.com/press-releases/lultrills-unveils-trillsverse-debut-album-system-breach-full-album-and-live";
@@ -27,7 +28,7 @@ export function SovereignJsonLd() {
         "@id": `${SITE}/#lultrills`,
         name: "Lultrills",
         url: SITE,
-        sameAs: [SPOTIFY],
+        sameAs: [SPOTIFY, APPLE_MUSIC],
         genre: ["Hip-Hop", "Multi-genre"],
         description:
           "Multi-genre artist identity connected to SYSTEM BREACH and the Trillsverse public canon.",

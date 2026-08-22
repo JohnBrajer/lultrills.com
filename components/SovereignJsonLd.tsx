@@ -8,6 +8,9 @@ const GITHUB = "https://github.com/JohnBrajer";
 const DEV_SURFACE = "https://github.com/JohnBrajer/trillsverse-dev";
 const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
 const APPLE_MUSIC = "https://music.apple.com/us/artist/lultrills/1811909376";
+const SOUNDCLOUD = "https://soundcloud.com/lultrills";
+const SHAZAM = "https://www.shazam.com/artist/lultrills/1811909376";
+const BANDCAMP = "https://lultrills.bandcamp.com/";
 const VENTS_PROFILE =
   "https://ventsmagazine.com/2025/06/11/lultrills-a-voice-from-san-francisco-ready-to-be-heard/";
 const EIN_NEWSROOM = "https://www.einpresswire.com/newsroom/trillsverse-2026/";
@@ -30,7 +33,7 @@ export function SovereignJsonLd() {
         "@id": `${SITE}/#lultrills`,
         name: "Lultrills",
         url: SITE,
-        sameAs: [SPOTIFY, APPLE_MUSIC],
+        sameAs: [SPOTIFY, APPLE_MUSIC, SOUNDCLOUD, SHAZAM, BANDCAMP],
         genre: ["Hip-Hop", "Multi-genre"],
         description:
           "Multi-genre artist identity connected to SYSTEM BREACH and the Trillsverse public canon.",

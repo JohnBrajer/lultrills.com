@@ -8,6 +8,8 @@ const GITHUB = "https://github.com/JohnBrajer";
 const DEV_SURFACE = "https://github.com/JohnBrajer/trillsverse-dev";
 const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
 const APPLE_MUSIC = "https://music.apple.com/us/artist/lultrills/1811909376";
+const SPOTIFY_ALBUM = "https://open.spotify.com/album/2EdL8cFjNfkiSuxk0udISO";
+const APPLE_ALBUM = "https://music.apple.com/us/album/system-breach/6789855058";
 const SOUNDCLOUD = "https://soundcloud.com/lultrills";
 const SHAZAM = "https://www.shazam.com/artist/lultrills/1811909376";
 const BANDCAMP = "https://lultrills.bandcamp.com/";
@@ -96,6 +98,7 @@ export function SovereignJsonLd() {
             byArtist: { "@id": `${SITE}/#lultrills` },
             datePublished: "2026-07-11",
             url: `${SITE}/system-breach`,
+            sameAs: [SPOTIFY_ALBUM, APPLE_ALBUM],
           },
           {
             "@type": "WebApplication",
@@ -119,6 +122,17 @@ export function SovereignJsonLd() {
             `${SITE}/eon/constitution.json`,
           ],
         },
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": `${SITE}/press#webpage`,
+        name: "Lultrills / Trillsverse Press Kit & Evidence",
+        url: `${SITE}/press`,
+        isPartOf: { "@id": `${SITE}/#website` },
+        about: [
+          { "@id": `${SITE}/#lultrills` },
+          { "@id": `${GATE}/#trillsverse` },
+        ],
       },
       {
         "@type": "DefinedTermSet",

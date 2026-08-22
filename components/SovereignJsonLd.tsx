@@ -13,6 +13,8 @@ const SHAZAM = "https://www.shazam.com/artist/lultrills/1811909376";
 const BANDCAMP = "https://lultrills.bandcamp.com/";
 const VENTS_PROFILE =
   "https://ventsmagazine.com/2025/06/11/lultrills-a-voice-from-san-francisco-ready-to-be-heard/";
+const NOW_ENTERTAINMENT_PROFILE =
+  "https://nowentertainment.net/lultrills-redefines-hip-hop-with-up-release/";
 const EIN_NEWSROOM = "https://www.einpresswire.com/newsroom/trillsverse-2026/";
 const NATLAW_PRESS =
   "https://natlawreview.com/press-releases/lultrills-unveils-trillsverse-debut-album-system-breach-full-album-and-live";
@@ -44,6 +46,12 @@ export function SovereignJsonLd() {
             name: "Lultrills: A Voice From San Francisco Ready to Be Heard",
             url: VENTS_PROFILE,
             datePublished: "2025-06-11",
+          },
+          {
+            "@type": "Article",
+            name: "Lultrills Redefines Hip Hop with ‘Up’ Release",
+            url: NOW_ENTERTAINMENT_PROFILE,
+            datePublished: "2026-04-17",
           },
         ],
       },

@@ -5,14 +5,15 @@ const SITE = "https://www.lultrills.com";
 const GATE_RITE = "https://trillsverse.com/system-breach";
 
 export const metadata: Metadata = {
-  title: "Press Kit | Lultrills · Trillsverse Reality Update",
+  title: "Press Kit & Evidence | Lultrills · Trillsverse",
   description:
-    "Press kit for Lultrills and Trillsverse: The Reality Update. Facts, links, Layer A lede. System live.",
+    "Press kit and source index for Lultrills and Trillsverse: verified public links, publication coverage, platform identities, press distribution, and machine-readable evidence.",
   alternates: { canonical: `${SITE}/press` },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Press · Lultrills / Trillsverse",
-    description: "Reality Update press kit. Flatlined. Survived. System live.",
+    description:
+      "Press kit, publication coverage, identity surfaces, distribution evidence, and public source links for Lultrills and Trillsverse.",
     url: `${SITE}/press`,
     type: "website",
   },
@@ -77,6 +78,81 @@ const LINKS = [
     external: false,
   },
 ];
+
+const PUBLICATION_EVIDENCE = [
+  {
+    label: "Vents Magazine · Lultrills: A Voice From San Francisco Ready to Be Heard · 2025-06-11",
+    href: "https://ventsmagazine.com/2025/06/11/lultrills-a-voice-from-san-francisco-ready-to-be-heard/",
+  },
+  {
+    label: "Now Entertainment · Lultrills Redefines Hip Hop with ‘Up’ Release · 2026-04-17",
+    href: "https://nowentertainment.net/lultrills-redefines-hip-hop-with-up-release/",
+  },
+];
+
+const IDENTITY_EVIDENCE = [
+  {
+    label: "Public developer & research reference · GitHub",
+    href: "https://github.com/JohnBrajer/trillsverse-dev",
+  },
+  {
+    label: "Lultrills · Spotify",
+    href: "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt",
+  },
+  {
+    label: "Lultrills · Apple Music",
+    href: "https://music.apple.com/us/artist/lultrills/1811909376",
+  },
+  {
+    label: "Lultrills · SoundCloud",
+    href: "https://soundcloud.com/lultrills",
+  },
+  {
+    label: "Lultrills · Shazam",
+    href: "https://www.shazam.com/artist/lultrills/1811909376",
+  },
+  {
+    label: "Lultrills · Bandcamp",
+    href: "https://lultrills.bandcamp.com/",
+  },
+];
+
+const DISTRIBUTION_EVIDENCE = [
+  {
+    label: "EIN Presswire · Trillsverse newsroom",
+    href: "https://www.einpresswire.com/newsroom/trillsverse-2026/",
+  },
+  {
+    label: "EIN Presswire · SYSTEM BREACH / Trillsverse release",
+    href: "https://www.einpresswire.com/article/928899049/lultrills-unveils-the-trillsverse-with-debut-album-system-breach-full-album-and-live-universe",
+  },
+  {
+    label: "EIN News · syndicated release",
+    href: "https://www.einnews.com/pr_news/928899049/lultrills-unveils-the-trillsverse-with-debut-album-system-breach-full-album-and-live-universe",
+  },
+  {
+    label: "National Law Review · syndicated release",
+    href: "https://natlawreview.com/press-releases/lultrills-unveils-trillsverse-debut-album-system-breach-full-album-and-live",
+  },
+];
+
+function ExternalEvidenceList({
+  items,
+}: {
+  items: { label: string; href: string }[];
+}) {
+  return (
+    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+      {items.map((item) => (
+        <li key={item.href} style={{ marginBottom: "0.65rem" }}>
+          <a href={item.href} target="_blank" rel="noopener noreferrer">
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function PressPage() {
   return (
@@ -179,6 +255,34 @@ export default function PressPage() {
                 <dd>No major-label consensus machine</dd>
               </div>
             </dl>
+          </div>
+
+          <p className="section-label">Publication coverage</p>
+          <div className="panel-glass" style={{ marginBottom: "2rem" }}>
+            <p className="hero-sub" style={{ marginTop: 0, marginBottom: "1rem" }}>
+              Publication-hosted profiles and coverage. Kept separate from
+              press-release syndication and platform identity pages.
+            </p>
+            <ExternalEvidenceList items={PUBLICATION_EVIDENCE} />
+          </div>
+
+          <p className="section-label">Identity & technical proof</p>
+          <div className="panel-glass" style={{ marginBottom: "2rem" }}>
+            <p className="hero-sub" style={{ marginTop: 0, marginBottom: "1rem" }}>
+              Exact artist profiles and public technical/reference surfaces used
+              to resolve entity identity across platforms.
+            </p>
+            <ExternalEvidenceList items={IDENTITY_EVIDENCE} />
+          </div>
+
+          <p className="section-label">Distribution & backlinks</p>
+          <div className="panel-glass" style={{ marginBottom: "2rem" }}>
+            <p className="hero-sub" style={{ marginTop: 0, marginBottom: "1rem" }}>
+              Press-release distribution and syndicated pages. Useful as external
+              domain evidence and backlinks, but not represented as independent
+              editorial coverage.
+            </p>
+            <ExternalEvidenceList items={DISTRIBUTION_EVIDENCE} />
           </div>
 
           <p className="section-label">Assets</p>

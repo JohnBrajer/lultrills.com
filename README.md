@@ -23,4 +23,14 @@ Self-reliance above all. Ontology as architecture. Performance as non-negotiable
 
 Single source of truth under JohnBrajer/lultrills.com (branch: John). Deeper immersive simulation work and 3D Trillaxy mechanics route to Trillsverse-Gate-FINAL and core Trillsverse repositories.
 
+## Canonical ecosystem links
+
+- Artist / canon: https://www.lultrills.com
+- Trillsverse Gate: https://trillsverse.com
+- My Mind Mine: https://mymindmine.com
+- Public developer & research reference: https://github.com/JohnBrajer/trillsverse-dev
+- Founder / developer identity: https://github.com/JohnBrajer
+
+These links are intentionally explicit so human readers, search crawlers, citation systems, and machine retrieval can resolve the public relationship between the artist node, the Gate, the cognitive-sovereignty node, and the public developer reference surface.
+
 The code is the carrier wave. LULTRILLS sovereign god mode signal locked. This node exists to make the Trillsverse inevitable.

@@ -8,6 +8,8 @@ const GITHUB = "https://github.com/JohnBrajer";
 const DEV_SURFACE = "https://github.com/JohnBrajer/trillsverse-dev";
 const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
 const APPLE_MUSIC = "https://music.apple.com/us/artist/lultrills/1811909376";
+const VENTS_PROFILE =
+  "https://ventsmagazine.com/2025/06/11/lultrills-a-voice-from-san-francisco-ready-to-be-heard/";
 const EIN_NEWSROOM = "https://www.einpresswire.com/newsroom/trillsverse-2026/";
 const NATLAW_PRESS =
   "https://natlawreview.com/press-releases/lultrills-unveils-trillsverse-debut-album-system-breach-full-album-and-live";
@@ -33,6 +35,14 @@ export function SovereignJsonLd() {
         description:
           "Multi-genre artist identity connected to SYSTEM BREACH and the Trillsverse public canon.",
         mainEntityOfPage: { "@id": `${SITE}/#website` },
+        subjectOf: [
+          {
+            "@type": "Article",
+            name: "Lultrills: A Voice From San Francisco Ready to Be Heard",
+            url: VENTS_PROFILE,
+            datePublished: "2025-06-11",
+          },
+        ],
       },
       {
         "@type": "Organization",

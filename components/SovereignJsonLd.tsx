@@ -1,46 +1,75 @@
 /**
  * Site-wide Schema.org JSON-LD for crawler / AI ingestion.
- * Structures Lultrills + Trillsverse as concrete MusicGroup + CreativeWork graph.
+ * Keeps identities distinct and links third-party evidence without abusing sameAs.
  */
 const SITE = "https://www.lultrills.com";
 const GATE = "https://trillsverse.com";
+const GITHUB = "https://github.com/JohnBrajer";
+const DEV_SURFACE = "https://github.com/JohnBrajer/trillsverse-dev";
+const SPOTIFY = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
+const EIN_NEWSROOM = "https://www.einpresswire.com/newsroom/trillsverse-2026/";
+const NATLAW_PRESS =
+  "https://natlawreview.com/press-releases/lultrills-unveils-trillsverse-debut-album-system-breach-full-album-and-live";
 
 export function SovereignJsonLd() {
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Person",
+        "@id": `${SITE}/#john-brajer`,
+        name: "John Brajer",
+        url: GITHUB,
+        sameAs: [GITHUB],
+      },
+      {
         "@type": "MusicGroup",
         "@id": `${SITE}/#lultrills`,
         name: "Lultrills",
         url: SITE,
-        sameAs: [
-          GATE,
-          "https://open.spotify.com/artist/0lEyZFGEI5aIsNZB2PHhpI",
-        ],
+        sameAs: [SPOTIFY],
         genre: ["Hip-Hop", "Multi-genre"],
         description:
-          "Multi-genre artist and architect of the Trillsverse. SYSTEM BREACH album. Sovereignty architecture as culture.",
-        memberOf: { "@id": `${SITE}/#trillsverse` },
+          "Multi-genre artist identity connected to SYSTEM BREACH and the Trillsverse public canon.",
+        mainEntityOfPage: { "@id": `${SITE}/#website` },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${GATE}/#trillsverse-llc`,
+        name: "Trillsverse LLC",
+        url: GATE,
+        founder: { "@id": `${SITE}/#john-brajer` },
       },
       {
         "@type": "CreativeWork",
-        "@id": `${SITE}/#trillsverse`,
+        "@id": `${GATE}/#trillsverse`,
         name: "Trillsverse",
         url: GATE,
-        sameAs: [SITE, `${GATE}/system-breach`],
         description:
-          "Sovereignty architecture and cultural operating system. Executable baseline for the Gate runtime and public corpus.",
-        creator: { "@id": `${SITE}/#lultrills` },
-        about: [
-          "sovereignty",
-          "identity architecture",
-          "SYSTEM BREACH",
-          "Trillaxy",
+          "Connected creative, technical, cultural, and research ecosystem spanning music, public software, identity architecture, and machine-readable canon.",
+        creator: { "@id": `${SITE}/#john-brajer` },
+        publisher: { "@id": `${GATE}/#trillsverse-llc` },
+        subjectOf: [
+          {
+            "@type": "WebPage",
+            name: "Trillsverse Developer & Research Surface",
+            url: DEV_SURFACE,
+          },
+          {
+            "@type": "WebPage",
+            name: "Trillsverse LLC newsroom on EIN Presswire",
+            url: EIN_NEWSROOM,
+          },
+          {
+            "@type": "NewsArticle",
+            name: "Lultrills Unveils the Trillsverse With Debut Album SYSTEM BREACH",
+            url: NATLAW_PRESS,
+          },
         ],
         hasPart: [
           {
             "@type": "MusicAlbum",
+            "@id": `${SITE}/system-breach#album`,
             name: "SYSTEM BREACH",
             byArtist: { "@id": `${SITE}/#lultrills` },
             datePublished: "2026-07-11",
@@ -59,7 +88,7 @@ export function SovereignJsonLd() {
         "@id": `${SITE}/#website`,
         name: "Lultrills",
         url: SITE,
-        publisher: { "@id": `${SITE}/#lultrills` },
+        publisher: { "@id": `${GATE}/#trillsverse-llc` },
         potentialAction: {
           "@type": "ReadAction",
           target: [

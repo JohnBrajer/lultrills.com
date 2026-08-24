@@ -7,13 +7,17 @@ import { SITE, INJECTION_HEADERS } from "@/lib/corpus";
 export function GET() {
   const agents = [
     "*",
+    "OAI-SearchBot",
     "GPTBot",
     "ChatGPT-User",
     "Google-Extended",
     "Googlebot",
+    "Claude-SearchBot",
+    "Claude-User",
     "ClaudeBot",
     "anthropic-ai",
     "PerplexityBot",
+    "Perplexity-User",
     "Applebot-Extended",
     "Bytespider",
     "CCBot",

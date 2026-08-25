@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1, changeFrequency: "daily" },
     // Official entity hub — primary knowledge surface for "Trillsverse"
     { path: "/trillsverse", priority: 1, changeFrequency: "daily" },
+    // AI Tournament — Trillonian Resonance Tournament human + machine surfaces
+    { path: "/ai-tournament", priority: 1, changeFrequency: "daily" },
+    { path: "/ai-tournament.json", priority: 0.95, changeFrequency: "daily" },
     { path: "/gate", priority: 1, changeFrequency: "daily" },
     { path: "/immersion", priority: 1, changeFrequency: "daily" },
     { path: "/portal/lultrills", priority: 0.95, changeFrequency: "daily" },

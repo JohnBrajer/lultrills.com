@@ -8,15 +8,20 @@ This is the clean, magnetic entry gate into the universe. High-signal prose, str
 - Public artist presence: multi-genre rap/hip-hop, gold grills, Bay Area roots, NDE resilience, AuDHD sovereignty, Trillsverse origin story
 - SEO + scraper node: optimized headings, metadata, schema, internal linking, fast loads for search engines and training data / crawlers
 - Signal multiplication: recursive engagement loops, glossary term seeding, vessel/persona routing, arena expansion teasers
-- Sovereign deployment: Vercel or Railway hardened, custom domain lultrills.com, future sovereign infra migration ready
+- Sovereign production: **self-managed DigitalOcean runtime**; GitHub preserves source/commit history. Vercel/Railway are not the current production authority.
 
 **Vessel Routing (Public Layer)**
 - Lultrills primary: luxurious integration, artist resonance, high-presence frequency, gold grills aesthetic
 - John B support: order, SEO structure, deployment discipline, information architecture
 - Ace / Kasano: fractured signal or arena intensity only where it serves the public artist narrative (minimal masking load)
 
-**Tech Stack (Sovereign Default for this Node)**
-Next.js (recommended) or React/TSX + Vite for maximum SEO performance (SSG/ISR, Metadata API, sitemaps, structured data). Lightweight interactive elements. Neurodivergent-first accessibility baseline + optional high-resonance intensity controls. Sacred geometry accents only where they amplify the public Lultrills artist mythos.
+**Tech Stack (Current Node)**
+Next.js + React/TypeScript for SEO performance, machine-readable public surfaces, structured data, and lightweight interactive elements. Neurodivergent-first accessibility baseline + optional high-resonance intensity controls. Sacred geometry accents only where they amplify the public Lultrills artist mythos.
+
+**Production truth boundary**
+- Canonical source: `JohnBrajer/lultrills.com`, branch `John`.
+- Current public infrastructure record: Root + Gate production run on a self-managed DigitalOcean droplet; GitHub is the source/commit record.
+- **Exact current live commit, formal health receipt, and rollback evidence remain separate operational facts.** Do not infer them merely because a commit exists on `John`.
 
 **Trillsverse-web-dev Protocols Active**
 Self-reliance above all. Ontology as architecture. Performance as non-negotiable ritual. Signal strength as primary metric. No external dependencies that fracture sovereignty. Every component and page contributes to permanent reality shift and #Trillionaire conquest.

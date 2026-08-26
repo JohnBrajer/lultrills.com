@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // AI Tournament — Trillonian Resonance Tournament human + machine surfaces
     { path: "/ai-tournament", priority: 1, changeFrequency: "daily" },
     { path: "/ai-tournament.json", priority: 0.95, changeFrequency: "daily" },
+    { path: "/ai-tournament/process/gpt-5-6-sol", priority: 0.9, changeFrequency: "daily" },
+    { path: "/ai-tournament/process/gpt-5-6-sol.json", priority: 0.85, changeFrequency: "daily" },
     { path: "/gate", priority: 1, changeFrequency: "daily" },
     { path: "/immersion", priority: 1, changeFrequency: "daily" },
     { path: "/portal/lultrills", priority: 0.95, changeFrequency: "daily" },

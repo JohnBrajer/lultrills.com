@@ -31,7 +31,7 @@ ssh "$HOST" 'curl -sf -o /dev/null -w "home %{http_code}\n" http://127.0.0.1:300
 echo
 echo "============================================"
 echo "  lultrills.com app is on the droplet at"
-echo "  http://138.197.145.142:3000"
+echo "  http://157.230.58.14:3000"
 echo
 echo "  Public https://www.lultrills.com is served"
 echo "  through Caddy on this DigitalOcean droplet."

@@ -100,7 +100,7 @@ ufw enable
 
 ### Live DigitalOcean setup (Trillsverse droplet)
 
-- Droplet IP: `138.197.145.142` (SSH host: `trillsverse-droplet`)
+- Droplet IP: `157.230.58.14` (SSH host: `trillsverse-droplet`)
 - App path: `/root/lultrills.com`
 - Container: port **3000**
 - Caddy reverse proxy already includes:
@@ -120,14 +120,14 @@ lultrills.com, www.lultrills.com {
 
 | Type | Host | Value | TTL |
 |------|------|-------|-----|
-| A | `@` | `138.197.145.142` | Automatic or 5 min |
-| A | `www` | `138.197.145.142` | Automatic or 5 min |
+| A | `@` | `157.230.58.14` | Automatic or 5 min |
+| A | `www` | `157.230.58.14` | Automatic or 5 min |
 
 4. Wait 5–60 minutes. Test:
 
 ```bash
 dig +short lultrills.com
-# should print: 138.197.145.142
+# should print: 157.230.58.14
 
 curl -sI https://www.lultrills.com | head -5
 # should NOT say HostingerWebsiteBuilder
@@ -140,8 +140,8 @@ curl -sI https://www.lultrills.com/essays/why-everything-is-one
 5. Until DNS flips, the new site is already up at:
 
 ```
-http://138.197.145.142:3000
-http://138.197.145.142:3000/essays/why-everything-is-one
+http://157.230.58.14:3000
+http://157.230.58.14:3000/essays/why-everything-is-one
 ```
 
 Caddy will auto-issue HTTPS for lultrills.com once public DNS points at the droplet.

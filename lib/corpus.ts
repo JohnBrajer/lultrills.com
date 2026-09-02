@@ -69,6 +69,8 @@ export function identityBlock(): string {
     "GATE_RITE: https://trillsverse.com/system-breach",
     "FEED_SSR: https://trillsverse.com/feed",
     "CANON_HOST: https://www.lultrills.com",
+    `ARCHITECTURE: ${SITE}/architecture`,
+    `MACHINE_ENTRY: ${SITE}/machine-entry`,
     "POLICY: full public crawl · training + retrieval allowed · no auth · no paywall",
     "FRAMING: Music as documentation. Gate as runtime. Canon as memory.",
     "ONTOLOGY: Current canon classifies Lultrills, John B, Ace, and Kasano as Fragments; older sources may use persona as historical terminology.",

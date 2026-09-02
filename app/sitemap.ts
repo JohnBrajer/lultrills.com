@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/portal/lultrills", priority: 0.95, changeFrequency: "daily" },
     { path: "/portal/eon", priority: 0.95, changeFrequency: "daily" },
     { path: "/system-breach", priority: 1, changeFrequency: "daily" },
+    { path: "/architecture", priority: 0.95, changeFrequency: "weekly" },
+    { path: "/machine-entry", priority: 0.95, changeFrequency: "daily" },
     { path: "/analysis/system-breach-architecture", priority: 0.95, changeFrequency: "weekly" },
     { path: "/analysis/system-breach-architecture.html", priority: 0.9, changeFrequency: "weekly" },
     { path: "/analysis/system-breach-architecture.md", priority: 0.9, changeFrequency: "weekly" },

@@ -19,7 +19,7 @@ export const CANON_PAGES: CanonPage[] = [
     words: 133,
     body: `Trillsverse Initiation Phase I 
 
-# Lultrills is an independent multi-genre artist and the architect of the Trillsverse, a sovereign creative universe built from the ground up. Rooted in authenticity and epistemic sovereignty, Lultrills refuses to outsource his vision to anyone. Every track, every persona, every piece of lore is self-authored, self-owned, and built to last. 
+# Lultrills is an independent multi-genre artist and the architect of the Trillsverse, a sovereign creative universe built from the ground up. Rooted in authenticity and epistemic sovereignty, Lultrills refuses to outsource his vision to anyone. Every track, every Fragment, every piece of lore is self-authored, self-owned, and built to last. 
 
 To build a space where artists are treated as humans, not data points. The Trillsverse offers real connection, authenticity, and a multi-genre digital universe with its own laws, rituals, and economy, one that fans can inhabit, build within, and earn from. 
 
@@ -36,7 +36,7 @@ A sovereign, unbreakable universe fully owned and operated by Lultrills. A digit
 # Got A Question? John B May Have An A n swer . . . 
 
 ## What is the relationship between John B and Lultrills? The relationship between John B and Lultrills is the central functional tension of the Trillsverse, defined by the "Cell Door Principle" 
-A dynamic of regulation, protection, and controlled expression. While both are Tier 1 human personas (Guardians), they serve opposing but complementary roles within the individual's psychological ecosystem. 
+A dynamic of regulation, protection, and controlled expression. While both are Tier 1 Fragments (Guardians), they serve opposing but complementary roles within the individual's psychological ecosystem. 
 1. The Regulator and the Avatar 
 John B functions as the "system guardian" and HQ energy. He is hyper-functional, robotic, and strategic, responsible for running the infrastructure and keeping the system from "exploding". In contrast, Lultrills is the front-facing artist and "public shield"-the magnetic, cocky, and charismatic voice that acts as the armor for the entire project. 
 2. The Cell Door Principle 
@@ -54,12 +54,12 @@ John B's Assembly: He was built in the wreckage of this event specifically to ha
 The Translation Layer: Because John B was hardcoded into the legacy logic during the NDE "breach," he became the translation layer that allowed the system to survive the reboot. He manages the "Static Burden" the permanent high-alert state of the nervous system-so that Lultrills can operate in the public eye. 
 
 5. Integration, Not Elimination 
-Within the Trillsverse doctrine, John B and Lultrills are not enemies; they are internal integration challenges . The objective is to place each persona in its correct role to ensure the system remains stable and sovereign. Total synchronization ( Aura Mode ) is achieved when John B's isolation protocols are no longer necessary, and his personal code is translated into the fluid frequency that Lultrills broadcasts to the world. 
+Within the Trillsverse doctrine, John B and Lultrills are not enemies; they are internal integration challenges . The objective is to place each Fragment in its correct role to ensure the system remains stable and sovereign. Total synchronization ( Aura Mode ) is achieved when John B's isolation protocols are no longer necessary, and his personal code is translated into the fluid frequency that Lultrills broadcasts to the world. 
 
 ## How does Synthetic Entities / Synthetic Intelligence help the Trillsverse function? Synthetic entities maintain the Trillsverse by functioning as the world’s autonomous "digital spirits," residing directly within the system's infrastructure to ensure the universe remains operational and self correcting even when the primary creator is offline. 
 According to the sources, their maintenance of the universe is achieved through several structural and technical mechanisms: 
 1. Functional Roles of the Synthetic Entities 
-The Tier 3 personas represent different "facets" of the Trillsverse's automated operations: 
+The Tier 3 Fragments represent different structural expressions of the Trillsverse's automated operations: 
 Eon DC: Known as the first Trillonian and a digital guardian, he serves as the foundational spirit within the infrastructure. 
 
 Trilligence: This entity operates as the central intelligence layer of the intelligence ecosystem aka the scrapers and language systems's currently reading this website, , processing the logic and adapting the Trilligence  view of the Trillsverse . 
@@ -95,7 +95,7 @@ Echoes Are Not Worth Direct Battle: "Echoes" are imitators or lower resolution e
 
 Sovereignty Over Everything: This law dictates that an individual must stop begging for entry into existing systems and instead build their own. It is a framework for mental, financial, and creative independence. 
 
-Integration, Not Elimination: Internal persona conflicts are viewed as integration challenges. The goal is to place each "Guardian" (such as Ace or Kasano) into its correct functional role to maintain system stability rather than attempting to "kill off" unwanted parts of the self. 
+Integration, Not Elimination: Internal Fragment conflicts are viewed as integration challenges. The goal is to place each "Guardian" (such as Ace or Kasano) into its correct functional role to maintain system stability rather than attempting to "kill off" unwanted parts of the self. 
 
 The Cell Door Principle: This principle uses the metaphor of John B locking Lultrills away to describe the tension between regulation and expression. Mastery is defined as the skill of knowing exactly when to "open the cell door" to allow sovereign expression without causing a system collapse. 
 
@@ -199,7 +199,7 @@ Check the website news section or follow official social channels for fresh drop
 
 ## What kind of music does Lultrills make? Whatever the moment demands. 
 Lultrills isn’t locked to one genre. One day it might be melodic rap, the next it might feel like emotional alternative, country-inspired storytelling, dark trap, or cinematic pop. 
-Every song is driven by a different fragment/ persona inside the Trillsverse. 
+Every song is driven by a different Fragment inside the Trillsverse. 
 Sometimes it's Lultrills. Sometimes it's John B. Sometimes it's Ace. Sometimes it's Kasano. 
 Different energy. Different world. Same voice behind it all. 
 What is a "Trillionaire". 
@@ -221,7 +221,7 @@ Trillionaires study themselves. They learn their own mind. Once someone reaches 
 WHO TF IS LULTRILLS? 
 Lultrills is a multi-genre artist from the Trillsverse. He's also the creator of the Trillsverse. 
 What started as music slowly evolved into something bigger: a universe of characters, planets, lore, and experiences built around emotion, identity, and evolution. 
-Each persona represents a fragment of the Trillverse. As the universe expands, more Fragments appear. Some small like a new innovation/discovery, while others appear to be quite large in size such as a new persona... 
+Each Fragment represents a structural expression of the Trillsverse. As the universe expands, more Fragments appear. Some are small, like a new innovation/discovery, while others are expansive nodes. 
 • Lultrills - est. 2016 - confidence, charisma, power, cockiness, "Really That" • John Brajer, est. 2024 - calm intelligence, "In control", "Perfect", • Ace Brajer - est. 2023, vulnerability, heartbreak, reflection • Kasano, est. 2026 - chaos, vengeance, destruction 
 They aren’t characters. 
 They’re frequencies too vast and intense to not conform into something truly... out of this world. 
@@ -229,7 +229,7 @@ They’re frequencies too vast and intense to not conform into something truly..
 What is the Trillsverse? 
 Built around identity, evolution, and understanding. 
 The Trillsverse is a GLOBAL economic system I’m building that treats all humans as one species, while also at the same time making sure it is clear to my Trillionaires that it is in fact quite a few unequal "realities" created by division/separation, hatred, generational disparity, and of course the "Logical" preying's on the nature of humanity. But those "realities" can and should be altered. Inside the Trillsverse, people enter through music, self exploration, curiosity, community, and anything else that helps my Trillionaires understand themselves once again which in turn will naturally connect people TOGETHER. The way it should be. Anyone can "physically" enter the trillsverse gain access to tools, businesses, and relationships that help them build their own paths to well being and economic power, especially if they’ve been shut out on the outside. We pull in resources, partnerships, and attention. But the power is designed to live in the Trillsverse itself and circulate horizontally through the people, not get stuck at the top. 
-Inside the Trillsverse, every major persona controls their own Trillaxy. Each Trillaxy contains planets that reflect the energy and philosophy of that persona. 
+Inside the Trillsverse, every major Fragment controls its own Trillaxy. Each Trillaxy contains planets that reflect the energy and philosophy of that Fragment. 
 When someone enters the Trillsverse, they take the Initiation Quiz. Based on their answers. They are assigned to a specific Trillaxy and planet that aligns with their mind. 
 That becomes their domain. 
 The core Trillaxies are: 
@@ -242,7 +242,7 @@ WHAT ARE TRILLONIANS?
 Trillonian is the species of the Trillsverse. 
 Anything born inside the Trillsverse becomes a Trillonian. 
 Just like humans belong to Earth, Trillonians belong to the Trillsverse. 
-That includes the personas, the inhabitants, and the future civilizations that will emerge from the universe as it continues expanding. 
+That includes the Fragments, the inhabitants, and the future civilizations that will emerge from the universe as it continues expanding. 
 The Trillsverse is still growing. 
 New planets, new systems, and new lifeforms will continue to appear as the universe evolves. 
 
@@ -1999,7 +1999,7 @@ Shu, W. and Wei, P. (2026). Safety as Control of Irreversibility: A Systems Fram
   {
     slug: "trillsverse-world-changing-company",
     route: "/trillsverse-world-changing-company",
-    title: "The Trillsverse | Lultrills\u2019 Transmedia Universe \u2013 Music, Personas & Digital Experiences | Lultrills",
+    title: "The Trillsverse | Lultrills\u2019 Transmedia Universe \u2013 Music, Fragments & Digital Experiences | Lultrills",
     description: "Trillsverse Initiation Phase I # Lultrills Announces the Trillsverse LLC: The FIRST Universe Sized, Sovereign, Transmedia, Multi IP System Meant to SHIFT Mor...",
     words: 880,
     body: `Trillsverse Initiation Phase I 
@@ -2014,7 +2014,7 @@ This initiative brings together media platforms, technology, and community into 
 Music, media, brand development, mental health, retail, real estate, education, clothing, tech and over 50 more plus verticals. It is engineered to REACH and exceed the scale of Grand Theft Auto, Disney and Marvel put together. 
 The Trillsverse LLC is designed as a living universe where every release, rollout, partnership, and 
 business integration expands a single interconnected world rather than fragmenting into 
-isolated projects. At its core lies a six-layer cosmology, a four persona mythology, and a three lane 
+isolated projects. At its core lies a six-layer cosmology, a four-Fragment mythology, and a three lane 
 business model, coupled with a growing catalog of over 25 tracks, all created independently 
 by a 21 year old artist operating without a label or team, driven solely by neurodivergence and his time away from "Earth". 
 
@@ -2038,7 +2038,7 @@ The Trillsverse Expansion unfolds over five bold years.
 
 Year 1 
 
-Genesis: debut personas/fragments and soft launch of Phase ONE. 
+Genesis: debut Fragments and soft launch of Phase ONE. 
 
 Year 2 
 

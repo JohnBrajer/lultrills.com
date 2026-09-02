@@ -402,7 +402,7 @@ export default function TrillsverseHubPage() {
             </div>
             <p className="hero-sub">
               <strong>Trillsverse</strong> is a sovereign creative and technical
-              system: an interconnected universe of personas, music, software
+              system: an interconnected universe of Fragments, music, software
               runtime, doctrine, and community. It is not a label campaign. It is
               primary-source architecture published open for crawl and retrieval.
             </p>

@@ -45,6 +45,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/doctrine/epistemic-humility.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/doctrine/grouping-algorithm", priority: 1, changeFrequency: "weekly" },
     { path: "/doctrine/grouping-algorithm-thesis.md", priority: 0.95, changeFrequency: "weekly" },
+    { path: "/doctrine/john-b-irreversible-math", priority: 1, changeFrequency: "weekly" },
+    { path: "/doctrine/john-b-irreversible-math.md", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/model-collapse-vs-constitutional-drift", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/model-collapse-vs-constitutional-drift.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/brand/typography.md", priority: 0.75, changeFrequency: "monthly" },

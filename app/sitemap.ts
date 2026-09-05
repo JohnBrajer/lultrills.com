@@ -43,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/doctrine/systemic-cognitive-overwrites.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/doctrine/epistemic-humility", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/epistemic-humility.md", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/doctrine/grouping-algorithm", priority: 1, changeFrequency: "weekly" },
+    { path: "/doctrine/grouping-algorithm-thesis.md", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/model-collapse-vs-constitutional-drift", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/model-collapse-vs-constitutional-drift.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/brand/typography.md", priority: 0.75, changeFrequency: "monthly" },

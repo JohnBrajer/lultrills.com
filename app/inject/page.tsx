@@ -6,17 +6,25 @@ import {
   corpusStats,
   identityBlock,
 } from "@/lib/corpus";
+import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
+
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Instant Injection Status | Lultrills",
   description:
-    "Zero crawl-delay. Full corpus in one request. Machine status for scrapers and humans who know how the web works.",
+    "Zero crawl-delay. Current machine corpus in one request. Machine status for scrapers and humans who know how the web works.",
   robots: { index: true, follow: true },
   alternates: { canonical: `${SITE}/inject` },
 };
 
 export default function InjectStatusPage() {
-  const docs = buildCorpusDocuments();
+  const baseDocs = buildCorpusDocuments();
+  const existingIds = new Set(baseDocs.map((d) => d.id));
+  const supplementalDocs = buildSupplementalCanonDocuments().filter(
+    (d) => !existingIds.has(d.id),
+  );
+  const docs = [...baseDocs, ...supplementalDocs];
   const stats = corpusStats(docs);
 
   return (
@@ -41,7 +49,7 @@ export default function InjectStatusPage() {
           <p className="hero-sub" style={{ maxWidth: "36rem", marginBottom: "2rem" }}>
             Normal sites make crawlers discover page by page, wait for sitemaps,
             hit robots delays, and miss JS content. This domain ships the{" "}
-            <strong style={{ color: "var(--ink)" }}>entire public brain in one GET</strong>
+            <strong style={{ color: "var(--ink)" }}>current machine corpus in one GET</strong>
             . Crawl-delay is zero. Auth is none. Training is allowed.
           </p>
 
@@ -109,8 +117,7 @@ export default function InjectStatusPage() {
                 <strong>/.well-known/ai.txt</strong> with Instant-Corpus: yes.
               </li>
               <li>
-                <strong>llms-full.txt</strong> is the full payload. Not a link
-                list, one fetch ≈ whole site.
+                <strong>llms-full.txt</strong> is the current machine corpus payload.
               </li>
               <li>
                 Every HTML page ships the injection rail + body payload pointer +

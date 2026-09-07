@@ -1,0 +1,71 @@
+name: Public state continuity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 10 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-state:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe advertised public surfaces
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/public-state
+          base="https://www.lultrills.com"
+          paths=(
+            "/"
+            "/machine-entry"
+            "/.well-known/ai.txt"
+            "/architecture.json"
+            "/corpus.json"
+            "/llms-full.txt"
+            "/inject"
+            "/robots.txt"
+            "/sitemap.xml"
+          )
+          for path in "${paths[@]}"; do
+            safe=$(printf '%s' "$path" | sed 's#^/##; s#[/.]#_#g')
+            [ -n "$safe" ] || safe="root"
+            echo "GET ${base}${path}"
+            curl --fail --silent --show-error --location \
+              --retry 2 --retry-delay 2 \
+              --connect-timeout 10 --max-time 30 \
+              "${base}${path}" -o "/tmp/public-state/${safe}"
+          done
+
+      - name: Verify machine corpus convergence
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          root = Path('/tmp/public-state')
+          corpus = json.loads((root / 'corpus_json').read_text())
+          llms = (root / 'llms-full_txt').read_text()
+          inject = (root / 'inject').read_text()
+
+          corpus_id = corpus.get('corpusId')
+          manifest_hash = corpus.get('manifestHash')
+          assert corpus_id, 'corpus.json missing corpusId'
+          assert manifest_hash, 'corpus.json missing manifestHash'
+          assert f'CORPUS_ID={corpus_id}' in llms, 'llms-full corpusId disagrees with corpus.json'
+          assert f'MANIFEST_SHA256={manifest_hash}' in llms, 'llms-full manifest hash disagrees with corpus.json'
+
+          legend = corpus.get('epistemicLegend', {})
+          assert 'narrative_canon' in legend, 'current narrative canon category missing'
+          assert 'lore' not in legend, 'legacy narrative category still active in machine schema'
+
+          lowered = inject.lower()
+          assert 'current machine corpus' in lowered, '/inject is not using current-corpus framing'
+          assert 'entire public brain' not in lowered, '/inject still overclaims entire-public-brain scope'
+
+          docs = corpus.get('documents', [])
+          assert len(docs) == corpus.get('documentCount'), 'documentCount disagrees with documents array'
+          print(f"verified corpusId={corpus_id} documents={len(docs)}")

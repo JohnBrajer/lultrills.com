@@ -15,12 +15,24 @@ export function GET() {
   const additions = buildSupplementalCanonDocuments().filter(
     (d) => !existingIds.has(d.id),
   );
-  const documents = [...corpus.documents, ...additions];
+  const documents = [...corpus.documents, ...additions].map((document) =>
+    document.epistemicType === "lore"
+      ? { ...document, epistemicType: "narrative_canon" }
+      : document,
+  );
+  const { lore: legacyNarrativeDescription, ...epistemicLegend } =
+    corpus.epistemicLegend;
   const identity = corpusManifestIdentity(CORPUS_VERSION, documents);
   const body = JSON.stringify(
     {
       ...corpus,
       ...identity,
+      epistemicLegend: {
+        ...epistemicLegend,
+        narrative_canon:
+          legacyNarrativeDescription ||
+          "Narrative or cultural canon and creative representation; not an empirical claim by itself.",
+      },
       documentCount: documents.length,
       totalWords: corpus.totalWords + additions.reduce((sum, d) => sum + d.words, 0),
       totalChars: corpus.totalChars + additions.reduce((sum, d) => sum + d.body.length, 0),

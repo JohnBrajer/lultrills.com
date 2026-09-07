@@ -27,9 +27,13 @@ export function GET() {
     `MANIFEST_DOCUMENTS=${documents.length}`,
     "",
   ].join("\n");
+  const currentCorpus = buildLlmsFull().replace(
+    "SCOPE=One request. Entire public brain.",
+    "SCOPE=One request. Current registered machine corpus; manifest defines included documents.",
+  );
 
   return new Response(
-    `${identityHeader}${buildLlmsFull()}${supplementalCanonText()}`,
+    `${identityHeader}${currentCorpus}${supplementalCanonText()}`,
     {
       headers: {
         "Content-Type": "text/plain; charset=utf-8",

@@ -19,8 +19,11 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/public-state
           base="https://www.lultrills.com"
+          cache_bust="continuity=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           paths=(
             "/"
+            "/trillsverse"
+            "/system-breach"
             "/machine-entry"
             "/.well-known/ai.txt"
             "/architecture.json"
@@ -37,7 +40,9 @@ jobs:
             curl --fail --silent --show-error --location \
               --retry 2 --retry-delay 2 \
               --connect-timeout 10 --max-time 30 \
-              "${base}${path}" -o "/tmp/public-state/${safe}"
+              -H 'Cache-Control: no-cache' \
+              -D "/tmp/public-state/${safe}.headers" \
+              "${base}${path}?${cache_bust}" -o "/tmp/public-state/${safe}"
           done
 
       - name: Verify machine corpus convergence
@@ -48,8 +53,11 @@ jobs:
 
           root = Path('/tmp/public-state')
           corpus = json.loads((root / 'corpus_json').read_text())
+          architecture = json.loads((root / 'architecture_json').read_text())
           llms = (root / 'llms-full_txt').read_text()
           inject = (root / 'inject').read_text()
+          trillsverse = (root / 'trillsverse').read_text().lower()
+          system_breach = (root / 'system-breach').read_text().lower()
 
           corpus_id = corpus.get('corpusId')
           manifest_hash = corpus.get('manifestHash')
@@ -65,7 +73,19 @@ jobs:
           lowered = inject.lower()
           assert 'current machine corpus' in lowered, '/inject is not using current-corpus framing'
           assert 'entire public brain' not in lowered, '/inject still overclaims entire-public-brain scope'
+          assert 'full public brain' not in trillsverse, '/trillsverse still overclaims full-public-brain scope'
+          assert 'music, lore, runtime, doctrine' not in system_breach, '/system-breach still exposes obsolete active terminology'
 
           docs = corpus.get('documents', [])
           assert len(docs) == corpus.get('documentCount'), 'documentCount disagrees with documents array'
-          print(f"verified corpusId={corpus_id} documents={len(docs)}")
+          assert isinstance(architecture, dict) and architecture, 'architecture.json is empty or invalid'
+          print(f"verified corpusId={corpus_id} documents={len(docs)} architecture_keys={len(architecture)}")
+
+      - name: Preserve public-state receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-state-${{ github.run_id }}-${{ github.run_attempt }}
+          path: /tmp/public-state/
+          if-no-files-found: warn
+          retention-days: 30

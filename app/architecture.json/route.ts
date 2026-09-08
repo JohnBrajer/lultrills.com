@@ -5,11 +5,12 @@ export function GET() {
   return Response.json(
     {
       protocol: "trillsverse-architecture/v1",
+      topologyVersion: "2026-09-08",
       node: "canon",
       surface: "https://www.lultrills.com/architecture",
       json: "https://www.lultrills.com/architecture.json",
       status: "canonical-public-record",
-      updated: "2026-09-03",
+      updated: "2026-09-08",
       domains: {
         canon: {
           host: "https://www.lultrills.com",

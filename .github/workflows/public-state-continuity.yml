@@ -28,6 +28,8 @@ jobs:
             "/.well-known/ai.txt"
             "/architecture.json"
             "/corpus.json"
+            "/corpus.md"
+            "/corpus.txt"
             "/llms-full.txt"
             "/inject"
             "/robots.txt"
@@ -54,6 +56,8 @@ jobs:
           root = Path('/tmp/public-state')
           corpus = json.loads((root / 'corpus_json').read_text())
           architecture = json.loads((root / 'architecture_json').read_text())
+          corpus_md = (root / 'corpus_md').read_text()
+          corpus_txt = (root / 'corpus_txt').read_text()
           llms = (root / 'llms-full_txt').read_text()
           inject = (root / 'inject').read_text()
           trillsverse = (root / 'trillsverse').read_text().lower()
@@ -70,6 +74,15 @@ jobs:
           assert 'narrative_canon' in legend, 'current narrative canon category missing'
           assert 'lore' not in legend, 'legacy narrative category still active in machine schema'
 
+          for name, projection in {
+            'corpus.md': corpus_md,
+            'corpus.txt': corpus_txt,
+            'llms-full.txt': llms,
+          }.items():
+            assert 'epistemic_type: lore' not in projection, f'{name} still emits legacy active narrative type'
+            assert 'SCOPE=One request. Entire public brain.' not in projection, f'{name} still overclaims entire-public-brain scope'
+            assert 'STATUS: Historical receipt snapshot; scope language superseded on 2026-09-08.' in projection, f'{name} lost historical supersession evidence'
+
           lowered = inject.lower()
           assert 'current machine corpus' in lowered, '/inject is not using current-corpus framing'
           assert 'entire public brain' not in lowered, '/inject still overclaims entire-public-brain scope'
@@ -79,6 +92,7 @@ jobs:
           docs = corpus.get('documents', [])
           assert len(docs) == corpus.get('documentCount'), 'documentCount disagrees with documents array'
           assert isinstance(architecture, dict) and architecture, 'architecture.json is empty or invalid'
+          assert architecture.get('topologyVersion') == '2026-09-08', 'architecture topologyVersion is stale'
           print(f"verified corpusId={corpus_id} documents={len(docs)} architecture_keys={len(architecture)}")
 
       - name: Preserve public-state receipt

@@ -9,6 +9,10 @@ import {
   supplementalCanonText,
 } from "@/lib/canonAdditions";
 import { corpusManifestIdentity } from "@/lib/corpusIdentity";
+import {
+  normalizeMachineCorpusDocument,
+  normalizeMachineCorpusText,
+} from "@/lib/corpusProjection";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -19,7 +23,9 @@ export function GET() {
   const additions = buildSupplementalCanonDocuments().filter(
     (d) => !existingIds.has(d.id),
   );
-  const documents = [...baseDocs, ...additions];
+  const documents = [...baseDocs, ...additions].map(
+    normalizeMachineCorpusDocument,
+  );
   const identity = corpusManifestIdentity(CORPUS_VERSION, documents);
   const identityHeader = [
     `CORPUS_ID=${identity.corpusId}`,
@@ -27,10 +33,7 @@ export function GET() {
     `MANIFEST_DOCUMENTS=${documents.length}`,
     "",
   ].join("\n");
-  const currentCorpus = buildLlmsFull().replace(
-    "SCOPE=One request. Entire public brain.",
-    "SCOPE=One request. Current registered machine corpus; manifest defines included documents.",
-  );
+  const currentCorpus = normalizeMachineCorpusText(buildLlmsFull());
 
   return new Response(
     `${identityHeader}${currentCorpus}${supplementalCanonText()}`,

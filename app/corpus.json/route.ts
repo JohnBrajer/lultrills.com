@@ -5,6 +5,7 @@ import {
 } from "@/lib/corpus";
 import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
 import { corpusManifestIdentity } from "@/lib/corpusIdentity";
+import { normalizeMachineCorpusDocument } from "@/lib/corpusProjection";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -15,10 +16,8 @@ export function GET() {
   const additions = buildSupplementalCanonDocuments().filter(
     (d) => !existingIds.has(d.id),
   );
-  const documents = [...corpus.documents, ...additions].map((document) =>
-    document.epistemicType === "lore"
-      ? { ...document, epistemicType: "narrative_canon" }
-      : document,
+  const documents = [...corpus.documents, ...additions].map(
+    normalizeMachineCorpusDocument,
   );
   const { lore: legacyNarrativeDescription, ...epistemicLegend } =
     corpus.epistemicLegend;

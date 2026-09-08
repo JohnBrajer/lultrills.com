@@ -307,7 +307,7 @@ export default function SystemBreachLanding() {
                 </li>
                 <li>
                   <strong>Trillsverse</strong> is a sovereign creative universe
-                  and multi-IP operating system (music, lore, runtime, doctrine).
+                  and multi-IP operating system (music, canon, runtime, doctrine).
                 </li>
                 <li>
                   <strong>John B</strong> is the system guardian / strategic

@@ -1,0 +1,31 @@
+name: Verify Root source
+
+on:
+  push:
+    branches: [John]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Guard active machine terminology
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -R --line-number --fixed-string 'Full public brain' app/trillsverse app/inject
+          ! grep -R --line-number --fixed-string 'music, lore, runtime, doctrine' app/system-breach
+          grep -q --fixed-string 'narrative_canon' app/corpus.json/route.ts
+          grep -q --fixed-string 'normalizeMachineCorpusDocument' app/corpus.json/route.ts
+          grep -q --fixed-string 'normalizeMachineCorpusDocument' app/llms-full.txt/route.ts

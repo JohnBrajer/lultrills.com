@@ -151,7 +151,7 @@ const JSON_LD = {
       about: { "@id": `${CANONICAL}#universe` },
       primaryEntityOfPage: { "@id": `${CANONICAL}#universe` },
       mainEntity: { "@id": `${CANONICAL}#organization` },
-      dateModified: "2026-07-17",
+      dateModified: "2026-09-08",
       inLanguage: "en",
     },
     {
@@ -240,7 +240,7 @@ const PORTALS = [
   {
     key: "Machine",
     title: "Instant corpus",
-    body: "One GET. Full public brain. Crawl-delay 0. Training allowed.",
+    body: "One GET. Current registered machine corpus; manifest defines included documents. Crawl-delay 0.",
     href: "/corpus.json",
     external: false,
   },

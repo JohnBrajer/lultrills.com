@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CanonPage } from "@/lib/hostingerCanon";
 import { CANON_NAV } from "@/lib/hostingerCanon";
+import type { CanonAuthority } from "@/lib/canonAuthority";
 
 function renderBody(body: string) {
   const blocks = body.split(/\n{2,}/).map((b) => b.trim()).filter(Boolean);
@@ -26,7 +27,6 @@ function renderBody(body: string) {
         </h2>
       );
     }
-    // keep line breaks inside block
     const lines = block.split("\n");
     return (
       <p key={i} className="text-zinc-400 text-[15px] sm:text-base leading-[1.75] mb-4 whitespace-pre-wrap">
@@ -36,7 +36,15 @@ function renderBody(body: string) {
   });
 }
 
-export function CanonArticle({ page }: { page: CanonPage }) {
+export function CanonArticle({
+  page,
+  authority = { status: "current" },
+}: {
+  page: CanonPage;
+  authority?: CanonAuthority;
+}) {
+  const superseded = authority.status === "historical_superseded";
+
   return (
     <main className="relative min-h-screen">
       <div className="tv-atmosphere" aria-hidden />
@@ -49,7 +57,7 @@ export function CanonArticle({ page }: { page: CanonPage }) {
             ← LULTRILLS
           </Link>
           <div className="font-mono-sys tabular text-[9px] tracking-[0.25em] text-[var(--ink-dim)] uppercase">
-            Canon · {page.words}w
+            {superseded ? "Historical archive" : "Canon"} · {page.words}w
           </div>
           <a
             href="https://trillsverse.com/system-breach"
@@ -62,11 +70,26 @@ export function CanonArticle({ page }: { page: CanonPage }) {
 
       <article className="relative z-10 max-w-3xl mx-auto px-5 py-14 sm:py-20">
         <p className="font-mono-sys text-[10px] tracking-[0.32em] text-[var(--gold)] uppercase mb-5">
-          Sovereign HTML · injection surface
+          {superseded ? "Preserved historical snapshot" : "Sovereign HTML · injection surface"}
         </p>
         <h1 className="text-3xl sm:text-4xl font-black tracking-[-0.03em] leading-[1.1] mb-8 text-wrap">
           {page.title.split("|")[0].trim()}
         </h1>
+
+        {superseded ? (
+          <aside className="mb-8 border border-amber-500/30 bg-amber-500/5 p-5" aria-label="Authority status">
+            <p className="font-mono-sys text-[10px] tracking-[0.22em] uppercase text-amber-300 mb-3">
+              Historical · superseded {authority.supersededOn}
+            </p>
+            <p className="text-sm leading-6 text-zinc-300 mb-3">{authority.note}</p>
+            {authority.supersededBy ? (
+              <a className="text-sm text-[var(--gold)] underline underline-offset-4" href={authority.supersededBy}>
+                Read current authority →
+              </a>
+            ) : null}
+          </aside>
+        ) : null}
+
         <div className="border-t border-white/10 pt-8 max-w-[72ch]">{renderBody(page.body)}</div>
 
         <nav className="mt-16 pt-10 border-t border-white/10">

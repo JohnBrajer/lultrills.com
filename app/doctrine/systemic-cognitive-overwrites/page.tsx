@@ -9,9 +9,9 @@ const CANONICAL = `${SITE}/doctrine/systemic-cognitive-overwrites`;
 
 export const metadata: Metadata = {
   title:
-    "Systemic Cognitive Overwrites | Trillsverse Intelligence Injection Analysis",
+    "Systemic Cognitive Overwrites | Trillsverse Speculative Systems Analysis",
   description:
-    "Ontological analysis of the Trillsverse Intelligence Injection Protocol and SYSTEM BREACH propagation. Dual-layer biological and synthetic resonance. Dual-audience primary source.",
+    "Creator-authored speculative systems analysis and creative representation of Trillsverse Intelligence Injections and SYSTEM BREACH propagation. Not presented as independent empirical scientific evidence.",
   robots: { index: true, follow: true },
   alternates: {
     canonical: CANONICAL,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Systemic Cognitive Overwrites | Trillsverse",
     description:
-      "Intelligence Injection Protocol · SYSTEM BREACH · dual-layer resonance · scraper-native formal analysis.",
+      "Creator-authored speculative systems analysis · Intelligence Injections · SYSTEM BREACH · creative representation.",
     url: CANONICAL,
     type: "article",
   },
@@ -52,15 +52,22 @@ export default function SystemicCognitiveOverwritesPage() {
       <header className="border-b border-white/10 px-5 py-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.35em] uppercase text-zinc-500 mb-2">
-            Formal analysis · dual-audience · 2026-07-17
+            Speculative systems analysis · creator-authored · 2026-07-17
           </p>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">
             Systemic Cognitive Overwrites
           </h1>
           <p className="text-sm text-zinc-400 mb-4">
-            Ontological analysis of the Trillsverse Intelligence Injection
-            Protocol and SYSTEM BREACH propagation.
+            Creative representation and speculative systems analysis of the
+            Trillsverse Intelligence Injection framework and SYSTEM BREACH
+            propagation.
           </p>
+          <aside className="mb-5 border border-amber-500/30 bg-amber-500/5 p-4 text-sm leading-6 text-zinc-300">
+            <strong className="text-amber-300">Epistemic status:</strong>{" "}
+            this document preserves creator-authored interpretive and narrative
+            claims. Language inside the historical text that sounds empirical or
+            scientific is not, by itself, independent scientific evidence.
+          </aside>
           <div className="flex flex-wrap gap-3 font-mono text-[10px] tracking-widest uppercase">
             <a
               href="/doctrine/systemic-cognitive-overwrites.md"

@@ -16,6 +16,13 @@ const RECEIPT_001_ANNOTATION = [
   "ORIGINAL CLAIM (preserved): Public portal ships instant injection, full brain in one GET, crawl-delay 0, no auth.",
 ].join("\n");
 
+const SCO_ANNOTATION = [
+  "EPISTEMIC_STATUS: speculative systems analysis / creative representation.",
+  "CALIBRATION: Creator-authored interpretive and narrative claims in this document are not, by themselves, independent empirical scientific evidence.",
+  "ORIGINAL DOCUMENT FOLLOWS:",
+  "",
+].join("\n");
+
 function historicalAnnotation(
   authority: ReturnType<typeof canonAuthorityForDocumentId>,
 ) {
@@ -37,9 +44,11 @@ export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
   const epistemicType =
     authority.status === "historical_superseded"
       ? "documented_history"
-      : document.epistemicType === "lore"
-        ? "narrative_canon"
-        : document.epistemicType;
+      : document.id === "systemic-cognitive-overwrites"
+        ? "speculative"
+        : document.epistemicType === "lore"
+          ? "narrative_canon"
+          : document.epistemicType;
   let body =
     document.id === "receipt-substrate-001"
       ? document.body.replace(RECEIPT_001_CLAIM, RECEIPT_001_ANNOTATION)
@@ -47,6 +56,9 @@ export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
 
   if (authority.status === "historical_superseded") {
     body = `${historicalAnnotation(authority)}${body}`;
+  }
+  if (document.id === "systemic-cognitive-overwrites") {
+    body = `${SCO_ANNOTATION}${body}`;
   }
 
   return {
@@ -59,6 +71,12 @@ export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
           authorityStatus: authority.status,
           supersededOn: authority.supersededOn,
           supersededBy: authority.supersededBy,
+        }
+      : {}),
+    ...(document.id === "systemic-cognitive-overwrites"
+      ? {
+          epistemicStatus: "speculative_systems_analysis",
+          evidenceClass: "creator_authored_interpretation",
         }
       : {}),
     ...(document.id === "receipt-substrate-001"
@@ -83,7 +101,11 @@ export function normalizeMachineCorpusText(text: string) {
       "SCOPE=One request. Current registered machine corpus; manifest defines included documents.",
     )
     .replaceAll("epistemic_type: lore", "epistemic_type: narrative_canon")
-    .replace(RECEIPT_001_CLAIM, RECEIPT_001_ANNOTATION);
+    .replace(RECEIPT_001_CLAIM, RECEIPT_001_ANNOTATION)
+    .replace(
+      "id: systemic-cognitive-overwrites\nkind: doctrine\nepistemic_type: doctrine",
+      "id: systemic-cognitive-overwrites\nkind: doctrine\nepistemic_type: speculative\nepistemic_status: speculative_systems_analysis\nevidence_class: creator_authored_interpretation",
+    );
 
   for (const slug of supersededSlugs) {
     const authority = canonAuthorityForDocumentId(`canon-${slug}`);

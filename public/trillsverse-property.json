@@ -1,0 +1,58 @@
+{
+  "$schema": "https://www.trillsverse.com/trillsverse-property.schema.json",
+  "protocol": "trillsverse-property",
+  "protocolVersion": 1,
+  "id": "TV-PROPERTY-LULTRILLS-CANON",
+  "name": "Lultrills Canon",
+  "canonicalUrl": "https://www.lultrills.com",
+  "repository": "JohnBrajer/lultrills.com",
+  "kind": "canon",
+  "purpose": "Primary identity, canon, history, music, records, and machine corpus.",
+  "owner": "JohnBrajer",
+  "partOf": "Trillsverse",
+  "version": "2026-09-10.1",
+  "aliases": [
+    "Lultrills"
+  ],
+  "notSameAs": [],
+  "relationships": [
+    {
+      "type": "partOf",
+      "name": "Trillsverse",
+      "url": "https://www.trillsverse.com"
+    }
+  ],
+  "surfaces": [
+    {
+      "url": "https://www.lultrills.com/",
+      "role": "home",
+      "index": true
+    },
+    {
+      "url": "https://www.lultrills.com/corpus.json",
+      "role": "corpus.json",
+      "index": true
+    },
+    {
+      "url": "https://www.lultrills.com/llms-full.txt",
+      "role": "llms-full.txt",
+      "index": true
+    },
+    {
+      "url": "https://www.lultrills.com/sitemap.xml",
+      "role": "sitemap.xml",
+      "index": true
+    }
+  ],
+  "stateSources": [
+    {
+      "url": "https://www.lultrills.com/corpus.json",
+      "fields": [
+        "corpusId",
+        "manifestHash",
+        "documentCount",
+        "totalWords"
+      ]
+    }
+  ]
+}

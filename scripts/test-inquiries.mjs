@@ -11,7 +11,7 @@ let output = '';
 
 async function start() {
   server = spawn(process.execPath, ['.next/standalone/server.js'], {
-    env: { ...process.env, NODE_ENV: 'test', INQUIRY_DIR: directory, PORT: '3118', HOSTNAME: '127.0.0.1' },
+    env: { ...process.env, INQUIRY_DIR: directory, PORT: '3118', HOSTNAME: '127.0.0.1' },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   server.stdout.on('data', (chunk) => { output += chunk; });
@@ -43,7 +43,7 @@ const payload = {
   consent: true,
   source: 'release-test',
 };
-const post = (data, origin = 'http://localhost:3000') => fetch(base + '/api/inquiries', {
+const post = (data, origin = 'https://www.lultrills.com') => fetch(base + '/api/inquiries', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json', Origin: origin },
   body: JSON.stringify(data),

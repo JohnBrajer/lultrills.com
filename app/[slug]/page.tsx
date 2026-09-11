@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import { CanonArticle } from "@/components/CanonArticle";
 import { CANON_PAGES, getCanonBySlug } from "@/lib/hostingerCanon";
 
-// Hostinger paths that must remain exact for SEO + intelligence injection.
-// Custom routes (essays/*, really-that-magazine) live outside this segment.
+// Preserved Hostinger-era source paths. These remain crawlable for continuity,
+// but their wrapper explicitly marks them as historical snapshots rather than current state.
+// Custom current routes (essays/*, really-that-magazine) live outside this segment.
 
 type Props = { params: { slug: string } };
 
@@ -15,12 +16,14 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const page = getCanonBySlug(params.slug);
   if (!page) return { title: "Not found" };
+  const description = `Historical Lultrills source snapshot preserved for continuity. Time-sensitive claims reflect the original page state. ${page.description}`;
   return {
-    title: page.title,
-    description: page.description,
+    title: `${page.title.split("|")[0].trim()} | Historical Lultrills Archive`,
+    description,
+    robots: { index: true, follow: true },
     openGraph: {
-      title: page.title,
-      description: page.description,
+      title: `${page.title.split("|")[0].trim()} | Historical Lultrills Archive`,
+      description,
       type: "article",
     },
   };

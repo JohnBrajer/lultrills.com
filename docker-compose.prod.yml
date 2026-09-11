@@ -2,9 +2,14 @@ services:
   web:
     build: .
     restart: unless-stopped
+    volumes:
+      - offer-inquiries:/app/data/inquiries
     ports:
       - "3000:3000"
     environment:
       NODE_ENV: production
       PORT: "3000"
       HOSTNAME: "0.0.0.0"
+
+volumes:
+  offer-inquiries:

@@ -29,6 +29,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # Create non-root user for security
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
+RUN mkdir -p /app/data/inquiries && chown -R nextjs:nodejs /app/data
 
 # Copy standalone output
 COPY --from=builder /app/public ./public
@@ -36,6 +37,7 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 # Doctrine markdown for runtime/SSG filesystem reads (injection surface)
 COPY --from=builder /app/content ./content
+COPY --from=builder /app/scripts/read-inquiries.mjs ./scripts/read-inquiries.mjs
 
 USER nextjs
 

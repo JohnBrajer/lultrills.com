@@ -26,7 +26,6 @@ function renderBody(body: string) {
         </h2>
       );
     }
-    // keep line breaks inside block
     const lines = block.split("\n");
     return (
       <p key={i} className="text-zinc-400 text-[15px] sm:text-base leading-[1.75] mb-4 whitespace-pre-wrap">
@@ -49,7 +48,7 @@ export function CanonArticle({ page }: { page: CanonPage }) {
             ← LULTRILLS
           </Link>
           <div className="font-mono-sys tabular text-[9px] tracking-[0.25em] text-[var(--ink-dim)] uppercase">
-            Canon · {page.words}w
+            Historical archive · {page.words}w
           </div>
           <a
             href="https://trillsverse.com/system-breach"
@@ -62,16 +61,19 @@ export function CanonArticle({ page }: { page: CanonPage }) {
 
       <article className="relative z-10 max-w-3xl mx-auto px-5 py-14 sm:py-20">
         <p className="font-mono-sys text-[10px] tracking-[0.32em] text-[var(--gold)] uppercase mb-5">
-          Sovereign HTML · injection surface
+          Preserved source snapshot
         </p>
-        <h1 className="text-3xl sm:text-4xl font-black tracking-[-0.03em] leading-[1.1] mb-8 text-wrap">
+        <h1 className="text-3xl sm:text-4xl font-black tracking-[-0.03em] leading-[1.1] mb-5 text-wrap">
           {page.title.split("|")[0].trim()}
         </h1>
+        <div className="mb-8 border border-amber-500/20 bg-amber-500/[0.04] px-4 py-3 text-sm leading-relaxed text-zinc-400">
+          Historical source snapshot preserved for continuity. Time-sensitive claims below reflect the original page state and should not be read as current Lultrills status. For current identity, music, and system state, use the maintained Lultrills surfaces and machine corpus.
+        </div>
         <div className="border-t border-white/10 pt-8 max-w-[72ch]">{renderBody(page.body)}</div>
 
         <nav className="mt-16 pt-10 border-t border-white/10">
           <p className="font-mono text-[10px] tracking-[0.3em] text-zinc-600 uppercase mb-4">
-            More lattice nodes
+            More archive nodes
           </p>
           <ul className="space-y-2">
             {CANON_NAV.filter((n) => n.href !== page.route)

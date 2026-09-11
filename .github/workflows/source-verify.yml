@@ -20,6 +20,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Verify custom-quote intake
+        run: node scripts/test-inquiries.mjs
       - name: Guard active machine terminology
         shell: bash
         run: |

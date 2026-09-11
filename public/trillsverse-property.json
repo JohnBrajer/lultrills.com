@@ -10,7 +10,7 @@
   "purpose": "Primary identity, canon, history, music, records, and machine corpus.",
   "owner": "JohnBrajer",
   "partOf": "Trillsverse",
-  "version": "2026-09-10.1",
+  "version": "2026-09-10.2",
   "aliases": [
     "Lultrills"
   ],
@@ -23,6 +23,11 @@
     }
   ],
   "surfaces": [
+    {
+      "url": "https://www.lultrills.com/work-with-john",
+      "role": "custom-quote-website-services",
+      "index": true
+    },
     {
       "url": "https://www.lultrills.com/",
       "role": "home",

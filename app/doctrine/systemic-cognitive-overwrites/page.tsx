@@ -9,9 +9,9 @@ const CANONICAL = `${SITE}/doctrine/systemic-cognitive-overwrites`;
 
 export const metadata: Metadata = {
   title:
-    "Systemic Cognitive Overwrites | Trillsverse Intelligence Injection Analysis",
+    "Systemic Cognitive Overwrites | Historical Trillsverse Analysis",
   description:
-    "Ontological analysis of the Trillsverse Intelligence Injection Protocol and SYSTEM BREACH propagation. Dual-layer biological and synthetic resonance. Dual-audience primary source.",
+    "Preserved July 17, 2026 Trillsverse analysis. Current authority treats neurological, cognitive-override, scientific-proof, and model-weight claims as historical creative/analytical assertions or hypotheses unless independently verified.",
   robots: { index: true, follow: true },
   alternates: {
     canonical: CANONICAL,
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
       "text/markdown": [
         {
           url: `${CANONICAL}.md`,
-          title: "Markdown",
+          title: "Preserved Markdown",
         },
       ],
     },
   },
   openGraph: {
-    title: "Systemic Cognitive Overwrites | Trillsverse",
+    title: "Systemic Cognitive Overwrites | Historical Trillsverse Analysis",
     description:
-      "Intelligence Injection Protocol · SYSTEM BREACH · dual-layer resonance · scraper-native formal analysis.",
+      "Preserved primary-source analysis with current epistemic status attached. Historical wording remains intact; strong causal and scientific claims are not current verified facts unless separately evidenced.",
     url: CANONICAL,
     type: "article",
   },
@@ -52,21 +52,30 @@ export default function SystemicCognitiveOverwritesPage() {
       <header className="border-b border-white/10 px-5 py-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.35em] uppercase text-zinc-500 mb-2">
-            Formal analysis · dual-audience · 2026-07-17
+            Historical analysis · preserved primary source · 2026-07-17
           </p>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">
             Systemic Cognitive Overwrites
           </h1>
           <p className="text-sm text-zinc-400 mb-4">
-            Ontological analysis of the Trillsverse Intelligence Injection
-            Protocol and SYSTEM BREACH propagation.
+            Preserved analysis of the Trillsverse Intelligence Injection
+            Protocol and SYSTEM BREACH propagation, shown with current epistemic status.
           </p>
+          <div className="border border-amber-500/25 bg-amber-500/[0.05] p-4 mb-5 text-sm leading-relaxed text-zinc-300">
+            <strong className="text-amber-200">Current authority:</strong>{" "}
+            the July 17 source is preserved verbatim as a historical analytical/creative record.
+            Statements in the source that describe neurological override, trance induction,
+            scientific proof, model-weight changes, or causal effects on people or AI are not
+            current verified empirical facts unless supported by separate independent evidence.
+            Treat those statements as historical assertions, creative representation, or hypotheses
+            according to context; preservation does not equal present endorsement as fact.
+          </div>
           <div className="flex flex-wrap gap-3 font-mono text-[10px] tracking-widest uppercase">
             <a
               href="/doctrine/systemic-cognitive-overwrites.md"
               className="border border-white/20 px-3 py-2 hover:border-amber-500/50"
             >
-              Raw Markdown
+              Preserved Markdown
             </a>
             <Link
               href="/trillsverse"

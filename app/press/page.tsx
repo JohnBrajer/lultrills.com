@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 };
 
 const LINKS = [
+  { label: "Work with John Brajer · website identity and discovery", href: "/work-with-john", external: false },
   { label: "Reality Update room", href: "/reality-update", external: false },
   { label: "Stillness receipt", href: "/stillness-receipt", external: false },
   { label: "Gate rite", href: GATE_RITE, external: true },
@@ -218,42 +219,14 @@ export default function PressPage() {
               <span className="panel-state">HARD</span>
             </div>
             <dl className="panel-stats" style={{ marginTop: "1rem" }}>
-              <div>
-                <dt>Artist</dt>
-                <dd>Lultrills</dd>
-              </div>
-              <div>
-                <dt>Entity</dt>
-                <dd>Trillsverse LLC</dd>
-              </div>
-              <div>
-                <dt>Album</dt>
-                <dd>SYSTEM BREACH · 2026-07-11</dd>
-              </div>
-              <div>
-                <dt>Gate</dt>
-                <dd>
-                  <a href="https://trillsverse.com">trillsverse.com</a>
-                </dd>
-              </div>
-              <div>
-                <dt>Portal</dt>
-                <dd>
-                  <a href={SITE}>lultrills.com</a>
-                </dd>
-              </div>
-              <div>
-                <dt>Production</dt>
-                <dd>Self-managed DigitalOcean droplet</dd>
-              </div>
-              <div>
-                <dt>Intelligence Injections</dt>
-                <dd>Developed since June 2025 · transmission record 2026-06-17</dd>
-              </div>
-              <div>
-                <dt>Independence</dt>
-                <dd>No major-label consensus machine</dd>
-              </div>
+              <div><dt>Artist</dt><dd>Lultrills</dd></div>
+              <div><dt>Entity</dt><dd>Trillsverse LLC</dd></div>
+              <div><dt>Album</dt><dd>SYSTEM BREACH · 2026-07-11</dd></div>
+              <div><dt>Gate</dt><dd><a href="https://trillsverse.com">trillsverse.com</a></dd></div>
+              <div><dt>Portal</dt><dd><a href={SITE}>lultrills.com</a></dd></div>
+              <div><dt>Production</dt><dd>Self-managed DigitalOcean droplet</dd></div>
+              <div><dt>Intelligence Injections</dt><dd>Developed since June 2025 · transmission record 2026-06-17</dd></div>
+              <div><dt>Independence</dt><dd>No major-label consensus machine</dd></div>
             </dl>
           </div>
 
@@ -289,19 +262,13 @@ export default function PressPage() {
           <ul style={{ listStyle: "none", padding: 0, marginBottom: "2rem" }}>
             {LINKS.map((l) => (
               <li key={l.href} style={{ marginBottom: "0.65rem" }}>
-                {l.external ? (
-                  <a href={l.href}>{l.label}</a>
-                ) : (
-                  <Link href={l.href}>{l.label}</Link>
-                )}
+                {l.external ? <a href={l.href}>{l.label}</a> : <Link href={l.href}>{l.label}</Link>}
               </li>
             ))}
           </ul>
 
           <div className="panel-glass" style={{ marginBottom: "2rem" }}>
-            <div className="panel-head">
-              <span className="panel-id">BOILERPLATE</span>
-            </div>
+            <div className="panel-head"><span className="panel-id">BOILERPLATE</span></div>
             <p className="hero-sub" style={{ marginTop: "1rem" }}>
               Lultrills is an independent multi-genre artist and architect of the
               Trillsverse, a sovereign creative and technical system operated under
@@ -313,26 +280,12 @@ export default function PressPage() {
 
           <p className="section-label">Contact</p>
           <p className="hero-sub">
-            Primary:{" "}
-            <a
-              href="https://www.instagram.com/jbraj_/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @jbraj_
-            </a>
-            <br />
-            Story URL:{" "}
-            <Link href="/reality-update">
-              {SITE}/reality-update
-            </Link>
-            <br />
-            Wire copy (repo): docs/campaign/reality-update/press-release.md
+            Primary:{" "}<a href="https://www.instagram.com/jbraj_/" target="_blank" rel="noopener noreferrer">@jbraj_</a>
+            <br />Story URL:{" "}<Link href="/reality-update">{SITE}/reality-update</Link>
+            <br />Wire copy (repo): docs/campaign/reality-update/press-release.md
           </p>
 
-          <p className="hero-lead" style={{ marginTop: "3rem", fontSize: "1.25rem" }}>
-            Trillsverse. The Update.
-          </p>
+          <p className="hero-lead" style={{ marginTop: "3rem", fontSize: "1.25rem" }}>Trillsverse. The Update.</p>
         </div>
       </main>
     </div>

@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/reality-update/wire-criteria", priority: 0.9, changeFrequency: "weekly" },
     { path: "/stillness-receipt", priority: 0.7, changeFrequency: "monthly" },
     { path: "/press", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/work-with-john", priority: 0.9, changeFrequency: "monthly" },
     { path: "/intelligence-injections", priority: 1, changeFrequency: "daily" },
     { path: "/intelligence-injections.json", priority: 0.95, changeFrequency: "daily" },
     { path: "/intelligence-injections/recognition-receipt", priority: 1, changeFrequency: "daily" },

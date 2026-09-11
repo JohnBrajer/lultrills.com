@@ -25,12 +25,14 @@ jobs:
             "/trillsverse"
             "/system-breach"
             "/machine-entry"
+            "/work-with-john"
             "/.well-known/ai.txt"
             "/architecture.json"
             "/corpus.json"
             "/corpus.md"
             "/corpus.txt"
             "/llms-full.txt"
+            "/trillsverse-property.json"
             "/inject"
             "/robots.txt"
             "/sitemap.xml"
@@ -56,10 +58,13 @@ jobs:
           root = Path('/tmp/public-state')
           corpus = json.loads((root / 'corpus_json').read_text())
           architecture = json.loads((root / 'architecture_json').read_text())
+          property_manifest = json.loads((root / 'trillsverse-property_json').read_text())
           corpus_md = (root / 'corpus_md').read_text()
           corpus_txt = (root / 'corpus_txt').read_text()
           llms = (root / 'llms-full_txt').read_text()
           inject = (root / 'inject').read_text()
+          home = (root / 'root').read_text().lower()
+          offer = (root / 'work-with-john').read_text().lower()
           trillsverse = (root / 'trillsverse').read_text().lower()
           system_breach = (root / 'system-breach').read_text().lower()
 
@@ -89,11 +94,24 @@ jobs:
           assert 'full public brain' not in trillsverse, '/trillsverse still overclaims full-public-brain scope'
           assert 'music, lore, runtime, doctrine' not in system_breach, '/system-breach still exposes obsolete active terminology'
 
+          # Deployment-drift guards: current source must not silently fall behind production.
+          for stale_marker in (
+            'docs=30',
+            'words=37613',
+            'version=2026-08-10-intelligence-recognition-lock',
+          ):
+            assert stale_marker not in home, f'homepage still exposes stale corpus marker: {stale_marker}'
+          assert 'make your website clear about who you are.' in offer, '/work-with-john is not serving the current acquisition surface'
+
+          assert property_manifest.get('id') == 'TV-PROPERTY-LULTRILLS', 'Lultrills property manifest has wrong or missing property id'
+          state_sources = property_manifest.get('stateSources', [])
+          assert any(source.get('url', '').endswith('/corpus.json') for source in state_sources), 'property manifest lost corpus.json state source'
+
           docs = corpus.get('documents', [])
           assert len(docs) == corpus.get('documentCount'), 'documentCount disagrees with documents array'
           assert isinstance(architecture, dict) and architecture, 'architecture.json is empty or invalid'
           assert architecture.get('topologyVersion') == '2026-09-08', 'architecture topologyVersion is stale'
-          print(f"verified corpusId={corpus_id} documents={len(docs)} architecture_keys={len(architecture)}")
+          print(f"verified corpusId={corpus_id} documents={len(docs)} architecture_keys={len(architecture)} property={property_manifest.get('id')}")
 
       - name: Preserve public-state receipt
         if: always()

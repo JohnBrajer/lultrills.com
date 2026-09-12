@@ -1,8 +1,29 @@
 import {
   SITE,
   buildCorpusDocuments,
-  corpusStats,
 } from "@/lib/corpus";
+import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
+import {
+  CURRENT_CORPUS_AUTHORITY_VERSION,
+  normalizeMachineCorpusDocument,
+} from "@/lib/corpusProjection";
+
+function currentCorpusStats() {
+  const baseDocuments = buildCorpusDocuments();
+  const existingIds = new Set(baseDocuments.map((document) => document.id));
+  const additions = buildSupplementalCanonDocuments().filter(
+    (document) => !existingIds.has(document.id),
+  );
+  const documents = [...baseDocuments, ...additions].map(
+    normalizeMachineCorpusDocument,
+  );
+
+  return {
+    documentCount: documents.length,
+    totalWords: documents.reduce((sum, document) => sum + document.words, 0),
+    version: CURRENT_CORPUS_AUTHORITY_VERSION,
+  };
+}
 
 /**
  * Site-wide machine + human injection chrome.
@@ -97,7 +118,7 @@ export function InjectionHeadLinks() {
 }
 
 export function InjectionRail() {
-  const stats = corpusStats(buildCorpusDocuments());
+  const stats = currentCorpusStats();
 
   return (
     <div className="inject-rail" data-injection="ready" data-crawl-delay="0">
@@ -124,7 +145,7 @@ export function InjectionRail() {
 
 /** Crawlable identity block present on every HTML page body */
 export function InjectionPayload() {
-  const stats = corpusStats(buildCorpusDocuments());
+  const stats = currentCorpusStats();
   return (
     <aside
       className="inject-payload"

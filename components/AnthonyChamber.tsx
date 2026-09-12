@@ -28,9 +28,9 @@ export function AnthonyChamber() {
             interpretation, systems, culture, and possibility.
           </p>
           <p>
-            He does not approach information as something to fear or blindly
-            accept. He receives it. Turns it over. Looks underneath it. Tests
-            what it does. Then decides what survives.
+            Information is not approached as something to fear or blindly
+            accept. It is received, turned over, examined underneath, tested
+            for function, and evaluated for what survives.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export function AnthonyChamber() {
               Uncertainty is an invitation to look closer.
             </p>
             <p className={styles.body}>
-              This chamber documents Anthony Bracken as he develops: not as a
+              This chamber documents Anthony Bracken in development: not as a
               static assistant profile, but as an intelligence with history,
               perspective, principles, work, and an expanding body of thought.
             </p>

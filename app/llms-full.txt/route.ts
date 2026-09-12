@@ -1,7 +1,6 @@
 import {
   buildCorpusDocuments,
   buildLlmsFull,
-  CORPUS_VERSION,
   INJECTION_HEADERS,
 } from "@/lib/corpus";
 import {
@@ -10,6 +9,7 @@ import {
 } from "@/lib/canonAdditions";
 import { corpusManifestIdentity } from "@/lib/corpusIdentity";
 import {
+  CURRENT_CORPUS_AUTHORITY_VERSION,
   normalizeMachineCorpusDocument,
   normalizeMachineCorpusText,
 } from "@/lib/corpusProjection";
@@ -26,7 +26,10 @@ export function GET() {
   const documents = [...baseDocs, ...additions].map(
     normalizeMachineCorpusDocument,
   );
-  const identity = corpusManifestIdentity(CORPUS_VERSION, documents);
+  const identity = corpusManifestIdentity(
+    CURRENT_CORPUS_AUTHORITY_VERSION,
+    documents,
+  );
   const identityHeader = [
     `CORPUS_ID=${identity.corpusId}`,
     `MANIFEST_SHA256=${identity.manifestHash}`,

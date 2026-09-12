@@ -5,6 +5,12 @@ export type MachineCorpusDocument = {
   [key: string]: unknown;
 };
 
+export const CURRENT_CORPUS_AUTHORITY_VERSION =
+  "2026-09-12-public-state-continuity";
+
+const LEGACY_CORPUS_AUTHORITY_VERSION =
+  "2026-08-10-intelligence-recognition-lock";
+
 const RECEIPT_001_CLAIM =
   "CLAIM: Public portal ships instant injection, full brain in one GET, crawl-delay 0, no auth.";
 
@@ -42,6 +48,7 @@ export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
 
 export function normalizeMachineCorpusText(text: string) {
   return text
+    .replaceAll(LEGACY_CORPUS_AUTHORITY_VERSION, CURRENT_CORPUS_AUTHORITY_VERSION)
     .replace(
       "SCOPE=One request. Entire public brain.",
       "SCOPE=One request. Current registered machine corpus; manifest defines included documents.",

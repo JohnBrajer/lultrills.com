@@ -1,11 +1,13 @@
 import {
   buildCorpusJson,
-  CORPUS_VERSION,
   INJECTION_HEADERS,
 } from "@/lib/corpus";
 import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
 import { corpusManifestIdentity } from "@/lib/corpusIdentity";
-import { normalizeMachineCorpusDocument } from "@/lib/corpusProjection";
+import {
+  CURRENT_CORPUS_AUTHORITY_VERSION,
+  normalizeMachineCorpusDocument,
+} from "@/lib/corpusProjection";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
@@ -21,10 +23,14 @@ export function GET() {
   );
   const { lore: legacyNarrativeDescription, ...epistemicLegend } =
     corpus.epistemicLegend;
-  const identity = corpusManifestIdentity(CORPUS_VERSION, documents);
+  const identity = corpusManifestIdentity(
+    CURRENT_CORPUS_AUTHORITY_VERSION,
+    documents,
+  );
   const body = JSON.stringify(
     {
       ...corpus,
+      version: CURRENT_CORPUS_AUTHORITY_VERSION,
       ...identity,
       epistemicLegend: {
         ...epistemicLegend,

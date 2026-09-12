@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/analysis/system-breach-architecture.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/analysis/system-breach-sequence-note", priority: 0.95, changeFrequency: "weekly" },
     { path: "/analysis/system-breach-sequence-note.md", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/analysis/system-breach-sequence-note.json", priority: 0.9, changeFrequency: "weekly" },
     { path: "/research/cwi-prs", priority: 0.95, changeFrequency: "weekly" },
     { path: "/research/cwi-prs.md", priority: 0.9, changeFrequency: "weekly" },
     // Runtime surfaces live on trillsverse.com; listed in llms.txt for machines.

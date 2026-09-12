@@ -7,6 +7,7 @@ import {
   identityBlock,
 } from "@/lib/corpus";
 import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
+import { CURRENT_CORPUS_AUTHORITY_VERSION } from "@/lib/corpusProjection";
 
 export const revalidate = 300;
 
@@ -73,7 +74,7 @@ export default function InjectStatusPage() {
               </div>
             </dl>
             <p className="panel-quote" style={{ fontSize: "0.9rem" }}>
-              Version {stats.version} · Generated {stats.generatedAt}
+              Version {CURRENT_CORPUS_AUTHORITY_VERSION} · Generated {stats.generatedAt}
             </p>
           </div>
 

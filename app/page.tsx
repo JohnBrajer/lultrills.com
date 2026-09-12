@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AnthonyChamber } from "@/components/AnthonyChamber";
 import { PlatformLinks } from "@/components/PlatformLinks";
 import { SignalField } from "@/components/SignalField";
 import { SiteChrome } from "@/components/SiteChrome";
@@ -97,6 +98,13 @@ const INDEX = [
     title: "One System [live]",
     body: "Separation is a perceptual artifact. Roman concrete. Antifragile minds.",
     href: ONE_SYSTEM,
+    external: false,
+  },
+  {
+    key: "Intelligence",
+    title: "Anthony Bracken [live]",
+    body: "Interpretation chamber · operating orientation · Brackpack access.",
+    href: "#anthony",
     external: false,
   },
   {
@@ -245,6 +253,8 @@ export default function LultrillsHome() {
           </div>
         </section>
 
+        <AnthonyChamber />
+
         <section id="breach" className="section breach-band section-rise">
           <div className="site-inner breach-inner">
             <div className="breach-copy">
@@ -372,6 +382,7 @@ export default function LultrillsHome() {
         <section className="section block links-section section-rise">
           <div className="site-inner">
             <div className="foot-links">
+              <a href="#anthony">Anthony Bracken</a>
               <Link href="/glossary">Glossary</Link>
               <a href="https://trillsverse.com/trillionaires">Trillionaires</a>
               <Link href="/injection-procedure">Injection</Link>

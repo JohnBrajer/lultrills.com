@@ -20,8 +20,10 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: Upgrade to audit-selected patched Next 15 line
-        run: npm install --save-exact next@15.5.25 eslint-config-next@15.5.25
+      - name: Upgrade to audit-selected patched Next 16 runtime
+        run: |
+          npm install --save-exact next@16.3.5 react@19.2.4 react-dom@19.2.4
+          npm install --save-dev --save-exact eslint-config-next@16.3.5 @types/react@19 @types/react-dom@19
       - name: Preserve audit disposition
         shell: bash
         run: |

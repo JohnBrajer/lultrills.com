@@ -103,11 +103,11 @@ export function assertNoCompetingCurrentAuthority(
     }
   }
 
-  for (const [identity, count] of currentByIdentity) {
+  currentByIdentity.forEach((count, identity) => {
     if (count > 1) {
       throw new Error(`Multiple current-authority claims for ${identity}`);
     }
-  }
+  });
 }
 
 export function rankCorpusAuthority(

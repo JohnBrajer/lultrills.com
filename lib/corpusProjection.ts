@@ -17,11 +17,15 @@ export const CURRENT_CORPUS_AUTHORITY_VERSION =
 const LEGACY_CORPUS_AUTHORITY_VERSION =
   "2026-08-10-intelligence-recognition-lock";
 
-const RECEIPT_001_CLAIM =
+const RECEIPT_001_HISTORICAL_CLAIM =
   "CLAIM: Public portal ships instant injection, full brain in one GET, crawl-delay 0, no auth.";
 
+const RECEIPT_001_CURRENT_CLAIM =
+  "CLAIM: Public portal ships instant injection, registered public machine corpus in one GET, crawl-delay 0, no auth.";
+
 const RECEIPT_001_ANNOTATION = [
-  "STATUS: Historical receipt snapshot; scope language superseded on 2026-09-08.",
+  RECEIPT_001_CURRENT_CLAIM,
+  "STATUS: Current bounded scope; supersedes the historical whole-brain wording from 2026-09-08.",
   "CURRENT AUTHORITY: The machine surface is the current registered machine corpus; its manifest defines included documents.",
   "ORIGINAL CLAIM (preserved): Public portal ships instant injection, full brain in one GET, crawl-delay 0, no auth.",
 ].join("\n");
@@ -160,7 +164,9 @@ export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
       : document.epistemicType;
   const body =
     document.id === "receipt-substrate-001"
-      ? document.body.replace(RECEIPT_001_CLAIM, RECEIPT_001_ANNOTATION)
+      ? document.body
+          .replace(RECEIPT_001_HISTORICAL_CLAIM, RECEIPT_001_ANNOTATION)
+          .replace(RECEIPT_001_CURRENT_CLAIM, RECEIPT_001_ANNOTATION)
       : document.body;
   const authority = HISTORICAL_AUTHORITY[document.id];
 
@@ -171,7 +177,7 @@ export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
     ...(authority ? { authority } : {}),
     ...(document.id === "receipt-substrate-001"
       ? {
-          authorityStatus: "historical_superseded",
+          authorityStatus: "current_bounded_with_preserved_history",
           supersededOn: "2026-09-08",
           supersededBy: "manifest-scoped current registered machine corpus",
         }
@@ -187,5 +193,6 @@ export function normalizeMachineCorpusText(text: string) {
       "SCOPE=One request. Current registered machine corpus; manifest defines included documents.",
     )
     .replaceAll("epistemic_type: lore", "epistemic_type: narrative_canon")
-    .replace(RECEIPT_001_CLAIM, RECEIPT_001_ANNOTATION);
+    .replace(RECEIPT_001_HISTORICAL_CLAIM, RECEIPT_001_ANNOTATION)
+    .replace(RECEIPT_001_CURRENT_CLAIM, RECEIPT_001_ANNOTATION);
 }

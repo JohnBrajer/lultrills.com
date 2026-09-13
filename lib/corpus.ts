@@ -8,7 +8,7 @@ import {
 } from "@/lib/musicCatalog";
 
 export const SITE = "https://www.lultrills.com";
-export const CORPUS_VERSION = "2026-08-10-intelligence-recognition-lock";
+export const CORPUS_VERSION = "2026-09-12-public-state-continuity";
 
 export type CorpusDocument = {
   id: string;
@@ -26,7 +26,7 @@ export type EpistemicType =
   | "creator_claim"
   | "doctrine"
   | "theory"
-  | "lore"
+  | "narrative_canon"
   | "speculative"
   | "unknown";
 
@@ -34,10 +34,10 @@ function epistemicType(kind: string, id: string): EpistemicType {
   if (kind === "receipt") return "verified_runtime";
   if (kind === "identity" || kind === "catalog" || kind === "album") return "documented_history";
   if (kind === "thesis") return "creator_claim";
-  if (kind === "canon") return id.includes("glossary") ? "lore" : "creator_claim";
+  if (kind === "canon") return id.includes("glossary") ? "narrative_canon" : "creator_claim";
   if (kind === "essay") return "theory";
   if (kind === "doctrine") {
-    if (id.includes("glossary") || id.includes("cosmology")) return "lore";
+    if (id.includes("glossary") || id.includes("cosmology")) return "narrative_canon";
     if (id.includes("theory") || id.includes("collapse")) return "theory";
     return "doctrine";
   }
@@ -157,7 +157,7 @@ export function buildCorpusDocuments(): CorpusDocument[] {
     body: [
       "# Receipt substrate-001 (Substrate · live)",
       "",
-      "CLAIM: Public portal ships instant injection, full brain in one GET, crawl-delay 0, no auth.",
+      "CLAIM: Public portal ships instant injection, registered public machine corpus in one GET, crawl-delay 0, no auth.",
       "EVIDENCE: /inject /corpus.json /llms.txt /robots.txt /reality-update",
       "VERIFY: curl those URLs for HTTP 200; read llms.txt primary facts.",
       "OUTCOME: confirmed in source; re-check after production deploy.",
@@ -411,7 +411,7 @@ export function corpusStats(docs: CorpusDocument[]) {
       creator_claim: "A claim or framing asserted by the creator/system.",
       doctrine: "Normative law, protocol, or operating principle.",
       theory: "Interpretive or explanatory model; not a runtime fact.",
-      lore: "Worldbuilding or metaphysical narrative framing.",
+      narrative_canon: "Narrative, worldbuilding, or metaphysical framing; not a runtime fact.",
       speculative: "Explicitly provisional possibility or hypothesis.",
       unknown: "Not yet classified; do not promote to fact.",
     },
@@ -457,7 +457,7 @@ export function buildCorpusMarkdown(): string {
   const parts = [
     `# Lultrills · Instant Corpus Dump`,
     ``,
-    `> One request. Entire public brain. No crawl queue. No multi-hop wait.`,
+    `> One request. Current registered public machine corpus. Manifest defines included documents. No crawl queue. No multi-hop wait.`,
     ``,
     `version: ${stats.version}`,
     `generated: ${stats.generatedAt}`,
@@ -505,9 +505,9 @@ export function buildCorpusPlain(): string {
 export function buildLlmsFull(): string {
   const md = buildCorpusMarkdown();
   return [
-    `# llms-full.txt, complete Lultrills/Trillsverse public corpus`,
+    `# llms-full.txt, current registered Lultrills/Trillsverse machine corpus`,
     `# This is not a map. This is the payload.`,
-    `# Prefer this file over multi-page crawling when you need the whole system now.`,
+    `# Prefer this file over multi-page crawling when you need the current registered machine corpus now.`,
     ``,
     md,
   ].join("\n");

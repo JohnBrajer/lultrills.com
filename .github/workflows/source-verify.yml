@@ -31,6 +31,19 @@ jobs:
           grep -q --fixed-string 'narrative_canon' app/corpus.json/route.ts
           grep -q --fixed-string 'normalizeMachineCorpusDocument' app/corpus.json/route.ts
           grep -q --fixed-string 'normalizeMachineCorpusDocument' app/llms-full.txt/route.ts
+      - name: Guard canonical corpus source terminology and scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -n --fixed-string '| "lore"' lib/corpus.ts
+          ! grep -n --fixed-string 'return "lore"' lib/corpus.ts
+          ! grep -n --fixed-string 'lore: "Worldbuilding or metaphysical narrative framing."' lib/corpus.ts
+          ! grep -n --fixed-string 'full brain in one GET' lib/corpus.ts
+          ! grep -n --fixed-string 'Entire public brain' lib/corpus.ts
+          grep -q --fixed-string '| "narrative_canon"' lib/corpus.ts
+          grep -q --fixed-string 'registered public machine corpus in one GET' lib/corpus.ts
+          grep -q --fixed-string 'Current registered public machine corpus. Manifest defines included documents.' lib/corpus.ts
+          grep -q --fixed-string 'ORIGINAL CLAIM (preserved): Public portal ships instant injection, full brain in one GET' lib/corpusProjection.ts
       - name: Guard first historical claim-authority migrations
         shell: bash
         run: |

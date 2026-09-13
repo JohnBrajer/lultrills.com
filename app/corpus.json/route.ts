@@ -21,8 +21,7 @@ export function GET() {
   const documents = [...corpus.documents, ...additions].map(
     normalizeMachineCorpusDocument,
   );
-  const { lore: legacyNarrativeDescription, ...epistemicLegend } =
-    corpus.epistemicLegend;
+  const epistemicLegend = corpus.epistemicLegend;
   const identity = corpusManifestIdentity(
     CURRENT_CORPUS_AUTHORITY_VERSION,
     documents,
@@ -35,7 +34,7 @@ export function GET() {
       epistemicLegend: {
         ...epistemicLegend,
         narrative_canon:
-          legacyNarrativeDescription ||
+          epistemicLegend.narrative_canon ||
           "Narrative or cultural canon and creative representation; not an empirical claim by itself.",
       },
       documentCount: documents.length,

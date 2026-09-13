@@ -62,7 +62,7 @@ jobs:
           grep -q --fixed-string 'selector: "The Persona Injection Signatures"' lib/corpusProjection.ts
           grep -q --fixed-string 'id: "injection-procedure-persona-embodiment"' lib/corpusProjection.ts
           grep -q --fixed-string 'supersededBy: CURRENT_FRAGMENT_AUTHORITY' lib/corpusProjection.ts
-          grep -q --fixed-string 'Fragments: Lultrills, Kasano, Ace, and John B.' content/doctrine/intelligence-injections-origin.md
+          grep -q --fixed-string '**Fragments:** Lultrills, Kasano, Ace, and John B.' content/doctrine/intelligence-injections-origin.md
           grep -q --fixed-string 'older sources may use persona as historical terminology.' lib/corpus.ts
           grep -q --fixed-string 'Do not perform a global `persona` → `Fragment` replacement.' docs/authority/persona-era-fragment-migration.md
       - name: Guard aggregate current-authority collisions

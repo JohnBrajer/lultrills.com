@@ -27,7 +27,9 @@ export type CorpusClaimStatus =
 
 export type CorpusClaimAuthority = {
   id: string;
+  canonicalIdentity?: string;
   selector?: string;
+  preservedText?: string;
   validFrom?: string;
   validUntil?: string | null;
   currentAuthority: boolean;
@@ -38,6 +40,7 @@ export type CorpusClaimAuthority = {
 };
 
 export type CorpusAuthorityEnvelope = {
+  canonicalIdentity?: string;
   validFrom?: string;
   validUntil?: string | null;
   currentAuthority: boolean;
@@ -70,9 +73,41 @@ export function assertCorpusAuthorityEnvelope(
     if (claim.claimStatus === "superseded" && !claim.supersededBy) {
       throw new Error(`Superseded claim ${claim.id} must identify supersededBy`);
     }
+    if (claim.validUntil && claim.currentAuthority) {
+      throw new Error(`Claim ${claim.id} with validUntil cannot remain current authority`);
+    }
   }
 
   return envelope;
+}
+
+export function assertNoCompetingCurrentAuthority(
+  records: readonly CorpusAuthorityEnvelope[],
+): void {
+  const currentByIdentity = new Map<string, number>();
+
+  for (const record of records) {
+    if (record.currentAuthority && record.canonicalIdentity) {
+      currentByIdentity.set(
+        record.canonicalIdentity,
+        (currentByIdentity.get(record.canonicalIdentity) ?? 0) + 1,
+      );
+    }
+
+    for (const claim of record.claims ?? []) {
+      if (!claim.currentAuthority || !claim.canonicalIdentity) continue;
+      currentByIdentity.set(
+        claim.canonicalIdentity,
+        (currentByIdentity.get(claim.canonicalIdentity) ?? 0) + 1,
+      );
+    }
+  }
+
+  for (const [identity, count] of currentByIdentity) {
+    if (count > 1) {
+      throw new Error(`Multiple current-authority claims for ${identity}`);
+    }
+  }
 }
 
 export function rankCorpusAuthority(

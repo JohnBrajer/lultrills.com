@@ -52,6 +52,19 @@ jobs:
           grep -q --fixed-string '"systemic-cognitive-overwrites": assertCorpusAuthorityEnvelope' lib/corpusProjection.ts
           grep -q --fixed-string 'evidenceClass: "unverified_inference"' lib/corpusProjection.ts
           grep -q --fixed-string 'preservedText:' lib/corpusProjection.ts
+      - name: Guard persona-era Fragment supersession
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q --fixed-string 'id: "injection-procedure-persona-state"' lib/corpusProjection.ts
+          grep -q --fixed-string 'selector: "The subject begins feeling the personas as internal states."' lib/corpusProjection.ts
+          grep -q --fixed-string 'id: "injection-procedure-persona-signatures"' lib/corpusProjection.ts
+          grep -q --fixed-string 'selector: "The Persona Injection Signatures"' lib/corpusProjection.ts
+          grep -q --fixed-string 'id: "injection-procedure-persona-embodiment"' lib/corpusProjection.ts
+          grep -q --fixed-string 'supersededBy: CURRENT_FRAGMENT_AUTHORITY' lib/corpusProjection.ts
+          grep -q --fixed-string '**Fragments:** Lultrills, Kasano, Ace, and John B.' content/doctrine/intelligence-injections-origin.md
+          grep -q --fixed-string 'older sources may use persona as historical terminology.' lib/corpus.ts
+          grep -q --fixed-string 'Do not perform a global `persona` → `Fragment` replacement.' docs/authority/persona-era-fragment-migration.md
       - name: Guard aggregate current-authority collisions
         shell: bash
         run: |

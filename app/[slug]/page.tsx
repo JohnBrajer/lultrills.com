@@ -7,14 +7,15 @@ import { CANON_PAGES, getCanonBySlug } from "@/lib/hostingerCanon";
 // but their wrapper explicitly marks them as historical snapshots rather than current state.
 // Custom current routes (essays/*, really-that-magazine) live outside this segment.
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return CANON_PAGES.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const page = getCanonBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getCanonBySlug(slug);
   if (!page) return { title: "Not found" };
   const description = `Historical Lultrills source snapshot preserved for continuity. Time-sensitive claims reflect the original page state. ${page.description}`;
   return {
@@ -29,8 +30,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function CanonSlugPage({ params }: Props) {
-  const page = getCanonBySlug(params.slug);
+export default async function CanonSlugPage({ params }: Props) {
+  const { slug } = await params;
+  const page = getCanonBySlug(slug);
   if (!page) notFound();
   return <CanonArticle page={page} />;
 }

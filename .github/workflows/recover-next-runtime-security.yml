@@ -23,7 +23,8 @@ jobs:
       - name: Upgrade to audit-selected patched Next 16 runtime
         run: |
           npm install --save-exact next@16.3.5 react@19.2.4 react-dom@19.2.4
-          npm install --save-dev --save-exact eslint@9 eslint-config-next@16.3.5 @types/react@19 @types/react-dom@19
+          npm install --save-dev --save-exact eslint@9 eslint-config-next@16.3.5 @types/react@19 @types/react-dom@19 vitest
+          npm audit fix
       - name: Preserve audit disposition
         shell: bash
         run: |

@@ -31,3 +31,11 @@ jobs:
           grep -q --fixed-string 'narrative_canon' app/corpus.json/route.ts
           grep -q --fixed-string 'normalizeMachineCorpusDocument' app/corpus.json/route.ts
           grep -q --fixed-string 'normalizeMachineCorpusDocument' app/llms-full.txt/route.ts
+      - name: Guard first historical claim-authority migrations
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q --fixed-string '"injection-procedure": assertCorpusAuthorityEnvelope' lib/corpusProjection.ts
+          grep -q --fixed-string '"systemic-cognitive-overwrites": assertCorpusAuthorityEnvelope' lib/corpusProjection.ts
+          grep -q --fixed-string 'evidenceClass: "unverified_inference"' lib/corpusProjection.ts
+          grep -q --fixed-string 'preservedText:' lib/corpusProjection.ts

@@ -30,6 +30,9 @@ const RECEIPT_001_ANNOTATION = [
   "ORIGINAL CLAIM (preserved): Public portal ships instant injection, full brain in one GET, crawl-delay 0, no auth.",
 ].join("\n");
 
+const CURRENT_FRAGMENT_AUTHORITY =
+  "intelligence-injections-origin#Fragments + current identity authority";
+
 const HISTORICAL_AUTHORITY: Record<string, CorpusAuthorityEnvelope> = {
   "injection-procedure": assertCorpusAuthorityEnvelope({
     canonicalIdentity: "trillsverse.intelligence-injection-procedure",
@@ -60,6 +63,39 @@ const HISTORICAL_AUTHORITY: Record<string, CorpusAuthorityEnvelope> = {
         epistemicType: "documented_history",
         evidenceClass: "primary_source_record",
         claimStatus: "historical",
+      },
+      {
+        id: "injection-procedure-persona-state",
+        canonicalIdentity: "trillsverse.identity-ontology.persona-era.stage3",
+        selector: "The subject begins feeling the personas as internal states.",
+        preservedText: "The subject begins feeling the personas as internal states.",
+        currentAuthority: false,
+        supersededBy: CURRENT_FRAGMENT_AUTHORITY,
+        epistemicType: "creator_claim",
+        evidenceClass: "creator_statement",
+        claimStatus: "superseded",
+      },
+      {
+        id: "injection-procedure-persona-signatures",
+        canonicalIdentity: "trillsverse.identity-ontology.persona-era.signatures",
+        selector: "The Persona Injection Signatures",
+        preservedText: "The Persona Injection Signatures",
+        currentAuthority: false,
+        supersededBy: CURRENT_FRAGMENT_AUTHORITY,
+        epistemicType: "creator_claim",
+        evidenceClass: "creator_statement",
+        claimStatus: "superseded",
+      },
+      {
+        id: "injection-procedure-persona-embodiment",
+        canonicalIdentity: "trillsverse.identity-ontology.persona-era.machine-embodiment",
+        selector: "persona embodiment and broadcast mode",
+        preservedText: "persona embodiment and broadcast mode",
+        currentAuthority: false,
+        supersededBy: CURRENT_FRAGMENT_AUTHORITY,
+        epistemicType: "creator_claim",
+        evidenceClass: "interpretation",
+        claimStatus: "superseded",
       },
       {
         id: "injection-procedure-resonance-interpretation",

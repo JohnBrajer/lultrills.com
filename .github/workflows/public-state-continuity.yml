@@ -86,7 +86,8 @@ jobs:
           }.items():
             assert 'epistemic_type: lore' not in projection, f'{name} still emits legacy active narrative type'
             assert 'SCOPE=One request. Entire public brain.' not in projection, f'{name} still overclaims entire-public-brain scope'
-            assert 'STATUS: Historical receipt snapshot; scope language superseded on 2026-09-08.' in projection, f'{name} lost historical supersession evidence'
+            assert 'STATUS: Current bounded scope; supersedes the historical whole-brain wording from 2026-09-08.' in projection, f'{name} lost bounded current-scope authority marker'
+            assert 'ORIGINAL CLAIM (preserved): Public portal ships instant injection, full brain in one GET' in projection, f'{name} lost preserved historical whole-brain wording'
 
           lowered = inject.lower()
           assert 'current machine corpus' in lowered, '/inject is not using current-corpus framing'

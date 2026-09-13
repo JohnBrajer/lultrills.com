@@ -10,6 +10,8 @@ services:
       NODE_ENV: production
       PORT: "3000"
       HOSTNAME: "0.0.0.0"
+      APP_COMMIT_SHA: "${APP_COMMIT_SHA:-UNKNOWN}"
+      APP_DEPLOYED_AT: "${APP_DEPLOYED_AT:-UNKNOWN}"
 
 volumes:
   offer-inquiries:

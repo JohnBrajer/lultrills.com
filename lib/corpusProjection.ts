@@ -1,5 +1,6 @@
 import {
   assertCorpusAuthorityEnvelope,
+  assertNoCompetingCurrentAuthority,
   type CorpusAuthorityEnvelope,
 } from "./corpusAuthority";
 
@@ -144,6 +145,11 @@ const HISTORICAL_AUTHORITY: Record<string, CorpusAuthorityEnvelope> = {
     ],
   }),
 };
+
+// Aggregate invariant: the projected authority registry may not expose more than
+// one current authority for the same canonical identity. Keeping this at module
+// initialization turns the existing validator into an executable projection guard.
+assertNoCompetingCurrentAuthority(Object.values(HISTORICAL_AUTHORITY));
 
 export function normalizeMachineCorpusDocument<T extends MachineCorpusDocument>(
   document: T,

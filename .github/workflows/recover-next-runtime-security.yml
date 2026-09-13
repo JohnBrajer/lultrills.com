@@ -1,0 +1,51 @@
+name: Recover Next runtime security
+
+on:
+  push:
+    branches:
+      - recovery/next-runtime-security-29
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade-and-verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Upgrade to first currently patched stable Next 15 line
+        run: npm install --save-exact next@15.5.10 eslint-config-next@15.5.10
+      - name: Preserve audit disposition
+        shell: bash
+        run: |
+          mkdir -p docs/security
+          set +e
+          npm audit --json > docs/security/npm-audit-2026-09-13.json
+          code=$?
+          set -e
+          node -e "const fs=require('fs'); const p='docs/security/npm-audit-2026-09-13.json'; const a=JSON.parse(fs.readFileSync(p,'utf8')); console.log(JSON.stringify({auditExit:${code},metadata:a.metadata,vulnerabilities:Object.fromEntries(Object.entries(a.vulnerabilities||{}).map(([k,v])=>[k,{severity:v.severity,isDirect:v.isDirect,range:v.range,fixAvailable:v.fixAvailable}]))},null,2));"
+      - name: Build production application
+        run: npm run build
+      - name: Run source continuity guards when available
+        shell: bash
+        run: |
+          if npm run | grep -q 'test'; then npm test -- --runInBand || npm test; fi
+      - name: Commit regenerated dependency state and audit receipt
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add package.json package-lock.json docs/security/npm-audit-2026-09-13.json
+          if git diff --cached --quiet; then
+            echo 'No dependency changes produced.'
+            exit 1
+          fi
+          git commit -m 'security: upgrade Next runtime for #29'
+          git push origin HEAD:recovery/next-runtime-security-29

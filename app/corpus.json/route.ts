@@ -1,50 +1,17 @@
+import { INJECTION_HEADERS } from "@/lib/corpus";
 import {
-  buildCorpusJson,
-  INJECTION_HEADERS,
-} from "@/lib/corpus";
-import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
-import { corpusManifestIdentity } from "@/lib/corpusIdentity";
-import {
-  CURRENT_CORPUS_AUTHORITY_VERSION,
-  normalizeMachineCorpusDocument,
-} from "@/lib/corpusProjection";
+  buildCorpusRegistryIdentity,
+  buildPublicMachineCorpusProjection,
+  buildRegistryCorpusJson,
+} from "@/lib/corpusRegistry";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
 
 export function GET() {
-  const corpus = buildCorpusJson();
-  const existingIds = new Set(corpus.documents.map((d) => d.id));
-  const additions = buildSupplementalCanonDocuments().filter(
-    (d) => !existingIds.has(d.id),
-  );
-  const documents = [...corpus.documents, ...additions].map(
-    normalizeMachineCorpusDocument,
-  );
-  const epistemicLegend = corpus.epistemicLegend;
-  const identity = corpusManifestIdentity(
-    CURRENT_CORPUS_AUTHORITY_VERSION,
-    documents,
-  );
-  const body = JSON.stringify(
-    {
-      ...corpus,
-      version: CURRENT_CORPUS_AUTHORITY_VERSION,
-      ...identity,
-      epistemicLegend: {
-        ...epistemicLegend,
-        narrative_canon:
-          epistemicLegend.narrative_canon ||
-          "Narrative or cultural canon and creative representation; not an empirical claim by itself.",
-      },
-      documentCount: documents.length,
-      totalWords: corpus.totalWords + additions.reduce((sum, d) => sum + d.words, 0),
-      totalChars: corpus.totalChars + additions.reduce((sum, d) => sum + d.body.length, 0),
-      documents,
-    },
-    null,
-    2,
-  );
+  const documents = buildPublicMachineCorpusProjection();
+  const identity = buildCorpusRegistryIdentity(documents);
+  const body = JSON.stringify(buildRegistryCorpusJson(), null, 2);
 
   return new Response(body, {
     headers: {

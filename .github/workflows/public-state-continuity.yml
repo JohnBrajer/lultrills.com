@@ -104,7 +104,10 @@ jobs:
             assert stale_marker not in home, f'homepage still exposes stale corpus marker: {stale_marker}'
           assert 'make your website clear about who you are.' in offer, '/work-with-john is not serving the current acquisition surface'
 
-          assert property_manifest.get('id') == 'TV-PROPERTY-LULTRILLS', 'Lultrills property manifest has wrong or missing property id'
+          # The property ID is governed by the shared Property Protocol registry.
+          # Keep this verifier aligned with the canonical registry rather than a
+          # legacy pre-protocol identifier.
+          assert property_manifest.get('id') == 'TV-PROPERTY-LULTRILLS-CANON', 'Lultrills property manifest has wrong or missing canonical property id'
           state_sources = property_manifest.get('stateSources', [])
           assert any(source.get('url', '').endswith('/corpus.json') for source in state_sources), 'property manifest lost corpus.json state source'
 

@@ -18,8 +18,7 @@ export type CorpusRegistryRecord = CorpusDocument & {
   includeInCorpus: boolean;
   currentAuthority: boolean;
   registrySource: "core" | "supplemental";
-  authority?: unknown;
-  [key: string]: unknown;
+  authority?: { currentAuthority?: boolean };
 };
 
 export type CorpusRegistryInput = Omit<CorpusRegistryRecord, "words"> & {
@@ -34,9 +33,8 @@ function toRegistryRecord(
   document: CorpusDocument,
   registrySource: CorpusRegistryRecord["registrySource"],
 ): CorpusRegistryRecord {
-  const normalized = normalizeMachineCorpusDocument(document) as CorpusDocument & {
+  const normalized = normalizeMachineCorpusDocument(document) as unknown as CorpusDocument & {
     authority?: { currentAuthority?: boolean };
-    [key: string]: unknown;
   };
 
   return {

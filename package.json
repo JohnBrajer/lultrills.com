@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
+    "prebuild": "npm run test:corpus-registry",
     "build": "next build",
+    "test:corpus-registry": "vitest run lib/corpusRegistry.test.ts",
     "start": "next start",
     "lint": "next lint"
   },

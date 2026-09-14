@@ -22,15 +22,20 @@ jobs:
       - run: npm run build
       - name: Verify custom-quote intake
         run: node scripts/test-inquiries.mjs
-      - name: Guard active machine terminology
+      - name: Guard active machine terminology and registry projection
         shell: bash
         run: |
           set -euo pipefail
           ! grep -R --line-number --fixed-string 'Full public brain' app/trillsverse app/inject
           ! grep -R --line-number --fixed-string 'music, lore, runtime, doctrine' app/system-breach
-          grep -q --fixed-string 'narrative_canon' app/corpus.json/route.ts
-          grep -q --fixed-string 'normalizeMachineCorpusDocument' app/corpus.json/route.ts
-          grep -q --fixed-string 'normalizeMachineCorpusDocument' app/llms-full.txt/route.ts
+          grep -q --fixed-string 'buildRegistryCorpusJson' app/corpus.json/route.ts
+          grep -q --fixed-string 'buildRegistryCorpusMarkdown' app/corpus.md/route.ts
+          grep -q --fixed-string 'buildRegistryCorpusPlain' app/corpus.txt/route.ts
+          grep -q --fixed-string 'buildRegistryLlmsFull' app/llms-full.txt/route.ts
+          grep -q --fixed-string 'normalizeMachineCorpusDocument' lib/corpusRegistry.ts
+          grep -q --fixed-string 'includeInCorpus' lib/corpusRegistry.ts
+          grep -q --fixed-string 'visibility === "public"' lib/corpusRegistry.ts
+          grep -q --fixed-string 'machineReadable === true' lib/corpusRegistry.ts
       - name: Guard canonical corpus source terminology and scope
         shell: bash
         run: |

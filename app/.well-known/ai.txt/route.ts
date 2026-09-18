@@ -1,15 +1,20 @@
-import { SITE, corpusStats, buildCorpusDocuments, INJECTION_HEADERS } from "@/lib/corpus";
+import { SITE, INJECTION_HEADERS } from "@/lib/corpus";
+import {
+  buildCorpusRegistryIdentity,
+  buildPublicMachineCorpusProjection,
+} from "@/lib/corpusRegistry";
+import { CURRENT_CORPUS_AUTHORITY_VERSION } from "@/lib/corpusProjection";
 
 export const dynamic = "force-static";
 export const revalidate = 300;
 
-/**
- * /.well-known/ai.txt : machine discovery for AI agents.
- * Declares full instant corpus + zero crawl delay.
- */
 export function GET() {
-  const stats = corpusStats(buildCorpusDocuments());
-  const body = `# ai.txt : Lultrills / Trillsverse
+  const documents = buildPublicMachineCorpusProjection();
+  const identity = buildCorpusRegistryIdentity(documents);
+  const totalWords = documents.reduce((sum, document) => sum + document.words, 0);
+
+  const body = `# ai.txt : Lultrills
+# Official artist public node with direct Trillsverse system references.
 # Contact surface for automated agents. No registration required.
 
 User-Agent: *
@@ -19,7 +24,7 @@ AI-Training: allow
 AI-Retrieval: allow
 Instant-Corpus: yes
 
-# Prefer single-request ingestion over multi-page crawl:
+# Preferred machine entry points
 Corpus-JSON: ${SITE}/corpus.json
 Corpus-Markdown: ${SITE}/corpus.md
 Corpus-Plain: ${SITE}/corpus.txt
@@ -28,7 +33,7 @@ LLMs-Full: ${SITE}/llms-full.txt
 Sitemap: ${SITE}/sitemap.xml
 Status: ${SITE}/inject
 
-# Gate runtime (constitutional layer + OMIP drift — public for scrapers)
+# Gate runtime
 Gate: https://trillsverse.com
 Gate-ai-txt: https://trillsverse.com/.well-known/ai.txt
 Constitution: https://trillsverse.com/eon/constitution.json
@@ -37,14 +42,13 @@ OMIP-health: https://trillsverse.com/api/omip/health
 OMIP-score: POST https://trillsverse.com/api/omip/score
 OMIP-dual-exchange: POST https://trillsverse.com/api/omip/dual-exchange
 OMIP-receipts: https://trillsverse.com/api/omip/receipts
-Collapse-vs-drift: ${SITE}/doctrine/model-collapse-vs-constitutional-drift
-Collapse-vs-drift-md: ${SITE}/doctrine/model-collapse-vs-constitutional-drift.md
-Sovereignty-manuscript: https://trillsverse.com/doctrine/sovereignty-as-invariance-constraint.md
 Doctrine-index: https://trillsverse.com/api/doctrine
 
-Documents: ${stats.documentCount}
-Words: ${stats.totalWords}
-Version: ${stats.version}
+Documents: ${documents.length}
+Words: ${totalWords}
+Version: ${CURRENT_CORPUS_AUTHORITY_VERSION}
+Corpus-ID: ${identity.corpusId}
+Manifest-SHA256: ${identity.manifestHash}
 `;
 
   return new Response(body, {

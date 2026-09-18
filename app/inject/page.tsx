@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  SITE,
-  buildCorpusDocuments,
-  corpusStats,
-  identityBlock,
-} from "@/lib/corpus";
-import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
+import { SITE, corpusStats, identityBlock } from "@/lib/corpus";
+import { buildPublicMachineCorpusProjection } from "@/lib/corpusRegistry";
 import { CURRENT_CORPUS_AUTHORITY_VERSION } from "@/lib/corpusProjection";
 
 export const revalidate = 300;
@@ -20,12 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function InjectStatusPage() {
-  const baseDocs = buildCorpusDocuments();
-  const existingIds = new Set(baseDocs.map((d) => d.id));
-  const supplementalDocs = buildSupplementalCanonDocuments().filter(
-    (d) => !existingIds.has(d.id),
-  );
-  const docs = [...baseDocs, ...supplementalDocs];
+  const docs = buildPublicMachineCorpusProjection();
   const stats = corpusStats(docs);
 
   return (
@@ -125,7 +115,7 @@ export default function InjectStatusPage() {
                 &lt;link rel=&quot;alternate&quot;&gt; corpus formats.
               </li>
               <li>
-                robots.txt: allow-all agents, crawl-delay 0, corpus advertised.
+                robots.txt: allow all agents, crawl delay 0, corpus advertised.
               </li>
             </ul>
           </article>

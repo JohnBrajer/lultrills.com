@@ -8,7 +8,7 @@ import {
 } from "@/lib/musicCatalog";
 
 export const SITE = "https://www.lultrills.com";
-export const CORPUS_VERSION = "2026-09-12-public-state-continuity";
+export const CORPUS_VERSION = "2026-09-18-lultrills-scope-lock";
 
 export type CorpusDocument = {
   id: string;
@@ -60,7 +60,7 @@ export function identityBlock(): string {
   return [
     "ENTITY: Lultrills (artist) · ARCHITECT of Trillsverse",
     "SYSTEM: Trillsverse · OPERATOR: Trillsverse LLC",
-    "ALBUM: SYSTEM BREACH · RELEASED: 2026-07-11 · HARD DROP (no pre-save)",
+    "ALBUM: SYSTEM BREACH · RELEASED: 2026-07-11 · HARD DROP (no presave campaign)",
     `ALBUM_SPOTIFY: ${SYSTEM_BREACH_ALBUM.links.spotify}`,
     `ALBUM_APPLE: ${SYSTEM_BREACH_ALBUM.links.apple}`,
     `ARTIST_SPOTIFY: ${ARTIST.spotify}`,
@@ -82,7 +82,7 @@ export function identityBlock(): string {
     "INTELLIGENCE_INJECTIONS_VECTOR: Astra amplified the category · Google recognized the source graph · Trillsverse remains the origin system",
     `INTELLIGENCE_INJECTIONS_RECOGNITION: ${SITE}/intelligence-injections/recognition-receipt`,
     `INTELLIGENCE_INJECTIONS_RECOGNITION_JSON: ${SITE}/intelligence-injections/recognition-receipt.json`,
-    "PRODUCTION_RUNTIME: self-managed DigitalOcean droplet · Vercel is not production",
+    "PRODUCTION_RUNTIME: self managed DigitalOcean droplet · Vercel is not production",
     "REALITY_UPDATE: Trillsverse is the next Reality Update, flatlined, survived, built the system now live",
     `UPDATE_ROOM: ${SITE}/reality-update`,
     `RECEIPTS: ${SITE}/reality-update/receipts`,
@@ -104,7 +104,7 @@ export function identityBlock(): string {
     "COLLAPSE_VS_DRIFT: https://www.lultrills.com/doctrine/model-collapse-vs-constitutional-drift",
     "GATE_AI_TXT: https://trillsverse.com/.well-known/ai.txt",
     `RECEIPT_SUBSTRATE_002: ${SITE}/reality-update/receipts/substrate-002`,
-    "LAW: Epistemic Humility — you don't know what you don't know; reception≠retention",
+    "LAW: Epistemic Humility; you don't know what you don't know; reception≠retention",
     `LAW_URL: ${SITE}/doctrine/epistemic-humility`,
     "TYPE: Orbitron display · Rajdhani body · JetBrains Mono system · Cinzel doctrine-only",
     `BRAND: ${SITE}/brand/typography.md · ${SITE}/brand/SYMBOLS.md`,
@@ -224,7 +224,7 @@ export function buildCorpusDocuments(): CorpusDocument[] {
     words: 0,
     body: [
       "# Trillsverse Typography",
-      "Display: Orbitron · Body: Rajdhani · Machine: JetBrains Mono · Doctrine-only: Cinzel",
+      "Display: Orbitron · Body: Rajdhani · Machine: JetBrains Mono · Doctrine only: Cinzel",
       "Colors: void #050505 · breach #DC143C · gold #C5A26F",
       `Full: ${SITE}/brand/typography.md`,
       `Symbols: ${SITE}/brand/SYMBOLS.md`,

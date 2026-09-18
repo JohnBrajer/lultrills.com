@@ -12,7 +12,7 @@ export type MachineCorpusDocument = {
 };
 
 export const CURRENT_CORPUS_AUTHORITY_VERSION =
-  "2026-09-12-public-state-continuity";
+  "2026-09-18-lultrills-scope-lock";
 
 const LEGACY_CORPUS_AUTHORITY_VERSION =
   "2026-08-10-intelligence-recognition-lock";

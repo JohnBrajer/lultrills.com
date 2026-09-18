@@ -1,22 +1,9 @@
-import {
-  SITE,
-  buildCorpusDocuments,
-} from "@/lib/corpus";
-import { buildSupplementalCanonDocuments } from "@/lib/canonAdditions";
-import {
-  CURRENT_CORPUS_AUTHORITY_VERSION,
-  normalizeMachineCorpusDocument,
-} from "@/lib/corpusProjection";
+import { SITE } from "@/lib/corpus";
+import { buildPublicMachineCorpusProjection } from "@/lib/corpusRegistry";
+import { CURRENT_CORPUS_AUTHORITY_VERSION } from "@/lib/corpusProjection";
 
 function currentCorpusStats() {
-  const baseDocuments = buildCorpusDocuments();
-  const existingIds = new Set(baseDocuments.map((document) => document.id));
-  const additions = buildSupplementalCanonDocuments().filter(
-    (document) => !existingIds.has(document.id),
-  );
-  const documents = [...baseDocuments, ...additions].map(
-    normalizeMachineCorpusDocument,
-  );
+  const documents = buildPublicMachineCorpusProjection();
 
   return {
     documentCount: documents.length,

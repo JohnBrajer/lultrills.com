@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { CanonArticle } from "@/components/CanonArticle";
 import { CANON_PAGES, getCanonBySlug } from "@/lib/hostingerCanon";
 
 // Preserved Hostinger-era source paths. These remain crawlable for continuity,
 // but their wrapper explicitly marks them as historical snapshots rather than current state.
-// Custom current routes (essays/*, really-that-magazine) live outside this segment.
+// Custom current routes live outside this segment.
+
+const LEGACY_REDIRECTS: Record<string, string> = {
+  "lultrills-frequently-asked-questions-2026": "/frequently-asked-questions-about-lultrills-2026",
+  "really-that-magazine-audhd-insights":
+    "https://reallythatmagazine.com/article/understanding-audhd-and-neurodivergence",
+  "the-constitutional-update-2026-copy": "/the-constitutional-update-2026",
+};
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,6 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CanonSlugPage({ params }: Props) {
   const { slug } = await params;
+  const redirectTarget = LEGACY_REDIRECTS[slug];
+  if (redirectTarget) permanentRedirect(redirectTarget);
   const page = getCanonBySlug(slug);
   if (!page) notFound();
   return <CanonArticle page={page} />;

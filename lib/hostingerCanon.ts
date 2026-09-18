@@ -10,7 +10,7 @@ export type CanonPage = {
   words: number;
 };
 
-export const CANON_PAGES: CanonPage[] = [
+const HOSTINGER_CANON_PAGES: CanonPage[] = [
   {
     slug: "about-best-artist-2026",
     route: "/about-best-artist-2026",
@@ -2136,6 +2136,17 @@ By designing hotels, clothing lines, sports, media platforms, and mental health 
 Given all of this, the most powerful move I could do is treat the Trillsverse not only as a story for others but as a tool for me as well. Psychological research on narrative identity and multiple selves suggests that explicitly rewriting your story with more agency and giving different parts room to speak is linked to better well being and more flexibility. I will do that by continuing to let each persona speak honestly about their side of your life through songs, essays, transmissions, and visual pieces and then using Lultrills as the integrator that draws the threads together.`,
   },
 ];
+
+const EXCLUDED_CANON_SLUGS = new Set([
+  "lultrills-frequently-asked-questions-2026",
+  "really-that-magazine",
+  "really-that-magazine-audhd-insights",
+  "the-constitutional-update-2026-copy",
+]);
+
+export const CANON_PAGES = HOSTINGER_CANON_PAGES.filter(
+  (page) => !EXCLUDED_CANON_SLUGS.has(page.slug),
+);
 
 export function getCanonBySlug(slug: string): CanonPage | undefined {
   return CANON_PAGES.find((p) => p.slug === slug);

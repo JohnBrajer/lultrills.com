@@ -61,7 +61,7 @@ const INDEX = [
   {
     key: "Plate",
     title: "THE INNER + HUD [live]",
-    body: "Diffusion plate + code-layer SpatialShell telemetry. Sector · Lux next.",
+    body: "Diffusion plate + code layer SpatialShell telemetry. Sector · Lux next.",
     href: `${GATE}/plate/inner`,
     external: true,
   },
@@ -89,7 +89,7 @@ const INDEX = [
   {
     key: "Public",
     title: "Live feed [live]",
-    body: "Server-rendered transmissions. Indexable. High-authority bleed.",
+    body: "Server rendered transmissions. Indexable. High authority bleed.",
     href: FEED,
     external: true,
   },
@@ -152,7 +152,7 @@ export default function LultrillsHome() {
               </p>
               <p className="hero-sub hero-enter hero-enter--3">
                 Music as documentation. Gate as runtime. Canon as memory. The
-                Trillsverse is not fiction — it is the live public index: album,
+                Trillsverse is not fiction. It is the live public index: album,
                 doctrine, and instant corpus for humans and machines.
               </p>
 
@@ -266,7 +266,7 @@ export default function LultrillsHome() {
               </h2>
               <p>
                 The album is the documentation of what broke and what got
-                rebuilt. The Trillsverse is the architecture — not a fictional
+                rebuilt. The Trillsverse is the architecture, not a fictional
                 setting. The Gate is open.
               </p>
             </div>
@@ -386,7 +386,6 @@ export default function LultrillsHome() {
               <Link href="/glossary">Glossary</Link>
               <a href="https://trillsverse.com/trillionaires">Trillionaires</a>
               <Link href="/injection-procedure">Injection</Link>
-              <Link href="/really-that-magazine">Magazine</Link>
               <Link href="/press">Press</Link>
               <a
                 href="https://www.instagram.com/jbraj_/"

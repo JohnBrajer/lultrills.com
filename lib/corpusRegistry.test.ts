@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   buildCorpusRegistryIdentity,
+  buildPublicMachineCorpusProjection,
   projectCorpusRegistryRecords,
   type CorpusRegistryInput,
 } from "./corpusRegistry";
@@ -54,6 +55,17 @@ describe("registry-derived public machine corpus", () => {
     expect(buildCorpusRegistryIdentity(forward)).toEqual(
       buildCorpusRegistryIdentity(reverse),
     );
+  });
+
+  it("keeps migrated editorial and duplicate aliases out of the current machine corpus", () => {
+    const ids = new Set(buildPublicMachineCorpusProjection().map((item) => item.id));
+
+    expect(ids.has("canon-really-that-magazine")).toBe(false);
+    expect(ids.has("canon-really-that-magazine-audhd-insights")).toBe(false);
+    expect(ids.has("canon-lultrills-frequently-asked-questions-2026")).toBe(false);
+    expect(ids.has("canon-the-constitutional-update-2026-copy")).toBe(false);
+    expect(ids.has("canon-frequently-asked-questions-about-lultrills-2026")).toBe(true);
+    expect(ids.has("canon-the-constitutional-update-2026")).toBe(true);
   });
 
   it("fails closed on duplicate registry identities", () => {

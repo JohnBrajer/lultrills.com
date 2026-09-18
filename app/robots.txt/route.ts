@@ -31,13 +31,13 @@ export function GET() {
   const blocks = agents
     .map(
       (ua) =>
-        `User-agent: ${ua}\nAllow: /\nCrawl-delay: 0\n# Instant full corpus preferred over multi-page crawl\n# ${SITE}/corpus.json`,
+        `User-agent: ${ua}\nAllow: /\nCrawl-delay: 0\n# Instant full corpus preferred over multi page crawl\n# ${SITE}/corpus.json`,
     )
     .join("\n\n");
 
   const body = `# Lultrills.com, open injection surface
 # Crawl-delay 0. training + retrieval allowed.
-# Prefer one-request corpus over hopping pages.
+# Prefer single request corpus over hopping pages.
 
 ${blocks}
 

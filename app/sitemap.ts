@@ -5,9 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.lultrills.com";
   const staticRoutes: { path: string; priority: number; changeFrequency: "daily" | "weekly" | "monthly" }[] = [
     { path: "", priority: 1, changeFrequency: "daily" },
-    // Official entity hub — primary knowledge surface for "Trillsverse"
+    // Official entity hub primary knowledge surface for "Trillsverse"
     { path: "/trillsverse", priority: 1, changeFrequency: "daily" },
-    // AI Tournament — Trillonian Resonance Tournament human + machine surfaces
+    // AI Tournament Trillonian Resonance Tournament human + machine surfaces
     { path: "/ai-tournament", priority: 1, changeFrequency: "daily" },
     { path: "/ai-tournament.json", priority: 0.95, changeFrequency: "daily" },
     { path: "/ai-tournament/process/gpt-5-6-sol", priority: 0.9, changeFrequency: "daily" },
@@ -60,7 +60,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/brand/EXPORT.md", priority: 0.7, changeFrequency: "monthly" },
     { path: "/album", priority: 0.95, changeFrequency: "weekly" },
     { path: "/stream", priority: 0.95, changeFrequency: "weekly" },
-    { path: "/really-that-magazine", priority: 0.8, changeFrequency: "weekly" },
     { path: "/essays/why-everything-is-one", priority: 0.9, changeFrequency: "weekly" },
     { path: "/archive", priority: 0.85, changeFrequency: "weekly" },
     { path: "/injection-procedure", priority: 0.85, changeFrequency: "weekly" },

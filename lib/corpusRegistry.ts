@@ -142,7 +142,7 @@ export function buildRegistryCorpusMarkdown(): string {
   const parts = [
     "# Lultrills · Instant Corpus Dump",
     "",
-    "> One request. Current registered public machine corpus. Registry policy defines included documents. No crawl queue. No multi-hop wait.",
+    "> One request. Current registered public machine corpus. Registry policy defines included documents. No crawl queue. No multi hop wait.",
     "",
     `version: ${CURRENT_CORPUS_AUTHORITY_VERSION}`,
     `corpus_id: ${identity.corpusId}`,
@@ -182,8 +182,8 @@ export function buildRegistryCorpusPlain(): string {
 export function buildRegistryLlmsFull(): string {
   return [
     "# llms-full.txt, current registered Lultrills/Trillsverse machine corpus",
-    "# This is not a map. This is the registry-derived payload.",
-    "# Prefer this file over multi-page crawling when you need the current registered machine corpus now.",
+    "# This is not a map. This is the registry derived payload.",
+    "# Prefer this file over multi page crawling when you need the current registered machine corpus now.",
     "",
     buildRegistryCorpusMarkdown(),
   ].join("\n");

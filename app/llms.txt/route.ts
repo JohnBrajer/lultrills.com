@@ -20,8 +20,10 @@ export function GET() {
 > This file is a machine map. The corpus payload lives in corpus.json and llms-full.txt.
 
 Canonical: ${SITE}
-Entity: Lultrills
-Type: artist public node
+Public entity: Lultrills
+Entity role: Fragment and public music entity
+Artist identity: John B
+Founder and architect: John Brajer
 System: Trillsverse
 Operator: Trillsverse LLC
 Corpus version: ${CURRENT_CORPUS_AUTHORITY_VERSION}
@@ -69,7 +71,7 @@ Use https://trillsverse.com for the live runtime.
 
 ## Scope
 
-Lultrills.com is the artist node. It contains Lultrills identity, music, primary source records, relevant Trillsverse canon, and machine interfaces.
+Lultrills.com is the Lultrills music public node. It carries the Lultrills Fragment and platform identity, the John B artist identity, music, primary source records, relevant Trillsverse canon, and machine interfaces. John Brajer is the founder and architect of Trillsverse.
 Machine counts and corpus membership come from one registry projection so the discovery files cannot drift from the payload.
 `;
 

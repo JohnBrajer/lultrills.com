@@ -33,7 +33,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills, multigenre artist. Architect of the Trillsverse. SYSTEM BREACH album. Enter the Gate. Current public machine corpus available in one request.",
+    "Lultrills public music node within the John B artist identity. Trillsverse is founded and architected by John Brajer. SYSTEM BREACH album. Enter the Gate. Current public machine corpus available in one request.",
   metadataBase: new URL("https://www.lultrills.com"),
   robots: {
     index: true,

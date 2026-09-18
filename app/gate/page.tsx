@@ -140,7 +140,7 @@ const DESTINATIONS = [
   {
     key: "Rite",
     title: "SYSTEM BREACH threshold",
-    body: "Gate breach room — entry rite for the drop surface.",
+    body: "Gate breach room. Entry rite for the drop surface.",
     href: GATE_RITE,
     external: true,
     status: "live" as const,
@@ -164,7 +164,7 @@ const DESTINATIONS = [
   {
     key: "Corpus",
     title: "Machine brain",
-    body: "One-request corpus · llms.txt · crawl-delay 0.",
+    body: "Single request corpus · llms.txt · crawl delay 0.",
     href: "/corpus.json",
     external: false,
     status: "live" as const,
@@ -180,7 +180,7 @@ const DESTINATIONS = [
   {
     key: "Feed",
     title: "Public feed",
-    body: "Server-rendered transmissions — public bleed.",
+    body: "Server rendered transmissions. Public bleed.",
     href: FEED,
     external: true,
     status: "live" as const,

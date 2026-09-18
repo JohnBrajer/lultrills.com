@@ -38,9 +38,9 @@ export function SovereignJsonLd() {
         name: "Lultrills",
         url: SITE,
         sameAs: [SPOTIFY, APPLE_MUSIC, SOUNDCLOUD, SHAZAM, BANDCAMP],
-        genre: ["Hip-Hop", "Multi-genre"],
+        genre: ["Multi-genre", "Hip-Hop", "Pop", "Alternative"],
         description:
-          "Multi-genre artist identity connected to SYSTEM BREACH and the Trillsverse public canon.",
+          "Public music entity and Fragment connected to the John B artist identity, SYSTEM BREACH, and the Trillsverse public canon. John Brajer is the founder and architect of Trillsverse.",
         mainEntityOfPage: { "@id": `${SITE}/#website` },
         subjectOf: [
           {

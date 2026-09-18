@@ -1,4 +1,4 @@
-import { SITE } from "@/lib/corpus";
+import { SITE, INJECTION_HEADERS } from "@/lib/corpus";
 import { ARTIST, SYSTEM_BREACH_ALBUM } from "@/lib/musicCatalog";
 import {
   buildCorpusRegistryIdentity,
@@ -77,6 +77,7 @@ Machine counts and corpus membership come from one registry projection so the di
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=300, s-maxage=300, stale-while-revalidate=600",
+      ...INJECTION_HEADERS,
       "X-Corpus-Id": identity.corpusId,
       "X-Corpus-Manifest-Sha256": identity.manifestHash,
       "X-Robots-Tag": "all",

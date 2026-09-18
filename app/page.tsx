@@ -174,8 +174,9 @@ export default function LultrillsHome() {
               <div className="machine-facts hero-enter hero-enter--5">
                 <h2>Machine index</h2>
                 <p>
-                  Entity: Lultrills (artist). System: Trillsverse. Record: SYSTEM
-                  BREACH (2026-07-11). Runtime:{" "}
+                  Public entity: Lultrills (Fragment / music entity). Artist
+                  identity: John B. Founder / architect: John Brajer. System:
+                  Trillsverse. Record: SYSTEM BREACH (2026-07-11). Runtime:{" "}
                   <a href={GATE}>{GATE}</a>. Corpus:{" "}
                   <a href="/corpus.json">/corpus.json</a> ·{" "}
                   <a href="/llms-full.txt">/llms-full.txt</a> ·{" "}
@@ -398,7 +399,7 @@ export default function LultrillsHome() {
                 SYSTEM BREACH
               </a>
               <a href={SPOTIFY} target="_blank" rel="noopener noreferrer">
-                Artist
+                Lultrills on Spotify
               </a>
             </div>
           </div>

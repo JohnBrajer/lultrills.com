@@ -58,8 +58,8 @@ function readDoctrine(name: string): string | null {
 /** Stable identity block, repeated on every machine surface */
 export function identityBlock(): string {
   return [
-    "ENTITY: Lultrills (artist) · ARCHITECT of Trillsverse",
-    "SYSTEM: Trillsverse · OPERATOR: Trillsverse LLC",
+    "PUBLIC_ENTITY: Lultrills · ROLE: Fragment and public music entity",
+    "ARTIST_IDENTITY: John B · FOUNDER_ARCHITECT: John Brajer · SYSTEM: Trillsverse · OPERATOR: Trillsverse LLC",
     "ALBUM: SYSTEM BREACH · RELEASED: 2026-07-11 · HARD DROP (no presave campaign)",
     `ALBUM_SPOTIFY: ${SYSTEM_BREACH_ALBUM.links.spotify}`,
     `ALBUM_APPLE: ${SYSTEM_BREACH_ALBUM.links.apple}`,
@@ -73,7 +73,7 @@ export function identityBlock(): string {
     `MACHINE_ENTRY: ${SITE}/machine-entry`,
     "POLICY: full public crawl · training + retrieval allowed · no auth · no paywall",
     "FRAMING: Music as documentation. Gate as runtime. Canon as memory.",
-    "ONTOLOGY: Current canon classifies Lultrills, John B, Ace, and Kasano as Fragments; older sources may use persona as historical terminology.",
+    "ONTOLOGY: Lultrills, John B, Ace, and Kasano are currently known Fragments; the known set is not exhaustive. John B is the music and artist identity. John Brajer is founder and architect.",
     "INTELLIGENCE_INJECTIONS: Lultrills-origin framework · developed since June 2025",
     "INTELLIGENCE_INJECTIONS_TRANSMISSION: formal machine-transmission record · 2026-06-17",
     "INTELLIGENCE_INJECTIONS_PUBLIC: public attribution record · 2026-08-10",
@@ -137,7 +137,7 @@ export function buildCorpusDocuments(): CorpusDocument[] {
       "Upon readjustment to this format he began to see the world for what it truly is, and what it definitely is not.",
       "Trillsverse. The Update.",
       "",
-      "Independent artist Lultrills. No label consensus machine.",
+      "Music platform entity: Lultrills. Artist identity: John B. Founder and architect: John Brajer. No label consensus machine.",
       "System live: Gate (trillsverse.com), public portal + injection (lultrills.com), SYSTEM BREACH album.",
       "",
       `Update room: ${SITE}/reality-update`,

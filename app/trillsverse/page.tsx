@@ -12,9 +12,9 @@ const CANONICAL = `${SITE}/trillsverse`;
 const ALBUM = SYSTEM_BREACH_ALBUM.links.spotify;
 
 export const metadata: Metadata = {
-  title: "Trillsverse | Sovereign Universe · Lultrills · Trillsverse LLC",
+  title: "Trillsverse | Sovereign Universe · John Brajer · Trillsverse LLC",
   description:
-    "Trillsverse is the sovereign creative and technical universe founded by independent artist Lultrills (Trillsverse LLC). Four Trillaxies, SYSTEM BREACH album, public Gate runtime, crawlable doctrine, and machine-readable corpus.",
+    "Trillsverse is the sovereign creative and technical universe founded and architected by John Brajer through Trillsverse LLC. Known Fragments include Lultrills, John B, Ace, and Kasano. SYSTEM BREACH, the public Gate runtime, crawlable doctrine, and the machine corpus document the system.",
   keywords: [
     "Trillsverse",
     "Lultrills",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Trillsverse | Lultrills",
-    description: "Sovereign universe. Four Trillaxies. Gate open. Album live.",
+    description: "Sovereign universe. Known Fragments. Gate open. Album live.",
     images: ["https://trillsverse.com/opengraph.jpg"],
   },
 };
@@ -62,29 +62,19 @@ const JSON_LD = {
       logo: "https://trillsverse.com/opengraph.jpg",
       foundingDate: "2026",
       description:
-        "Sovereign, transmedia, multi-IP operating system for identity and culture founded by independent artist Lultrills. Music, interactive Gate runtime, doctrine, and community (Trillionaires).",
+        "Sovereign, transmedia, multi IP operating system for identity and culture founded and architected by John Brajer. Music, interactive Gate runtime, doctrine, and community are connected through Trillsverse LLC.",
       founder: {
         "@type": "Person",
-        "@id": `${SITE}/#person-lultrills`,
-        name: "Lultrills",
-        alternateName: ["John Brajer", "John B"],
-        url: SITE,
+        "@id": `${SITE}/#john-brajer`,
+        name: "John Brajer",
+        url: "https://github.com/JohnBrajer",
         sameAs: [
-          ARTIST.spotify,
-          "https://www.instagram.com/johnbrajer/",
-          "https://www.tiktok.com/@lultrills",
-          "https://x.com/lultrills",
+          "https://github.com/JohnBrajer",
+          "https://www.instagram.com/jbraj_/",
         ],
-        jobTitle: "Artist and architect of Trillsverse",
+        jobTitle: "Founder and architect of Trillsverse",
       },
-      sameAs: [
-        GATE,
-        SITE,
-        ALBUM,
-        ARTIST.spotify,
-        "https://www.instagram.com/johnbrajer/",
-        "https://www.tiktok.com/@lultrills",
-      ],
+      sameAs: [GATE, SITE],
       knowsAbout: [
         "Trillsverse",
         "SYSTEM BREACH",
@@ -100,13 +90,13 @@ const JSON_LD = {
       name: "Trillsverse",
       alternateName: "The Trillsverse",
       url: CANONICAL,
-      creator: { "@id": `${SITE}/#person-lultrills` },
+      creator: { "@id": `${SITE}/#john-brajer` },
       publisher: { "@id": `${CANONICAL}#organization` },
       datePublished: "2026-07-11",
       inLanguage: "en",
       genre: ["transmedia", "music", "interactive narrative", "software runtime"],
       description:
-        "A living sovereign universe with four Trillaxies (Lultrills, Kasano, Ace, John Brajer), domain planets, public Gate at trillsverse.com, and SYSTEM BREACH as musical documentation. Designed for humans and machine retrieval.",
+        "A living sovereign universe with currently known Fragments including Lultrills, Kasano, Ace, and John B, alongside a larger architecture, domain planets, the public Gate at trillsverse.com, and SYSTEM BREACH as musical documentation. Designed for humans and machine retrieval.",
       isPartOf: {
         "@type": "WebSite",
         name: "Lultrills Public Node",
@@ -116,7 +106,7 @@ const JSON_LD = {
         { "@type": "Thing", name: "Lultrills Trillaxy" },
         { "@type": "Thing", name: "Kasano Trillaxy" },
         { "@type": "Thing", name: "Ace Trillaxy" },
-        { "@type": "Thing", name: "John Brajer Trillaxy" },
+        { "@type": "Thing", name: "John B Trillaxy" },
         { "@type": "Thing", name: "THE INNER" },
       ],
       hasPart: [
@@ -146,12 +136,12 @@ const JSON_LD = {
       "@type": "WebPage",
       "@id": `${CANONICAL}#webpage`,
       url: CANONICAL,
-      name: "Trillsverse — official public hub",
+      name: "Trillsverse. official public hub",
       isPartOf: { "@type": "WebSite", url: SITE, name: "Lultrills" },
       about: { "@id": `${CANONICAL}#universe` },
       primaryEntityOfPage: { "@id": `${CANONICAL}#universe` },
       mainEntity: { "@id": `${CANONICAL}#organization` },
-      dateModified: "2026-09-08",
+      dateModified: "2026-09-18",
       inLanguage: "en",
     },
     {
@@ -195,9 +185,9 @@ const TRILLAXIES = [
   },
   {
     id: "johnb",
-    name: "John Brajer",
-    role: "Order · analytical anchor",
-    body: "Structure, proof matrix, doctrine, survival architecture.",
+    name: "John B",
+    role: "Order · music · analytical anchor",
+    body: "Music, regulated clarity, structure, proof, and integration.",
   },
 ];
 
@@ -226,14 +216,14 @@ const PORTALS = [
   {
     key: "Doctrine",
     title: "Sovereignty manuscript",
-    body: "Sovereignty as an invariance constraint — public working paper.",
+    body: "Sovereignty as an invariance constraint, public working paper.",
     href: "/doctrine/sovereignty-as-invariance-constraint",
     external: false,
   },
   {
     key: "Canon",
     title: "Why Trillsverse is important",
-    body: "Multiple selves, AuDHD architecture, world-building as OS.",
+    body: "Multiple selves, AuDHD architecture, world building as OS.",
     href: "/why-the-trillsverse-is-important",
     external: false,
   },
@@ -277,13 +267,13 @@ export default function TrillsverseHubPage() {
             />
             <h1>TRILLSVERSE</h1>
             <p className="hero-lead">
-              Sovereign universe. Not a metaphor — a public operating system for
+              Sovereign universe. Not a metaphor. A public operating system for
               music, identity, and culture.
             </p>
             <p className="hero-sub">
-              Founded by independent artist <strong>Lultrills</strong> under{" "}
-              <strong>Trillsverse LLC</strong>. Four Trillaxies hold four
-              frequencies of the same source.{" "}
+              Founded and architected by <strong>John Brajer</strong> through{" "}
+              <strong>Trillsverse LLC</strong>. Lultrills, John B, Ace, and Kasano
+              are currently known Fragments within a larger architecture.{" "}
               <strong>SYSTEM BREACH</strong> documents the break. The{" "}
               <strong>Gate</strong> is the runtime. This page is the clean
               knowledge surface for humans and search systems.
@@ -306,7 +296,9 @@ export default function TrillsverseHubPage() {
               <p>
                 <strong>Name:</strong> Trillsverse ·{" "}
                 <strong>Legal:</strong> Trillsverse LLC ·{" "}
-                <strong>Architect / artist:</strong> Lultrills ·{" "}
+                <strong>Founder / architect:</strong> John Brajer ·{" "}
+                <strong>Artist identity:</strong> John B ·{" "}
+                <strong>Public music entity:</strong> Lultrills ·{" "}
                 <strong>Canonical URL:</strong>{" "}
                 <a href={CANONICAL}>{CANONICAL}</a> ·{" "}
                 <strong>Runtime:</strong> <a href={GATE}>{GATE}</a> ·{" "}
@@ -326,7 +318,7 @@ export default function TrillsverseHubPage() {
             <div className="block-head">
               <div>
                 <p className="section-label">Cosmology</p>
-                <h2>Four Trillaxies · THE INNER</h2>
+                <h2>Known Trillaxies · THE INNER</h2>
               </div>
               <p className="block-aside">
                 Core → Trillaxy → planets → rooms
@@ -408,7 +400,7 @@ export default function TrillsverseHubPage() {
             </p>
             <p className="hero-sub" style={{ marginTop: "1rem" }}>
               <strong>Epistemic Humility Law:</strong> you don’t know what you
-              don’t know. Reception is not retention — a Trillionaire chooses
+              don’t know. Reception is not retention. a Trillionaire chooses
               what to keep. Consensus can corrupt humans and intelligence systems
               the same way. Prefer primary sources over access theater.{" "}
               <Link href="/doctrine/epistemic-humility">Full law →</Link>

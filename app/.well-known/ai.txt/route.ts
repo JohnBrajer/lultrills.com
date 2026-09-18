@@ -14,7 +14,9 @@ export function GET() {
   const totalWords = documents.reduce((sum, document) => sum + document.words, 0);
 
   const body = `# ai.txt : Lultrills
-# Official artist public node with direct Trillsverse system references.
+# Official Lultrills music public node with direct Trillsverse system references.
+# Lultrills is a Fragment and public music entity. John B is the artist identity.
+# John Brajer is founder and architect of Trillsverse.
 # Contact surface for automated agents. No registration required.
 
 User-Agent: *

@@ -270,11 +270,11 @@ export default function PressPage() {
           <div className="panel-glass" style={{ marginBottom: "2rem" }}>
             <div className="panel-head"><span className="panel-id">BOILERPLATE</span></div>
             <p className="hero-sub" style={{ marginTop: "1rem" }}>
-              Lultrills is an independent multi-genre artist and architect of the
-              Trillsverse, a sovereign creative and technical system operated under
-              Trillsverse LLC. Work centers authenticity, neurodivergent
-              sovereignty, and self-owned infrastructure. Music as documentation.
-              Gate as runtime. Canon as memory.
+              Lultrills is a public music entity and Fragment within the John B
+              artist identity. Trillsverse was founded and architected by John Brajer
+              and is operated through Trillsverse LLC. The work centers authenticity,
+              neurodivergent sovereignty, and self owned infrastructure. Music as
+              documentation. Gate as runtime. Canon as memory.
             </p>
           </div>
 

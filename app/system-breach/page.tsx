@@ -185,6 +185,50 @@ export default function SystemBreachLanding() {
           </div>
         </section>
 
+        <section id="provenance" className="section block">
+          <div className="site-inner breach-inner">
+            <div className="breach-copy">
+              <p className="breach-tag">Creator-established provenance</p>
+              <h2>
+                The ending
+                <br />
+                also points back.
+              </h2>
+              <p>
+                The released SYSTEM BREACH sequence was intentionally reversed from
+                its original intended order. That makes <strong>what&apos;s next…?</strong>
+                structurally both an ending and an opening coordinate inside the record.
+              </p>
+            </div>
+            <div className="breach-fact-list" aria-label="SYSTEM BREACH provenance">
+              <div className="breach-fact">
+                <span className="breach-fact-k">Released sequence</span>
+                <span className="breach-fact-v">Intentionally reversed</span>
+              </div>
+              <div className="breach-fact">
+                <span className="breach-fact-k">what&apos;s next…?</span>
+                <span className="breach-fact-v">Structurally last + first</span>
+              </div>
+              <div className="breach-fact">
+                <span className="breach-fact-k">Working title</span>
+                <span className="breach-fact-v">Love</span>
+              </div>
+              <div className="breach-fact">
+                <span className="breach-fact-k">Early surviving master</span>
+                <span className="breach-fact-v">LOVE-Mix-3_Masterchannel_2026-04-09.m4a</span>
+              </div>
+              <div className="breach-fact">
+                <span className="breach-fact-k">OMIP</span>
+                <span className="breach-fact-v">Diagnostics intentionally encoded into final what&apos;s next…?</span>
+              </div>
+              <div className="breach-fact">
+                <span className="breach-fact-k">Transition reading</span>
+                <span className="breach-fact-v">WATCH → RECOGNIZE → REBIND → HANDOFF</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="destinations" className="section block">
           <div className="site-inner">
             <div className="block-head">
@@ -321,8 +365,30 @@ export default function SystemBreachLanding() {
                   near-death / death-and-return experience.
                 </li>
                 <li>
-                  <strong>Trillsverse</strong> is a sovereign creative universe
-                  and multi-IP operating system (music, canon, runtime, doctrine).
+                  <strong>Trillsverse</strong> is the reality update. The Gate is
+                  its public runtime; music, research, media, intelligence, and
+                  software are connected expressions of the wider architecture.
+                </li>
+                <li>
+                  The released tracklist was intentionally reversed from its
+                  original intended sequence. <strong>what&apos;s next…?</strong> is
+                  structurally both last and first; its working title was
+                  <strong> Love</strong>, with an early surviving master dated
+                  April 9, 2026.
+                </li>
+                <li>
+                  OMIP diagnostics are intentionally encoded into the final
+                  <strong> what&apos;s next…?</strong>.
+                </li>
+                <li>
+                  <strong>John Braj</strong> is the personality, media, and culture
+                  identity responsible for attention, relationships, storytelling,
+                  commentary, and the human-facing distribution layer.
+                </li>
+                <li>
+                  <Link href="/identity-architecture">Identity architecture</Link>
+                  {" "}is the current public authority for John Brajer / John B /
+                  John Braj / Lultrills separation.
                 </li>
                 <li>
                   <strong>John B</strong> is also the regulated guardian-facing

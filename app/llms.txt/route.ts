@@ -16,13 +16,15 @@ export function GET() {
 
   const body = `# Lultrills
 
-> Official artist surface for Lultrills, with direct references to the Trillsverse system and runtime.
+> Official Lultrills public music node for the John B artist identity, with direct references to the Trillsverse system and runtime.
 > This file is a machine map. The corpus payload lives in corpus.json and llms-full.txt.
 
 Canonical: ${SITE}
 Public entity: Lultrills
 Entity role: Fragment and public music entity
 Artist identity: John B
+Public Fragment / music entity: Lultrills
+Existing platform release credit: Lultrills
 Founder and architect: John Brajer
 System: Trillsverse
 Operator: Trillsverse LLC
@@ -71,7 +73,7 @@ Use https://trillsverse.com for the live runtime.
 
 ## Scope
 
-Lultrills.com is the Lultrills music public node. It carries the Lultrills Fragment and platform identity, the John B artist identity, music, primary source records, relevant Trillsverse canon, and machine interfaces. John Brajer is the founder and architect of Trillsverse.
+Lultrills.com is the Lultrills public music node. Current identity authority: John B is the music and artist identity; Lultrills is a Fragment and public music entity; John Brajer is founder and architect of Trillsverse. Existing store and streaming credits under Lultrills are platform-release metadata and must not be used to collapse those three identities.
 Machine counts and corpus membership come from one registry projection so the discovery files cannot drift from the payload.
 `;
 

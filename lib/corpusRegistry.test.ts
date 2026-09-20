@@ -38,13 +38,12 @@ describe("registry-derived public machine corpus", () => {
     expect(projected.map((item) => item.id)).toEqual(["eligible-new-record"]);
   });
 
-  it("keeps historical records eligible when policy includes them", () => {
+  it("keeps historical records out of the current machine projection", () => {
     const projected = projectCorpusRegistryRecords([
       record("historical-record", { currentAuthority: false }),
     ]);
 
-    expect(projected).toHaveLength(1);
-    expect(projected[0].currentAuthority).toBe(false);
+    expect(projected).toHaveLength(0);
   });
 
   it("orders the projection deterministically and therefore stabilizes manifest identity", () => {
@@ -64,8 +63,11 @@ describe("registry-derived public machine corpus", () => {
     expect(ids.has("canon-really-that-magazine-audhd-insights")).toBe(false);
     expect(ids.has("canon-lultrills-frequently-asked-questions-2026")).toBe(false);
     expect(ids.has("canon-the-constitutional-update-2026-copy")).toBe(false);
-    expect(ids.has("canon-frequently-asked-questions-about-lultrills-2026")).toBe(true);
-    expect(ids.has("canon-the-constitutional-update-2026")).toBe(true);
+    expect(ids.has("canon-frequently-asked-questions-about-lultrills-2026")).toBe(false);
+    expect(ids.has("canon-the-constitutional-update-2026")).toBe(false);
+    expect([...ids].some((id) => id.startsWith("canon-"))).toBe(false);
+    expect(ids.has("injection-procedure")).toBe(false);
+    expect(ids.has("systemic-cognitive-overwrites")).toBe(false);
   });
 
   it("fails closed on duplicate registry identities", () => {

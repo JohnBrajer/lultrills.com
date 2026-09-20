@@ -5,7 +5,7 @@ import { CANON_NAV } from "@/lib/hostingerCanon";
 export const metadata: Metadata = {
   title: "Trillsverse Canon Archive | Lultrills",
   description:
-    "Full sovereign HTML archive of Trillsverse doctrine, mapping, FAQs, and historical canon, ported for human and model ingestion.",
+    "Preserved historical Trillsverse source archive. Current machine authority is published separately through the registered corpus and llms surfaces.",
 };
 
 export default function ArchivePage() {
@@ -32,16 +32,16 @@ export default function ArchivePage() {
         </p>
         <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-4">Lattice nodes</h1>
         <p className="text-zinc-500 text-sm mb-10 max-w-xl leading-relaxed">
-          Ported from Hostinger builder into crawlable sovereign HTML.{" "}
+          Preserved from the earlier Hostinger surface as historical source records.{" "}
           <span className="text-zinc-300">{CANON_NAV.length} nodes · ~{total.toLocaleString()} words</span>.
-          Built for humans and machines. Not a website builder cage.
+          These pages remain directly inspectable, while current machine authority is defined by the registered corpus.
         </p>
         <ul className="space-y-3 border-t border-white/10 pt-6">
           {[
             {
               href: "/injection-procedure",
               title: "THE INJECTION PROCEDURE",
-              sub: "Lore + seeding playbook · dual-layer",
+              sub: "Historical transmission + seeding playbook · dual-layer",
             },
             {
               href: "/glossary",

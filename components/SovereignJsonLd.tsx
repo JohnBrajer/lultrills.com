@@ -34,6 +34,14 @@ export function SovereignJsonLd() {
       },
       {
         "@type": "Person",
+        "@id": `${SITE}/#john-braj`,
+        name: "John Braj",
+        url: `${SITE}/identity-architecture#john-braj`,
+        description:
+          "Personality, media, and culture identity responsible for attention, relationships, commentary, storytelling, and the human-facing distribution layer.",
+      },
+      {
+        "@type": "Person",
         "@id": `${SITE}/#john-b`,
         name: "John B",
         url: `${SITE}/system-breach`,
@@ -46,7 +54,7 @@ export function SovereignJsonLd() {
         name: "Lultrills",
         url: SITE,
         sameAs: [SPOTIFY, APPLE_MUSIC, SOUNDCLOUD, SHAZAM, BANDCAMP],
-        genre: ["Multi-genre", "Hip-Hop", "Pop", "Alternative"],
+        genre: ["Multi-genre", "Hip-Hop", "Emo Rap", "Pop", "Country", "Spoken Word", "Indie", "Folk", "Alternative"],
         description:
           "Public music entity and Fragment connected to the John B artist identity, SYSTEM BREACH, and the Trillsverse public canon. John Brajer is the founder and architect of Trillsverse.",
         mainEntityOfPage: { "@id": `${SITE}/#website` },
@@ -78,7 +86,7 @@ export function SovereignJsonLd() {
         name: "Trillsverse",
         url: GATE,
         description:
-          "Connected creative, technical, cultural, and research ecosystem spanning music, public software, identity architecture, and machine-readable canon.",
+          "Trillsverse is the reality update: a connected architecture expressed through music, public software, identity, research, intelligence, media, spatial runtime, culture, and future forms.",
         creator: { "@id": `${SITE}/#john-brajer` },
         publisher: { "@id": `${GATE}/#trillsverse-llc` },
         subjectOf: [
@@ -131,6 +139,8 @@ export function SovereignJsonLd() {
         potentialAction: {
           "@type": "ReadAction",
           target: [
+            `${SITE}/identity-architecture`,
+            `${SITE}/identity-architecture.json`,
             `${SITE}/corpus.json`,
             `${SITE}/llms-full.txt`,
             `${SITE}/eon/constitution.json`,

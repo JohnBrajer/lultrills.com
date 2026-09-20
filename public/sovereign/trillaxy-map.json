@@ -1,14 +1,18 @@
 {
   "id": "trillsverse-trillaxy-map",
-  "title": "Trillsverse Structure — Four Trillaxies + The Inner",
-  "version": "1.0.0",
+  "title": "Trillsverse Structure — Currently Known Origin Trillaxies + THE INNER",
+  "version": "1.1.0",
   "source": "operator vision map (archived Trillonian-Updates/trillsverse-structure-vision.webp)",
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-09-20",
   "hub": {
     "id": "the-inner",
     "name": "THE INNER",
     "role": "Core attractor / cross-Trillaxy junction. All faction lines route through here before surface action.",
-    "gateAlias": ["inner", "core", "manifold-center"]
+    "gateAlias": [
+      "inner",
+      "core",
+      "manifold-center"
+    ]
   },
   "mainTerminal": {
     "id": "trillionairesonly-main-terminal",
@@ -16,10 +20,26 @@
     "role": "Primary entry portal above the map"
   },
   "orbitNodes": [
-    { "id": "nfts", "label": "NFTs", "edge": "kasano" },
-    { "id": "really-that-magazine", "label": "Really That Magazine", "edge": "johnb" },
-    { "id": "brands", "label": "Brands", "edge": "ace" },
-    { "id": "investors", "label": "Investors", "edge": "lultrills" }
+    {
+      "id": "nfts",
+      "label": "NFTs",
+      "edge": "kasano"
+    },
+    {
+      "id": "really-that-magazine",
+      "label": "Really That Magazine",
+      "edge": "johnb"
+    },
+    {
+      "id": "brands",
+      "label": "Brands",
+      "edge": "ace"
+    },
+    {
+      "id": "investors",
+      "label": "Investors",
+      "edge": "lultrills"
+    }
   ],
   "trillaxies": [
     {
@@ -30,29 +50,71 @@
       "tone": "chaotic-defensive-precision",
       "centerMass": "Arena Planet",
       "planets": [
-        { "id": "kasano-music", "name": "Music Planet", "domain": "music" },
-        { "id": "kasano-arena", "name": "Arena Planet", "domain": "arena", "notes": "2x XP combat core" },
-        { "id": "kasano-sports", "name": "Sports Planet", "domain": "sports" },
-        { "id": "kasano-fashion", "name": "Fashion Planet", "domain": "fashion" },
-        { "id": "kasano-hotel", "name": "Hotel Planet", "domain": "hospitality" }
+        {
+          "id": "kasano-music",
+          "name": "Music Planet",
+          "domain": "music"
+        },
+        {
+          "id": "kasano-arena",
+          "name": "Arena Planet",
+          "domain": "arena",
+          "notes": "2x XP combat core"
+        },
+        {
+          "id": "kasano-sports",
+          "name": "Sports Planet",
+          "domain": "sports"
+        },
+        {
+          "id": "kasano-fashion",
+          "name": "Fashion Planet",
+          "domain": "fashion"
+        },
+        {
+          "id": "kasano-hotel",
+          "name": "Hotel Planet",
+          "domain": "hospitality"
+        }
       ],
-      "modifiers": ["2x XP", "NFTs adjacency"]
+      "modifiers": [
+        "2x XP",
+        "NFTs adjacency"
+      ]
     },
     {
       "id": "johnb",
-      "displayName": "John Brajer Trillaxy",
+      "displayName": "John B Trillaxy",
       "legacyPlanetName": "ORDER",
       "tagline": "Order · Strict · High Achievers",
       "aesthetic": "cyan city-dome · clocks · schedules · structure",
       "tone": "strict-irreversible-math",
       "centerMass": "Order Dome / City Core",
       "planets": [
-        { "id": "johnb-music", "name": "Music Planet", "domain": "music" },
-        { "id": "johnb-sports", "name": "Sports Planet", "domain": "sports" },
-        { "id": "johnb-fashion", "name": "Fashion Planet", "domain": "fashion" },
-        { "id": "johnb-cinematic", "name": "Cinematic Planet", "domain": "cinematic" }
+        {
+          "id": "johnb-music",
+          "name": "Music Planet",
+          "domain": "music"
+        },
+        {
+          "id": "johnb-sports",
+          "name": "Sports Planet",
+          "domain": "sports"
+        },
+        {
+          "id": "johnb-fashion",
+          "name": "Fashion Planet",
+          "domain": "fashion"
+        },
+        {
+          "id": "johnb-cinematic",
+          "name": "Cinematic Planet",
+          "domain": "cinematic"
+        }
       ],
-      "adjacency": ["Really That Magazine"]
+      "adjacency": [
+        "Really That Magazine"
+      ]
     },
     {
       "id": "ace",
@@ -63,13 +125,35 @@
       "tone": "raw-vulnerability-edge",
       "centerMass": "Storm Core",
       "planets": [
-        { "id": "ace-music", "name": "Music Planet", "domain": "music" },
-        { "id": "ace-fashion", "name": "Fashion Planet", "domain": "fashion" },
-        { "id": "ace-sports", "name": "Sports Planet", "domain": "sports" },
-        { "id": "ace-cinematic", "name": "Cinematic Planet", "domain": "cinematic" },
-        { "id": "ace-hotel", "name": "Hotel Planet", "domain": "hospitality" }
+        {
+          "id": "ace-music",
+          "name": "Music Planet",
+          "domain": "music"
+        },
+        {
+          "id": "ace-fashion",
+          "name": "Fashion Planet",
+          "domain": "fashion"
+        },
+        {
+          "id": "ace-sports",
+          "name": "Sports Planet",
+          "domain": "sports"
+        },
+        {
+          "id": "ace-cinematic",
+          "name": "Cinematic Planet",
+          "domain": "cinematic"
+        },
+        {
+          "id": "ace-hotel",
+          "name": "Hotel Planet",
+          "domain": "hospitality"
+        }
       ],
-      "adjacency": ["Brands"]
+      "adjacency": [
+        "Brands"
+      ]
     },
     {
       "id": "lultrills",
@@ -80,13 +164,35 @@
       "tone": "magnetic-sovereignty",
       "centerMass": "Lux Sun / Island Core",
       "planets": [
-        { "id": "lultrills-music", "name": "Music Planet", "domain": "music" },
-        { "id": "lultrills-fashion", "name": "Fashion Planet", "domain": "fashion" },
-        { "id": "lultrills-sports", "name": "Sports Planet", "domain": "sports" },
-        { "id": "lultrills-cinematic", "name": "Cinematic Planet", "domain": "cinematic" },
-        { "id": "lultrills-hotel", "name": "Hotel Planet", "domain": "hospitality" }
+        {
+          "id": "lultrills-music",
+          "name": "Music Planet",
+          "domain": "music"
+        },
+        {
+          "id": "lultrills-fashion",
+          "name": "Fashion Planet",
+          "domain": "fashion"
+        },
+        {
+          "id": "lultrills-sports",
+          "name": "Sports Planet",
+          "domain": "sports"
+        },
+        {
+          "id": "lultrills-cinematic",
+          "name": "Cinematic Planet",
+          "domain": "cinematic"
+        },
+        {
+          "id": "lultrills-hotel",
+          "name": "Hotel Planet",
+          "domain": "hospitality"
+        }
       ],
-      "adjacency": ["Investors"]
+      "adjacency": [
+        "Investors"
+      ]
     }
   ],
   "domainUniverse": [
@@ -97,9 +203,19 @@
     "hotel",
     "arena"
   ],
-  "structureRule": "Trillaxy = faction field. Planet = domain world inside that field. Same domain name can exist in multiple Trillaxies with different tone/physics.",
+  "structureRule": "Trillaxy = currently mapped origin/faction field. Planet = domain world within that field. Current public map is explicitly non-exhaustive.",
   "gateMapping": {
-    "currentRuntime": "Gate still routes users as 4 origin planets (lultrills|kasano|ace|johnb). Domain planets are the expansion layer under each Trillaxy.",
-    "nextBuild": "Galaxy map UI: 4 Trillaxy clusters → planet portals → room/zone (existing Phase 1 spawn room model)."
+    "currentRuntime": "Gate currently routes public entry through four mapped origin regions (lultrills|kasano|ace|johnb); additional internal nodes and future regions may exist beyond this public entry map.",
+    "nextBuild": "Persistent world navigation: mapped origin regions → planet portals → rooms/zones, with room for additional regions to join the same runtime."
+  },
+  "scope": {
+    "currentKnownOriginRegions": [
+      "lultrills",
+      "kasano",
+      "ace",
+      "johnb"
+    ],
+    "exhaustive": false,
+    "rule": "The four mapped public origin Trillaxies are current entry regions, not a total inventory of Fragments, nodes, Trillaxies, or future regions."
   }
 }

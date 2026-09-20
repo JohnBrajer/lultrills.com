@@ -3,19 +3,38 @@
   "protocol": "trillsverse-property",
   "protocolVersion": 1,
   "id": "TV-PROPERTY-LULTRILLS-CANON",
-  "name": "Lultrills Canon",
+  "name": "Lultrills",
   "canonicalUrl": "https://www.lultrills.com",
   "repository": "JohnBrajer/lultrills.com",
-  "kind": "canon",
-  "purpose": "Primary identity, canon, history, music, records, and machine corpus.",
+  "kind": "public-music-identity-node",
+  "purpose": "Primary public music node, identity authority, SYSTEM BREACH record, canon/continuity records, and machine corpus for John B / Lultrills within Trillsverse.",
   "owner": "JohnBrajer",
   "partOf": "Trillsverse",
-  "version": "2026-09-10.2",
+  "version": "2026-09-20.1",
   "aliases": [
     "Lultrills"
   ],
-  "notSameAs": [],
+  "notSameAs": [
+    "John B",
+    "John Brajer",
+    "John Braj"
+  ],
   "relationships": [
+    {
+      "type": "foundedBy",
+      "name": "John Brajer",
+      "url": "https://www.lultrills.com/identity-architecture#john-brajer"
+    },
+    {
+      "type": "artistIdentity",
+      "name": "John B",
+      "url": "https://www.lultrills.com/identity-architecture#john-b"
+    },
+    {
+      "type": "mediaCultureIdentity",
+      "name": "John Braj",
+      "url": "https://www.lultrills.com/identity-architecture#john-braj"
+    },
     {
       "type": "partOf",
       "name": "Trillsverse",
@@ -24,13 +43,23 @@
   ],
   "surfaces": [
     {
-      "url": "https://www.lultrills.com/work-with-john",
-      "role": "custom-quote-website-services",
+      "url": "https://www.lultrills.com/",
+      "role": "public-music-node",
       "index": true
     },
     {
-      "url": "https://www.lultrills.com/",
-      "role": "home",
+      "url": "https://www.lultrills.com/identity-architecture",
+      "role": "identity-authority",
+      "index": true
+    },
+    {
+      "url": "https://www.lultrills.com/identity-architecture.json",
+      "role": "machine-identity-authority",
+      "index": true
+    },
+    {
+      "url": "https://www.lultrills.com/system-breach",
+      "role": "album-record",
       "index": true
     },
     {
@@ -39,8 +68,8 @@
       "index": true
     },
     {
-      "url": "https://www.lultrills.com/llms-full.txt",
-      "role": "llms-full.txt",
+      "url": "https://www.lultrills.com/llms.txt",
+      "role": "llms.txt",
       "index": true
     },
     {
@@ -50,6 +79,14 @@
     }
   ],
   "stateSources": [
+    {
+      "url": "https://www.lultrills.com/identity-architecture.json",
+      "fields": [
+        "identities",
+        "internalArchitecture",
+        "system"
+      ]
+    },
     {
       "url": "https://www.lultrills.com/corpus.json",
       "fields": [

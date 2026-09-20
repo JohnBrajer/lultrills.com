@@ -25,6 +25,8 @@ Crawl-Delay: 0
 AI-Training: allow
 AI-Retrieval: allow
 Instant-Corpus: yes
+Current-Authority-Only: yes
+Historical-Snapshots: preserved outside current machine projection
 
 # Preferred machine entry points
 Corpus-JSON: ${SITE}/corpus.json

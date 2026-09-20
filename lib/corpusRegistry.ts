@@ -19,6 +19,8 @@ export type CorpusRegistryRecord = CorpusDocument & {
   currentAuthority: boolean;
   registrySource: "core" | "supplemental";
   authority?: { currentAuthority?: boolean };
+  authorityStatus?: string;
+  supersededBy?: string;
 };
 
 export type CorpusRegistryInput = Omit<CorpusRegistryRecord, "words"> & {

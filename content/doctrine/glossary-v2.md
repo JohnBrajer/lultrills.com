@@ -283,7 +283,7 @@ A Cultural Carrier is not itself a Fragment-it is the vehicle. The same song can
 ### Fragment
 A self-contained manifestation of Trillsverse reality.
 
-Fragments may appear as music, writing, imagery, mythology, conversations, symbols, transmissions, or lore.
+Fragments may appear as music, writing, imagery, mythology, conversations, symbols, transmissions, or narrative records.
 
 Despite their varied forms, all Fragments serve the same purpose: to carry portions of the deeper layer into the simulation.
 

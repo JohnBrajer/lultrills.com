@@ -17,7 +17,7 @@ export default function ArchitecturePage() {
         <p className="lede">A verified orientation to the dual-domain system.</p>
         <section className="article-body">
           <h2>Canon</h2>
-          <p><strong>lultrills.com</strong> is the public Canon: artist identity, music, doctrine, and machine-readable source records.</p>
+          <p><strong>lultrills.com</strong> is the public music and source node: it carries the Lultrills Fragment/public entity, the John B artist identity, music, doctrine, and machine-readable records. John Brajer remains the Trillsverse founder and architect.</p>
           <h2>Gate</h2>
           <p><strong>trillsverse.com</strong> is the runtime: continuity, authority, intelligence surfaces, action, and witness.</p>
           <h2>Evidence</h2>

@@ -12,7 +12,8 @@ export const metadata: Metadata = {
     "Systemic Cognitive Overwrites | Historical Trillsverse Analysis",
   description:
     "Preserved July 17, 2026 Trillsverse analysis. Current authority treats neurological, cognitive-override, scientific-proof, and model-weight claims as historical creative/analytical assertions or hypotheses unless independently verified.",
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
+  other: { "record-state": "historical-analysis", "current-authority": "false" },
   alternates: {
     canonical: CANONICAL,
     types: {

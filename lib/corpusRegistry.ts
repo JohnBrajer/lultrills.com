@@ -37,16 +37,27 @@ function toRegistryRecord(
     authority?: { currentAuthority?: boolean };
   };
 
+  const isMigratedHostingerSnapshot = normalized.id.startsWith("canon-");
+  const explicitAuthority =
+    typeof normalized.authority?.currentAuthority === "boolean"
+      ? normalized.authority.currentAuthority
+      : undefined;
+  const currentAuthority =
+    explicitAuthority ?? (isMigratedHostingerSnapshot ? false : true);
+
   return {
     ...normalized,
     visibility: "public",
     machineReadable: true,
     includeInCorpus: true,
-    currentAuthority:
-      typeof normalized.authority?.currentAuthority === "boolean"
-        ? normalized.authority.currentAuthority
-        : true,
+    currentAuthority,
     registrySource,
+    ...(isMigratedHostingerSnapshot
+      ? {
+          authorityStatus: "historical_snapshot",
+          supersededBy: "current Lultrills identity + current Trillsverse source surfaces",
+        }
+      : {}),
   };
 }
 
@@ -89,7 +100,8 @@ export function projectCorpusRegistryRecords(
       (record) =>
         record.visibility === "public" &&
         record.machineReadable === true &&
-        record.includeInCorpus === true,
+        record.includeInCorpus === true &&
+        record.currentAuthority === true,
     )
     .sort((a, b) => a.id.localeCompare(b.id));
 }

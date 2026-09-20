@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { CANON_PAGES } from "@/lib/hostingerCanon";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.lultrills.com";
@@ -80,12 +79,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency,
       priority,
-    })),
-    ...CANON_PAGES.map((p) => ({
-      url: `${base}${p.route}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: p.words > 2000 ? 0.9 : 0.7,
     })),
   ];
 }

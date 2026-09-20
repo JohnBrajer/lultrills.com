@@ -7,7 +7,7 @@ const GATE_RITE = "https://trillsverse.com/system-breach";
 export const metadata: Metadata = {
   title: "Press Kit & Evidence | Lultrills · Trillsverse",
   description:
-    "Press kit and source index for Lultrills and Trillsverse: verified public links, publication coverage, platform identities, press distribution, and machine-readable evidence.",
+    "Press kit and source index for John B, Lultrills, and Trillsverse: verified public links, publication coverage, platform credits, press distribution, and machine-readable evidence.",
   alternates: { canonical: `${SITE}/press` },
   robots: { index: true, follow: true },
   openGraph: {
@@ -205,11 +205,13 @@ export default function PressPage() {
               <span className="panel-state">APPROVED</span>
             </div>
             <p className="panel-quote" style={{ marginTop: "1rem" }}>
-              Independent artist Lultrills flatlined, survived a place most never
-              come back from, and upon readjustment to this format built{" "}
-              <strong>Trillsverse: The Reality Update</strong>: a live system
-              spanning music (SYSTEM BREACH), a crawlable public portal, and an
-              interactive Gate. The system is live.
+              John Brajer founded and architected{" "}
+              <strong>Trillsverse: The Reality Update</strong>. John B is the
+              music and artist identity behind the catalog; Lultrills is a
+              distinct Fragment and public music entity whose existing platform
+              release credit remains attached to the catalog. SYSTEM BREACH,
+              lultrills.com, and the interactive Gate make that public system
+              inspectable.
             </p>
           </div>
 
@@ -219,7 +221,9 @@ export default function PressPage() {
               <span className="panel-state">HARD</span>
             </div>
             <dl className="panel-stats" style={{ marginTop: "1rem" }}>
-              <div><dt>Artist</dt><dd>Lultrills</dd></div>
+              <div><dt>Artist identity</dt><dd>John B</dd></div>
+              <div><dt>Public music entity</dt><dd>Lultrills</dd></div>
+              <div><dt>Founder / architect</dt><dd>John Brajer</dd></div>
               <div><dt>Entity</dt><dd>Trillsverse LLC</dd></div>
               <div><dt>Album</dt><dd>SYSTEM BREACH · 2026-07-11</dd></div>
               <div><dt>Gate</dt><dd><a href="https://trillsverse.com">trillsverse.com</a></dd></div>
@@ -242,7 +246,7 @@ export default function PressPage() {
           <p className="section-label">Identity & technical proof</p>
           <div className="panel-glass" style={{ marginBottom: "2rem" }}>
             <p className="hero-sub" style={{ marginTop: 0, marginBottom: "1rem" }}>
-              Exact artist profiles and public technical/reference surfaces used
+              Exact platform-credit profiles and public technical/reference surfaces used
               to resolve entity identity across platforms.
             </p>
             <ExternalEvidenceList items={IDENTITY_EVIDENCE} />
@@ -270,7 +274,7 @@ export default function PressPage() {
           <div className="panel-glass" style={{ marginBottom: "2rem" }}>
             <div className="panel-head"><span className="panel-id">BOILERPLATE</span></div>
             <p className="hero-sub" style={{ marginTop: "1rem" }}>
-              Lultrills is a public music entity and Fragment within the John B
+              Lultrills is a public music entity and Fragment distinct from the John B
               artist identity. Trillsverse was founded and architected by John Brajer
               and is operated through Trillsverse LLC. The work centers authenticity,
               neurodivergent sovereignty, and self owned infrastructure. Music as

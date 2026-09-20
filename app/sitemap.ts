@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { CANON_PAGES } from "@/lib/hostingerCanon";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.lultrills.com";
@@ -45,8 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/press/INTELLIGENCE_INJECTIONS_SOCIAL_PACK.md", priority: 0.85, changeFrequency: "daily" },
     { path: "/press/PRESS_SUBMISSION_PROTOCOL_001.md", priority: 0.8, changeFrequency: "weekly" },
     { path: "/doctrine/sovereignty-as-invariance-constraint", priority: 0.95, changeFrequency: "weekly" },
-    { path: "/doctrine/systemic-cognitive-overwrites", priority: 0.95, changeFrequency: "weekly" },
-    { path: "/doctrine/systemic-cognitive-overwrites.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/doctrine/epistemic-humility", priority: 0.95, changeFrequency: "weekly" },
     { path: "/doctrine/epistemic-humility.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/doctrine/grouping-algorithm", priority: 1, changeFrequency: "weekly" },
@@ -62,7 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/stream", priority: 0.95, changeFrequency: "weekly" },
     { path: "/essays/why-everything-is-one", priority: 0.9, changeFrequency: "weekly" },
     { path: "/archive", priority: 0.85, changeFrequency: "weekly" },
-    { path: "/injection-procedure", priority: 0.85, changeFrequency: "weekly" },
     { path: "/glossary", priority: 0.85, changeFrequency: "weekly" },
     { path: "/theory", priority: 0.8, changeFrequency: "weekly" },
     { path: "/llms.txt", priority: 0.7, changeFrequency: "daily" },
@@ -80,12 +76,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency,
       priority,
-    })),
-    ...CANON_PAGES.map((p) => ({
-      url: `${base}${p.route}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: p.words > 2000 ? 0.9 : 0.7,
     })),
   ];
 }

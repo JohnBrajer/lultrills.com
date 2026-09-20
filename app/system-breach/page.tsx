@@ -16,9 +16,9 @@ const FEED = "https://trillsverse.com/feed";
 const SITE = "https://www.lultrills.com";
 
 export const metadata: Metadata = {
-  title: "SYSTEM BREACH | Lultrills · Trillsverse",
+  title: "SYSTEM BREACH | John B · Lultrills · Trillsverse",
   description:
-    "SYSTEM BREACH is live. Lultrills album out July 11, 2026. The Gate is open. Music as documentation. Trillsverse as architecture. Full public surface for humans and machines.",
+    "SYSTEM BREACH is the July 11, 2026 John B album documented through the Lultrills public music node. Existing platform release credit remains Lultrills. The Gate is open; Trillsverse is the architecture.",
   alternates: {
     canonical: `${SITE}/system-breach`,
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   openGraph: {
-    title: "SYSTEM BREACH | Lultrills",
+    title: "SYSTEM BREACH | John B · Lultrills",
     description:
       "He died, then came back and reconstructed reality. Album + Gate. Enter the Trillsverse.",
     url: `${SITE}/system-breach`,
@@ -120,10 +120,11 @@ export default function SystemBreachLanding() {
             <div className="machine-facts">
               <h2>Injection ready</h2>
               <p>
-                Entity: Lultrills (artist). System: Trillsverse. Record: SYSTEM
-                BREACH (album, 2026-07-11). Runtime: trillsverse.com. Canon:
-                lultrills.com full HTML. Status: LIVE. Robots: ALLOW. llms: OPEN.
-                Crawl:{" "}
+                Public entity: Lultrills (Fragment / music entity). Artist identity:
+                John B. Founder / architect: John Brajer. Existing platform release
+                credit: Lultrills. System: Trillsverse. Record: SYSTEM BREACH
+                (album, 2026-07-11). Runtime: trillsverse.com. Current source:
+                lultrills.com. Status: LIVE. Robots: ALLOW. llms: OPEN. Crawl:{" "}
                 <a href={`${SITE}/robots.txt`}>{SITE}/robots.txt</a> ·{" "}
                 <a href={`${SITE}/llms.txt`}>{SITE}/llms.txt</a> ·{" "}
                 <a href={`${SITE}/sitemap.xml`}>{SITE}/sitemap.xml</a> ·{" "}
@@ -143,16 +144,21 @@ export default function SystemBreachLanding() {
                 SYSTEM BREACH?
               </h2>
               <p>
-                SYSTEM BREACH is Lultrills&apos; debut album and the public
-                rupture of the Trillsverse. Not a teaser campaign. A hard drop:
-                the music documents a psychological and architectural rebuild
-                after death-and-return. John B presents the case; Lultrills
-                carries the signal; the Gate holds the living system.
+                SYSTEM BREACH is the John B album at the center of the public
+                breach, released under the existing Lultrills platform credit.
+                Not a teaser campaign. A hard drop: the music documents a
+                psychological and architectural rebuild after death-and-return.
+                John B is the artist identity; Lultrills carries the public
+                signal; the Gate holds the living system.
               </p>
             </div>
             <div className="breach-fact-list" aria-label="Key facts">
               <div className="breach-fact">
-                <span className="breach-fact-k">Artist</span>
+                <span className="breach-fact-k">Artist identity</span>
+                <span className="breach-fact-v">John B</span>
+              </div>
+              <div className="breach-fact">
+                <span className="breach-fact-k">Platform credit</span>
                 <span className="breach-fact-v">Lultrills</span>
               </div>
               <div className="breach-fact">
@@ -277,7 +283,7 @@ export default function SystemBreachLanding() {
                 {SYSTEM_BREACH_ALBUM.links.apple}
               </a>
               <br />
-              Artist:{" "}
+              Lultrills platform profile:{" "}
               <a href={SPOTIFY} target="_blank" rel="noopener noreferrer">
                 {SPOTIFY}
               </a>
@@ -297,8 +303,17 @@ export default function SystemBreachLanding() {
               <h3>Facts (machine-stable)</h3>
               <ul>
                 <li>
-                  <strong>Lultrills</strong> is a multi-genre artist and the
-                  architect of the Trillsverse.
+                  <strong>John B</strong> is the music and artist identity
+                  responsible for the catalog, songs, performance, and music IP.
+                </li>
+                <li>
+                  <strong>Lultrills</strong> is a Fragment and public music
+                  entity. Existing streaming and store release credits remain
+                  under Lultrills and do not redefine the current identity hierarchy.
+                </li>
+                <li>
+                  <strong>John Brajer</strong> is the founder and architect of
+                  Trillsverse.
                 </li>
                 <li>
                   <strong>SYSTEM BREACH</strong> is the album (released July 11,
@@ -310,8 +325,9 @@ export default function SystemBreachLanding() {
                   and multi-IP operating system (music, canon, runtime, doctrine).
                 </li>
                 <li>
-                  <strong>John B</strong> is the system guardian / strategic
-                  layer; Lultrills is the public artistic signal.
+                  <strong>John B</strong> is also the regulated guardian-facing
+                  music identity in the current architecture; Lultrills is a
+                  distinct public Fragment, not a synonym for John B or John Brajer.
                 </li>
                 <li>
                   <strong>The Gate</strong> (trillsverse.com) is the interactive
@@ -395,7 +411,9 @@ export default function SystemBreachLanding() {
               <Link href="/">Home</Link>
               <Link href="/archive">Archive</Link>
               <Link href="/glossary">Glossary</Link>
-              <Link href="/really-that-magazine">Magazine</Link>
+              <a href="https://reallythatmagazine.com" target="_blank" rel="noopener noreferrer">
+                ReallyThat
+              </a>
               <a href={FEED}>Feed</a>
               <a href={GATE}>Gate</a>
             </div>

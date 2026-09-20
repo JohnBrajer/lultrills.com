@@ -5,7 +5,8 @@
 import { SYSTEM_BREACH_ALBUM, type AlbumTrack } from "./musicCatalog";
 
 const SITE = "https://www.lultrills.com";
-const ARTIST_ID = `${SITE}/#lultrills`;
+const JOHN_B_ID = `${SITE}/#john-b`;
+const LULTRILLS_ID = `${SITE}/#lultrills`;
 const ALBUM_PAGE = `${SITE}/system-breach`;
 const ALBUM_ID = `${SITE}/system-breach#album`;
 
@@ -33,7 +34,7 @@ export function buildSystemBreachMusicGraph() {
       name: t.title,
       url: `${ALBUM_PAGE}#${fragment}`,
       position: t.n,
-      byArtist: { "@id": ARTIST_ID },
+      byArtist: { "@id": JOHN_B_ID },
       inAlbum: { "@id": ALBUM_ID },
       isPartOf: { "@id": ALBUM_ID },
       sameAs,
@@ -44,16 +45,43 @@ export function buildSystemBreachMusicGraph() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MusicGroup",
-        "@id": ARTIST_ID,
+        "@type": "Person",
+        "@id": JOHN_B_ID,
+        name: "John B",
+        url: ALBUM_PAGE,
+        description:
+          "Music and artist identity responsible for the catalog, songs, performance, and music IP.",
+      },
+      {
+        "@type": "Thing",
+        "@id": LULTRILLS_ID,
         name: "Lultrills",
         url: SITE,
+        description:
+          "Fragment and public music entity. Existing streaming and store release credits remain under Lultrills.",
+        sameAs: [
+          "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt",
+          "https://music.apple.com/us/artist/lultrills/1811909376",
+        ],
       },
       {
         "@type": "MusicAlbum",
         "@id": ALBUM_ID,
         name: SYSTEM_BREACH_ALBUM.title,
-        byArtist: { "@id": ARTIST_ID },
+        byArtist: { "@id": JOHN_B_ID },
+        creator: { "@id": JOHN_B_ID },
+        additionalProperty: [
+          {
+            "@type": "PropertyValue",
+            name: "Existing platform release credit",
+            value: "Lultrills",
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Public music entity",
+            value: "Lultrills",
+          },
+        ],
         datePublished: "2026-07-11",
         numTracks: tracks.length,
         url: ALBUM_PAGE,

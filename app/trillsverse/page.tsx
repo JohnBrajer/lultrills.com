@@ -113,7 +113,20 @@ const JSON_LD = {
         {
           "@type": "MusicAlbum",
           name: "SYSTEM BREACH",
-          byArtist: { "@type": "MusicGroup", name: "Lultrills" },
+          byArtist: {
+            "@type": "Person",
+            name: "John B",
+            description: "Music and artist identity within the current Trillsverse identity architecture.",
+          },
+          creator: {
+            "@type": "Person",
+            name: "John B",
+          },
+          additionalProperty: {
+            "@type": "PropertyValue",
+            name: "Existing platform release credit",
+            value: "Lultrills",
+          },
           datePublished: "2026-07-11",
           url: `${SITE}/system-breach`,
           sameAs: [ALBUM],
@@ -141,7 +154,7 @@ const JSON_LD = {
       about: { "@id": `${CANONICAL}#universe` },
       primaryEntityOfPage: { "@id": `${CANONICAL}#universe` },
       mainEntity: { "@id": `${CANONICAL}#organization` },
-      dateModified: "2026-09-18",
+      dateModified: "2026-09-20",
       inLanguage: "en",
     },
     {

@@ -28,7 +28,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${page.title.split("|")[0].trim()} | Historical Lultrills Archive`,
     description,
-    robots: { index: true, follow: true },
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: { index: false, follow: true },
+    },
+    other: {
+      "record-state": "historical-snapshot",
+      "current-authority": "false",
+    },
     openGraph: {
       title: `${page.title.split("|")[0].trim()} | Historical Lultrills Archive`,
       description,

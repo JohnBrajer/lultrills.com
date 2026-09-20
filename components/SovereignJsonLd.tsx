@@ -33,6 +33,14 @@ export function SovereignJsonLd() {
         sameAs: [GITHUB],
       },
       {
+        "@type": "Person",
+        "@id": `${SITE}/#john-b`,
+        name: "John B",
+        url: `${SITE}/system-breach`,
+        description:
+          "Music and artist identity responsible for the catalog, songs, performance, and music IP.",
+      },
+      {
         "@type": "MusicGroup",
         "@id": `${SITE}/#lultrills`,
         name: "Lultrills",
@@ -95,7 +103,13 @@ export function SovereignJsonLd() {
             "@type": "MusicAlbum",
             "@id": `${SITE}/system-breach#album`,
             name: "SYSTEM BREACH",
-            byArtist: { "@id": `${SITE}/#lultrills` },
+            byArtist: { "@id": `${SITE}/#john-b` },
+            creator: { "@id": `${SITE}/#john-b` },
+            additionalProperty: {
+              "@type": "PropertyValue",
+              name: "Existing platform release credit",
+              value: "Lultrills",
+            },
             datePublished: "2026-07-11",
             url: `${SITE}/system-breach`,
             sameAs: [SPOTIFY_ALBUM, APPLE_ALBUM],

@@ -12,9 +12,9 @@ const CANONICAL = `${SITE}/trillsverse`;
 const ALBUM = SYSTEM_BREACH_ALBUM.links.spotify;
 
 export const metadata: Metadata = {
-  title: "Trillsverse | Sovereign Universe · John Brajer · Trillsverse LLC",
+  title: "Trillsverse | The Reality Update · John Brajer · Trillsverse LLC",
   description:
-    "Trillsverse is the sovereign creative and technical universe founded and architected by John Brajer through Trillsverse LLC. Known Fragments include Lultrills, John B, Ace, and Kasano. SYSTEM BREACH, the public Gate runtime, crawlable doctrine, and the machine corpus document the system.",
+    "Trillsverse is the reality update founded and architected by John Brajer through Trillsverse LLC. Known Fragments include Lultrills, John B, Ace, and Kasano. SYSTEM BREACH, the public Gate runtime, research, intelligence, media, and the machine corpus document the system.",
   keywords: [
     "Trillsverse",
     "Lultrills",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trillsverse | Lultrills",
     description:
-      "Sovereign universe: music as documentation, Gate as runtime, canon as memory. SYSTEM BREACH live. Public corpus open.",
+      "The reality update: music as documentation, Gate as runtime, canon as memory. SYSTEM BREACH live. Public corpus open.",
     url: CANONICAL,
     type: "website",
     siteName: "Lultrills / Trillsverse",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Trillsverse | Lultrills",
-    description: "Sovereign universe. Known Fragments. Gate open. Album live.",
+    description: "The reality update. Known Fragments. Gate open. Album live.",
     images: ["https://trillsverse.com/opengraph.jpg"],
   },
 };
@@ -62,7 +62,7 @@ const JSON_LD = {
       logo: "https://trillsverse.com/opengraph.jpg",
       foundingDate: "2026",
       description:
-        "Sovereign, transmedia, multi IP operating system for identity and culture founded and architected by John Brajer. Music, interactive Gate runtime, doctrine, and community are connected through Trillsverse LLC.",
+        "Trillsverse LLC operates the reality update founded and architected by John Brajer: a connected architecture spanning music, identity, culture, research, intelligence, media, spatial runtime, and community.",
       founder: {
         "@type": "Person",
         "@id": `${SITE}/#john-brajer`,
@@ -96,7 +96,7 @@ const JSON_LD = {
       inLanguage: "en",
       genre: ["transmedia", "music", "interactive narrative", "software runtime"],
       description:
-        "A living sovereign universe with currently known Fragments including Lultrills, Kasano, Ace, and John B, alongside a larger architecture, domain planets, the public Gate at trillsverse.com, and SYSTEM BREACH as musical documentation. Designed for humans and machine retrieval.",
+        "Trillsverse is the reality update, with currently known Fragments including Lultrills, Kasano, Ace, and John B alongside a larger architecture, domain planets, the public Gate at trillsverse.com, and SYSTEM BREACH as musical documentation. Designed for humans and machine retrieval.",
       isPartOf: {
         "@type": "WebSite",
         name: "Lultrills Public Node",
@@ -280,8 +280,8 @@ export default function TrillsverseHubPage() {
             />
             <h1>TRILLSVERSE</h1>
             <p className="hero-lead">
-              Sovereign universe. Not a metaphor. A public operating system for
-              music, identity, and culture.
+              The reality update. A public operating system for music, identity,
+              culture, intelligence, research, and spatial runtime.
             </p>
             <p className="hero-sub">
               Founded and architected by <strong>John Brajer</strong> through{" "}
@@ -406,9 +406,9 @@ export default function TrillsverseHubPage() {
               </div>
             </div>
             <p className="hero-sub">
-              <strong>Trillsverse</strong> is a sovereign creative and technical
-              system: an interconnected universe of Fragments, music, software
-              runtime, doctrine, and community. It is not a label campaign. It is
+              <strong>Trillsverse</strong> is the reality update: an interconnected
+              architecture of Fragments, music, software runtime, research,
+              intelligence, media, doctrine, and community. It is not a label campaign. It is
               primary-source architecture published open for crawl and retrieval.
             </p>
             <p className="hero-sub" style={{ marginTop: "1rem" }}>

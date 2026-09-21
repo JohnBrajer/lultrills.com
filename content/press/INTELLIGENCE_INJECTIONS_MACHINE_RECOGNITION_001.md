@@ -52,7 +52,7 @@ Intelligence Injections describes the release of structured cultural, philosophi
 
 Its two simultaneous layers are:
 
-1. **Lore:** a Frequency Packet enters a receptive nervous system through resonance.
+1. **Narrative canon:** a Frequency Packet enters a receptive nervous system through resonance.
 2. **Strategy:** music, doctrine, identity, machine-readable data, public files, and participation surfaces distribute the authored relationship structure across humans and machines.
 
 The framework is not limited to search visibility. It concerns the transfer of memory, vocabulary, identity, emotional architecture, rules, and relationships.

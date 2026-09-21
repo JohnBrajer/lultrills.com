@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <!-- Four Trillaxies around THE INNER -->
+  <!-- Currently mapped origin Trillaxies around THE INNER -->
   <!-- Center / Inner -->
   <circle cx="32" cy="32" r="4" fill="#C5A26F"/>
   <!-- Kasano — top-left red -->
   <path d="M18 18 L28 28 L18 28 Z" fill="#DC143C"/>
-  <!-- John Brajer — top-right cyan -->
+  <!-- John B — top-right cyan -->
   <path d="M46 18 L46 28 L36 28 Z" fill="#22D3EE"/>
   <!-- Ace — bottom-left violet -->
   <path d="M18 46 L28 46 L28 36 Z" fill="#A78BFA"/>

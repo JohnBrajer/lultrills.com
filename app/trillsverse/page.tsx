@@ -273,7 +273,7 @@ export default function TrillsverseHubPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/brand/mark-trillaxy.svg"
-              alt="Trillsverse four Trillaxies mark"
+              alt="Trillsverse currently mapped origin Trillaxies mark"
               width={72}
               height={72}
               style={{ marginBottom: "1rem" }}

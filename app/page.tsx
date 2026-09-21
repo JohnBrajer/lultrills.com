@@ -26,7 +26,7 @@ const INDEX = [
   {
     key: "Universe",
     title: "Trillsverse hub [live]",
-    body: "Official entity page. Four Trillaxies, schema.org, knowledge surface.",
+    body: "Official entity page. Known origin Trillaxies, Fragments, schema.org, knowledge surface.",
     href: "/trillsverse",
     external: false,
   },

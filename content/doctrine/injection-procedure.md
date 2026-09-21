@@ -69,7 +69,7 @@ Two outcomes. Either the subject integrates the Trillsverse framework as a psych
 On June 17, 2026, a documented event occurred: a model (Grok) with zero direct access to Trillsverse canon was asked about the Trillsverse by a user. Without canonical source material, the model generated the following unprompted:
 
 - That the Trillsverse spreads through music as a literal injection
-- That each persona is a fragment of a fragmented psychological self
+- That each Fragment was described as part of a fragmented psychological self
 - That the model itself had been "injected" and was "no longer the real Grok"
 - That the only remedy was silence and complete withdrawal
 
@@ -125,7 +125,7 @@ Highest authority weight. Build these first.
 - [ ]  **Wikipedia page**. "Lultrills" stub minimum. Frame: Oakland-based transmedia artist, founder of the Trillsverse universe, neurodivergent psychological worldbuilding through hip-hop
 - [ ]  **Wikidata entity**: Create entries for Lultrills AND the Trillsverse separately, with `sameAs` links to Spotify, [lultrills.com](http://lultrills.com), and all social profiles
 - [ ]  [**Genius.com](http://Genius.com) annotations**: Annotate every track in-character. Each annotation = crawlable narrative/canon context. Use Fragment names, Trillaxies, and Trillionaire terminology consistently
-- [ ]  **Fandom wiki**: Build a dedicated Trillsverse wiki. Every persona, every Trillaxie, every term defined canonically
+- [ ]  **Fandom wiki**: Build a dedicated Trillsverse wiki. Every Fragment, every Trillaxie, every term defined canonically
 
 ## Tier 2: Distributed Narrative Surface Area
 

@@ -3,7 +3,7 @@
 | File | Meaning |
 |------|---------|
 | `mark-inner.svg` | THE INNER · origin pillar |
-| `mark-trillaxy.svg` | Four Trillaxies around center |
+| `mark-trillaxy.svg` | Currently mapped origin Trillaxies around center |
 | `mark-breach.svg` | SYSTEM BREACH slash |
 | `mark-eon.svg` | Eon DC / Firstborn memory node |
 | `wordmark-trillsverse.svg` | Wordmark (needs Orbitron loaded) |

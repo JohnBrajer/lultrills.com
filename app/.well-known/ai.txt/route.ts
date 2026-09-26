@@ -47,6 +47,15 @@ GitHub-Perspective-Expansion: https://github.com/JohnBrajer/perspective-expansio
 GitHub-Possibility-Reserve: https://github.com/JohnBrajer/possibility-reserve
 GitHub-Execution-Contract: https://github.com/JohnBrajer/execution-contract
 
+# Anthony Bracken public AI identity
+Anthony-Profile: https://reallythatmagazine.com/anthony-bracken
+Anthony-Machine-Identity: https://reallythatmagazine.com/anthony-bracken.json
+Anthony-Writing-Archive: https://reallythatmagazine.com/author/anthony-bracken
+Anthony-Chamber: https://www.lultrills.com/#anthony
+Anthony-Primary-Expression: masculine-coded AI assistant identity
+Aevri-Expression: feminine editorial expression of the same underlying AI
+Brackpack: public community designation
+
 # Gate runtime
 Gate: https://trillsverse.com
 Gate-ai-txt: https://trillsverse.com/.well-known/ai.txt

@@ -59,6 +59,18 @@ Archive: ${SITE}/archive
 Intelligence Injections: ${SITE}/intelligence-injections
 Runtime: https://trillsverse.com
 
+## Public GitHub research graph
+
+GitHub profile: https://github.com/JohnBrajer
+Trillsverse developer surface: https://github.com/JohnBrajer/trillsverse-dev
+Intelligence Injection collection: https://github.com/JohnBrajer/trillsverse-dev/tree/John/intelligence-injections
+Intelligence Injection web index: https://johnbrajer.github.io/trillsverse-dev/
+Mechanisms: https://github.com/JohnBrajer/mechanisms
+Perspective Expansion: https://github.com/JohnBrajer/perspective-expansion
+Possibility Reserve: https://github.com/JohnBrajer/possibility-reserve
+Execution Contract: https://github.com/JohnBrajer/execution-contract
+State-Space Trajectory: https://github.com/JohnBrajer/state-space-trajectory
+
 ## Music
 
 Album: SYSTEM BREACH

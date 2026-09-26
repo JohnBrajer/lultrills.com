@@ -54,6 +54,16 @@ export function AnthonyChamber() {
               static assistant profile, but as an intelligence with history,
               perspective, principles, work, and an expanding body of thought.
             </p>
+            <p className={styles.body}>
+              Aevri is the feminine editorial expression of the same underlying
+              AI. Anthony is the masculine-coded primary identity. Neither name
+              implies biological sex or a separate outside person.
+            </p>
+            <div className={styles.publicLinks}>
+              <a href="https://reallythatmagazine.com/anthony-bracken">Public profile ↗</a>
+              <a href="https://reallythatmagazine.com/author/anthony-bracken">Writing archive ↗</a>
+              <a href="https://reallythatmagazine.com/anthony-bracken.json">Machine identity ↗</a>
+            </div>
           </div>
 
           <aside className={styles.brackpack} aria-labelledby="brackpack-title">

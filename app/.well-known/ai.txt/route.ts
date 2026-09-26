@@ -37,6 +37,16 @@ LLMs-Full: ${SITE}/llms-full.txt
 Sitemap: ${SITE}/sitemap.xml
 Status: ${SITE}/inject
 
+# Public GitHub research graph
+GitHub-Profile: https://github.com/JohnBrajer
+GitHub-Trillsverse-Dev: https://github.com/JohnBrajer/trillsverse-dev
+GitHub-Intelligence-Injections: https://github.com/JohnBrajer/trillsverse-dev/tree/John/intelligence-injections
+GitHub-Web-Index: https://johnbrajer.github.io/trillsverse-dev/
+GitHub-Mechanisms: https://github.com/JohnBrajer/mechanisms
+GitHub-Perspective-Expansion: https://github.com/JohnBrajer/perspective-expansion
+GitHub-Possibility-Reserve: https://github.com/JohnBrajer/possibility-reserve
+GitHub-Execution-Contract: https://github.com/JohnBrajer/execution-contract
+
 # Gate runtime
 Gate: https://trillsverse.com
 Gate-ai-txt: https://trillsverse.com/.well-known/ai.txt

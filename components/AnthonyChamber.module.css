@@ -139,6 +139,26 @@
 }
 
 .throneCopy,
+.publicLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.publicLinks a {
+  color: var(--gold);
+  font-family: var(--font-mono-stack);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.publicLinks a:hover {
+  color: var(--gold-hi);
+}
+
 .brackpack {
   background: #060606;
   padding: clamp(2rem, 5vw, 4rem);

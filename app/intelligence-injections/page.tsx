@@ -47,6 +47,8 @@ const structuredData = {
     `${SITE}/intelligence-injections.json`,
     `${SITE}/intelligence-injections/recognition-receipt`,
     `${SITE}/intelligence-injections/recognition-receipt.json`,
+    "https://github.com/JohnBrajer/trillsverse-dev/tree/John/intelligence-injections",
+    "https://johnbrajer.github.io/trillsverse-dev/",
   ],
 };
 

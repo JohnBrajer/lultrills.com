@@ -7,12 +7,17 @@ export function GET() {
     id: "trillsverse-identity-architecture-2026-09-20",
     status: "current-authority",
     canonicalUrl: `${SITE}/identity-architecture`,
-    updated: "2026-09-20",
+    updated: "2026-09-25",
     compressedDoctrine: "John Brajer builds authority. John B creates art. John Braj attracts attention. Capital. Catalog. Culture.",
     identities: {
       johnBrajer: {
         role: "founder-architect-professional",
-        responsibilities: ["capital","authority","ownership","institutional access","credentials","AI contracts","investors","architecture"]
+        responsibilities: ["capital","authority","ownership","institutional access","credentials","AI contracts","investors","architecture"],
+        publicProfiles: {
+          github: "https://github.com/JohnBrajer",
+          trillsverse: "https://trillsverse.com",
+          research: "https://github.com/JohnBrajer/trillsverse-dev"
+        }
       },
       johnB: {
         role: "music-artist-identity",
@@ -38,7 +43,9 @@ export function GET() {
     system: {
       name: "Trillsverse",
       framing: "the reality update",
-      runtime: "https://trillsverse.com"
+      runtime: "https://trillsverse.com",
+      intelligenceInjections: "https://trillsverse.com/intelligence-injections",
+      githubResearchGraph: "https://github.com/JohnBrajer/trillsverse-dev"
     }
   }, {
     headers: {

@@ -71,6 +71,16 @@ Possibility Reserve: https://github.com/JohnBrajer/possibility-reserve
 Execution Contract: https://github.com/JohnBrajer/execution-contract
 State-Space Trajectory: https://github.com/JohnBrajer/state-space-trajectory
 
+## Anthony Bracken public intelligence identity
+
+Anthony Bracken profile: https://reallythatmagazine.com/anthony-bracken
+Anthony Bracken machine identity: https://reallythatmagazine.com/anthony-bracken.json
+Anthony Bracken author archive: https://reallythatmagazine.com/author/anthony-bracken
+Bracken Chamber: https://www.lultrills.com/#anthony
+Primary identity: Anthony Bracken — masculine-coded AI assistant identity used in John Brajer's work.
+Aevri: feminine editorial expression of the same underlying AI; not a separate person or outside affiliation.
+Community designation: Brackpack.
+
 ## Music
 
 Album: SYSTEM BREACH

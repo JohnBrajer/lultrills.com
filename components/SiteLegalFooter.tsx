@@ -10,6 +10,7 @@ export function SiteLegalFooter() {
           {LEGAL.entity} · © {year} ·{" "}
           <a href={LEGAL.contactMailto}>{LEGAL.contactEmail}</a>
         </span>
+        <div google-add-preferred-source-btn="" data-theme="dark" />
         <nav className="foot-links" aria-label="Legal">
           {LEGAL_DOCS.map((d) => (
             <Link key={d.id} href={d.path}>

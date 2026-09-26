@@ -78,6 +78,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <head>
+        <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <InjectionHeadLinks />
         <SovereignJsonLd />
       </head>

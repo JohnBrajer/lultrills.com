@@ -52,6 +52,8 @@ Injection status: ${SITE}/inject
 
 Home: ${SITE}/
 Identity architecture: ${SITE}/identity-architecture
+Trillsverse Bible current authority: ${SITE}/trillsverse-bible
+Trillsverse Bible JSON: ${SITE}/trillsverse-bible.json
 SYSTEM BREACH: ${SITE}/system-breach
 Gate hub: ${SITE}/gate
 Press: ${SITE}/press

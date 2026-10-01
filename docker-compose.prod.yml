@@ -1,5 +1,6 @@
 services:
   web:
+    image: lultrills-web:current
     build: .
     restart: unless-stopped
     volumes:

@@ -148,29 +148,34 @@ Caddy will auto-issue HTTPS for lultrills.com once public DNS points at the drop
 
 ---
 
-## 6. Updates (autonomous production path)
+## 6. Updates (shared autonomous production controller)
 
-The canonical production branch is `John`. The droplet runs a native systemd timer that checks that branch once per minute. When the commit SHA changes, it builds the exact commit, switches the production container, verifies the public authority surfaces, rolls back automatically on failure, and notifies IndexNow after a successful deployment.
+The canonical Lultrills source is `JohnBrajer/lultrills.com`, branch `John`.
 
-One-time bootstrap on an existing droplet:
-
-```bash
-cd /root/lultrills.com
-git fetch origin John
-git checkout John
-git reset --hard origin/John
-bash scripts/install-autodeploy.sh
-```
-
-After bootstrap, ordinary production updates require no laptop, Helios, Desktop Commander, GitHub Actions, or manual pull.
-
-Public deployment receipt:
+Production deployment is controlled by the already-installed host-level Trillsverse controller on `trillsverse-prod`:
 
 ```
+Trillsverse-Gate-FINAL main
+  → host self-deploy controller
+  → Gate verified healthy
+  → sibling-site convergence
+  → Lultrills John
+  → exact-SHA health + /deployment.json verification
+  → sitemap freshness + IndexNow notification
+```
+
+There is intentionally **no separate Lultrills systemd deploy timer**. One host controller owns promotion, rollback, and sibling-site convergence so two deployment loops cannot race each other.
+
+Ordinary Lultrills releases therefore require no laptop, Helios, Desktop Commander, GitHub Actions, or manual pull.
+
+Public production receipts:
+
+```
+https://www.lultrills.com/api/health
 https://www.lultrills.com/deployment.json
 ```
 
-Break-glass manual deployment remains available, but it is no longer the primary path. See `deploy/AUTONOMOUS_DEPLOY.md`.
+The controller implementation and host-side receipts live in `JohnBrajer/Trillsverse-Gate-FINAL` under `ops/self-deploy.sh` and `ops/sync-public-sites.sh`. The SSH push script in this repository remains break-glass only.
 
 ---
 

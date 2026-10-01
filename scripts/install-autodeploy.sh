@@ -10,6 +10,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 install -d -m 0755 /usr/local/sbin
 install -d -m 0755 /var/lib/lultrills-autodeploy
+install -d -m 0700 /var/lib/lultrills-autodeploy/docker
 install -m 0755 "$ROOT/scripts/lultrills-autodeploy.sh" /usr/local/sbin/lultrills-autodeploy
 install -m 0644 "$ROOT/deploy/systemd/lultrills-autodeploy.service" /etc/systemd/system/lultrills-autodeploy.service
 install -m 0644 "$ROOT/deploy/systemd/lultrills-autodeploy.timer" /etc/systemd/system/lultrills-autodeploy.timer

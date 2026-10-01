@@ -38,6 +38,7 @@ LLMs-Map: ${SITE}/llms.txt
 LLMs-Full: ${SITE}/llms-full.txt
 Sitemap: ${SITE}/sitemap.xml
 Status: ${SITE}/inject
+Deployment-Receipt: ${SITE}/deployment.json
 
 # Public GitHub research graph
 GitHub-Profile: https://github.com/JohnBrajer

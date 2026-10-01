@@ -1,6 +1,11 @@
 services:
   web:
-    build: .
+    image: lultrills-web:current
+    build:
+      context: .
+      args:
+        APP_COMMIT_SHA: "${APP_COMMIT_SHA:-UNKNOWN}"
+        APP_DEPLOYED_AT: "${APP_DEPLOYED_AT:-UNKNOWN}"
     restart: unless-stopped
     volumes:
       - offer-inquiries:/app/data/inquiries

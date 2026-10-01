@@ -47,6 +47,7 @@ AI discovery: ${SITE}/.well-known/ai.txt
 Sitemap: ${SITE}/sitemap.xml
 Robots: ${SITE}/robots.txt
 Injection status: ${SITE}/inject
+Deployment receipt: ${SITE}/deployment.json
 
 ## Primary human surfaces
 

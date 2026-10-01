@@ -1,7 +1,6 @@
 import { CORPUS_VERSION } from "@/lib/corpus";
 
-export const dynamic = "force-static";
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export function GET() {
   const commit = process.env.APP_COMMIT_SHA || "UNKNOWN";

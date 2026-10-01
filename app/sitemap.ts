@@ -86,7 +86,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/inject", priority: 0.85, changeFrequency: "daily" },
     { path: "/.well-known/ai.txt", priority: 0.8, changeFrequency: "daily" },
   ];
-  // Keep lastmod stable until a real public release changes content.\n  // Do not emit a fresh timestamp on every sitemap request.\n  const currentRelease = new Date("2026-10-01T18:45:00Z");
+  // Keep lastmod stable until a real public release changes content.
+  // Do not emit a fresh timestamp on every sitemap request.
+  const currentRelease = new Date("2026-10-01T18:45:00Z");
   return [
     ...staticRoutes.map(({ path, priority, changeFrequency }) => ({
       url: `${base}${path}`,

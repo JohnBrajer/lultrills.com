@@ -241,6 +241,13 @@ const PORTALS = [
     external: false,
   },
   {
+    key: "Bible",
+    title: "Current constitutional canon",
+    body: "Versioned current authority with continuity, chronology, and preserved prior states.",
+    href: "/trillsverse-bible",
+    external: false,
+  },
+  {
     key: "Machine",
     title: "Instant corpus",
     body: "One GET. Current registered machine corpus; manifest defines included documents. Crawl-delay 0.",

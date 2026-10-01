@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
+import { TRILLSVERSE_BIBLE_TEXT } from "./trillsverseBible";
 
 const SITE = "https://www.lultrills.com";
 
@@ -7,9 +8,9 @@ export type SupplementalCanonDocument = {
   id: string;
   url: string;
   title: string;
-  kind: "doctrine";
+  kind: "doctrine" | "canon";
   words: number;
-  epistemicType: "doctrine";
+  epistemicType: "doctrine" | "creator_claim";
   body: string;
 };
 
@@ -43,7 +44,7 @@ function wordCount(body: string): number {
 }
 
 export function buildSupplementalCanonDocuments(): SupplementalCanonDocument[] {
-  return SPECS.flatMap((spec) => {
+  const fileBacked = SPECS.flatMap((spec) => {
     const body = readDoctrine(spec.file);
     if (!body) return [];
     return [
@@ -58,6 +59,19 @@ export function buildSupplementalCanonDocuments(): SupplementalCanonDocument[] {
       },
     ];
   });
+
+  return [
+    ...fileBacked,
+    {
+      id: "trillsverse-bible-current-authority",
+      url: `${SITE}/trillsverse-bible`,
+      title: "Trillsverse Bible — Current Authority",
+      kind: "canon" as const,
+      words: wordCount(TRILLSVERSE_BIBLE_TEXT),
+      epistemicType: "creator_claim" as const,
+      body: TRILLSVERSE_BIBLE_TEXT,
+    },
+  ];
 }
 
 export function supplementalCanonText(): string {

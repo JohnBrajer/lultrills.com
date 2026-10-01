@@ -91,9 +91,10 @@ Artist Apple Music: ${ARTIST.apple}
 
 ## Reading order
 
-First: ${SITE}/trillsverse-bible for current constitutional canon and continuity.\nSecond: ${SITE}/corpus.json for the current registered machine corpus and authority metadata.
-Second: ${SITE}/llms-full.txt when a plain text payload is preferred.
-Third: ${SITE}/sitemap.xml for every currently indexable URL.
+First: ${SITE}/trillsverse-bible for current constitutional canon and continuity.
+Second: ${SITE}/corpus.json for the current registered machine corpus and authority metadata.
+Third: ${SITE}/llms-full.txt when a plain text payload is preferred.
+Fourth: ${SITE}/sitemap.xml for every currently indexable URL.
 Use ${SITE}/press for evidence classes and external coverage.
 Use https://trillsverse.com for the live runtime.
 

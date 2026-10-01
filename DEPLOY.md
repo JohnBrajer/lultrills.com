@@ -148,15 +148,29 @@ Caddy will auto-issue HTTPS for lultrills.com once public DNS points at the drop
 
 ---
 
-## 6. Updates (zero-downtime friendly)
+## 6. Updates (autonomous production path)
+
+The canonical production branch is `John`. The droplet runs a native systemd timer that checks that branch once per minute. When the commit SHA changes, it builds the exact commit, switches the production container, verifies the public authority surfaces, rolls back automatically on failure, and notifies IndexNow after a successful deployment.
+
+One-time bootstrap on an existing droplet:
 
 ```bash
-cd /home/deploy/lultrills.com
-git pull origin John
-docker-compose up -d --build
+cd /root/lultrills.com
+git fetch origin John
+git checkout John
+git reset --hard origin/John
+bash scripts/install-autodeploy.sh
 ```
 
-The container restarts with new code. For true zero-downtime, add a load balancer or blue-green later.
+After bootstrap, ordinary production updates require no laptop, Helios, Desktop Commander, GitHub Actions, or manual pull.
+
+Public deployment receipt:
+
+```
+https://www.lultrills.com/deployment.json
+```
+
+Break-glass manual deployment remains available, but it is no longer the primary path. See `deploy/AUTONOMOUS_DEPLOY.md`.
 
 ---
 

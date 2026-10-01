@@ -24,6 +24,9 @@ rsync -az --delete \
 echo "[2/3] Docker build & start..."
 ssh "$HOST" "cd $REMOTE_DIR && docker compose -f docker-compose.prod.yml up -d --build"
 
+echo "[bootstrap] Installing autonomous deployer..."
+ssh "$HOST" "cd $REMOTE_DIR && bash scripts/install-autodeploy.sh"
+
 echo "[3/3] Health..."
 sleep 6
 ssh "$HOST" 'curl -sf -o /dev/null -w "home %{http_code}\n" http://127.0.0.1:3000/ && curl -sf -o /dev/null -w "essay %{http_code}\n" http://127.0.0.1:3000/essays/why-everything-is-one && docker ps --filter name=lultrills --format "{{.Names}} {{.Status}}"'

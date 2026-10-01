@@ -1,0 +1,13 @@
+[Unit]
+Description=Check canonical Lultrills GitHub branch for production updates
+
+[Timer]
+OnBootSec=45s
+OnUnitActiveSec=60s
+AccuracySec=10s
+RandomizedDelaySec=8s
+Persistent=true
+Unit=lultrills-autodeploy.service
+
+[Install]
+WantedBy=timers.target

@@ -83,7 +83,14 @@ if [[ -n "$CURRENT_CONTAINER" ]]; then
 fi
 
 log "building candidate $SHORT_SHA"
-docker build   --label "org.opencontainers.image.revision=$REMOTE_SHA"   --label "org.opencontainers.image.source=$REPO_URL"   --label "trillsverse.deploy.timestamp=$DEPLOYED_AT"   -t "$CANDIDATE_IMAGE"   "$RELEASE_DIR"
+docker build \
+  --build-arg "APP_COMMIT_SHA=$REMOTE_SHA" \
+  --build-arg "APP_DEPLOYED_AT=$DEPLOYED_AT" \
+  --label "org.opencontainers.image.revision=$REMOTE_SHA" \
+  --label "org.opencontainers.image.source=$REPO_URL" \
+  --label "trillsverse.deploy.timestamp=$DEPLOYED_AT" \
+  -t "$CANDIDATE_IMAGE" \
+  "$RELEASE_DIR"
 
 docker tag "$CANDIDATE_IMAGE" "$CURRENT_IMAGE"
 

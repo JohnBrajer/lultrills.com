@@ -143,5 +143,13 @@ if [[ -f "$KEY_FILE" ]]; then
 fi
 
 cleanup_old_releases
+
+while read -r image_ref; do
+  [[ -z "$image_ref" ]] && continue
+  if [[ "$image_ref" != "$CURRENT_IMAGE" && "$image_ref" != "$CANDIDATE_IMAGE" ]]; then
+    docker image rm "$image_ref" >/dev/null 2>&1 || true
+  fi
+done < <(docker image ls "$IMAGE_REPO" --format '{{.Repository}}:{{.Tag}}')
+
 docker image prune -f --filter "until=336h" >/dev/null 2>&1 || true
 log "deployment complete"

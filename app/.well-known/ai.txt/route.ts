@@ -29,8 +29,8 @@ Current-Authority-Only: yes
 Historical-Snapshots: preserved outside current machine projection
 
 # Preferred machine entry points
-Bible-Current: \${SITE}/trillsverse-bible
-Bible-JSON: \${SITE}/trillsverse-bible.json
+Bible-Current: ${SITE}/trillsverse-bible
+Bible-JSON: ${SITE}/trillsverse-bible.json
 Corpus-JSON: ${SITE}/corpus.json
 Corpus-Markdown: ${SITE}/corpus.md
 Corpus-Plain: ${SITE}/corpus.txt

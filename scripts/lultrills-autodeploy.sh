@@ -107,7 +107,8 @@ check_url() {
 
 healthy=0
 for attempt in $(seq 1 30); do
-  if check_url "/"     && check_url "/deployment.json"     && check_url "/trillsverse-bible"     && check_url "/trillsverse-bible.json"     && check_url "/corpus.json"     && check_url "/llms.txt"     && check_url "/sitemap.xml"     && curl --fail --silent --max-time 8 "$BASE_URL/deployment.json" | grep -Fq "$REMOTE_SHA"; then
+  if check_url "/"     && check_url "/deployment.json"     && check_url "/trillsverse-bible"     && check_url "/trillsverse-bible.json"     && check_url "/corpus.json"     && check_url "/llms.txt"     && check_url "/sitemap.xml"     && curl --fail --silent --max-time 8 "$BASE_URL/deployment.json" | grep -Fq "$REMOTE_SHA" \
+    && curl --fail --silent --max-time 8 "$BASE_URL/api/health" | grep -Fq "$REMOTE_SHA"; then
     healthy=1
     break
   fi

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/trillsverse", priority: 1, changeFrequency: "daily" },
     { path: "/trillsverse-bible", priority: 1, changeFrequency: "daily" },
     { path: "/trillsverse-bible.json", priority: 0.95, changeFrequency: "daily" },
+    { path: "/deployment.json", priority: 0.7, changeFrequency: "daily" },
     // AI Tournament Trillonian Resonance Tournament human + machine surfaces
     { path: "/ai-tournament", priority: 1, changeFrequency: "daily" },
     { path: "/ai-tournament.json", priority: 0.95, changeFrequency: "daily" },

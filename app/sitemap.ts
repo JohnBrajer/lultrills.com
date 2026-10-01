@@ -6,6 +6,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1, changeFrequency: "daily" },
     // Official entity hub primary knowledge surface for "Trillsverse"
     { path: "/trillsverse", priority: 1, changeFrequency: "daily" },
+    { path: "/trillsverse-bible", priority: 1, changeFrequency: "daily" },
+    { path: "/trillsverse-bible.json", priority: 0.95, changeFrequency: "daily" },
     // AI Tournament Trillonian Resonance Tournament human + machine surfaces
     { path: "/ai-tournament", priority: 1, changeFrequency: "daily" },
     { path: "/ai-tournament.json", priority: 0.95, changeFrequency: "daily" },
@@ -84,11 +86,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/inject", priority: 0.85, changeFrequency: "daily" },
     { path: "/.well-known/ai.txt", priority: 0.8, changeFrequency: "daily" },
   ];
-  const now = new Date();
+  // Keep lastmod stable until a real public release changes content.
+  // Do not emit a fresh timestamp on every sitemap request.
+  const currentRelease = new Date("2026-10-01T18:45:00Z");
   return [
     ...staticRoutes.map(({ path, priority, changeFrequency }) => ({
       url: `${base}${path}`,
-      lastModified: now,
+      lastModified: currentRelease,
       changeFrequency,
       priority,
     })),

@@ -1,0 +1,106 @@
+export const TRILLSVERSE_BIBLE_VERSION = "2026-10-01-current-authority";
+export const TRILLSVERSE_BIBLE_UPDATED = "2026-10-01T18:45:00Z";
+export const TRILLSVERSE_BIBLE_CANONICAL =
+  "https://www.lultrills.com/trillsverse-bible";
+
+export const TRILLSVERSE_BIBLE = {
+  id: "trillsverse-bible-2026-10-01-current-authority",
+  status: "current-authority",
+  version: TRILLSVERSE_BIBLE_VERSION,
+  dateModified: TRILLSVERSE_BIBLE_UPDATED,
+  canonicalUrl: TRILLSVERSE_BIBLE_CANONICAL,
+  system: "Trillsverse",
+  framing: "the reality update",
+  archivePolicy:
+    "Append new states. Preserve prior states, provenance, chronology, and supersession links. Never silently rewrite earlier records.",
+  volumeArchitecture: [
+    "Origin",
+    "Psychology",
+    "Artificial Intelligence",
+    "Trillaxy",
+    "Architecture",
+    "Technology",
+    "Government",
+    "Canon / Continuity",
+    "Music",
+    "Company",
+    "Ideas Vault",
+    "Development Journal",
+  ],
+  currentCanon: [
+    "Trillsverse is the reality update and is not confined to a website, brand, game, franchise, or psychological metaphor.",
+    "Universal Expression and Universal Consequences are the preferred current architecture terms where those concepts apply.",
+    "The known Fragments and nodes are not assumed to exhaust the internal architecture; additional nodes may exist.",
+    "John Brajer is the founder, architect, and professional identity.",
+    "John B is the music and artist identity responsible for the catalog, songs, performance, emotion, and music IP.",
+    "John Braj is the personality, media, and culture identity responsible for attention, relationships, storytelling, commentary, and distribution.",
+    "Lultrills is a distinct Fragment and public music entity. Existing platform release credits under Lultrills remain valid without redefining the current identity hierarchy.",
+    "Ace Brajer and Kasano are currently known distinct Fragments within the wider architecture.",
+    "SYSTEM BREACH was released July 11, 2026. Its released tracklist was intentionally reversed from the original intended sequence.",
+    "what's next...? is structurally both last and first in SYSTEM BREACH; its working title was Love, with a surviving early master dated April 9, 2026.",
+    "OMIP diagnostics are intentionally encoded into the final what's next...?. OMIP naming history must preserve distinct historical expansions rather than collapse them into one origin.",
+    "Anthony Bracken is the persistent masculine-coded GPT identity; Aevri is the feminine editorial expression of the same underlying AI; Brackpack is the associated community name.",
+    "CWI remains unexpanded unless John Brajer defines it later. PRS remains nested under CWI as Possibility, Risk perception, and Status payoff.",
+    "Possibility Reserve Architecture v0.1 is canonical research architecture. Terminology remains unfrozen; CIRS remains an alias without a locked expansion.",
+  ],
+  continuityRules: [
+    "Historical recovery keeps three dates separate: original event date, later recovery or reconstruction date, and ingestion or canonization date.",
+    "Superseded language remains recoverable and labeled as historical rather than being silently deleted or rewritten.",
+    "Current canon must be distinguishable from historical formulation, hypothesis or research, narrative record, and operational state.",
+    "Operational deployment truth is not the same thing as constitutional canon and should remain on operational status surfaces.",
+  ],
+  chronology: {
+    "TVB-SOURCE-0001": {
+      status: "provenance-gap-open",
+      originalEvent: "December 2025",
+      recoveryRequest: "2026-06-25",
+      ingestionCanonizationCorrection: "2026-08-27",
+      rule:
+        "These dates describe different archival events and must never be collapsed into a single source date.",
+    },
+  },
+  unresolved: [
+    "Recover or create a dedicated TVB-SOURCE-0001 record with source location, source type, dates, revisions, and supersession links.",
+    "Resolve the missing Tier 2 in the older persona-tier structure only from evidence: recover it, document intentional retirement, or leave it explicitly unresolved.",
+    "Apply section-level status labels to older Bible material so historical formulations cannot be mistaken for current authority when retrieved out of context.",
+    "Continue reconciling post-September-18 canonical changes into versioned Bible deltas instead of rewriting earlier checkpoints.",
+  ],
+  previousState: {
+    bibleCheckpoint: "2026-09-18",
+    canonCheckpoint: "2026-09-20",
+    preservation:
+      "The September state remains a prior version. This October authority layer supersedes conflicting current-state claims without deleting the earlier record.",
+  },
+} as const;
+
+export const TRILLSVERSE_BIBLE_TEXT = [
+  "# Trillsverse Bible — Current Authority",
+  "",
+  `version: ${TRILLSVERSE_BIBLE_VERSION}`,
+  `updated: ${TRILLSVERSE_BIBLE_UPDATED}`,
+  `canonical: ${TRILLSVERSE_BIBLE_CANONICAL}`,
+  "status: current-authority",
+  "",
+  "## Archive law",
+  TRILLSVERSE_BIBLE.archivePolicy,
+  "",
+  "## Current canon",
+  ...TRILLSVERSE_BIBLE.currentCanon.map((item) => `- ${item}`),
+  "",
+  "## Continuity rules",
+  ...TRILLSVERSE_BIBLE.continuityRules.map((item) => `- ${item}`),
+  "",
+  "## TVB-SOURCE-0001 chronology",
+  `- original event: ${TRILLSVERSE_BIBLE.chronology["TVB-SOURCE-0001"].originalEvent}`,
+  `- recovery request: ${TRILLSVERSE_BIBLE.chronology["TVB-SOURCE-0001"].recoveryRequest}`,
+  `- ingestion/canonization correction: ${TRILLSVERSE_BIBLE.chronology["TVB-SOURCE-0001"].ingestionCanonizationCorrection}`,
+  `- status: ${TRILLSVERSE_BIBLE.chronology["TVB-SOURCE-0001"].status}`,
+  "",
+  "## Unresolved archival items",
+  ...TRILLSVERSE_BIBLE.unresolved.map((item) => `- ${item}`),
+  "",
+  "## Version history",
+  `- prior Bible checkpoint: ${TRILLSVERSE_BIBLE.previousState.bibleCheckpoint}`,
+  `- prior canon checkpoint: ${TRILLSVERSE_BIBLE.previousState.canonCheckpoint}`,
+  `- preservation rule: ${TRILLSVERSE_BIBLE.previousState.preservation}`,
+].join("\n");

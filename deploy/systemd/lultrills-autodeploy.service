@@ -8,6 +8,7 @@ Requires=docker.service
 [Service]
 Type=oneshot
 EnvironmentFile=-/etc/lultrills-autodeploy.conf
+Environment=DOCKER_CONFIG=/var/lib/lultrills-autodeploy/docker
 ExecStart=/usr/local/sbin/lultrills-autodeploy
 User=root
 Group=root

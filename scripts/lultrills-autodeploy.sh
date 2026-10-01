@@ -134,10 +134,21 @@ KEY_FILE="$RELEASE_DIR/public/55592b66f56c2cbf76f7f2a9bccda90c.txt"
 if [[ -f "$KEY_FILE" ]]; then
   KEY="$(tr -d '\r\n' < "$KEY_FILE")"
   KEY_LOCATION="https://www.lultrills.com/55592b66f56c2cbf76f7f2a9bccda90c.txt"
-  for path in     "/trillsverse-bible"     "/trillsverse-bible.json"     "/trillsverse"     "/identity-architecture"     "/identity-architecture.json"     "/corpus.json"     "/llms.txt"     "/llms-full.txt"     "/sitemap.xml"; do
-    encoded_url="$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "https://www.lultrills.com$path")"
-    encoded_key_location="$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$KEY_LOCATION")"
-    curl --silent --show-error --max-time 10       "https://api.indexnow.org/indexnow?url=$encoded_url&key=$KEY&keyLocation=$encoded_key_location"       >/dev/null || true
+  for path in \
+    "/trillsverse-bible" \
+    "/trillsverse-bible.json" \
+    "/trillsverse" \
+    "/identity-architecture" \
+    "/identity-architecture.json" \
+    "/corpus.json" \
+    "/llms.txt" \
+    "/llms-full.txt" \
+    "/sitemap.xml"; do
+    curl --silent --show-error --max-time 10 --get \
+      --data-urlencode "url=https://www.lultrills.com$path" \
+      --data-urlencode "key=$KEY" \
+      --data-urlencode "keyLocation=$KEY_LOCATION" \
+      "https://api.indexnow.org/indexnow" >/dev/null || true
   done
   log "IndexNow notifications sent"
 fi

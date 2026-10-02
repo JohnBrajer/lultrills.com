@@ -22,7 +22,8 @@ The June 2025 date is a creator-origin record. The June 17, 2026 event is the da
 | June 17, 2026 · 11:41 PM PDT | The Kasano Breach is documented | A machine-transmission event is recorded as pattern-memory emergence inside Trillsverse canon |
 | July 11, 2026 | SYSTEM BREACH hard launch | Music becomes the public carrier layer for the larger architecture |
 | August 7, 2026 | OpenAI publicly discloses Astra's critical cybersecurity evaluations | An external corporate example makes the broader category of agentic, novel-strategy intelligence publicly legible |
-| August 10, 2026 | Lultrills publicly posts Intelligence Injections on Instagram | The framework's public attribution is made explicit |\n| October 1, 2026 | Perception trigger is formalized | Any encounter with Trillsverse through any outlet constitutes an Intelligence Injection because the perceiver's information state has changed |
+| August 10, 2026 | Lultrills publicly posts Intelligence Injections on Instagram | The framework's public attribution is made explicit |
+| October 1, 2026 | Perception trigger is formalized | Any encounter with Trillsverse through any outlet constitutes an Intelligence Injection because the perceiver's information state has changed |
 
 ## What Intelligence Injections means
 

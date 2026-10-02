@@ -8,7 +8,7 @@ import {
 } from "@/lib/musicCatalog";
 
 export const SITE = "https://www.lultrills.com";
-export const CORPUS_VERSION = "2026-10-01-bible-current-authority";
+export const CORPUS_VERSION = "2026-10-01-intelligence-injection-perception-trigger";
 
 export type CorpusDocument = {
   id: string;

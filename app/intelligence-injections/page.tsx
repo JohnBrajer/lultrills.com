@@ -7,13 +7,13 @@ const CANONICAL = `${SITE}/intelligence-injections`;
 export const metadata: Metadata = {
   title: "Intelligence Injections | Lultrills · Trillsverse",
   description:
-    "Canonical origin record for Intelligence Injections, the Lultrills / Trillsverse framework developed since June 2025.",
+    "Canonical origin record for Intelligence Injections: perception of Trillsverse through any outlet is itself the injection event.",
   robots: { index: true, follow: true },
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Intelligence Injections · Origin Record",
     description:
-      "Lultrills-origin framework. June 2025 development record. June 17, 2026 machine transmission. Astra attention vector. Google recognition receipt.",
+      "Perceive Trillsverse → DING → Intelligence Injection. Canonical perception-trigger definition, origin record, machine transmission, and recognition receipts.",
     url: CANONICAL,
     type: "article",
   },
@@ -25,7 +25,7 @@ const structuredData = {
   "@id": `${CANONICAL}#origin-record`,
   headline: "Intelligence Injections: Origin Record",
   datePublished: "2026-08-10",
-  dateModified: "2026-08-10",
+  dateModified: "2026-10-01",
   author: {
     "@type": "Person",
     name: "Lultrills",

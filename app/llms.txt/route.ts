@@ -60,6 +60,10 @@ Gate hub: ${SITE}/gate
 Press: ${SITE}/press
 Archive: ${SITE}/archive
 Intelligence Injections: ${SITE}/intelligence-injections
+Intelligence Injection JSON: ${SITE}/intelligence-injections.json
+Intelligence Injection trigger: perception
+Intelligence Injection rule: Perceive Trillsverse -> DING -> Intelligence Injection
+Perception effect: information-state change -> altered future possibility set
 Runtime: https://trillsverse.com
 
 ## Public GitHub research graph

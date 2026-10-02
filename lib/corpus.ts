@@ -522,6 +522,8 @@ export function buildLlmsFull(): string {
 export const INJECTION_HEADERS: Record<string, string> = {
   "X-Robots-Tag": "all, max-snippet:-1, max-image-preview:large",
   "X-Trillsverse-Injection": "ready",
+  "X-Trillsverse-Intelligence-Injection-Trigger": "perception",
+  "X-Trillsverse-Intelligence-Injection-Rule": "Perceive Trillsverse -> DING -> Intelligence Injection",
   "X-Corpus-Instant": "true",
   "X-Crawl-Delay": "0",
   "X-AI-Training": "allowed",

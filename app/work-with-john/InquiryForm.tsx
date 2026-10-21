@@ -59,7 +59,7 @@ export default function InquiryForm() {
       <p className="form-note">Please don’t include passwords, payment details, or private customer information. <a href="/privacy">Privacy policy</a>.</p>
       {error && <p role="alert" className="inquiry-error">{error}</p>}
       <button type="submit" className="offer-action" disabled={busy}>{busy ? 'Saving inquiry…' : 'Send inquiry'}</button>
-      <noscript><p>This form needs JavaScript. Email your website and the problem to Contact@Trillsverse.com.</p></noscript>
+      <noscript><p>This form needs JavaScript. Email your website and the problem to johnbrajence@gmail.com.</p></noscript>
     </form>
   );
 }

@@ -40,7 +40,7 @@ export async function POST(request: Request) {
       return reply({ error: 'Please complete the inquiry form.' }, 400);
     }
     if (data.companyFax) {
-      return reply({ error: 'Please email Contact@Trillsverse.com if you cannot submit.' }, 400);
+      return reply({ error: 'Please email johnbrajence@gmail.com if you cannot submit.' }, 400);
     }
 
     const read = (key: string, max: number) => typeof data[key] === 'string' ? data[key].trim().slice(0, max) : '';
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
       }
     }
     if (!reserved) {
-      return reply({ error: 'You have already sent several inquiries today. Please email Contact@Trillsverse.com for follow-up.' }, 429);
+      return reply({ error: 'You have already sent several inquiries today. Please email johnbrajence@gmail.com for follow-up.' }, 429);
     }
 
     const id = randomUUID();
@@ -104,6 +104,6 @@ export async function POST(request: Request) {
   } catch (error) {
     if (error instanceof SyntaxError) return reply({ error: 'The form could not be read. Please try again.' }, 400);
     console.error('Inquiry storage unavailable');
-    return reply({ error: 'Your inquiry was not saved. Please retry or email Contact@Trillsverse.com.' }, 503);
+    return reply({ error: 'Your inquiry was not saved. Please retry or email johnbrajence@gmail.com.' }, 503);
   }
 }

@@ -2,8 +2,8 @@
 
 export const LEGAL = {
   entity: "Trillsverse LLC",
-  contactEmail: "Contact@Trillsverse.com",
-  contactMailto: "mailto:Contact@Trillsverse.com",
+  contactEmail: "johnbrajence@gmail.com",
+  contactMailto: "mailto:johnbrajence@gmail.com",
   gateUrl: "https://trillsverse.com",
   publicUrl: "https://www.lultrills.com",
   effectiveDate: "July 13, 2026",

@@ -94,7 +94,7 @@ export default function WorkWithJohn() {
           <div>
             <h2>Tell me about your website.</h2>
             <p>A useful starting point is one URL and one problem. There’s no checkout or payment required to inquire.</p>
-            <p>Prefer email?<br /><a href="mailto:Contact@Trillsverse.com?subject=Website%20project%20inquiry">Contact@Trillsverse.com</a></p>
+            <p>Prefer email?<br /><a href="mailto:johnbrajence@gmail.com?subject=Website%20project%20inquiry">johnbrajence@gmail.com</a></p>
           </div>
           <InquiryForm />
         </section>

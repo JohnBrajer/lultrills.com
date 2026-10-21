@@ -146,3 +146,7 @@
   .offer-intake { padding: 44px 0; }
   .offer-fit,.offer-process { padding: 28px 0; }
 }
+
+.offer-pricing { margin: 72px 0; scroll-margin-top: 24px; }
+.offer-pricing > h2 { font-family: var(--font-display); margin: 0 0 28px; }
+@media (max-width: 760px) { .offer-pricing .offer-scope { grid-template-columns: 1fr; gap: 24px; } .offer-pricing .offer-scope section+section { border-left: 0; padding-left: 0; } }

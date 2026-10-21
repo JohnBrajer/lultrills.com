@@ -28,7 +28,7 @@ export default function WorkWithJohn() {
     provider: { '@id': 'https://www.lultrills.com/#john-brajer' },
     description: metadata.description,
     offers: [
-      { '@type': 'Offer', name: 'Signal Audit', price: '297', priceCurrency: 'USD', url: canonical + '#pricing' },
+      { '@type': 'Offer', name: 'Signal Audit', price: '297', priceCurrency: 'USD', url: 'https://buy.stripe.com/14A4gz4kZeYp42y0CwfUQ00', availability: 'https://schema.org/InStock' },
       { '@type': 'Offer', name: 'Signal Sprint', price: '1500', priceCurrency: 'USD', url: canonical + '#pricing' },
       { '@type': 'Offer', name: 'Full Build', price: '3500', priceCurrency: 'USD', url: canonical + '#pricing', description: 'Starting price' },
     ],
@@ -64,7 +64,7 @@ export default function WorkWithJohn() {
             <section><h2>Verified handoff</h2><p>Source files, a change record, and public checks. Work you can inspect, maintain, and keep.</p></section>
           </div>
           <a className="offer-action" href="#inquiry">Tell me about your website <span aria-hidden="true">→</span></a>
-          <p className="offer-note">Fixed starting prices. Scope confirmed in writing before any payment.</p>
+          <p className="offer-note">Fixed starting prices. Buy the Signal Audit directly, or inquire about larger work.</p>
         </section>
 
         <section className="offer-pricing" id="pricing" aria-labelledby="pricing-title">
@@ -73,6 +73,8 @@ export default function WorkWithJohn() {
             <section>
               <h2>Signal Audit · $297</h2>
               <p>One website reviewed for identity, discovery, and how people, search engines, and AI systems read it. You get a written report with prioritized fixes. Delivered in 5 business days.</p>
+              <a className="offer-action offer-buy" href="https://buy.stripe.com/14A4gz4kZeYp42y0CwfUQ00" rel="noopener">Buy Signal Audit · $297 <span aria-hidden="true">→</span></a>
+              <p className="offer-note">After purchase, reply with your website URL. Full refund if it isn’t a fit before work starts.</p>
             </section>
             <section>
               <h2>Signal Sprint · $1,500</h2>

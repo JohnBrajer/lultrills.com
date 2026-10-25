@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 const RECORD = {
   schema: "trillsverse.ai-tournament.v1",
   canonical: "https://www.lultrills.com/ai-tournament",

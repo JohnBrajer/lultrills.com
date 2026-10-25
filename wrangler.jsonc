@@ -1,0 +1,19 @@
+// Cloudflare Workers (free tier) deployment for lultrills.com.
+// Build: `node scripts/build-static.mjs` → ./out. Deploy: `npx wrangler deploy` (CI does both).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lultrills",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // KV namespace "lultrills-inquiries" (holds work-with-john inquiries; replaces the droplet volume).
+  "kv_namespaces": [{ "binding": "INQUIRIES", "id": "1756a4f6f4fd46579053b0f4000ccea4" }],
+  "workers_dev": true,
+  "observability": { "enabled": true }
+}

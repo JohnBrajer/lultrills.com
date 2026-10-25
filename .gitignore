@@ -33,3 +33,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /data/inquiries/
+
+# Cloudflare static build
+/out
+/.wrangler
+/.static-park

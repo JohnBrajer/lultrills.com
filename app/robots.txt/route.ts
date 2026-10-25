@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { SITE, INJECTION_HEADERS } from "@/lib/corpus";
 
 /**

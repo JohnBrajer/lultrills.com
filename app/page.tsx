@@ -246,7 +246,10 @@ export default function LultrillsHome() {
               <h3>Core principle</h3>
               <p>There is no true evil, only misguidance.</p>
               <div className="hero-actions">
-                <a href="https://trillsverse.com/trillionaires" className="chip chip--gold">
+                <a href="/join" className="chip chip--gold">
+                  Join TrillionairesONLY · $7.99/mo →
+                </a>
+                <a href="https://trillsverse.com/trillionaires" className="chip">
                   Read the full orientation →
                 </a>
               </div>

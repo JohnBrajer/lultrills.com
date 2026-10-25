@@ -1,0 +1,10 @@
+{
+  "schema": "trillsverse.founders.v1",
+  "title": "Founding Trillionaires",
+  "cap": 117,
+  "price": "$22",
+  "checkout": "https://buy.stripe.com/00w6oHeZD7vXgPk3OIfUQ01",
+  "opened": "2026-10-25",
+  "note": "Seats are assigned in payment order from completed Stripe checkouts on the Founding Trillionaire Pass payment link. Names are what each buyer entered as 'Name for the record'.",
+  "seats": []
+}

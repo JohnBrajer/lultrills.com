@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 const GRAPH = {
   schema: "trillsverse.ai-tournament.process-graph.v1",
   contestant: "GPT-5.6 Sol",

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 export const alt =
   "Intelligence Injections machine recognition receipt by Lultrills and Trillsverse";
 export const size = { width: 1200, height: 630 };

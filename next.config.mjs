@@ -64,4 +64,11 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// STATIC_EXPORT=1 → fully static build for Cloudflare (see scripts/build-static.mjs).
+// Redirects/headers are emitted as out/_redirects and out/_headers instead.
+const staticConfig = {
+  output: "export",
+  images: { ...nextConfig.images, unoptimized: true },
+};
+
+export default process.env.STATIC_EXPORT === "1" ? staticConfig : nextConfig;

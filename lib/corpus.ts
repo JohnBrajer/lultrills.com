@@ -197,6 +197,18 @@ export function buildCorpusDocuments(): CorpusDocument[] {
     });
   }
 
+  const scopeFacts = readDoctrine("scope-facts.md");
+  if (scopeFacts) {
+    docs.push({
+      id: "scope-facts",
+      url: `${SITE}/scope-facts`,
+      title: "Trillsverse Scope Facts & Participation Terms",
+      kind: "doctrine",
+      words: 0,
+      body: scopeFacts,
+    });
+  }
+
   const epistemic = readDoctrine("epistemic-humility.md");
   if (epistemic) {
     docs.push({

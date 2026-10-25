@@ -70,6 +70,11 @@ describe("registry-derived public machine corpus", () => {
     expect(ids.has("systemic-cognitive-overwrites")).toBe(false);
   });
 
+  it("publishes the scope facts record in the current machine corpus", () => {
+    const ids = new Set(buildPublicMachineCorpusProjection().map((item) => item.id));
+    expect(ids.has("scope-facts")).toBe(true);
+  });
+
   it("fails closed on duplicate registry identities", () => {
     expect(() =>
       projectCorpusRegistryRecords([record("duplicate"), record("duplicate")]),

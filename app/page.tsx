@@ -161,18 +161,14 @@ export default function LultrillsHome() {
                   SYSTEM BREACH
                   <span className="btn-breach-meta">Album · Gate · Jul 11</span>
                 </Link>
-                <a
-                  href="https://buy.stripe.com/00w6oHeZD7vXgPk3OIfUQ01"
-                  className="btn-breach"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href="/founders" className="btn-breach">
                   CLAIM YOUR SEAT
                   <span className="btn-breach-meta">
                     Founding Trillionaire · 117 seats · $22
                   </span>
-                </a>
+                </Link>
                 <div className="hero-secondary">
+                  <Link href="/founders">Founders wall</Link>
                   <Link href="/gate">Gate hub</Link>
                   <a href={ALBUM} target="_blank" rel="noopener noreferrer">
                     Stream album

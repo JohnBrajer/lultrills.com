@@ -1,9 +1,10 @@
+import { getRelease } from "@/lib/release";
+
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export function GET() {
-  const deployedCommit = process.env.APP_COMMIT_SHA || "UNKNOWN";
-  const deployedAt = process.env.APP_DEPLOYED_AT || "UNKNOWN";
+  const { commit: deployedCommit, deployedAt } = getRelease();
 
   return Response.json(
     {

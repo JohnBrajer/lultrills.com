@@ -21,6 +21,7 @@ ARG APP_COMMIT_SHA=UNKNOWN
 ARG APP_DEPLOYED_AT=UNKNOWN
 ENV APP_COMMIT_SHA=$APP_COMMIT_SHA
 ENV APP_DEPLOYED_AT=$APP_DEPLOYED_AT
+RUN node scripts/resolve-release.mjs && rm -rf .git
 RUN npm run build
 
 # ---- Production runner ----
@@ -41,6 +42,8 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 # Doctrine markdown for runtime/SSG filesystem reads (injection surface)
 COPY --from=builder /app/content ./content
+# Baked release identity (commit SHA) for /deployment.json + /api/health
+COPY --from=builder /app/release.json ./release.json
 COPY --from=builder /app/scripts/read-inquiries.mjs ./scripts/read-inquiries.mjs
 
 USER nextjs

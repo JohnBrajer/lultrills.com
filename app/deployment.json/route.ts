@@ -1,10 +1,10 @@
 import { CORPUS_VERSION } from "@/lib/corpus";
+import { getRelease } from "@/lib/release";
 
 export const dynamic = "force-dynamic";
 
 export function GET() {
-  const commit = process.env.APP_COMMIT_SHA || "UNKNOWN";
-  const deployedAt = process.env.APP_DEPLOYED_AT || "UNKNOWN";
+  const { commit, deployedAt } = getRelease();
 
   return Response.json(
     {

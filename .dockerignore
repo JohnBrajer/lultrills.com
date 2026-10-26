@@ -1,6 +1,10 @@
 node_modules
 .next
-.git
+# keep only the git metadata needed to resolve the release SHA (scripts/resolve-release.mjs)
+.git/*
+!.git/HEAD
+!.git/refs
+!.git/packed-refs
 data/inquiries
 .env*
 .impeccable

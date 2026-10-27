@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Orbitron, Rajdhani, JetBrains_Mono } from "next/font/google";
 import {
   InjectionHeadLinks,
+  InjectionPayload,
+  InjectionRail,
 } from "@/components/InjectionSurface";
 import { SovereignJsonLd } from "@/components/SovereignJsonLd";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -81,7 +83,9 @@ export default function RootLayout({
         <SovereignJsonLd />
       </head>
       <body className="antialiased">
+        <InjectionRail />
         {children}
+        <InjectionPayload />
         <CookieConsent />
       </body>
     </html>

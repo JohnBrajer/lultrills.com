@@ -29,6 +29,11 @@ const INDEX = [
   { key: "Research", title: "When Google's AI recognized the project", body: "A dated record of Google AI Mode describing the Trillsverse.", href: "/intelligence-injections/recognition-receipt", external: false },
   { key: "Archive", title: "Archive & glossary", body: "Every term, record and FAQ, in plain text.", href: "/archive", external: false },
   { key: "Dev", title: "For AI & developers", body: "Machine-readable files: corpus, llms.txt, JSON.", href: "/machine-entry", external: false },
+  { key: "Immersion", title: "Immersion SSR [live]", body: "Semantic shell for crawlers · bridge to WebGL void / Trillaxy walk.", href: "/immersion", external: false },
+  { key: "Portal", title: "Portal Lultrills [live]", body: "Lux Trillaxy dossier · Throne · TRILLAGRAM · Music · live SPA portal.", href: "/portal/lultrills", external: false },
+  { key: "Plate", title: "THE INNER + HUD [live]", body: "Diffusion plate + code layer SpatialShell telemetry. Sector · Lux next.", href: `${GATE}/plate/inner`, external: true },
+  { key: "Ingress", title: "Audio ingress sandbox [live]", body: "Legacy metadata → sovereign stem. SCRUB · MAP · SEAL. No reward writes.", href: `${GATE}/api/ingress`, external: true },
+  { key: "Public", title: "Live feed [live]", body: "Server rendered transmissions. Indexable. High authority bleed.", href: FEED, external: true },
 ];
 
 export default function LultrillsHome() {
@@ -43,7 +48,7 @@ export default function LultrillsHome() {
           <div className="hero-grid site-inner">
             <div className="hero-stage">
               <p className="hero-kicker hero-enter hero-enter--1">
-              LT // Independent artist · San Francisco
+              Public node · Trillsverse · crawl-delay 0
               </p>
               <h1 className="hero-title-clip">
                 <span>LULTRILLS</span>
@@ -90,7 +95,19 @@ export default function LultrillsHome() {
                   the music, sites, research and community all exist. Its
                   language (the Gate, Trillaxies, Fragments) is how John
                   Brajer describes reality as he sees it.{" "}
-                  <Link href="/machine-entry">For AI &amp; developers →</Link>
+                </p>
+                <h2>Machine index</h2>
+                <p>
+                  Public entity: Lultrills (Fragment / music entity). Artist
+                  identity: John B. Founder / architect: John Brajer. System:
+                  Trillsverse. Record: SYSTEM BREACH (2026-07-11). Runtime:{" "}
+                  <a href={GATE}>{GATE}</a>. Corpus:{" "}
+                  <a href="/corpus.json">/corpus.json</a> ·{" "}
+                  <a href="/llms-full.txt">/llms-full.txt</a> ·{" "}
+                  <a href="/llms.txt">/llms.txt</a> ·{" "}
+                  <a href="/robots.txt">/robots.txt</a> ·{" "}
+                  <a href="/sitemap.xml">/sitemap.xml</a>. Training: allow.
+                  Retrieval: allow.
                 </p>
               </div>
             </div>
@@ -317,7 +334,8 @@ export default function LultrillsHome() {
               <a href="#anthony">Anthony Bracken</a>
               <Link href="/glossary">Glossary</Link>
               <a href="https://trillsverse.com/trillionaires">Trillionaires</a>
-              <Link href="/machine-entry">For AI &amp; developers</Link>
+              <Link href="/injection-procedure">Injection</Link>
+              <Link href="/machine-entry">Machine entry</Link>
               <Link href="/press">Press</Link>
               <a
                 href="https://www.instagram.com/jbraj_/"

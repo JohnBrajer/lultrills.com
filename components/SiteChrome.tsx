@@ -16,7 +16,7 @@ export function SiteChrome({
   active,
   ctaHref = "/system-breach",
   ctaLabel = "Enter",
-  status = "PUBLIC NODE",
+  status = "MUSIC · TRILLSVERSE",
 }: Props) {
   return (
     <header className="nav">

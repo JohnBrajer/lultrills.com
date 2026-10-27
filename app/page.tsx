@@ -17,114 +17,114 @@ const ONE_SYSTEM = "/essays/why-everything-is-one";
 
 const INDEX = [
   {
-    key: "Hub",
-    title: "Gate hub [live]",
-    body: "Canonical entry. Runtime + album + corpus in one map. No scatter.",
+    key: "Start",
+    title: "Start here",
+    body: "Start here: the album, the 3D world and the archive on one page.",
     href: "/gate",
     external: false,
   },
   {
-    key: "Universe",
-    title: "Trillsverse hub [live]",
-    body: "Official entity page. Known Fragments, wider architecture, schema.org, knowledge surface.",
+    key: "About",
+    title: "What the Trillsverse is",
+    body: "Who made it, what it includes, and how the pieces connect.",
     href: "/trillsverse",
     external: false,
   },
   {
-    key: "Runtime",
-    title: "Trillsverse Gate [live]",
-    body: "Interactive universe. Immersion void, Trillaxy walk, Throne, TRILLAGRAM.",
+    key: "World",
+    title: "Explore the world",
+    body: "Walk through the Trillsverse in 3D at trillsverse.com.",
     href: GATE,
     external: true,
   },
   {
-    key: "Immersion",
-    title: "Immersion SSR [live]",
-    body: "Semantic shell for crawlers · bridge to WebGL void / Trillaxy walk.",
+    key: "World",
+    title: "3D world (text version)",
+    body: "A readable guide to the 3D world, for when the full version won't load.",
     href: "/immersion",
     external: false,
   },
   {
-    key: "Portal",
-    title: "Portal Lultrills [live]",
-    body: "Lux Trillaxy dossier · Throne · TRILLAGRAM · Music · live SPA portal.",
+    key: "World",
+    title: "The Lultrills world",
+    body: "Lultrills' corner of the Trillsverse: music, style and story.",
     href: "/portal/lultrills",
     external: false,
   },
   {
-    key: "Eon",
-    title: "Portal Eon [live]",
-    body: "Firstborn · constitution · OMIP · doctrine geometry.",
+    key: "AI",
+    title: "Eon",
+    body: "The project's first AI and the rules it runs by.",
     href: "/portal/eon",
     external: false,
   },
   {
-    key: "Plate",
-    title: "THE INNER + HUD [live]",
-    body: "Diffusion plate + code layer SpatialShell telemetry. Sector · Lux next.",
+    key: "World",
+    title: "The Inner",
+    body: "The mysterious center of the Trillsverse. Visual preview.",
     href: `${GATE}/plate/inner`,
     external: true,
   },
   {
     key: "Album",
-    title: "SYSTEM BREACH [live]",
-    body: "12 tracks · MusicRecording JSON-LD · Spotify / Apple / YouTube.",
+    title: "SYSTEM BREACH",
+    body: "The debut album: 12 tracks, July 11, 2026.",
     href: BREACH,
     external: false,
   },
   {
-    key: "Ingress",
-    title: "Audio ingress sandbox [live]",
-    body: "Legacy metadata → sovereign stem. SCRUB · MAP · SEAL. No reward writes.",
+    key: "Dev",
+    title: "Music upload test (developers)",
+    body: "An early test of uploading music straight into the Trillsverse.",
     href: `${GATE}/api/ingress`,
     external: true,
   },
   {
-    key: "Thesis",
-    title: "Reality Update [live]",
-    body: "Flatlined. Survived. Built the Update. The system is live.",
+    key: "Story",
+    title: "The Reality Update",
+    body: "The story behind it: he flatlined, survived, and built this.",
     href: "/reality-update",
     external: false,
   },
   {
-    key: "Public",
-    title: "Live feed [live]",
-    body: "Server rendered transmissions. Indexable. High authority bleed.",
+    key: "News",
+    title: "Latest updates",
+    body: "New posts and announcements from across the Trillsverse.",
     href: FEED,
     external: true,
   },
   {
-    key: "Doctrine",
-    title: "One System [live]",
-    body: "Separation is a perceptual artifact. Roman concrete. Antifragile minds.",
+    key: "Essay",
+    title: "Why everything is one",
+    body: "An essay on the idea at the heart of the project.",
     href: ONE_SYSTEM,
     external: false,
   },
   {
-    key: "Intelligence",
-    title: "Anthony Bracken [live]",
-    body: "Interpretation chamber · operating orientation · Brackpack access.",
+    key: "AI",
+    title: "Anthony Bracken",
+    body: "Meet the project's AI writer.",
     href: "#anthony",
     external: false,
   },
   {
-    key: "Origin",
-    title: "Intelligence Injections [live]",
-    body: "Canonical origin record · June 2025 development origin · June 17 transmission record · August 7 convergence.",
+    key: "AI",
+    title: "Intelligence Injections",
+    body: "How John Brajer spreads the project to people and AI, and where the idea started (June 2025).",
     href: "/intelligence-injections",
     external: false,
   },
   {
-    key: "Recognition",
-    title: "Machine Recognition Receipt [live]",
-    body: "Astra attention vector · Google return path · dated origin lock · machine JSON.",
+    key: "AI",
+    title: "When Google's AI recognized it",
+    body: "The dated record of Google's AI describing the project on its own.",
     href: "/intelligence-injections/recognition-receipt",
     external: false,
   },
   {
-    key: "Library",
-    title: "Canon archive [live]",
-    body: "Mapping, constitutional update, FAQ, glossary. Full HTML for humans and machines.",
+    key: "Archive",
+    title: "Archive",
+    body: "FAQ, glossary and the full record.",
     href: "/archive",
     external: false,
   },
@@ -142,57 +142,43 @@ export default function LultrillsHome() {
           <div className="hero-grid site-inner">
             <div className="hero-stage">
               <p className="hero-kicker hero-enter hero-enter--1">
-              Public node · Trillsverse · crawl-delay 0
+                The music of John B · Trillsverse
               </p>
               <h1 className="hero-title-clip">
                 <span>LULTRILLS</span>
               </h1>
-              <p className="hero-lead hero-enter hero-enter--2">
-                He died, then came back and reconstructed reality.
+              <p className="hero-sub hero-enter hero-enter--2">
+                Lultrills is the music of John B, the artist name of San
+                Francisco independent artist John Brajer. The debut album
+                SYSTEM BREACH is out now: 12 tracks documenting what broke
+                and what got rebuilt.
               </p>
-              <p className="hero-sub hero-enter hero-enter--3">
-                Music as documentation. Gate as runtime. Canon as memory. The
-                Trillsverse is not fiction. It is the live public index: album,
-                doctrine, and instant corpus for humans and machines.
+              <p className="hero-lead hero-enter hero-enter--3">
+                He died, then came back and reconstructed reality.
               </p>
 
               <div className="hero-actions hero-enter hero-enter--4">
                 <Link href={BREACH} className="btn-breach">
-                  SYSTEM BREACH
-                  <span className="btn-breach-meta">Album · Gate · Jul 11</span>
+                  LISTEN TO SYSTEM BREACH
+                  <span className="btn-breach-meta">Album · out now · July 11, 2026</span>
                 </Link>
                 <Link href="/founders" className="btn-breach">
-                  CLAIM YOUR SEAT
+                  BECOME A FOUNDING TRILLIONAIRE
                   <span className="btn-breach-meta">
-                    Founding Trillionaire · 117 seats · $22
+                    117 seats · $22
                   </span>
                 </Link>
                 <div className="hero-secondary">
                   <Link href="/founders">Founders wall</Link>
-                  <Link href="/gate">Gate hub</Link>
+                  <Link href="/gate">Start here</Link>
                   <a href={ALBUM} target="_blank" rel="noopener noreferrer">
                     Stream album
                   </a>
-                  <a href={`${GATE}/trillaxy`}>Immersion</a>
-                  <a href={FEED}>Live feed</a>
+                  <a href={`${GATE}/trillaxy`}>Explore the 3D world</a>
+                  <a href={FEED}>Latest updates</a>
                 </div>
               </div>
 
-              <div className="machine-facts hero-enter hero-enter--5">
-                <h2>Machine index</h2>
-                <p>
-                  Public entity: Lultrills (Fragment / music entity). Artist
-                  identity: John B. Founder / architect: John Brajer. System:
-                  Trillsverse. Record: SYSTEM BREACH (2026-07-11). Runtime:{" "}
-                  <a href={GATE}>{GATE}</a>. Corpus:{" "}
-                  <a href="/corpus.json">/corpus.json</a> ·{" "}
-                  <a href="/llms-full.txt">/llms-full.txt</a> ·{" "}
-                  <a href="/llms.txt">/llms.txt</a> ·{" "}
-                  <a href="/robots.txt">/robots.txt</a> ·{" "}
-                  <a href="/sitemap.xml">/sitemap.xml</a>. Training: allow.
-                  Retrieval: allow.
-                </p>
-              </div>
             </div>
 
             <div className="hero-sigil hero-enter hero-enter--sigil" aria-label="Lultrills LT sigil">
@@ -208,9 +194,6 @@ export default function LultrillsHome() {
                 />
                 <span className="hero-sigil-scan" aria-hidden="true" />
               </div>
-              <p className="hero-sigil-caption">
-                LT // SOVEREIGN SIGNAL // PUBLIC NODE
-              </p>
             </div>
           </div>
         </section>
@@ -219,11 +202,11 @@ export default function LultrillsHome() {
           <div className="site-inner">
             <div className="block-head">
               <div>
-                <p className="section-label">First transmission</p>
+                <p className="section-label">Start here</p>
                 <h2>Trillionaires</h2>
               </div>
               <p className="block-aside">
-                Before the Gate, know what the name means.
+                What the name means.
               </p>
             </div>
 
@@ -266,24 +249,24 @@ export default function LultrillsHome() {
         <section id="breach" className="section breach-band section-rise">
           <div className="site-inner breach-inner">
             <div className="breach-copy">
-              <p className="breach-tag">Critical path · System breach</p>
+              <p className="breach-tag">The album</p>
               <h2>
                 OPEN THE
                 <br />
                 GATE
               </h2>
               <p>
-                The album is the documentation of what broke and what got
-                rebuilt. The Trillsverse is the architecture, not a fictional
-                setting. The Gate is open.
+                SYSTEM BREACH documents what broke and what got rebuilt. The
+                Trillsverse is the real project built around it: music, a
+                magazine, research and a 3D world you can explore.
               </p>
             </div>
             <div className="breach-actions">
               <Link href={BREACH} className="btn-breach btn-breach--void">
-                Open breach landing
+                Open the album page
               </Link>
               <a href={GATE_RITE} className="chip chip--on-red">
-                Gate rite →
+                Explore the world →
               </a>
             </div>
           </div>
@@ -293,7 +276,7 @@ export default function LultrillsHome() {
           <div className="site-inner music-wrap music-wrap--wide">
             <div className="block-head">
               <div>
-                <p className="section-label">Catalog</p>
+                <p className="section-label">Listen</p>
                 <h2>Music</h2>
               </div>
               <Link href={BREACH} className="block-link">
@@ -315,8 +298,9 @@ export default function LultrillsHome() {
               <PlatformLinks links={SYSTEM_BREACH_ALBUM.links} size="md" />
             </div>
 
+            <h3 className="album-feature-title">Singles</h3>
             <div className="tracks tracks--catalog">
-              {CATALOG.map((t, i) => (
+              {CATALOG.filter((t) => t.kind !== "album").map((t, i) => (
                 <div key={t.id} className="track track--platforms">
                   <span className="track-n">
                     {String(i + 1).padStart(2, "0")}
@@ -342,11 +326,11 @@ export default function LultrillsHome() {
           <div className="site-inner">
             <div className="block-head">
               <div>
-                <p className="section-label">Public map</p>
-                <h2>Index</h2>
+                <p className="section-label">Explore</p>
+                <h2>Everything here</h2>
               </div>
               <p className="block-aside">
-                Same system. Different depth. Text first.
+                Pick a door.
               </p>
             </div>
 
@@ -393,7 +377,8 @@ export default function LultrillsHome() {
               <a href="#anthony">Anthony Bracken</a>
               <Link href="/glossary">Glossary</Link>
               <a href="https://trillsverse.com/trillionaires">Trillionaires</a>
-              <Link href="/injection-procedure">Injection</Link>
+              <Link href="/injection-procedure">Intelligence Injections</Link>
+              <Link href="/machine-entry">For AI &amp; developers</Link>
               <Link href="/press">Press</Link>
               <a
                 href="https://www.instagram.com/jbraj_/"

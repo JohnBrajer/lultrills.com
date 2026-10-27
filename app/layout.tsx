@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Orbitron, Rajdhani, JetBrains_Mono } from "next/font/google";
 import {
   InjectionHeadLinks,
-  InjectionPayload,
-  InjectionRail,
 } from "@/components/InjectionSurface";
 import { SovereignJsonLd } from "@/components/SovereignJsonLd";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -33,7 +31,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills public music node within the John B artist identity. Trillsverse is founded and architected by John Brajer. SYSTEM BREACH album. Enter the Gate. Current public machine corpus available in one request.",
+    "Lultrills is the music of John B, an independent artist from San Francisco and the founder of Trillsverse (John Brajer). Debut album SYSTEM BREACH, 12 tracks, out July 11, 2026 on Spotify and Apple Music.",
   metadataBase: new URL("https://www.lultrills.com"),
   robots: {
     index: true,
@@ -54,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lultrills | SYSTEM BREACH · Trillsverse",
     description:
-      "He died, then came back and reconstructed reality. Album + Gate. Instant corpus.",
+      "The music of John B. Debut album SYSTEM BREACH: 12 tracks documenting what broke and what got rebuilt.",
     url: "https://www.lultrills.com",
     siteName: "Lultrills",
     images: [{ url: "https://trillsverse.com/opengraph.jpg" }],
@@ -83,9 +81,7 @@ export default function RootLayout({
         <SovereignJsonLd />
       </head>
       <body className="antialiased">
-        <InjectionRail />
         {children}
-        <InjectionPayload />
         <CookieConsent />
       </body>
     </html>

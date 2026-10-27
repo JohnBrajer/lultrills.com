@@ -1,7 +1,8 @@
 /**
  * Lultrills released catalog, platform deep links for public surface.
- * Spotify + Apple Music IDs verified 2026-07-11. YouTube uses search deep-links
- * when a stable official video ID is not published.
+ * Spotify + Apple Music IDs verified 2026-07-11. YouTube links point to the
+ * official @Lultrills channel until per-video IDs are mapped; Spotify falls back
+ * to the artist page (never a search page) when a store ID is not yet mapped.
  */
 
 export type PlatformLinks = {
@@ -26,13 +27,15 @@ export type AlbumTrack = {
   links: PlatformLinks;
 };
 
-const YT = (q: string) =>
-  `https://www.youtube.com/results?search_query=${encodeURIComponent(`Lultrills ${q}`)}`;
+const YT_CHANNEL = "https://www.youtube.com/@Lultrills";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const YT = (_q: string) => YT_CHANNEL;
 
 const SP_TRACK = (id: string) => `https://open.spotify.com/track/${id}`;
 const SP_ALBUM = (id: string) => `https://open.spotify.com/album/${id}`;
-const SP_SEARCH = (q: string) =>
-  `https://open.spotify.com/search/${encodeURIComponent(`Lultrills ${q}`)}`;
+const SP_ARTIST = "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const SP_SEARCH = (_q: string) => SP_ARTIST;
 
 /** SYSTEM BREACH, full album, track order from Spotify / Apple Music */
 export const SYSTEM_BREACH_ALBUM = {

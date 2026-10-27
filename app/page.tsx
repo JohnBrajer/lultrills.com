@@ -43,7 +43,7 @@ export default function LultrillsHome() {
           <div className="hero-grid site-inner">
             <div className="hero-stage">
               <p className="hero-kicker hero-enter hero-enter--1">
-              Independent artist · San Francisco
+              LT // Independent artist · San Francisco
               </p>
               <h1 className="hero-title-clip">
                 <span>LULTRILLS</span>
@@ -107,8 +107,31 @@ export default function LultrillsHome() {
                 <span className="hero-sigil-scan" aria-hidden="true" />
               </div>
               <p className="hero-sigil-caption">
-                LULTRILLS · SYSTEM BREACH
+                LT // SOVEREIGN SIGNAL
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="ways-in" className="section block section-rise" aria-label="Ways in">
+          <div className="site-inner">
+            <div className="block-head">
+              <div>
+                <p className="section-label">Ways in</p>
+                <h2>Pick a door</h2>
+              </div>
+              <p className="block-aside">Every door leads to the same world.</p>
+            </div>
+            <div className="foot-links">
+              <a href={ALBUM} target="_blank" rel="noopener noreferrer">Listen · Spotify</a>
+              <a href={SYSTEM_BREACH_ALBUM.links.apple} target="_blank" rel="noopener noreferrer">Listen · Apple Music</a>
+              <a href="https://www.tiktok.com/@lultrills" target="_blank" rel="noopener noreferrer">Watch LIVE · TikTok</a>
+              <a href="https://www.youtube.com/@Lultrills" target="_blank" rel="noopener noreferrer">Watch · YouTube</a>
+              <a href="https://www.instagram.com/jbraj_/" target="_blank" rel="noopener noreferrer">Follow · Instagram</a>
+              <a href="https://reallythatmagazine.com" target="_blank" rel="noopener noreferrer">Read · ReallyThat</a>
+              <a href="https://www.mymindmine.com" target="_blank" rel="noopener noreferrer">Think · MyMindMine</a>
+              <a href={`${GATE}/trillaxy`}>Walk · The Gate</a>
+              <Link href="/founders">Join · Founding Trillionaire</Link>
             </div>
           </div>
         </section>
@@ -117,11 +140,11 @@ export default function LultrillsHome() {
           <div className="site-inner">
             <div className="block-head">
               <div>
-                <p className="section-label">Start here</p>
+                <p className="section-label">First transmission</p>
                 <h2>Trillionaires</h2>
               </div>
               <p className="block-aside">
-                What the name means.
+                Before the Gate, know what the name means.
               </p>
             </div>
 
@@ -164,15 +187,16 @@ export default function LultrillsHome() {
         <section id="breach" className="section breach-band section-rise">
           <div className="site-inner breach-inner">
             <div className="breach-copy">
-              <p className="breach-tag">The album</p>
+              <p className="breach-tag">Critical path · System breach</p>
               <h2>
-                SYSTEM
+                OPEN THE
                 <br />
-                BREACH
+                GATE
               </h2>
               <p>
-                Twelve tracks documenting what broke and what got rebuilt. Then
-                step into the Trillsverse, the world built around it.
+                The album documents what broke and what got rebuilt. The Gate
+                is the Trillsverse&apos;s interactive 3D world, built around it.
+                It&apos;s open.
               </p>
             </div>
             <div className="breach-actions">
@@ -180,7 +204,7 @@ export default function LultrillsHome() {
                 Open the album
               </Link>
               <a href={GATE_RITE} className="chip chip--on-red">
-                Explore the world →
+                Enter the Gate →
               </a>
             </div>
           </div>

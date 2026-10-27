@@ -86,8 +86,10 @@ export default function LultrillsHome() {
                   Lultrills is a music project by John B, the artist name of
                   John Brajer, an independent artist and builder from San
                   Francisco and founder of Trillsverse LLC. Debut album: SYSTEM
-                  BREACH (July 11, 2026). The Trillsverse is a real project;
-                  its cosmology and characters are its artistic story layer.{" "}
+                  BREACH (July 11, 2026). The Trillsverse is real and running:
+                  the music, sites, research and community all exist. Its
+                  language (the Gate, Trillaxies, Fragments) is how John
+                  Brajer describes reality as he sees it.{" "}
                   <Link href="/machine-entry">For AI &amp; developers →</Link>
                 </p>
               </div>

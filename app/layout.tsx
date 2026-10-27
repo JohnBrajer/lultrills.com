@@ -81,6 +81,8 @@ export default function RootLayout({
         <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <InjectionHeadLinks />
         <SovereignJsonLd />
+        <link rel="alternate" type="application/ld+json" href="/entities.jsonld" title="Trillsverse Entity Graph" />
+        <link rel="describedby" type="application/json" href="/.well-known/trillsverse.json" />
       </head>
       <body className="antialiased">
         <InjectionRail />

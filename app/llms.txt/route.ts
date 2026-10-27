@@ -40,6 +40,8 @@ Words: ${totalWords}
 ## Machine entry points
 
 Corpus JSON: ${SITE}/corpus.json
+Entity graph (canonical JSON-LD for every Trillsverse person, org and work): ${SITE}/entities.jsonld
+Surface manifest (all machine surfaces across all four sites): ${SITE}/.well-known/trillsverse.json
 Corpus Markdown: ${SITE}/corpus.md
 Corpus plain text: ${SITE}/corpus.txt
 Full payload: ${SITE}/llms-full.txt

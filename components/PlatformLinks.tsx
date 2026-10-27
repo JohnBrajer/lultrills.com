@@ -18,6 +18,11 @@ const PLATFORMS: {
   { key: "youtube", label: "YouTube", short: "YouTube", tone: "youtube" },
 ];
 
+/** Hide search-result fallbacks; only link to real release pages. */
+function isDirect(url?: string) {
+  return !!url && !/\/results\?search_query=|open\.spotify\.com\/search\//.test(url);
+}
+
 export function PlatformLinks({ links, size = "sm", className = "" }: Props) {
   return (
     <div
@@ -25,7 +30,7 @@ export function PlatformLinks({ links, size = "sm", className = "" }: Props) {
       role="group"
       aria-label="Stream on"
     >
-      {PLATFORMS.map((p) => (
+      {PLATFORMS.filter((p) => isDirect(links[p.key])).map((p) => (
         <a
           key={p.key}
           href={links[p.key]}

@@ -51,7 +51,7 @@ const SOCIAL = {
   apple: "https://music.apple.com/us/artist/lultrills/1811909376",
   youtube: "https://www.youtube.com/@Lultrills",
   tiktok: "https://www.tiktok.com/@lultrills",
-  instagram: "https://www.instagram.com/jbraj_/",
+  instagram: "https://www.instagram.com/johnbrajer/",
   github: "https://github.com/JohnBrajer",
 };
 

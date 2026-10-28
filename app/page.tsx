@@ -146,7 +146,7 @@ export default function LultrillsHome() {
               <a href={SYSTEM_BREACH_ALBUM.links.apple} target="_blank" rel="noopener noreferrer">Listen · Apple Music</a>
               <a href="https://www.tiktok.com/@lultrills" target="_blank" rel="noopener noreferrer">Watch LIVE · TikTok</a>
               <a href="https://www.youtube.com/@Lultrills" target="_blank" rel="noopener noreferrer">Watch · YouTube</a>
-              <a href="https://www.instagram.com/jbraj_/" target="_blank" rel="noopener noreferrer">Follow · Instagram</a>
+              <a href="https://www.instagram.com/johnbrajer/" target="_blank" rel="noopener noreferrer">Follow · Instagram</a>
               <a href="https://reallythatmagazine.com" target="_blank" rel="noopener noreferrer">Read · ReallyThat</a>
               <a href="https://www.mymindmine.com" target="_blank" rel="noopener noreferrer">Think · MyMindMine</a>
               <a href={`${GATE}/trillaxy`}>Walk · The Gate</a>
@@ -338,7 +338,7 @@ export default function LultrillsHome() {
               <Link href="/machine-entry">Machine entry</Link>
               <Link href="/press">Press</Link>
               <a
-                href="https://www.instagram.com/jbraj_/"
+                href="https://www.instagram.com/johnbrajer/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

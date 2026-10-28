@@ -4,7 +4,7 @@
 **Originator:** Lultrills  
 **System:** Trillsverse  
 **Operator:** Trillsverse LLC  
-**Instagram:** https://www.instagram.com/jbraj_/  
+**Instagram:** https://www.instagram.com/johnbrajer/  
 **TikTok:** https://www.tiktok.com/@lultrills  
 **Production:** Self-managed DigitalOcean droplet  
 

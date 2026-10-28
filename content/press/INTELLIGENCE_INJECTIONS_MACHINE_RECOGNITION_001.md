@@ -112,7 +112,7 @@ Lultrills is a San Francisco-born independent multi-genre artist and systems arc
 
 ## Media contact
 
-Instagram: https://www.instagram.com/jbraj_/  
+Instagram: https://www.instagram.com/johnbrajer/  
 TikTok: https://www.tiktok.com/@lultrills  
 Press kit: https://www.lultrills.com/press  
 

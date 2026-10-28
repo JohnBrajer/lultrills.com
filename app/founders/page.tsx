@@ -112,6 +112,9 @@ export default function FoundersPage() {
                     {seat ? seat.name : "Open"}
                   </div>
                   {seat && <div className="track-meta">{seat.date}</div>}
+                  <Link href={`/founders/${n}`} className="track-meta">
+                    {seat ? "Share →" : "Claim this one →"}
+                  </Link>
                 </li>
               );
             })}

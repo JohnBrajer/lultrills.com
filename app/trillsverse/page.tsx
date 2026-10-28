@@ -70,7 +70,7 @@ const JSON_LD = {
         url: "https://github.com/JohnBrajer",
         sameAs: [
           "https://github.com/JohnBrajer",
-          "https://www.instagram.com/jbraj_/",
+          "https://www.instagram.com/johnbrajer/",
         ],
         jobTitle: "Founder and architect of Trillsverse",
       },

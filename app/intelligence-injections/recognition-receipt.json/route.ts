@@ -45,7 +45,7 @@ export function GET() {
           date: "2026-08-10",
           event: "Intelligence Injections publicly attributed on Instagram",
           authority: "creator public attribution",
-          url: "https://www.instagram.com/jbraj_/",
+          url: "https://www.instagram.com/johnbrajer/",
         },
       ],
       google_machine_recognition: {

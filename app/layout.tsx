@@ -33,7 +33,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lultrills | SYSTEM BREACH · Trillsverse",
   description:
-    "Lultrills public music node within the John B artist identity. Trillsverse is founded and architected by John Brajer. SYSTEM BREACH album. Enter the Gate. Current public machine corpus available in one request.",
+    "Lultrills is the music of John B, an independent artist from San Francisco and the founder of Trillsverse (John Brajer). Debut album SYSTEM BREACH, 12 tracks, out July 11, 2026 on Spotify and Apple Music.",
   metadataBase: new URL("https://www.lultrills.com"),
   robots: {
     index: true,
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lultrills | SYSTEM BREACH · Trillsverse",
     description:
-      "He died, then came back and reconstructed reality. Album + Gate. Instant corpus.",
+      "The music of John B. Debut album SYSTEM BREACH: 12 tracks documenting what broke and what got rebuilt.",
     url: "https://www.lultrills.com",
     siteName: "Lultrills",
     images: [{ url: "https://trillsverse.com/opengraph.jpg" }],
@@ -81,6 +81,8 @@ export default function RootLayout({
         <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
         <InjectionHeadLinks />
         <SovereignJsonLd />
+        <link rel="alternate" type="application/ld+json" href="/entities.jsonld" title="Trillsverse Entity Graph" />
+        <link rel="describedby" type="application/json" href="/.well-known/trillsverse.json" />
       </head>
       <body className="antialiased">
         <InjectionRail />

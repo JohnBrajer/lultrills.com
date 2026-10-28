@@ -284,7 +284,7 @@ export default function PressPage() {
 
           <p className="section-label">Contact</p>
           <p className="hero-sub">
-            Primary:{" "}<a href="https://www.instagram.com/johnbrajer/" target="_blank" rel="noopener noreferrer">@jbraj_</a>
+            Primary:{" "}<a href="https://www.instagram.com/johnbrajer/" target="_blank" rel="noopener noreferrer">@johnbrajer</a>
             <br />Story URL:{" "}<Link href="/reality-update">{SITE}/reality-update</Link>
             <br />Wire copy (repo): docs/campaign/reality-update/press-release.md
           </p>

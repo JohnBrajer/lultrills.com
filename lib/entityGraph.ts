@@ -27,7 +27,7 @@ export const SITES = {
 /** Fill these in as they are claimed. Empty strings are ignored. */
 export const EXTERNAL_IDS = {
   johnBrajer: { wikidata: "", orcid: "", isni: "", musicbrainz: "" },
-  lultrills: { wikidata: "", musicbrainz: "", discogs: "", isni: "" },
+  lultrills: { wikidata: "", musicbrainz: "e9d9e7b4-0bac-468f-aef8-77ec9809aa0d", discogs: "", isni: "" },
   systemBreach: { musicbrainzReleaseGroup: "", upc: "" },
   trillsverse: { wikidata: "" },
 };

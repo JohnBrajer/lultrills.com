@@ -28,7 +28,7 @@ export const SITES = {
 export const EXTERNAL_IDS = {
   johnBrajer: { wikidata: "", orcid: "", isni: "", musicbrainz: "" },
   lultrills: { wikidata: "", musicbrainz: "e9d9e7b4-0bac-468f-aef8-77ec9809aa0d", discogs: "", isni: "" },
-  systemBreach: { musicbrainzReleaseGroup: "", upc: "" },
+  systemBreach: { musicbrainzReleaseGroup: "0d0866f5-bfc5-4fbe-a89b-58d62e991c18", musicbrainzRelease: "1655d242-55da-4f35-8d50-147ec503cf02", upc: "883005330521" },
   trillsverse: { wikidata: "" },
 };
 
@@ -41,10 +41,14 @@ const ext = (o: Record<string, string>) =>
       : k === "isni" ? `https://isni.org/isni/${v.replace(/\s/g, "")}`
       : k === "musicbrainz" ? `https://musicbrainz.org/artist/${v}`
       : k === "musicbrainzReleaseGroup" ? `https://musicbrainz.org/release-group/${v}`
+      : k === "musicbrainzRelease" ? `https://musicbrainz.org/release/${v}`
+      : k === "upc" ? ""
       : k === "discogs" ? `https://www.discogs.com/artist/${v}`
       : v,
     )
     .filter((u) => u.startsWith("http"));
+
+const SB_TRACKS: { name: string; isrc: string; duration: string }[] = [{"name": "DOUBLE TAPPED", "isrc": "QT6F32668990", "duration": "PT2M31S"}, {"name": "Oh Okay", "isrc": "QZNWY2527407", "duration": "PT2M8S"}, {"name": "G O A T", "isrc": "QZZ7S2663172", "duration": "PT2M31S"}, {"name": "NO BRAKEZ", "isrc": "QT6F32668991", "duration": "PT2M38S"}, {"name": "KASANO", "isrc": "QZK6N2601030", "duration": "PT2M40S"}, {"name": "UP...", "isrc": "QZFYX2606484", "duration": "PT2M37S"}, {"name": "Never Be The SAME", "isrc": "QZWFP2572383", "duration": "PT1M58S"}, {"name": "AMIWRONG?", "isrc": "QZTAX2602388", "duration": "PT2M37S"}, {"name": "Low Down", "isrc": "QT6F32668992", "duration": "PT3M45S"}, {"name": "nik", "isrc": "QT6F32668993", "duration": "PT3M36S"}, {"name": "icu", "isrc": "QT6F32668994", "duration": "PT3M28S"}, {"name": "what's next...?", "isrc": "QT6F32668995", "duration": "PT4M15S"}];
 
 const SOCIAL = {
   spotify: "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt",
@@ -94,6 +98,17 @@ export function entityGraph() {
         byArtist: { "@id": id("lultrills") },
         datePublished: "2026-07-11",
         numTracks: 12,
+        gtin13: "0883005330521",
+        recordLabel: { "@type": "Organization", name: "Lultrills records" },
+        track: {
+          "@type": "ItemList",
+          numberOfItems: 12,
+          itemListElement: SB_TRACKS.map((t, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: { "@type": "MusicRecording", name: t.name, isrcCode: t.isrc, duration: t.duration, byArtist: { "@id": id("lultrills") } },
+          })),
+        },
         albumProductionType: "https://schema.org/StudioAlbum",
         url: `${SITES.lultrills}/system-breach`,
         sameAs: [

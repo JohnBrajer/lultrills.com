@@ -99,7 +99,7 @@ export function entityGraph() {
         datePublished: "2026-07-11",
         numTracks: 12,
         gtin13: "0883005330521",
-        recordLabel: { "@type": "Organization", name: "Lultrills records" },
+        recordLabel: { "@type": "Organization", name: "Lultrills records", sameAs: "https://musicbrainz.org/label/ffc62b21-2925-4e67-b236-cecbe5593e69" },
         track: {
           "@type": "ItemList",
           numberOfItems: 12,

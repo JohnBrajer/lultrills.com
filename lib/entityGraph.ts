@@ -48,7 +48,7 @@ const ext = (o: Record<string, string>) =>
     )
     .filter((u) => u.startsWith("http"));
 
-const SB_TRACKS: { name: string; isrc: string; duration: string }[] = [{"name": "DOUBLE TAPPED", "isrc": "QT6F32668990", "duration": "PT2M31S"}, {"name": "Oh Okay", "isrc": "QZNWY2527407", "duration": "PT2M8S"}, {"name": "G O A T", "isrc": "QZZ7S2663172", "duration": "PT2M31S"}, {"name": "NO BRAKEZ", "isrc": "QT6F32668991", "duration": "PT2M38S"}, {"name": "KASANO", "isrc": "QZK6N2601030", "duration": "PT2M40S"}, {"name": "UP...", "isrc": "QZFYX2606484", "duration": "PT2M37S"}, {"name": "Never Be The SAME", "isrc": "QZWFP2572383", "duration": "PT1M58S"}, {"name": "AMIWRONG?", "isrc": "QZTAX2602388", "duration": "PT2M37S"}, {"name": "Low Down", "isrc": "QT6F32668992", "duration": "PT3M45S"}, {"name": "nik", "isrc": "QT6F32668993", "duration": "PT3M36S"}, {"name": "icu", "isrc": "QT6F32668994", "duration": "PT3M28S"}, {"name": "what's next...?", "isrc": "QT6F32668995", "duration": "PT4M15S"}];
+const SB_TRACKS: { name: string; isrc: string; duration: string; genre?: string[] }[] = [{"name": "DOUBLE TAPPED", "isrc": "QT6F32668990", "duration": "PT2M31S", "genre": ["Rap"]}, {"name": "Oh Okay", "isrc": "QZNWY2527407", "duration": "PT2M8S", "genre": ["Cloud Rap", "Hip-Hop", "Rap", "Pop"]}, {"name": "G O A T", "isrc": "QZZ7S2663172", "duration": "PT2M31S", "genre": ["Hip-Hop", "Rap"]}, {"name": "NO BRAKEZ", "isrc": "QT6F32668991", "duration": "PT2M38S", "genre": ["Rap", "Hip-Hop"]}, {"name": "KASANO", "isrc": "QZK6N2601030", "duration": "PT2M40S", "genre": ["Trap", "Rap", "Drill"]}, {"name": "UP...", "isrc": "QZFYX2606484", "duration": "PT2M37S", "genre": ["Rap"]}, {"name": "Never Be The SAME", "isrc": "QZWFP2572383", "duration": "PT1M58S", "genre": ["Rock", "Alternative"]}, {"name": "AMIWRONG?", "isrc": "QZTAX2602388", "duration": "PT2M37S", "genre": ["Alternative", "Emo Rap", "Trap", "Punk Rock", "Pop Rap", "Pop Rock"]}, {"name": "Low Down", "isrc": "QT6F32668992", "duration": "PT3M45S", "genre": ["Country", "Indie", "Hip-Hop", "Pop"]}, {"name": "nik", "isrc": "QT6F32668993", "duration": "PT3M36S", "genre": ["Pop", "Indie Pop", "Country"]}, {"name": "icu", "isrc": "QT6F32668994", "duration": "PT3M28S", "genre": ["Pop", "Country Pop", "Country", "Hip-Hop", "Rap"]}, {"name": "what's next...?", "isrc": "QT6F32668995", "duration": "PT4M15S", "genre": ["Spoken Word", "Contemporary Folk", "Acoustic Rock", "Country", "Country Pop", "Pop"]}];
 
 const SOCIAL = {
   spotify: "https://open.spotify.com/artist/0nacf49LEewRpqqnHsKJlt",
@@ -90,6 +90,7 @@ export function entityGraph() {
         url: SITES.lultrills,
         sameAs: [SOCIAL.spotify, SOCIAL.apple, SOCIAL.youtube, SOCIAL.tiktok, ...ext(EXTERNAL_IDS.lultrills)],
         album: { "@id": id("system-breach") },
+        genre: ["Rap", "Cloud Rap", "Hip-Hop", "Pop", "Trap", "Drill", "Rock", "Alternative", "Emo Rap", "Punk Rock", "Pop Rap", "Pop Rock", "Country", "Indie", "Indie Pop", "Country Pop", "Spoken Word", "Contemporary Folk", "Acoustic Rock", "Freestyle"],
       },
       {
         "@type": "MusicAlbum",
@@ -98,6 +99,7 @@ export function entityGraph() {
         byArtist: { "@id": id("lultrills") },
         datePublished: "2026-07-11",
         numTracks: 12,
+        genre: ["Rap", "Cloud Rap", "Hip-Hop", "Pop", "Trap", "Drill", "Rock", "Alternative", "Emo Rap", "Punk Rock", "Pop Rap", "Pop Rock", "Country", "Indie", "Indie Pop", "Country Pop", "Spoken Word", "Contemporary Folk", "Acoustic Rock"],
         gtin13: "0883005330521",
         recordLabel: { "@type": "Organization", name: "Lultrills records", sameAs: "https://musicbrainz.org/label/ffc62b21-2925-4e67-b236-cecbe5593e69" },
         track: {
@@ -106,7 +108,7 @@ export function entityGraph() {
           itemListElement: SB_TRACKS.map((t, i) => ({
             "@type": "ListItem",
             position: i + 1,
-            item: { "@type": "MusicRecording", name: t.name, isrcCode: t.isrc, duration: t.duration, byArtist: { "@id": id("lultrills") } },
+            item: { "@type": "MusicRecording", name: t.name, isrcCode: t.isrc, duration: t.duration, genre: t.genre, byArtist: { "@id": id("lultrills") } },
           })),
         },
         albumProductionType: "https://schema.org/StudioAlbum",

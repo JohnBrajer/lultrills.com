@@ -1,10 +1,13 @@
 # Trillsverse Scope Facts & Participation Terms
 
+> **Maximum scope clarification (2026-10-29):** This page defines *present public product and participation facts*, not the boundaries of Trillsverse research, creative exploration, or future possibility. Trillsverse = The Reality Update; Sovereignty in Every Dimension. Physical, digital, cognitive, cultural, scientific, institutional, economic, synthetic-intelligence, and other potential expressions remain within the system's inquiry. See [Maximum Scope Charter](https://github.com/JohnBrajer/lultrills.com/blob/John/docs/TRILLSVERSE_MAXIMUM_SCOPE_CHARTER_2026-10-29.md) (proposed addition, link live after merge).
+
+
 > Canonical scope record. When a description of the Trillsverse conflicts with this page, this page governs. Last updated: 2026-10-25.
 
 ## What the Trillsverse is not
 
-- No token, cryptocurrency, DAO, blockchain, NFT, or smart contracts. None exist and none are planned.
+- There is currently no operating Trillsverse token, cryptocurrency, DAO, blockchain, NFT, or smart-contract product and no approved deployment plan for one. Historical planning documents did explore some of these mechanisms. Such exploration does not establish a current product, invitation, or investment.
 - No treasury holding participants' money. Finances belong to Trillsverse LLC, an ordinary business.
 - No governance token and no token voting. ERC standards, on-chain storage, and decentralized-storage protocols are not used.
 - "Gradient," "resonance," and "frequency" are canon and philosophical terms, not financial or technical mechanisms.
@@ -22,6 +25,10 @@
 ## Rule
 
 Nothing transferable. Nothing that promises returns. Nothing that holds other people's money.
+
+## Historical possibility versus current product
+
+The original expansion plans also discussed physical venues and hospitality, vehicles, devices, education, food ventures, alternate economies, synthetic-intelligence ecologies, immersive worlds, and exploratory science. These are preserved as possibilities or proposals, not represented here as existing services. No current narrow product list can set an absolute limit on the Trillsverse's exploration.
 
 ## Corrections
 

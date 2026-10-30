@@ -1,0 +1,12 @@
+import {test} from 'vitest';
+import assert from 'node:assert/strict';
+import {validateScope} from './validate-scope.mjs';
+const fixture = () => ({version:'0.1.0', identity:'Trillsverse = The Reality Update', mandate:'Sovereignty in Every Dimension', branches:[{id:'physical',status:'future-possibility',statusScope:'Proposed physical environments',evidence:[{kind:'docs',url:'https://www.lultrills.com/reality-update/scope'}]}]});
+test('accepts a documented future possibility without declaring it operational',()=>assert.deepEqual(validateScope(fixture()),[]));
+test('rejects an operational claim supported only by a proposal',()=>{const r=fixture();r.branches[0].status='operational';assert.ok(validateScope(r).some(x=>x.includes('observed')));});
+test('rejects duplicate branch identities',()=>{const r=fixture();r.branches.push({...r.branches[0]});assert.ok(validateScope(r).some(x=>x.includes('duplicate')));});
+test('rejects undefined lifecycle states',()=>{const r=fixture();r.branches[0].status='dead';assert.ok(validateScope(r).some(x=>x.includes('status')));});
+test('rejects replacement of the scope mandate',()=>{const r=fixture();r.mandate='Only a music website';assert.ok(validateScope(r).some(x=>x.includes('mandate')));});
+test('rejects unsafe evidence links',()=>{const r=fixture();r.branches[0].evidence[0].url='javascript:alert(1)';assert.ok(validateScope(r).some(x=>x.includes('https')));});
+test('rejects an operational claim with undated observed evidence',()=>{const r=fixture();r.branches[0].status='operational';r.branches[0].evidence[0].kind='observed';assert.ok(validateScope(r).some(x=>x.includes('dated')));});
+test('accepts a scoped operational claim with dated observed evidence',()=>{const r=fixture();r.branches[0].status='operational';r.branches[0].evidence[0]={kind:'observed',url:'https://trillsverse.com/atlas',observedAt:'2026-10-29',finding:'Public atlas responded HTTP 200'};assert.deepEqual(validateScope(r),[]);});

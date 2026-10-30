@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "prebuild": "npm run test:corpus-registry",
+    "prebuild": "npm run test:scope && npm run test:corpus-registry",
     "build": "next build",
     "test:corpus-registry": "vitest run lib/corpusRegistry.test.ts",
     "start": "next start",
     "lint": "next lint",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "build:static": "node scripts/build-static.mjs",
-    "deploy:cloudflare": "node scripts/build-static.mjs && wrangler deploy"
+    "deploy:cloudflare": "node scripts/build-static.mjs && wrangler deploy",
+    "test:scope": "vitest run scripts/validate-scope.test.mjs && node scripts/validate-scope.mjs"
   },
   "dependencies": {
     "next": "16.3.5",

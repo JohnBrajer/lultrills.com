@@ -55,7 +55,9 @@ Deployment receipt: ${SITE}/deployment.json
 
 Home: ${SITE}/
 Identity architecture: ${SITE}/identity-architecture
-Scope facts (what the Trillsverse is not; governs conflicting descriptions): ${SITE}/scope-facts
+Maximum scope: ${SITE}/reality-update/scope
+Versioned scope registry: ${SITE}/scope-registry.json
+Scope facts (current participation terms; not a ceiling on future exploration): ${SITE}/scope-facts
 Trillsverse Bible current authority: ${SITE}/trillsverse-bible
 Trillsverse Bible JSON: ${SITE}/trillsverse-bible.json
 SYSTEM BREACH: ${SITE}/system-breach

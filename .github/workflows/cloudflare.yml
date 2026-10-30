@@ -1,18 +1,23 @@
-name: Deploy to Cloudflare (free tier)
+name: Build and verify Cloudflare release
 
 on:
   push:
     branches: [John]
+  pull_request:
+    branches: [John]
   schedule:
-    - cron: "17 9 * * *" # daily rebuild refreshes corpus timestamps
+    - cron: "17 9 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
-  group: cloudflare-production
+  group: cloudflare-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-release:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -22,12 +27,22 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Build static site
+      - name: Build and validate static site
         run: node scripts/build-static.mjs
         env:
           APP_COMMIT_SHA: ${{ github.sha }}
-      - name: Deploy worker + assets
-        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+      - name: Require deployment credentials
+        if: github.event_name != 'pull_request'
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Publication blocked: configure CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets. A build is not a deployment."
+            exit 1
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Deploy worker and assets
+        if: github.event_name != 'pull_request'
         run: >
           npx wrangler deploy
           --var APP_COMMIT_SHA:${{ github.sha }}
@@ -35,8 +50,31 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      - name: Token missing
-        if: ${{ env.CLOUDFLARE_API_TOKEN == '' }}
-        run: echo "::warning::Add the CLOUDFLARE_API_TOKEN repo secret to enable deploys. Build succeeded."
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Verify public commit and scope
+        if: github.event_name != 'pull_request'
+        run: |
+          node --input-type=module <<'JS'
+          const root = 'https://www.lultrills.com';
+          for (let attempt = 0; attempt < 6; attempt++) {
+            try {
+              const get = async path => {
+                const r = await fetch(`${root}${path}?release=${process.env.GITHUB_SHA}&attempt=${attempt}`, {signal: AbortSignal.timeout(15000), headers: {'Cache-Control':'no-cache'}});
+                if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
+                return r;
+              };
+              const receipt = await (await get('/deployment.json')).json();
+              if (receipt.commit !== process.env.GITHUB_SHA) throw new Error(`Live commit differs: ${receipt.commit}`);
+              const scope = await (await get('/scope-registry.json')).json();
+              const {default: expected} = await import('./public/scope/v0.1.0.json', {with:{type:'json'}});
+              if (JSON.stringify(scope) !== JSON.stringify(expected)) throw new Error('Live registry differs from release');
+              const page = await (await get('/reality-update/scope')).text();
+              if (!page.includes('SOVEREIGNTY IN EVERY DIMENSION.')) throw new Error('Scope page missing');
+              console.log(`Verified live: ${receipt.commit}, scope ${scope.version}`);
+              process.exit(0);
+            } catch (error) {
+              console.error(error.message);
+              if (attempt < 5) await new Promise(resolve => setTimeout(resolve, 10000));
+            }
+          }
+          process.exit(1);
+          JS

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import scopeRegistry from "@/public/scope/v0.1.0.json";
 
 export const metadata: Metadata = {
   title: "Sovereignty in Every Dimension | Trillsverse",
@@ -13,26 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-type Domain = {
-  number: string;
-  name: string;
-  description: string;
-  path: string;
-  linkLabel: string;
-  status: "PUBLIC ENTRY" | "SOURCE / RESEARCH" | "EXPLORATION";
-};
-
-const domains: Domain[] = [
-  { number: "01", name: "Physical environments", description: "Architecture, places, experiential venues, built worlds, mobility and material systems.", path: "https://trillsverse.com/atlas", linkLabel: "Explore Gate atlas", status: "EXPLORATION" },
-  { number: "02", name: "Digital worlds", description: "Spatial interfaces, the Gate, planets, houses, portals and the public world.", path: "https://trillsverse.com/", linkLabel: "Enter the Gate", status: "PUBLIC ENTRY" },
-  { number: "03", name: "Mind & possibility", description: "MyMindMine, Choseverse, Perspective Expansion, CWI / PRS and Possibility Reserve.", path: "https://mymindmine.com/brajology", linkLabel: "Explore Brajology", status: "PUBLIC ENTRY" },
-  { number: "04", name: "Synthetic intelligence", description: "Trillonian, Eon, Anthony / Aevri, intelligence ecology and model-independent continuity.", path: "https://trillsverse.com/intelligence", linkLabel: "Explore intelligence", status: "SOURCE / RESEARCH" },
-  { number: "05", name: "Music & cultural expression", description: "John B, Lultrills, SYSTEM BREACH, the Trillaxy, cinema, fashion, film and participation.", path: "/system-breach", linkLabel: "Enter SYSTEM BREACH", status: "PUBLIC ENTRY" },
-  { number: "06", name: "Economies & institutions", description: "Future models of participation, services, education, governance and circulation of value.", path: "https://trillsverse.com/trillionaires", linkLabel: "Explore Trillionaires", status: "EXPLORATION" },
-  { number: "07", name: "Information & evidence", description: "Intelligence Injections, source provenance, independent editorial, discovery and witnessed consequences.", path: "https://reallythatmagazine.com/trillsverse", linkLabel: "Read ReallyThat", status: "PUBLIC ENTRY" },
-  { number: "08", name: "Science & living systems", description: "Recursive Mechanisms, biology, cognition, materials, environmental interdependence and testable research.", path: "https://mymindmine.com/research", linkLabel: "View research", status: "SOURCE / RESEARCH" },
-  { number: "09", name: "The frontier", description: "Space, planetary scales, unknown mechanisms and dormant possibilities awaiting new evidence.", path: "https://mymindmine.com/research/possibility-reserve", linkLabel: "Visit Possibility Reserve", status: "EXPLORATION" },
-];
+const domains = scopeRegistry.branches;
 
 const scenes = [
   "THE CAGE — A state becomes visible.",
@@ -107,7 +89,7 @@ export default function RealityUpdateScopePage() {
                 <div>
                   <div style={{display:"flex",justifyContent:"space-between",gap:"1rem",alignItems:"center",flexWrap:"wrap",marginBottom:"1rem"}}>
                     <span className="section-label" style={{margin:0}}>FIELD {domain.number}</span>
-                    <span style={{fontSize:".7rem",letterSpacing:".09em",opacity:.76}}>{domain.status}</span>
+                    <span style={{fontSize:".7rem",letterSpacing:".09em",opacity:.76}}>{domain.entryType}</span>
                   </div>
                   <h3 style={{fontSize:"clamp(1.15rem, 2vw, 1.5rem)"}}>{domain.name}</h3>
                   <p className="hero-sub" style={{fontSize:".96rem",marginTop:".65rem"}}>{domain.description}</p>

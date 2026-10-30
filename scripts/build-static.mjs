@@ -6,6 +6,8 @@ import { execSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
+execSync("npm run test:scope && npm run test:corpus-registry", { stdio: "inherit" });
+
 const root = process.cwd();
 const park = path.join(root, ".static-park");
 const parked = ["middleware.ts", "app/api", "app/deployment.json"];
@@ -78,6 +80,12 @@ writeFileSync(
   X-AI-Retrieval: allowed
   X-App-Commit: ${commit}
   Link: ${link}
+
+/scope-registry.json
+  Access-Control-Allow-Origin: *
+
+/scope/*
+  Access-Control-Allow-Origin: *
 
 /corpus.*
   Access-Control-Allow-Origin: *

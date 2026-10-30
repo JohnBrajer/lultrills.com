@@ -1,4 +1,5 @@
 import { readFileSync, existsSync } from "fs";
+import scopeRegistry from "@/public/scope/v0.1.0.json";
 import { join } from "path";
 import { CANON_PAGES } from "@/lib/hostingerCanon";
 import {
@@ -196,6 +197,8 @@ export function buildCorpusDocuments(): CorpusDocument[] {
       body: sco,
     });
   }
+
+  docs.push({ id: "maximum-scope-registry", url: `${SITE}/scope-registry.json`, title: "Trillsverse — Sovereignty in Every Dimension", kind: "doctrine", words: 0, body: JSON.stringify(scopeRegistry, null, 2) });
 
   const scopeFacts = readDoctrine("scope-facts.md");
   if (scopeFacts) {

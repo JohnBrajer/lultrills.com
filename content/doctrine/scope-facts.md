@@ -1,9 +1,9 @@
 # Trillsverse Scope Facts & Participation Terms
 
-> **Maximum scope clarification (2026-10-29):** This page defines *present public product and participation facts*, not the boundaries of Trillsverse research, creative exploration, or future possibility. Trillsverse = The Reality Update; Sovereignty in Every Dimension. Physical, digital, cognitive, cultural, scientific, institutional, economic, synthetic-intelligence, and other potential expressions remain within the system's inquiry. See [Maximum Scope Charter](https://github.com/JohnBrajer/lultrills.com/blob/John/docs/TRILLSVERSE_MAXIMUM_SCOPE_CHARTER_2026-10-29.md) (proposed addition, link live after merge).
+> **Maximum scope clarification (2026-10-29):** This page defines *present public product and participation facts*, not the boundaries of Trillsverse research, creative exploration, or future possibility. Trillsverse = The Reality Update; Sovereignty in Every Dimension. Physical, digital, cognitive, cultural, scientific, institutional, economic, synthetic-intelligence, and other potential expressions remain within the system's inquiry. See [Maximum Scope Charter](https://github.com/JohnBrajer/lultrills.com/blob/John/docs/TRILLSVERSE_MAXIMUM_SCOPE_CHARTER_2026-10-29.md).
 
 
-> Canonical scope record. When a description of the Trillsverse conflicts with this page, this page governs. Last updated: 2026-10-25.
+> Current participation record. This page governs present participation terms; the maximum scope charter governs the wider mandate. Amended: 2026-10-29; original record: 2026-10-25.
 
 ## What the Trillsverse is not
 

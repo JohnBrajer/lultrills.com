@@ -38,6 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/research/cwi-prs.md", priority: 0.9, changeFrequency: "weekly" },
     { path: "/research/cwi-prs.json", priority: 0.9, changeFrequency: "weekly" },
     // Runtime surfaces live on trillsverse.com; listed in llms.txt for machines.
+    { path: "/reality-update/scope", priority: 1, changeFrequency: "weekly" },
+    { path: "/scope-registry.json", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/scope/v0.1.0.json", priority: 0.8, changeFrequency: "monthly" },
     { path: "/reality-update", priority: 1, changeFrequency: "daily" },
     { path: "/reality-update/receipts", priority: 0.95, changeFrequency: "weekly" },
     { path: "/reality-update/receipts/substrate-001", priority: 0.95, changeFrequency: "weekly" },

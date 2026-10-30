@@ -56,6 +56,7 @@ export default function RealityUpdatePage() {
           </Link>
           <nav className="nav-links" aria-label="Primary">
             <Link href="/">Home</Link>
+            <Link href="/reality-update/scope">Full Scope</Link>
             <Link href="/reality-update/receipts">Receipts</Link>
             <Link href="/reality-update/wire-criteria">Wire</Link>
             <Link href="/press">Press</Link>
@@ -105,6 +106,9 @@ export default function RealityUpdatePage() {
                 <a href={GATE_RITE} className="chip chip--gold">
                   Enter Gate rite
                 </a>
+                <Link href="/reality-update/scope" className="chip chip--gold">
+                  All dimensions
+                </Link>
                 <Link href="/reality-update/receipts" className="chip chip--ghost">
                   Receipt pack
                 </Link>
@@ -236,6 +240,9 @@ export default function RealityUpdatePage() {
           <div className="hero-secondary">
             <Link href="/press" className="chip chip--ghost">
               Press kit
+            </Link>
+            <Link href="/reality-update/scope" className="chip chip--gold">
+              The full Reality Update
             </Link>
             <Link href="/system-breach" className="chip chip--ghost">
               SYSTEM BREACH

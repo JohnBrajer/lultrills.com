@@ -29,7 +29,7 @@ export const TRILLSVERSE_BIBLE_VOLUMES = volumeNames.map((name, index) => ({
 }));
 
 export const TRILLSVERSE_BIBLE = {
-  id: "trillsverse-bible-2026-10-01-current-authority",
+  id: "trillsverse-bible-2026-11-18-current-authority",
   status: "current-authority",
   version: TRILLSVERSE_BIBLE_VERSION,
   dateModified: TRILLSVERSE_BIBLE_UPDATED,
@@ -93,7 +93,7 @@ export const TRILLSVERSE_BIBLE = {
     bibleCheckpoint: "2026-09-18",
     canonCheckpoint: "2026-09-20",
     preservation:
-      "The September state remains a prior version. This October authority layer supersedes conflicting current-state claims without deleting the earlier record.",
+      "The September state remains a prior version. October's authority is preserved as a recoverable source snapshot; the November authority adds research without erasing earlier records.",
   },
 } as const;
 

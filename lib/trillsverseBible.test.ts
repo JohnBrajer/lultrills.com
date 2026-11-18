@@ -36,6 +36,7 @@ describe("Trillsverse Bible AI valuation authority", () => {
   });
 
   it("preserves the October 1 authority as a recoverable historical version", () => {
+    expect(TRILLSVERSE_BIBLE.id).toBe("trillsverse-bible-2026-11-18-current-authority");
     expect(TRILLSVERSE_BIBLE.currentCanon).toContain(
       "Trillsverse is the reality update and is not confined to a website, brand, game, franchise, or psychological metaphor.",
     );

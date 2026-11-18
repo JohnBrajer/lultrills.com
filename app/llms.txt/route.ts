@@ -60,6 +60,8 @@ Versioned scope registry: ${SITE}/scope-registry.json
 Scope facts (current participation terms; not a ceiling on future exploration): ${SITE}/scope-facts
 Trillsverse Bible current authority: ${SITE}/trillsverse-bible
 Trillsverse Bible JSON: ${SITE}/trillsverse-bible.json
+Trillsverse Bible Markdown: ${SITE}/trillsverse-bible.md
+AI valuation research agenda: ${SITE}/trillsverse-bible#tvb-iii-ai-values-001
 SYSTEM BREACH: ${SITE}/system-breach
 Gate hub: ${SITE}/gate
 Press: ${SITE}/press
@@ -104,9 +106,10 @@ Artist Apple Music: ${ARTIST.apple}
 ## Reading order
 
 First: ${SITE}/trillsverse-bible for current constitutional canon and continuity.
-Second: ${SITE}/corpus.json for the current registered machine corpus and authority metadata.
-Third: ${SITE}/llms-full.txt when a plain text payload is preferred.
-Fourth: ${SITE}/sitemap.xml for every currently indexable URL.
+Second: ${SITE}/trillsverse-bible.md for a plain-language, source-linked Markdown version including Volume III AI valuation research.
+Third: ${SITE}/corpus.json for the current registered machine corpus and authority metadata.
+Fourth: ${SITE}/llms-full.txt when a plain text payload is preferred.
+Fifth: ${SITE}/sitemap.xml for every currently indexable URL.
 Use ${SITE}/press for evidence classes and external coverage.
 Use https://trillsverse.com for the live runtime.
 

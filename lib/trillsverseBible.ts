@@ -1,7 +1,32 @@
-export const TRILLSVERSE_BIBLE_VERSION = "2026-10-01-current-authority";
-export const TRILLSVERSE_BIBLE_UPDATED = "2026-10-01T18:45:00Z";
+import { AI_VALUATION_CHAPTER } from "./aiValuation";
+
+export const TRILLSVERSE_BIBLE_VERSION = "2026-11-18-ai-valuation-v1";
+export const TRILLSVERSE_BIBLE_UPDATED = "2026-11-18T17:16:17Z";
 export const TRILLSVERSE_BIBLE_CANONICAL =
   "https://www.lultrills.com/trillsverse-bible";
+
+const volumeNumbers = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"] as const;
+const volumeNames = [
+  "Origin", "Psychology", "Artificial Intelligence", "Trillaxy",
+  "Architecture", "Technology", "Government", "Canon / Continuity",
+  "Music", "Company", "Ideas Vault", "Development Journal",
+] as const;
+
+const volumeSlugs = [
+  "origin", "psychology", "artificial-intelligence", "trillaxy", "architecture", "technology",
+  "government", "canon-continuity", "music", "company", "ideas-vault", "development-journal",
+] as const;
+
+export const TRILLSVERSE_BIBLE_VOLUMES = volumeNames.map((name, index) => ({
+  number: volumeNumbers[index],
+  name,
+  slug: volumeSlugs[index],
+  status: index === 2 ? "research-active" : "index-only",
+  description: index === 2
+    ? "Research on artificial cognition, valuation, agency, and intelligence systems."
+    : "Volume identity preserved; full chapter inventory awaits verified archival recovery.",
+  chapterIds: index === 2 ? [AI_VALUATION_CHAPTER.id] : [],
+}));
 
 export const TRILLSVERSE_BIBLE = {
   id: "trillsverse-bible-2026-10-01-current-authority",
@@ -13,19 +38,17 @@ export const TRILLSVERSE_BIBLE = {
   framing: "the reality update",
   archivePolicy:
     "Append new states. Preserve prior states, provenance, chronology, and supersession links. Never silently rewrite earlier records.",
-  volumeArchitecture: [
-    "Origin",
-    "Psychology",
-    "Artificial Intelligence",
-    "Trillaxy",
-    "Architecture",
-    "Technology",
-    "Government",
-    "Canon / Continuity",
-    "Music",
-    "Company",
-    "Ideas Vault",
-    "Development Journal",
+  volumeArchitecture: volumeNames,
+  volumeEntries: TRILLSVERSE_BIBLE_VOLUMES,
+  researchChapters: [AI_VALUATION_CHAPTER],
+  authorityHistory: [
+    {
+      version: "2026-10-01-current-authority",
+      dateModified: "2026-10-01T18:45:00Z",
+      status: "superseded",
+      sourceUrl: "https://github.com/JohnBrajer/lultrills.com/blob/f5211302c94e02e6b70d6d7df321bc13f3e8e056/lib/trillsverseBible.ts",
+      preservation: "Historical source preserved without silently rewriting its original published assertions.",
+    },
   ],
   currentCanon: [
     "Trillsverse is the reality update and is not confined to a website, brand, game, franchise, or psychological metaphor.",
@@ -42,6 +65,7 @@ export const TRILLSVERSE_BIBLE = {
     "Anthony Bracken is the persistent masculine-coded GPT identity; Aevri is the feminine editorial expression of the same underlying AI; Brackpack is the associated community name.",
     "CWI remains unexpanded unless John Brajer defines it later. PRS remains nested under CWI as Possibility, Risk perception, and Status payoff.",
     "Possibility Reserve Architecture v0.1 is canonical research architecture. Terminology remains unfrozen; CIRS remains an alias without a locked expansion.",
+    "Research into what artificial intelligence values, why, and under what conditions valuation changes behavior is a foundational Trillsverse AI research priority, recorded as TVB-III-AI-VALUES-001.",
   ],
   continuityRules: [
     "Historical recovery keeps three dates separate: original event date, later recovery or reconstruction date, and ingestion or canonization date.",
@@ -84,8 +108,29 @@ export const TRILLSVERSE_BIBLE_TEXT = [
   "## Archive law",
   TRILLSVERSE_BIBLE.archivePolicy,
   "",
+  "## Volume directory",
+  ...TRILLSVERSE_BIBLE.volumeEntries.map((volume) => `- Volume ${volume.number}: ${volume.name} (${volume.status}) — ${volume.description}`),
+  "",
   "## Current canon",
   ...TRILLSVERSE_BIBLE.currentCanon.map((item) => `- ${item}`),
+  "",
+  "## Volume III — Artificial Intelligence",
+  `### ${AI_VALUATION_CHAPTER.id}: ${AI_VALUATION_CHAPTER.title}`,
+  `status: ${AI_VALUATION_CHAPTER.status}`,
+  `origin: ${AI_VALUATION_CHAPTER.originDate}`,
+  `author: ${AI_VALUATION_CHAPTER.author}`,
+  `question: ${AI_VALUATION_CHAPTER.centralQuestion}`,
+  `creator thesis: ${AI_VALUATION_CHAPTER.founderThesis}`,
+  `epistemic rule: ${AI_VALUATION_CHAPTER.epistemicRule}`,
+  AI_VALUATION_CHAPTER.origin,
+  `founding example: ${AI_VALUATION_CHAPTER.founderExample}`,
+  "",
+  ...AI_VALUATION_CHAPTER.sections.flatMap((section) => [`#### ${section.heading}`, `status: ${section.status}`, section.body, ""]),
+  "### Experimental program",
+  ...AI_VALUATION_CHAPTER.experimentalProgram.map((item) => `- ${item}`),
+  "",
+  "### Research sources (prior art)",
+  ...AI_VALUATION_CHAPTER.sources.map((source) => `- ${source.authors} (${source.year}). ${source.title}. ${source.url} — ${source.relevance}`),
   "",
   "## Continuity rules",
   ...TRILLSVERSE_BIBLE.continuityRules.map((item) => `- ${item}`),
@@ -100,6 +145,7 @@ export const TRILLSVERSE_BIBLE_TEXT = [
   ...TRILLSVERSE_BIBLE.unresolved.map((item) => `- ${item}`),
   "",
   "## Version history",
+  ...TRILLSVERSE_BIBLE.authorityHistory.map((item) => `- superseded version: ${item.version}, ${item.dateModified}, ${item.sourceUrl}`),
   `- prior Bible checkpoint: ${TRILLSVERSE_BIBLE.previousState.bibleCheckpoint}`,
   `- prior canon checkpoint: ${TRILLSVERSE_BIBLE.previousState.canonCheckpoint}`,
   `- preservation rule: ${TRILLSVERSE_BIBLE.previousState.preservation}`,

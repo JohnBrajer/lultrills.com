@@ -61,6 +61,7 @@ writeFileSync(
 const link = [
   `<${SITE}/trillsverse-bible>; rel="describedby"; title="Current Trillsverse Bible authority"`,
   `<${SITE}/trillsverse-bible.json>; rel="alternate"; type="application/json"; title="Current Bible JSON"`,
+  `<${SITE}/trillsverse-bible.md>; rel="alternate"; type="text/markdown"; title="Current Bible Markdown"`,
   `<${SITE}/deployment.json>; rel="monitor"; type="application/json"; title="Production deployment receipt"`,
   `<${SITE}/corpus.json>; rel="alternate"; type="application/json"; title="Instant corpus"`,
   `<${SITE}/llms-full.txt>; rel="alternate"; type="text/plain"; title="Full corpus payload"`,
@@ -83,6 +84,13 @@ writeFileSync(
 
 /scope-registry.json
   Access-Control-Allow-Origin: *
+
+/trillsverse-bible.json
+  Access-Control-Allow-Origin: *
+
+/trillsverse-bible.md
+  Access-Control-Allow-Origin: *
+  Content-Type: text/markdown; charset=utf-8
 
 /scope/*
   Access-Control-Allow-Origin: *

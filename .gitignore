@@ -38,3 +38,6 @@ next-env.d.ts
 /out
 /.wrangler
 /.static-park
+
+# generated at image build by scripts/resolve-release.mjs
+/release.json

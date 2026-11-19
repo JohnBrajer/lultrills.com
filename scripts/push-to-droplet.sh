@@ -21,8 +21,11 @@ rsync -az --delete \
   --exclude '*.log' \
   "$ROOT/" "$HOST:$REMOTE_DIR/"
 
-echo "[2/3] Docker build & start..."
-ssh "$HOST" "cd $REMOTE_DIR && docker compose -f docker-compose.prod.yml up -d --build"
+COMMIT="$(git -C "$ROOT" rev-parse HEAD)"
+DEPLOYED_AT="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+echo "[2/3] Docker build & start (commit $COMMIT)..."
+ssh "$HOST" "cd $REMOTE_DIR && APP_COMMIT_SHA=$COMMIT APP_DEPLOYED_AT=$DEPLOYED_AT docker compose -f docker-compose.prod.yml up -d --build"
 
 echo "[3/3] Health..."
 sleep 6
